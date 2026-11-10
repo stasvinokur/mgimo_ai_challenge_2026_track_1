@@ -1,0 +1,26 @@
+{
+ "task": "research_step",
+ "schema": "ResearchActionDTO",
+ "text": "```json\n{\n \"action\": \"compute_metric\",\n \"reason\": \"Для ответа на RQ-003 нужно понять, на каком именно этапе воронки происходит отток и как он различается по платформам (особенно iPhone), используя данные из SRC-004.\",\n \"table_source_id\": \"SRC-004\",\n \"metric\": {\n  \"agg\": \"ratio\",\n  \"column\": \"5. Подключили ребёнка (разрешение на геолокацию за 3 дня)\",\n  \"denominator_column\": \"4. Ребёнок установил приложение\",\n  \"group_by\": \"Месяц подключения\",\n  \"name\": \"conversion_install_to_connected_by_month\"\n }\n}\n```",
+ "data": {
+  "action": "compute_metric",
+  "reason": "Для ответа на RQ-003 нужно понять, на каком именно этапе воронки происходит отток и как он различается по платформам (особенно iPhone), используя данные из SRC-004.",
+  "table_source_id": "SRC-004",
+  "metric": {
+   "agg": "ratio",
+   "column": "5. Подключили ребёнка (разрешение на геолокацию за 3 дня)",
+   "denominator_column": "4. Ребёнок установил приложение",
+   "group_by": "Месяц подключения",
+   "name": "conversion_install_to_connected_by_month"
+  }
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 4185,
+  "output_tokens": 172,
+  "estimated": false,
+  "latency_ms": 997,
+  "escalated": false
+ }
+}

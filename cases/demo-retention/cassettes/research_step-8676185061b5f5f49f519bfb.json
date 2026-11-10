@@ -1,0 +1,27 @@
+{
+ "task": "research_step",
+ "schema": "ResearchActionDTO",
+ "text": "```json\n{\n \"action\": \"compute_metric\",\n \"reason\": \"Необходимо проанализировать воронку онбординга по месяцам, чтобы понять, на каком этапе и в какой период произошло падение конверсии, особенно для пользователей iPhone, для ответа на RQ-003.\",\n \"question_id\": \"RQ-003\",\n \"table_source_id\": \"SRC-004\",\n \"metric\": {\n \"agg\": \"ratio\",\n \"column\": \"5. Подключили ребёнка (разрешение на геолокацию за 3 дня)\",\n \"denominator_column\": \"4. Ребёнок установил приложение\",\n \"group_by\": \"Месяц подключения\",\n \"name\": \"conversion_install_to_connected\"\n }\n}\n```",
+ "data": {
+  "action": "compute_metric",
+  "reason": "Необходимо проанализировать воронку онбординга по месяцам, чтобы понять, на каком этапе и в какой период произошло падение конверсии, особенно для пользователей iPhone, для ответа на RQ-003.",
+  "question_id": "RQ-003",
+  "table_source_id": "SRC-004",
+  "metric": {
+   "agg": "ratio",
+   "column": "5. Подключили ребёнка (разрешение на геолокацию за 3 дня)",
+   "denominator_column": "4. Ребёнок установил приложение",
+   "group_by": "Месяц подключения",
+   "name": "conversion_install_to_connected"
+  }
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 3392,
+  "output_tokens": 179,
+  "estimated": false,
+  "latency_ms": 898,
+  "escalated": false
+ }
+}

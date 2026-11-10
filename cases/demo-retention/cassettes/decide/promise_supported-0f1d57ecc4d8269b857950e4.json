@@ -1,0 +1,14 @@
+{
+ "question_id": "demo-retention-run:PRM-009:semantic",
+ "kind": "noul",
+ "choice": null,
+ "probability": 0.62,
+ "score": null,
+ "probs": {},
+ "confidence": 0.62,
+ "backend": "llm",
+ "model": "deepseek-v4.1-flash:cloud",
+ "escalated": true,
+ "input_tokens": 1131,
+ "latency_ms": 642
+}

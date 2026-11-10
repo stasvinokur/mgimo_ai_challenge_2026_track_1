@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"entailment\",\"confidence\":1,\"rationale\":\"Цитата прямо указывает значения NPS +41 для IV квартала 2025 и +33 для II квартала 2026 года.\"}",
+ "data": {
+  "label": "entailment",
+  "confidence": 1,
+  "rationale": "Цитата прямо указывает значения NPS +41 для IV квартала 2025 и +33 для II квартала 2026 года."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 339,
+  "output_tokens": 50,
+  "estimated": false,
+  "latency_ms": 608,
+  "escalated": false
+ }
+}

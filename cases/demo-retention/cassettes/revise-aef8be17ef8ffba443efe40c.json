@@ -1,0 +1,146 @@
+{
+ "task": "revise",
+ "schema": "RevisionClaimsDTO",
+ "text": "{\n  \"claims\": [\n    {\n      \"key\": \"C1\",\n      \"text\": \"В новом онбординге используются QR-код вместо шестизначного кода, пошаговая инструкция разрешений для iPhone (включая «Всегда») и напоминание через 24 часа, если ребёнок не подключён.\",\n      \"type\": \"fact\",\n      \"evidence_ids\": [\"EV-071\"],\n      \"topic\": \"онбординг\"\n    },\n    {\n      \"key\": \"C2\",\n      \"text\": \"В A/B-тесте не менялись цена, бесплатный период, тексты рекламы, детское приложение и порядок автоподключения по тарифу «Семейный»; экрана «договоритесь с ребёнком о правилах» в тесте не было.\",\n      \"type\": \"fact\",\n      \"evidence_ids\": [\"EV-072\"],\n      \"topic\": \"онбординг\"\n    },\n    {\n      \"key\": \"C3\",\n      \"text\": \"Основная метрика A/B-теста — первая оплата (M1) от подключений; вспомогательная — подключили ребёнка за 3 дня; ограничители — обращения в поддержку о подключении телефона ребёнка и возвраты.\",\n      \"type\": \"fact\",\n      \"evidence_ids\": [\"EV-073\"],\n      \"topic\": \"онбординг\"\n    },\n    {\n      \"key\": \"C4\",\n      \"text\": \"Обращения о подключении телефона ребёнка на 1000 установивших приложение родителя: в контроле 40,4, в новом онбординге 28,3.\",\n      \"type\": \"fact\",\n      \"evidence_ids\": [\"EV-074\"],\n      \"topic\": \"онбординг\"\n    },\n    {\n      \"key\": \"CL-067\",\n      \"text\": \"Конверсия в отправку инвайта: control 67.0%, new_onboarding 71.0%. По каналам: app_store control 83.6%, new_onboarding 88.2%; operator_app control 77.4%, new_onboarding 80.8%; tariff_bundle control 35.4%, new_onboarding 38.4%.\",\n      \"type\": \"fact\",\n      \"evidence_ids\": [],\n      \"topic\": \"воронка\"\n    },\n    {\n      \"key\": \"CL-068\",\n      \"text\": \"Конверсия в установку приложения ребенком: control 81.0%, new_onboarding 85.1%. По каналам: app_store control 81.7%, new_onboarding 84.6%; operator_app control 83.1%, new_onboarding 88.0%; tariff_bundle control 75.1%, new_onboarding 81.5%.\",\n      \"type\": \"fact\",\n      \"evidence_ids\": [],\n      \"topic\": \"воронка\"\n    },\n    {\n      \"key\": \"CL-069\",\n      \"text\": \"Конверсия в сопряжение (pairing): control 85.1%, new_onboarding 91.9%. По каналам: app_store control 85.1%, new_onboarding 92.3%; operator_app control 85.7%, new_onboarding 91.8%; tariff_bundle control 83.6%, new_onboarding 90.9%.\",\n      \"type\": \"fact\",\n      \"evidence_ids\": [],\n      \"topic\": \"воронка\"\n    },\n    {\n      \"key\": \"CL-070\",\n      \"text\": \"Конверсия в первый алерт: control 82.4%, new_onboarding 79.4%. По каналам: app_store control 81.8%, new_onboarding 78.4%; operator_app control 83.0%, new_onboarding 80.7%; tariff_bundle control 83.2%, new_onboarding 80.4%.\",\n      \"type\": \"fact\",\n      \"evidence_ids\": [],\n      \"topic\": \"воронка\"\n    },\n    {\n      \"key\": \"CL-071\",\n      \"text\": \"Доля iOS в отправке инвайтов: control 36.9%, new_onboarding 37.2%. По каналам: app_store control 37.2%, new_onboarding 38.2%; operator_app control 36.7%, new_onboarding 35.5%; tariff_bundle control 36.0%, new_onboarding 37.2%.\",\n      \"type\": \"fact\",\n      \"evidence_ids\": [],\n      \"topic\": \"воронка\"\n    },\n    {\n      \"key\": \"CL-072\",\n      \"text\": \"Доля iOS в сопряжении: control 29.8%, new_onboarding 32.7%. По каналам: app_store control 30.6%, new_onboarding 33.8%; operator_app control 29.7%, new_onboarding 30.9%; tariff_bundle control 27.3%, new_onboarding 32.7%.\",\n      \"type\": \"fact\",\n      \"evidence_ids\": [],\n      \"topic\": \"воронка\"\n    }\n  ],\n  \"relations\": [\n    {\n      \"new_claim_key\": \"C1\",\n      \"existing_claim_id\": \"CL-036\",\n      \"relation\": \"supports\",\n      \"explanation\": \"Новые данные подтверждают, что A/B-тест нового онбординга действительно проводится с описанными элементами (QR-код, инструкции для iPhone, напоминания).\"\n    },\n    {\n      \"new_claim_key\": \"C4\",\n      \"existing_claim_id\": \"CL-029\",\n      \"relation\": \"supports\",\n      \"explanation\": \"Снижение обращений о подключении телефона ребёнка в новом онбординге подтверждает, что трудности с настройкой разрешений на iPhone были значимой проблемой.\"\n    },\n    {\n      \"new_claim_key\": \"C1\",\n      \"existing_claim_id\": \"CL-040\",\n      \"relation\": \"contradicts\",\n      \"explanation\": \"Гипотеза утверждала, что снижение удержания вызвано исключительно сложностью онбординга на iPhone; новые данные показывают, что новый онбординг улучшил промежуточные шаги, но не даёт оснований считать причину исключительной, а также указывают на другие факторы (например, падение конверсии в первый алерт).\"\n    },\n    {\n      \"new_claim_key\": \"C2\",\n      \"existing_claim_id\": \"CL-041\",\n      \"relation\": \"contradicts\",\n      \"explanation\": \"Гипотеза о том, что основной причиной оттока является высокая цена, не подтверждается: в A/B-тесте цена не менялась, но онбординг повлиял на промежуточные метрики, что указывает на многофакторность.\"\n    },\n    {\n      \"new_claim_key\": \"C2\",\n      \"existing_claim_id\": \"CL-043\",\n      \"relation\": \"contradicts\",\n      \"explanation\": \"Гипотеза о негативном опыте неожиданных списаний как основной причины оттока не подтверждается: в тесте порядок автоподключения не менялся, но улучшения в онбординге всё равно произошли, что говорит о других причинах.\"\n    },\n    {\n      \"new_claim_key\": \"CL-069\",\n      \"existing_claim_id\": \"CL-059\",\n      \"relation\": \"supports\",\n      \"explanation\": \"Рост конверсии в сопряжение (pairing) в новом онбординге подтверждает, что шаг выдачи разрешения «Всегда» был значимым барьером на iOS.\"\n    },\n    {\n      \"new_claim_key\": \"CL-070\",\n      \"existing_claim_id\": \"CL-060\",\n      \"relation\": \"contradicts\",\n      \"explanation\": \"Допущение о том, что точечный фикс можно внедрить и измерить за квартал без роста бюджета, опровергается: новый онбординг улучшил ранние шаги, но конверсия в первый алерт упала, что ставит под сомнение достаточность точечного фикса для удержания.\"\n    },\n    {\n      \"new_claim_key\": \"C1\",\n      \"existing_claim_id\": \"CL-058\",\n      \"relation\": \"supports\",\n      \"explanation\": \"Новые данные подтверждают, что A/B-тест онбординга дал измеримые результаты по промежуточным метрикам в пределах квартала.\"\n    }\n  ]\n}",
+ "data": {
+  "claims": [
+   {
+    "key": "C1",
+    "text": "В новом онбординге используются QR-код вместо шестизначного кода, пошаговая инструкция разрешений для iPhone (включая «Всегда») и напоминание через 24 часа, если ребёнок не подключён.",
+    "type": "fact",
+    "evidence_ids": [
+     "EV-071"
+    ],
+    "topic": "онбординг"
+   },
+   {
+    "key": "C2",
+    "text": "В A/B-тесте не менялись цена, бесплатный период, тексты рекламы, детское приложение и порядок автоподключения по тарифу «Семейный»; экрана «договоритесь с ребёнком о правилах» в тесте не было.",
+    "type": "fact",
+    "evidence_ids": [
+     "EV-072"
+    ],
+    "topic": "онбординг"
+   },
+   {
+    "key": "C3",
+    "text": "Основная метрика A/B-теста — первая оплата (M1) от подключений; вспомогательная — подключили ребёнка за 3 дня; ограничители — обращения в поддержку о подключении телефона ребёнка и возвраты.",
+    "type": "fact",
+    "evidence_ids": [
+     "EV-073"
+    ],
+    "topic": "онбординг"
+   },
+   {
+    "key": "C4",
+    "text": "Обращения о подключении телефона ребёнка на 1000 установивших приложение родителя: в контроле 40,4, в новом онбординге 28,3.",
+    "type": "fact",
+    "evidence_ids": [
+     "EV-074"
+    ],
+    "topic": "онбординг"
+   },
+   {
+    "key": "CL-067",
+    "text": "Конверсия в отправку инвайта: control 67.0%, new_onboarding 71.0%. По каналам: app_store control 83.6%, new_onboarding 88.2%; operator_app control 77.4%, new_onboarding 80.8%; tariff_bundle control 35.4%, new_onboarding 38.4%.",
+    "type": "fact",
+    "evidence_ids": [],
+    "topic": "воронка"
+   },
+   {
+    "key": "CL-068",
+    "text": "Конверсия в установку приложения ребенком: control 81.0%, new_onboarding 85.1%. По каналам: app_store control 81.7%, new_onboarding 84.6%; operator_app control 83.1%, new_onboarding 88.0%; tariff_bundle control 75.1%, new_onboarding 81.5%.",
+    "type": "fact",
+    "evidence_ids": [],
+    "topic": "воронка"
+   },
+   {
+    "key": "CL-069",
+    "text": "Конверсия в сопряжение (pairing): control 85.1%, new_onboarding 91.9%. По каналам: app_store control 85.1%, new_onboarding 92.3%; operator_app control 85.7%, new_onboarding 91.8%; tariff_bundle control 83.6%, new_onboarding 90.9%.",
+    "type": "fact",
+    "evidence_ids": [],
+    "topic": "воронка"
+   },
+   {
+    "key": "CL-070",
+    "text": "Конверсия в первый алерт: control 82.4%, new_onboarding 79.4%. По каналам: app_store control 81.8%, new_onboarding 78.4%; operator_app control 83.0%, new_onboarding 80.7%; tariff_bundle control 83.2%, new_onboarding 80.4%.",
+    "type": "fact",
+    "evidence_ids": [],
+    "topic": "воронка"
+   },
+   {
+    "key": "CL-071",
+    "text": "Доля iOS в отправке инвайтов: control 36.9%, new_onboarding 37.2%. По каналам: app_store control 37.2%, new_onboarding 38.2%; operator_app control 36.7%, new_onboarding 35.5%; tariff_bundle control 36.0%, new_onboarding 37.2%.",
+    "type": "fact",
+    "evidence_ids": [],
+    "topic": "воронка"
+   },
+   {
+    "key": "CL-072",
+    "text": "Доля iOS в сопряжении: control 29.8%, new_onboarding 32.7%. По каналам: app_store control 30.6%, new_onboarding 33.8%; operator_app control 29.7%, new_onboarding 30.9%; tariff_bundle control 27.3%, new_onboarding 32.7%.",
+    "type": "fact",
+    "evidence_ids": [],
+    "topic": "воронка"
+   }
+  ],
+  "relations": [
+   {
+    "new_claim_key": "C1",
+    "existing_claim_id": "CL-036",
+    "relation": "supports",
+    "explanation": "Новые данные подтверждают, что A/B-тест нового онбординга действительно проводится с описанными элементами (QR-код, инструкции для iPhone, напоминания)."
+   },
+   {
+    "new_claim_key": "C4",
+    "existing_claim_id": "CL-029",
+    "relation": "supports",
+    "explanation": "Снижение обращений о подключении телефона ребёнка в новом онбординге подтверждает, что трудности с настройкой разрешений на iPhone были значимой проблемой."
+   },
+   {
+    "new_claim_key": "C1",
+    "existing_claim_id": "CL-040",
+    "relation": "contradicts",
+    "explanation": "Гипотеза утверждала, что снижение удержания вызвано исключительно сложностью онбординга на iPhone; новые данные показывают, что новый онбординг улучшил промежуточные шаги, но не даёт оснований считать причину исключительной, а также указывают на другие факторы (например, падение конверсии в первый алерт)."
+   },
+   {
+    "new_claim_key": "C2",
+    "existing_claim_id": "CL-041",
+    "relation": "contradicts",
+    "explanation": "Гипотеза о том, что основной причиной оттока является высокая цена, не подтверждается: в A/B-тесте цена не менялась, но онбординг повлиял на промежуточные метрики, что указывает на многофакторность."
+   },
+   {
+    "new_claim_key": "C2",
+    "existing_claim_id": "CL-043",
+    "relation": "contradicts",
+    "explanation": "Гипотеза о негативном опыте неожиданных списаний как основной причины оттока не подтверждается: в тесте порядок автоподключения не менялся, но улучшения в онбординге всё равно произошли, что говорит о других причинах."
+   },
+   {
+    "new_claim_key": "CL-069",
+    "existing_claim_id": "CL-059",
+    "relation": "supports",
+    "explanation": "Рост конверсии в сопряжение (pairing) в новом онбординге подтверждает, что шаг выдачи разрешения «Всегда» был значимым барьером на iOS."
+   },
+   {
+    "new_claim_key": "CL-070",
+    "existing_claim_id": "CL-060",
+    "relation": "contradicts",
+    "explanation": "Допущение о том, что точечный фикс можно внедрить и измерить за квартал без роста бюджета, опровергается: новый онбординг улучшил ранние шаги, но конверсия в первый алерт упала, что ставит под сомнение достаточность точечного фикса для удержания."
+   },
+   {
+    "new_claim_key": "C1",
+    "existing_claim_id": "CL-058",
+    "relation": "supports",
+    "explanation": "Новые данные подтверждают, что A/B-тест онбординга дал измеримые результаты по промежуточным метрикам в пределах квартала."
+   }
+  ]
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 8208,
+  "output_tokens": 1938,
+  "estimated": false,
+  "latency_ms": 6445,
+  "escalated": false
+ }
+}

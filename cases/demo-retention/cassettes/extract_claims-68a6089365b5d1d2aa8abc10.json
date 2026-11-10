@@ -1,0 +1,72 @@
+{
+ "task": "extract_claims",
+ "schema": "MetricPlanDTO",
+ "text": "{\"metrics\":[{\"name\":\"retention_m1\",\"description\":\"Удержание 1-го месяца по каналам\",\"agg\":\"ratio\",\"column\":\"paid_m1\",\"denominator_column\":\"connected\",\"group_by\":\"channel\",\"unit\":\"доля\"},{\"name\":\"retention_m2\",\"description\":\"Удержание 2-го месяца по каналам\",\"agg\":\"ratio\",\"column\":\"paid_m2\",\"denominator_column\":\"connected\",\"group_by\":\"channel\",\"unit\":\"доля\"},{\"name\":\"retention_m3\",\"description\":\"Удержание 3-го месяца по каналам\",\"agg\":\"ratio\",\"column\":\"paid_m3\",\"denominator_column\":\"connected\",\"group_by\":\"channel\",\"unit\":\"доля\"},{\"name\":\"retention_m4\",\"description\":\"Удержание 4-го месяца по каналам\",\"agg\":\"ratio\",\"column\":\"paid_m4\",\"denominator_column\":\"connected\",\"group_by\":\"channel\",\"unit\":\"доля\"},{\"name\":\"retention_m5\",\"description\":\"Удержание 5-го месяца по каналам\",\"agg\":\"ratio\",\"column\":\"paid_m5\",\"denominator_column\":\"connected\",\"group_by\":\"channel\",\"unit\":\"доля\"},{\"name\":\"retention_m6\",\"description\":\"Удержание 6-го месяца по каналам\",\"agg\":\"ratio\",\"column\":\"paid_m6\",\"denominator_column\":\"connected\",\"group_by\":\"channel\",\"unit\":\"доля\"}]}",
+ "data": {
+  "metrics": [
+   {
+    "name": "retention_m1",
+    "description": "Удержание 1-го месяца по каналам",
+    "agg": "ratio",
+    "column": "paid_m1",
+    "denominator_column": "connected",
+    "group_by": "channel",
+    "unit": "доля"
+   },
+   {
+    "name": "retention_m2",
+    "description": "Удержание 2-го месяца по каналам",
+    "agg": "ratio",
+    "column": "paid_m2",
+    "denominator_column": "connected",
+    "group_by": "channel",
+    "unit": "доля"
+   },
+   {
+    "name": "retention_m3",
+    "description": "Удержание 3-го месяца по каналам",
+    "agg": "ratio",
+    "column": "paid_m3",
+    "denominator_column": "connected",
+    "group_by": "channel",
+    "unit": "доля"
+   },
+   {
+    "name": "retention_m4",
+    "description": "Удержание 4-го месяца по каналам",
+    "agg": "ratio",
+    "column": "paid_m4",
+    "denominator_column": "connected",
+    "group_by": "channel",
+    "unit": "доля"
+   },
+   {
+    "name": "retention_m5",
+    "description": "Удержание 5-го месяца по каналам",
+    "agg": "ratio",
+    "column": "paid_m5",
+    "denominator_column": "connected",
+    "group_by": "channel",
+    "unit": "доля"
+   },
+   {
+    "name": "retention_m6",
+    "description": "Удержание 6-го месяца по каналам",
+    "agg": "ratio",
+    "column": "paid_m6",
+    "denominator_column": "connected",
+    "group_by": "channel",
+    "unit": "доля"
+   }
+  ]
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 1750,
+  "output_tokens": 299,
+  "estimated": false,
+  "latency_ms": 1173,
+  "escalated": false
+ }
+}

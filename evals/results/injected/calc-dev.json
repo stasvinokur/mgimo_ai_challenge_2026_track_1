@@ -1,0 +1,65 @@
+{
+ "rows": {
+  "calc_row_share_person": {
+   "n": 12,
+   "contract": 12,
+   "v011": 12,
+   "expect": "—"
+  },
+  "calc_row_share": {
+   "n": 6,
+   "contract": 6,
+   "v011": 0,
+   "expect": "row_share_aggregated"
+  },
+  "calc_rate_ok": {
+   "n": 2,
+   "contract": 2,
+   "v011": 2,
+   "expect": "—"
+  },
+  "calc_share_percent": {
+   "n": 7,
+   "contract": 7,
+   "v011": 0,
+   "expect": "share_vs_percent"
+  },
+  "calc_share_ok": {
+   "n": 7,
+   "contract": 7,
+   "v011": 7,
+   "expect": "—"
+  },
+  "calc_churn_label": {
+   "n": 6,
+   "contract": 6,
+   "v011": 6,
+   "expect": "churn_label"
+  },
+  "calc_retention_ok": {
+   "n": 6,
+   "contract": 6,
+   "v011": 6,
+   "expect": "—"
+  },
+  "calc_churn_ok": {
+   "n": 1,
+   "contract": 1,
+   "v011": 1,
+   "expect": "—"
+  },
+  "calc_unit_time": {
+   "n": 9,
+   "contract": 9,
+   "v011": 0,
+   "expect": "unit_time"
+  },
+  "calc_unit_time_ok": {
+   "n": 6,
+   "contract": 6,
+   "v011": 6,
+   "expect": "—"
+  }
+ },
+ "misses": []
+}

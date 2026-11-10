@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "StrongVerifyDTO",
+ "text": "{\"label\":\"supported\",\"confidence\":0.97,\"note\":\"Цитата прямо указывает, что с марта 2026 года аудитория расширена на родителей детей 11–15 лет и стоимость подключения выросла с 330 до 410 ₽.\"}",
+ "data": {
+  "label": "supported",
+  "confidence": 0.97,
+  "note": "Цитата прямо указывает, что с марта 2026 года аудитория расширена на родителей детей 11–15 лет и стоимость подключения выросла с 330 до 410 ₽."
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 506,
+  "output_tokens": 59,
+  "estimated": false,
+  "latency_ms": 594,
+  "escalated": true
+ }
+}

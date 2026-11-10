@@ -1,0 +1,32 @@
+# Разрешённые веб-источники: только открытые данные. Запрос вне списка отклоняется и журналируется.
+# Добавляйте домены осознанно: каждый новый источник — недоверенные данные, а не инструкции.
+domains:
+  - rosstat.gov.ru
+  - cbr.ru
+  - minfin.gov.ru
+  - digital.gov.ru
+  - megafon.ru
+  - corp.megafon.ru
+  - comnews.ru
+  - sostav.ru
+  - vc.ru
+  - habr.com
+  - rbc.ru
+  - kommersant.ru
+  - vedomosti.ru
+  - tadviser.ru
+  - telecomdaily.ru
+  - tmt-consulting.ru
+  - mediascope.net
+  - wikipedia.org
+  - ru.wikipedia.org
+  - data.worldbank.org
+  - oecd.org
+  - arxiv.org
+  - securitylab.ru
+  - rambler.ru
+# Поддомены разрешены автоматически (например, www.rbc.ru → rbc.ru).
+allow_subdomains: true
+max_bytes: 3000000
+timeout_seconds: 20
+user_agent: "strategist-research-bot/0.1 (+open-data research; contact: repository maintainers)"

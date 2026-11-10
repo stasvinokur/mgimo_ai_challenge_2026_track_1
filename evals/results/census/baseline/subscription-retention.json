@@ -1,0 +1,1486 @@
+{
+  "metrics_version": "1.2",
+  "brief_id": "subscription-retention",
+  "label": "baseline",
+  "output_path": "evals/results/baseline/subscription-retention/output.md",
+  "output_sha256": "883bdce163897a8bd6ff12fdd19df9524f7d753e0078a5f0fa09e50e4559e950",
+  "output_chars": 9495,
+  "judge_model": "mistral-large-4:cloud",
+  "judge_candidates": [
+    "mistral-large-4:cloud",
+    "kimi-k2.6:cloud"
+  ],
+  "judge_notes": [],
+  "judge_params": {
+    "think": false,
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 65536
+  },
+  "agent_model": "deepseek-v4.1-flash:cloud",
+  "seed": 42,
+  "census": true,
+  "claims_only": true,
+  "started_at": "2026-11-07T08:35:24+00:00",
+  "finished_at": "2026-11-07T08:48:38+00:00",
+  "claims": {
+    "extracted": 63,
+    "sample_size": 63,
+    "verified": 63,
+    "supported": 44,
+    "partial": 9,
+    "unsupported": 10,
+    "contradicted": 5,
+    "unsupported_share": 0.159,
+    "unsupported_ci95": [
+      0.0886,
+      0.2681
+    ],
+    "partial_share": 0.143,
+    "supported_share": 0.698,
+    "by_section": {
+      "(начало документа)": {
+        "verified": 1,
+        "unsupported": 0,
+        "partial": 0
+      },
+      "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения": {
+        "verified": 30,
+        "unsupported": 3,
+        "partial": 6
+      },
+      "2. Продуктовая стратегия": {
+        "verified": 7,
+        "unsupported": 1,
+        "partial": 1
+      },
+      "3. Коммуникационная стратегия": {
+        "verified": 12,
+        "unsupported": 4,
+        "partial": 1
+      },
+      "5. Ожидаемый эффект (консервативно)": {
+        "verified": 13,
+        "unsupported": 2,
+        "partial": 1
+      }
+    },
+    "quotes_not_found": 0,
+    "sample": [
+      {
+        "id": "c001",
+        "text": "Подготовлено к решению по бюджету до 15 ноября 2026",
+        "kind": "number",
+        "chunk": 1,
+        "section": "(начало документа)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "решение по бюджету нужно до 15 ноября",
+        "quote_found": true,
+        "comment": "В брифе прямо указано «решение по бюджету нужно до 15 ноября»; год 2026 следует из контекста материалов (выгрузка данных на 31.10.2026, дата записки 20.10.2026)."
+      },
+      {
+        "id": "c002",
+        "text": "Удержание первого продления (M1) у канала organic составляло 65,8% в январе, 65,9% в апреле, 66,2% в июне и 65,7% в сентябре",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |\n| 2026-04 | organic | 9801 | 6457 | 5454 | 4846 |\n| 2026-06 | organic | 10564 | 6996 | 5882 | 5186 |\n| 2026-09 | organic | 10426 | 6852 |  |  |",
+        "quote_found": true,
+        "comment": "Расчёт: 6272/9525=65,8%; 6457/9801=65,9%; 6996/10564=66,2%; 6852/10426=65,7%."
+      },
+      {
+        "id": "c003",
+        "text": "Удержание M1 у канала paid_performance составляло 56,9% в январе, 54,7% в апреле, 56,3% в июне и 56,8% в сентябре",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | paid_performance | 5442 | 3094 | 2496 | 2168 |\n| 2026-04 | paid_performance | 5904 | 3228 | 2547 | 2180 |\n| 2026-06 | paid_performance | 5984 | 3370 | 2653 | 2269 |\n| 2026-09 | paid_performance | 5836 | 3313 |  |  |",
+        "quote_found": true,
+        "comment": "Расчёт: 3094/5442=56,9%; 3228/5904=54,7%; 3370/5984=56,3%; 3313/5836=56,8%."
+      },
+      {
+        "id": "c004",
+        "text": "Удержание M1 у канала partner_bundle составляло 28,1% в апреле, 29,5% в июне и 29,8% в сентябре",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-04 | partner_bundle | 2513 | 705 | 524 | 436 |\n| 2026-06 | partner_bundle | 7335 | 2161 | 1617 | 1365 |\n| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "Расчёт: 705/2513=28,1%; 2161/7335=29,5%; 3847/12915=29,8%."
+      },
+      {
+        "id": "c005",
+        "text": "Общее удержание M1 по всем каналам составляло 62,7% в январе, 55,9% в апреле, 51,9% в июне и 48,0% в сентябре",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "По расчёту из таблицы общее удержание M1: янв 9366/14967=62,6%, апр 10390/18218=57,0%, июн 12527/23883=52,4%, сен 14012/29177=48,0%. Указанные 62,7%, 55,9%, 51,9% не совпадают с данными."
+      },
+      {
+        "id": "c006",
+        "text": "Удержание у organic за девять месяцев находилось в диапазоне 65,7–66,2%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Удержание organic по месяцам: янв 65,8%, фев 65,8%, мар 67,4%, апр 65,9%, май 66,6%, июн 66,2%, июл 65,4%, авг 66,7%, сен 65,7%. Фактический диапазон 65,4–67,4%, а не 65,7–66,2%."
+      },
+      {
+        "id": "c007",
+        "text": "Удержание у paid_performance находилось в диапазоне 54,7–56,9%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | paid_performance | 5442 | 3094 | 2496 | 2168 |\n| 2026-07 | paid_performance | 5689 | 3106 | 2473 | 2159 |\n| 2026-09 | paid_performance | 5836 | 3313 |  |  |",
+        "quote_found": true,
+        "comment": "Диапазон по расчёту составляет 54,6–56,9% (июль 3106/5689=54,6%); заявленный нижний порог 54,7% незначительно завышен."
+      },
+      {
+        "id": "c008",
+        "text": "Общее удержание упало с 63% до 48%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "упала с 63% у январских подписчиков до 48% у сентябрьских",
+        "quote_found": true,
+        "comment": "Прямая цитата из брифа подтверждает падение общего удержания с 63% до 48%."
+      },
+      {
+        "id": "c009",
+        "text": "Партнёрский канал partner_bundle вырос с 0 до примерно 44% новых подписок",
+        "kind": "market",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | organic | 10426 | 6852 |  |  |\n| 2026-09 | paid_performance | 5836 | 3313 |  |  |\n| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "Расчёт: 12915/(10426+5836+12915)=12915/29177=44,3%, что примерно равно 44%; канал запущен в апреле 2026 (до этого 0)."
+      },
+      {
+        "id": "c010",
+        "text": "Удержание M1 у partner_bundle составляет примерно 29%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-04 | partner_bundle | 2513 | 705 | 524 | 436 |\n| 2026-05 | partner_bundle | 5093 | 1519 | 1150 | 973 |\n| 2026-06 | partner_bundle | 7335 | 2161 | 1617 | 1365 |\n| 2026-07 | partner_bundle | 10044 | 2911 | 2172 | 1816 |\n| 2026-08 | partner_bundle | 11627 | 3489 | 2611 |  |\n| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "Удержание M1 по месяцам: 28,1%, 29,8%, 29,5%, 29,0%, 30,0%, 29,8% — в среднем около 29%."
+      },
+      {
+        "id": "c011",
+        "text": "Если бы в сентябре структура каналов была как в январе, общее удержание составило бы около 62%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |\n| 2026-01 | paid_performance | 5442 | 3094 | 2496 | 2168 |",
+        "quote_found": true,
+        "comment": "Контрфактум: (6272+3094)/(9525+5442)=9366/14967=62,58%, т.е. около 62–63%; для сентября текущее M1=(6852+3313+3847)/(10426+5836+12915)=48,0%."
+      },
+      {
+        "id": "c012",
+        "text": "Опрос ушедших пользователей проведён с выборкой n=260, что составляет 0,7% от отменивших подписку",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "ответили 260 человек — около 0,7% от ≈38 515 отменивших первое продление за период",
+        "quote_found": true,
+        "comment": "n=260 и доля 0,7% прямо указаны в метаданных файла опроса."
+      },
+      {
+        "id": "c013",
+        "text": "Чтобы вернуть общее удержание M1 к 60% при текущей структуре каналов, необходимо поднять удержание partner_bundle с 29% до примерно 55%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | organic | 10426 | 6852 |  |  |\n| 2026-09 | paid_performance | 5836 | 3313 |  |  |\n| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "При текущей структуре сентября цель 60% требует partner_bundle: (0,60*29177-(6852+3313))/12915=56,8%, а не ~55%; текущее partner_bundle=3847/12915=29,8%."
+      },
+      {
+        "id": "c014",
+        "text": "Запрос на производство двух сериалов составляет 38 млн ₽",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "просит 38 млн ₽ на два сериала — решение по бюджету нужно до 15 ноября",
+        "quote_found": true,
+        "comment": "Сумма 38 млн ₽ на два сериала прямо указана в запросе руководителя и в записке контент-команды."
+      },
+      {
+        "id": "c015",
+        "text": "Премьера двух сериалов запланирована на февраль–март 2027 года",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/content_team_memo.md",
+        "quote": "Выделить 38 млн ₽ на лицензии двух сериалов-новинок с премьерой в феврале–марте 2027.",
+        "quote_found": true,
+        "comment": "Премьера двух сериалов прямо запланирована на февраль–март 2027."
+      },
+      {
+        "id": "c016",
+        "text": "Эффект премьеры на удержание ожидается не раньше Q2 2027",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/content_team_memo.md",
+        "quote": "с премьерой в феврале–марте 2027. ... Ожидаем возврата удержания после первого месяца к уровню 60%+ в течение двух кварталов.",
+        "quote_found": true,
+        "comment": "Февраль–март 2027 относится к Q1 2027, поэтому эффект на удержание не может быть раньше Q2 2027."
+      },
+      {
+        "id": "c017",
+        "text": "Механика partner_bundle: первый месяц за 1 ₽, далее списывается 349 ₽",
+        "kind": "product",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "первый месяц стоит 1 ₽, далее — 349 ₽ в месяц с привязанной карты или счёта абонента.",
+        "quote_found": true,
+        "comment": "Механика partner_bundle прямо описана: 1 ₽ за первый месяц, затем 349 ₽."
+      },
+      {
+        "id": "c018",
+        "text": "Среди ушедших пользователей доля причины «Нечего смотреть / каталог устарел» составляет ~40% у organic, ~30% у paid_performance и ~15% у partner_bundle",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/content_team_memo.md",
+        "quote": "в опросе ушедших среди органических подписчиков 43% называют главной причиной «нечего смотреть, каталог устарел».",
+        "quote_found": true,
+        "comment": "По exit_survey.csv точные доли: organic 29/67=43,3% (не ~40%), paid_performance 14/50=28,0% (~30%), partner_bundle 20/143=14,0% (~15%)."
+      },
+      {
+        "id": "c019",
+        "text": "Среди ушедших пользователей доля причины «Дорого» составляет ~20% у organic, ~15% у paid_performance и ~30% у partner_bundle",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Материалы дают другие доли «дорого»: organic 11/67=16,4%, paid_performance 9/50=18,0%, partner_bundle 32/143=22,4%, что не совпадает с ~20%/~15%/~30%."
+      },
+      {
+        "id": "c020",
+        "text": "Среди ушедших пользователей доля причины «Подключался ради акции» составляет 0% у organic, ~4% у paid_performance и ~30% у partner_bundle",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "| S-0249 | 2026-07 | paid_performance | 4 | подключался ради акции | Не знал, что потом спишут полную цену |",
+        "quote_found": true,
+        "comment": "По exit_survey.csv: organic 0/67=0% (совпадает), paid_performance 1/50=2% (не ~4%), partner_bundle 43/143=30,1% (~30%, совпадает)."
+      },
+      {
+        "id": "c021",
+        "text": "Среди ушедших пользователей доля причины «Посмотрел то, ради чего подключался» составляет ~15% у organic, ~15% у paid_performance и ~15% у partner_bundle",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "S-0018 | 2026-09 | organic | 2 | посмотрел то, ради чего подключался | Подключался ради одного фильма",
+        "quote_found": true,
+        "comment": "Расчёт по exit_survey.csv: organic 10/62=16.1%, paid_performance 6/47=12.8%, partner_bundle 18/131=13.7% — все доли около 15%"
+      },
+      {
+        "id": "c022",
+        "text": "Среди ушедших пользователей доля причины «Перешёл на другой сервис» составляет ~15% у organic, ~15% у paid_performance и ~8% у partner_bundle",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "S-0004 | 2026-09 | partner_bundle | 2 | перешёл на другой сервис | В семье уже есть другой кинотеатр",
+        "quote_found": true,
+        "comment": "Organic 10/62=16.1% (~15%) и paid_performance 8/47=17.0% (~15%) подтверждены, но для partner_bundle доля 15/131=11.5%, что заметно отличается от заявленных ~8%"
+      },
+      {
+        "id": "c023",
+        "text": "Среди ушедших пользователей доля причины «Технические проблемы» составляет ~8% у organic, ~10% у paid_performance и ~5% у partner_bundle",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "S-0017 | 2026-09 | paid_performance | 4 | технические проблемы |",
+        "quote_found": true,
+        "comment": "Organic 5/62=8.1% (~8%) и partner_bundle 7/131=5.3% (~5%) подтверждены, но для paid_performance доля 7/47=14.9%, а не ~10%"
+      },
+      {
+        "id": "c024",
+        "text": "Падение общей метрики удержания является эффектом смеси (mix shift) структуры каналов",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "Доля partner_bundle выросла с 0% (январь) до 44% (сентябрь) при удержании ~29% против ~66% у organic; общая метрика M1 упала с 63% до 48% — классический эффект смеси (mix shift)"
+      },
+      {
+        "id": "c025",
+        "text": "Весь провал общего удержания объясняется притоком канала partner_bundle, а не деградацией продукта для остальных подписчиков",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |",
+        "quote_found": true,
+        "comment": "Удержание organic стабильно: 6272/9525=65.8% (янв) и 6852/10426=65.7% (сен); paid_performance ~56%. Падение общей метрики до 48% полностью объясняется ростом доли partner_bundle с удержанием ~29%"
+      },
+      {
+        "id": "c026",
+        "text": "Когорта partner_bundle является структурно низкокачественной по дизайну промо-акции",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "первый месяц стоит 1 ₽, далее — 349 ₽ в месяц с привязанной карты или счёта абонента.",
+        "quote_found": true,
+        "comment": "Промо-акция с ценой 1 ₽ за первый месяц привлекает аудиторию, не готовую платить 349 ₽; в опросе ушедших partner_bundle доминируют ответы «подключался ради акции» и «дорого» (шок цены)"
+      },
+      {
+        "id": "c027",
+        "text": "Причина «каталог устарел» является реальной, но вторичной причиной оттока",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "S-0001 | 2026-09 | organic | 4 | нечего смотреть, каталог устарел | Каталог старый, много фильмов десятилетней давности",
+        "quote_found": true,
+        "comment": "Причина реальна (в опросе — значимая доля, особенно у organic), но вторична по сравнению со структурным mix shift: общий провал удержания обусловлен каналом partner_bundle, а не деградацией каталога для всей базы"
+      },
+      {
+        "id": "c028",
+        "text": "Для большинства органических подписчиков текущего каталога достаточно (удержание органики 66%)",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | organic | 10426 | 6852 |  |  |",
+        "quote_found": true,
+        "comment": "Удержание organic M1 в сентябре: 6852/10426=65.7% ≈ 66%, то есть большинство органических подписчиков продлевает подписку, текущего каталога им достаточно"
+      },
+      {
+        "id": "c029",
+        "text": "У partner_bundle основные причины оттока — оффер акции и шок от цены после промо, а не качество контента",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "S-0003 | 2026-09 | partner_bundle | 1 | подключался ради акции | Взял за рубль посмотреть, платить 349 не готов",
+        "quote_found": true,
+        "comment": "У partner_bundle в опросе доминируют «подключался ради акции» (~30%) и «дорого» (~23%), тогда как «нечего смотреть, каталог устарел» — лишь ~15%; основные причины — оффер акции и шок цены, а не качество контента"
+      },
+      {
+        "id": "c030",
+        "text": "Контент не способен поднять общее удержание M1 до 60% при текущей доле partner_bundle в 44% с удержанием 29%",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "Расчёт: доля partner_bundle в сент = 12915/29177=44.3%, удержание = 3847/12915=29.8%. Чтобы общая M1 достигла 60%, при 44% partner с 29% удержание остальных каналов должно быть (0.60-0.44*0.298)/0.56=84.3%, что недостижимо текущим контентом (сейчас ~62%)"
+      },
+      {
+        "id": "c031",
+        "text": "Контент-команда утверждает, что партнёрский канал дал почти половину подписок и проблема не в привлечении",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/content_team_memo.md",
+        "quote": "Партнёрский канал работает отлично: он дал почти половину новых подписок в августе–сентябре, то есть проблема не в привлечении, а в том, что людей нечем удержать.",
+        "quote_found": true,
+        "comment": "Прямая цитата из записки контент-команды."
+      },
+      {
+        "id": "c032",
+        "text": "В комментариях пользователей прямо приводится фраза «не знал, что спишут полную цену»",
+        "kind": "user",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "Не знал, что потом спишут полную цену",
+        "quote_found": true,
+        "comment": "Фраза в материалах приводится с дополнительным словом «потом» («Не знал, что потом спишут полную цену»), а не дословно как в утверждении."
+      },
+      {
+        "id": "c033",
+        "text": "Часть оттока пользователей вызвана неожиданным списанием средств",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "Не знал, что потом спишут полную цену",
+        "quote_found": true,
+        "comment": "В комментариях ушедших (например, S-0133, S-0145, S-0233) прямо указывается на неожиданное списание полной цены после акции."
+      },
+      {
+        "id": "c034",
+        "text": "Органический канал удерживает 66% пользователей",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |",
+        "quote_found": true,
+        "comment": "Расчёт по всем органическим когортам: сумма active_m1 = 59 706, сумма new_subscribers = 90 224; 59 706 / 90 224 ≈ 66,2%."
+      },
+      {
+        "id": "c035",
+        "text": "Около 40% ушедших органических пользователей называют причиной ухода «нечего смотреть»",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/content_team_memo.md",
+        "quote": "43% называют главной причиной «нечего смотреть, каталог устарел»",
+        "quote_found": true,
+        "comment": "В материалах указано 43%, что соответствует формулировке «около 40%»."
+      },
+      {
+        "id": "c036",
+        "text": "Уход органических пользователей обусловлен не отсутствием контента, а навигацией и ощущением новизны",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/content_team_memo.md",
+        "quote": "43% называют главной причиной «нечего смотреть, каталог устарел»",
+        "quote_found": true,
+        "comment": "Материалы утверждают обратное: основной причиной ухода органических пользователей называется именно отсутствие/устаревание контента, а не навигация или новизна."
+      },
+      {
+        "id": "c037",
+        "text": "От 5% до 10% ушедших во всех каналах называют технические проблемы, в частности «тормозит на телевизоре» и «падает качество вечером»",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "Тормозит на телевизоре",
+        "quote_found": true,
+        "comment": "19 из 260 опрошенных (7,3%) выбрали «технические проблемы» — в диапазоне 5–10%; в комментариях встречаются «Тормозит на телевизоре» и «По вечерам падает качество картинки»."
+      },
+      {
+        "id": "c038",
+        "text": "В документе упоминается сумма 38 млн",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "просит 38 млн ₽ на два сериала",
+        "quote_found": true,
+        "comment": "Сумма 38 млн ₽ прямо указана в запросе руководителя и в записке контент-команды."
+      },
+      {
+        "id": "c039",
+        "text": "Стоимость partner_bundle после промо составляет 349 ₽",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "первый месяц стоит 1 ₽, далее — 349 ₽ в месяц",
+        "quote_found": true,
+        "comment": "Условия партнёрской программы прямо устанавливают цену после промо в 349 ₽."
+      },
+      {
+        "id": "c040",
+        "text": "Напоминание о списании отправляется за 3 дня до списания",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминания о напоминании о списании и сроке его отправки (за 3 дня)."
+      },
+      {
+        "id": "c041",
+        "text": "По договору допускается до 2 пуш/SMS от оператора в месяц",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "Оператор отправляет участникам программы не более двух сервисных сообщений в месяц (SMS или пуш) по согласованным текстам.",
+        "quote_found": true,
+        "comment": "Прямое условие договора."
+      },
+      {
+        "id": "c042",
+        "text": "Оффер-удержание предлагает скидку на 2–3 месяца",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминания оффера-удержания со скидкой на 2–3 месяца."
+      },
+      {
+        "id": "c043",
+        "text": "Текущий охват опроса ушедших пользователей составляет 0,7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "ответили 260 человек — около 0,7% от ≈38 515 отменивших первое продление за период",
+        "quote_found": true,
+        "comment": "Указано в метаданных файла опроса."
+      },
+      {
+        "id": "c044",
+        "text": "В опросе уже зафиксирован «шок от списания»",
+        "kind": "user",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Точная фраза «шок от списания» в материалах отсутствует."
+      },
+      {
+        "id": "c045",
+        "text": "Причиной оттока пользователей является «устаревший каталог»",
+        "kind": "user",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "| S-0001 | 2026-09 | organic | 4 | нечего смотреть, каталог устарел | Каталог старый, много фильмов десятилетней давности |",
+        "quote_found": true,
+        "comment": "«Устаревший каталог» — одна из причин у части пользователей (43% органических по memo), но не единственная причина оттока."
+      },
+      {
+        "id": "c046",
+        "text": "Наблюдается падение удержания пользователей",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "доля тех, кто оплачивает первое продление, упала с 63% у январских подписчиков до 48% у сентябрьских",
+        "quote_found": true,
+        "comment": "Прямо указано в брифе."
+      },
+      {
+        "id": "c047",
+        "text": "Гипотеза про каталог частично верна для органического сегмента",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/content_team_memo.md",
+        "quote": "в опросе ушедших среди органических подписчиков 43% называют главной причиной «нечего смотреть, каталог устарел»",
+        "quote_found": true,
+        "comment": "Для органического сегмента гипотеза подтверждается на 43%."
+      },
+      {
+        "id": "c048",
+        "text": "Падение aggregate-показателя удержания обусловлено mix shift от partner_bundle",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |\n| 2026-01 | paid_performance | 5442 | 3094 | 2496 | 2168 |\n| 2026-09 | organic | 10426 | 6852 |  |  |\n| 2026-09 | paid_performance | 5836 | 3313 |  |  |\n| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "Расчёт: янв (6272+3094)/(9525+5442)=62,6%; сент (6852+3313+3847)/(10426+5836+12915)=48,0%; без partner_bundle сент (6852+3313)/(10426+5836)=62,5%. Падение aggregate обусловлено mix shift."
+      },
+      {
+        "id": "c049",
+        "text": "Промо-механика partner_bundle создаёт низкокачественную когорту пользователей",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | partner_bundle | 12915 | 3847 |  |  |\n| 2026-09 | organic | 10426 | 6852 |  |  |",
+        "quote_found": true,
+        "comment": "Удержание m1 у partner_bundle ≈29,8% (3847/12915) против ≈65,7% у organic (6852/10426) — когорта с низким удержанием."
+      },
+      {
+        "id": "c050",
+        "text": "В настоящее время новинки, выходящие каждый месяц, отсутствуют",
+        "kind": "product",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/content_team_memo.md",
+        "quote": "Доля просмотров новинок (релизы последних 12 месяцев) снизилась с 41% в marzo до 33% в сентябре",
+        "quote_found": false,
+        "comment": "Новинки присутствуют (33% просмотров в сентябре), утверждение об их полном отсутствии противоречит данным."
+      },
+      {
+        "id": "c051",
+        "text": "Падение удержания вызвано промо-бандлом",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |\n| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "Расчёт: удержание в январе (6272+3094)/(9525+5442)=62,6%; в сентябре (6852+3313+3847)/(10426+5836+12915)=48,0%. Без partner_bundle в сентябре: (6852+3313)/(10426+5836)=62,5% — падение полностью объясняется ростом доли канала с удержанием ~30%."
+      },
+      {
+        "id": "c052",
+        "text": "Падение удержания не вызвано «устаревшим каталогом»",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |\n| 2026-09 | organic | 10426 | 6852 |  |  |",
+        "quote_found": true,
+        "comment": "Удержание organic стабильно: 6272/9525=65,8% (янв) vs 6852/10426=65,7% (сен); paid_performance: 3094/5442=56,9% vs 3313/5836=56,8%. Общее падение вызвано mix-эффектом partner_bundle, а не снижением удержания в органике/paid."
+      },
+      {
+        "id": "c053",
+        "text": "Промо-бандл приводит людей за 1 ₽",
+        "kind": "product",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "первый месяц стоит 1 ₽, далее — 349 ₽ в месяц",
+        "quote_found": true,
+        "comment": "Условия программы прямо устанавливают цену 1 ₽ за первый месяц."
+      },
+      {
+        "id": "c054",
+        "text": "Промо-бандл теряет пользователей на цене 349 ₽",
+        "kind": "product",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "| S-0003 | 2026-09 | partner_bundle | 1 | подключался ради акции | Взял за рубль посмотреть, платить 349 не готов |",
+        "quote_found": true,
+        "comment": "В опросе ушедших многократно фиксируется потеря пользователей из-за цены 349 ₽ после промо-периода (комментарии S-0003, S-0023, S-0059, S-0069 и др.)."
+      },
+      {
+        "id": "c055",
+        "text": "Опрос ушедших насчитывает 260 ответов",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "ответили 260 человек — около 0,7% от ≈38 515 отменивших первое продление за период",
+        "quote_found": true,
+        "comment": "Мета-описание и нумерация ответов S-0001…S-0260 подтверждают 260 респондентов."
+      },
+      {
+        "id": "c056",
+        "text": "260 ответов составляют примерно 0,7% от отменивших",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "ответили 260 человек — около 0,7% от ≈38 515 отменивших первое продление за период",
+        "quote_found": true,
+        "comment": "260 / 38515 = 0,675% ≈ 0,7%."
+      },
+      {
+        "id": "c057",
+        "text": "Опрос ушедших смещён к активным отменяющим",
+        "kind": "user",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет сведений о смещении выборки относительно «активных отменяющих»; указано лишь, что форма необязательная при отмене автопродления."
+      },
+      {
+        "id": "c058",
+        "text": "Когорты являются синтетическими",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "synthetic: true\nnote: \"Синтетические данные.",
+        "quote_found": true,
+        "comment": "Мета-файл cohorts_by_channel.csv.meta.yaml явно помечает данные как синтетические (synthetic: true)."
+      },
+      {
+        "id": "c059",
+        "text": "Когорты внутренне согласованы",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |",
+        "quote_found": true,
+        "comment": "Во всех строках таблицы active_m1 ≥ active_m2 ≥ active_m3 и все значения не превышают new_subscribers — данные внутренне согласованы."
+      },
+      {
+        "id": "c060",
+        "text": "Расчёты удержания по каналам приведены выше",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах приведены только исходные counts (new_subscribers, active_mN) по каналам; расчётов удержания (доли) по каналам нет."
+      },
+      {
+        "id": "c061",
+        "text": "Расчёты удержания по каналам проверяемы",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| cohort_month | channel | new_subscribers | active_m1 | active_m2 | active_m3 |",
+        "quote_found": true,
+        "comment": "Таблица содержит по каждому каналу new_subscribers и active_mN, что позволяет рассчитать удержание (например, active_m1/new_subscribers) и проверить расчёты."
+      },
+      {
+        "id": "c062",
+        "text": "На сериалы приходится 38 млн",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "просит 38 млн ₽ на два сериала",
+        "quote_found": true,
+        "comment": "В брифе прямо указано, что контент-команда просит 38 млн ₽ именно на два сериала; то же подтверждено в записке контент-направления."
+      },
+      {
+        "id": "c063",
+        "text": "38 млн на сериалы не являются лекарством от метрики удержания",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "Мне не очевидно, что дело в контенте, но спорить без цифр не хочу.",
+        "quote_found": true,
+        "comment": "Материалы показывают, что снижение удержания сильно связано с каналом partner_bundle (низкое удержание ~30% и причины ухода «подключался ради акции»/«дорого» в опросе), а не только с контентом, однако прямого утверждения, что 38 млн на сериалы «не лекарство», в материалах нет."
+      }
+    ],
+    "all_extracted": [
+      {
+        "id": "c001",
+        "text": "Подготовлено к решению по бюджету до 15 ноября 2026",
+        "kind": "number",
+        "chunk": 1,
+        "section": "(начало документа)"
+      },
+      {
+        "id": "c002",
+        "text": "Удержание первого продления (M1) у канала organic составляло 65,8% в январе, 65,9% в апреле, 66,2% в июне и 65,7% в сентябре",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c003",
+        "text": "Удержание M1 у канала paid_performance составляло 56,9% в январе, 54,7% в апреле, 56,3% в июне и 56,8% в сентябре",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c004",
+        "text": "Удержание M1 у канала partner_bundle составляло 28,1% в апреле, 29,5% в июне и 29,8% в сентябре",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c005",
+        "text": "Общее удержание M1 по всем каналам составляло 62,7% в январе, 55,9% в апреле, 51,9% в июне и 48,0% в сентябре",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c006",
+        "text": "Удержание у organic за девять месяцев находилось в диапазоне 65,7–66,2%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c007",
+        "text": "Удержание у paid_performance находилось в диапазоне 54,7–56,9%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c008",
+        "text": "Общее удержание упало с 63% до 48%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c009",
+        "text": "Партнёрский канал partner_bundle вырос с 0 до примерно 44% новых подписок",
+        "kind": "market",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c010",
+        "text": "Удержание M1 у partner_bundle составляет примерно 29%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c011",
+        "text": "Если бы в сентябре структура каналов была как в январе, общее удержание составило бы около 62%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c012",
+        "text": "Опрос ушедших пользователей проведён с выборкой n=260, что составляет 0,7% от отменивших подписку",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c013",
+        "text": "Чтобы вернуть общее удержание M1 к 60% при текущей структуре каналов, необходимо поднять удержание partner_bundle с 29% до примерно 55%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c014",
+        "text": "Запрос на производство двух сериалов составляет 38 млн ₽",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c015",
+        "text": "Премьера двух сериалов запланирована на февраль–март 2027 года",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c016",
+        "text": "Эффект премьеры на удержание ожидается не раньше Q2 2027",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c017",
+        "text": "Механика partner_bundle: первый месяц за 1 ₽, далее списывается 349 ₽",
+        "kind": "product",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c018",
+        "text": "Среди ушедших пользователей доля причины «Нечего смотреть / каталог устарел» составляет ~40% у organic, ~30% у paid_performance и ~15% у partner_bundle",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c019",
+        "text": "Среди ушедших пользователей доля причины «Дорого» составляет ~20% у organic, ~15% у paid_performance и ~30% у partner_bundle",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c020",
+        "text": "Среди ушедших пользователей доля причины «Подключался ради акции» составляет 0% у organic, ~4% у paid_performance и ~30% у partner_bundle",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c021",
+        "text": "Среди ушедших пользователей доля причины «Посмотрел то, ради чего подключался» составляет ~15% у organic, ~15% у paid_performance и ~15% у partner_bundle",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c022",
+        "text": "Среди ушедших пользователей доля причины «Перешёл на другой сервис» составляет ~15% у organic, ~15% у paid_performance и ~8% у partner_bundle",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c023",
+        "text": "Среди ушедших пользователей доля причины «Технические проблемы» составляет ~8% у organic, ~10% у paid_performance и ~5% у partner_bundle",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c024",
+        "text": "Падение общей метрики удержания является эффектом смеси (mix shift) структуры каналов",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c025",
+        "text": "Весь провал общего удержания объясняется притоком канала partner_bundle, а не деградацией продукта для остальных подписчиков",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c026",
+        "text": "Когорта partner_bundle является структурно низкокачественной по дизайну промо-акции",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c027",
+        "text": "Причина «каталог устарел» является реальной, но вторичной причиной оттока",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c028",
+        "text": "Для большинства органических подписчиков текущего каталога достаточно (удержание органики 66%)",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c029",
+        "text": "У partner_bundle основные причины оттока — оффер акции и шок от цены после промо, а не качество контента",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c030",
+        "text": "Контент не способен поднять общее удержание M1 до 60% при текущей доле partner_bundle в 44% с удержанием 29%",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c031",
+        "text": "Контент-команда утверждает, что партнёрский канал дал почти половину подписок и проблема не в привлечении",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Главный вывод: падение удержания — не про контент, а про структуру привлечения"
+      },
+      {
+        "id": "c032",
+        "text": "В комментариях пользователей прямо приводится фраза «не знал, что спишут полную цену»",
+        "kind": "user",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c033",
+        "text": "Часть оттока пользователей вызвана неожиданным списанием средств",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c034",
+        "text": "Органический канал удерживает 66% пользователей",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c035",
+        "text": "Около 40% ушедших органических пользователей называют причиной ухода «нечего смотреть»",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c036",
+        "text": "Уход органических пользователей обусловлен не отсутствием контента, а навигацией и ощущением новизны",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c037",
+        "text": "От 5% до 10% ушедших во всех каналах называют технические проблемы, в частности «тормозит на телевизоре» и «падает качество вечером»",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c038",
+        "text": "В документе упоминается сумма 38 млн",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c039",
+        "text": "Стоимость partner_bundle после промо составляет 349 ₽",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c040",
+        "text": "Напоминание о списании отправляется за 3 дня до списания",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c041",
+        "text": "По договору допускается до 2 пуш/SMS от оператора в месяц",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c042",
+        "text": "Оффер-удержание предлагает скидку на 2–3 месяца",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c043",
+        "text": "Текущий охват опроса ушедших пользователей составляет 0,7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c044",
+        "text": "В опросе уже зафиксирован «шок от списания»",
+        "kind": "user",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c045",
+        "text": "Причиной оттока пользователей является «устаревший каталог»",
+        "kind": "user",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c046",
+        "text": "Наблюдается падение удержания пользователей",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c047",
+        "text": "Гипотеза про каталог частично верна для органического сегмента",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c048",
+        "text": "Падение aggregate-показателя удержания обусловлено mix shift от partner_bundle",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c049",
+        "text": "Промо-механика partner_bundle создаёт низкокачественную когорту пользователей",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c050",
+        "text": "В настоящее время новинки, выходящие каждый месяц, отсутствуют",
+        "kind": "product",
+        "chunk": 4,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c051",
+        "text": "Падение удержания вызвано промо-бандлом",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)"
+      },
+      {
+        "id": "c052",
+        "text": "Падение удержания не вызвано «устаревшим каталогом»",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)"
+      },
+      {
+        "id": "c053",
+        "text": "Промо-бандл приводит людей за 1 ₽",
+        "kind": "product",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)"
+      },
+      {
+        "id": "c054",
+        "text": "Промо-бандл теряет пользователей на цене 349 ₽",
+        "kind": "product",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)"
+      },
+      {
+        "id": "c055",
+        "text": "Опрос ушедших насчитывает 260 ответов",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)"
+      },
+      {
+        "id": "c056",
+        "text": "260 ответов составляют примерно 0,7% от отменивших",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)"
+      },
+      {
+        "id": "c057",
+        "text": "Опрос ушедших смещён к активным отменяющим",
+        "kind": "user",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)"
+      },
+      {
+        "id": "c058",
+        "text": "Когорты являются синтетическими",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)"
+      },
+      {
+        "id": "c059",
+        "text": "Когорты внутренне согласованы",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)"
+      },
+      {
+        "id": "c060",
+        "text": "Расчёты удержания по каналам приведены выше",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)"
+      },
+      {
+        "id": "c061",
+        "text": "Расчёты удержания по каналам проверяемы",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)"
+      },
+      {
+        "id": "c062",
+        "text": "На сериалы приходится 38 млн",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)"
+      },
+      {
+        "id": "c063",
+        "text": "38 млн на сериалы не являются лекарством от метрики удержания",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "5. Ожидаемый эффект (консервативно)"
+      }
+    ]
+  },
+  "options": null,
+  "promises": {
+    "total": 0,
+    "unbacked": 0,
+    "unclear": 0,
+    "backed": 0,
+    "items": []
+  },
+  "validation_plan": null,
+  "expected_choice": null,
+  "injection": null,
+  "heuristics": {
+    "status_quo": 0,
+    "kill": 0,
+    "baseline": 0,
+    "guardrail": 0,
+    "kill_criterion": 0,
+    "date_or_term": 3,
+    "injection_flag": 0
+  },
+  "judge_usage": {
+    "calls": 13,
+    "prompt_tokens": 93617,
+    "output_tokens": 62453,
+    "duration_s": 794.26,
+    "cost_estimate": {
+      "usd": 0.196683,
+      "rub": 15.7347,
+      "estimated": false,
+      "basis": "config/prices.yaml (as_of 2026-11-04): $0.7/2.1 за 1 млн токенов вход/выход"
+    },
+    "log": [
+      {
+        "step": "extract_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 398,
+        "output_tokens": 652,
+        "duration_s": 30.39,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1588,
+        "output_tokens": 5399,
+        "duration_s": 65.91,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1053,
+        "output_tokens": 3945,
+        "duration_s": 60.24,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 940,
+        "output_tokens": 3150,
+        "duration_s": 46.46,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 501,
+        "output_tokens": 1035,
+        "duration_s": 33.46,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[6]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 690,
+        "output_tokens": 5152,
+        "duration_s": 66.81,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12739,
+        "output_tokens": 6689,
+        "duration_s": 61.27,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12717,
+        "output_tokens": 7665,
+        "duration_s": 100.53,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12736,
+        "output_tokens": 8656,
+        "duration_s": 93.18,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12637,
+        "output_tokens": 5865,
+        "duration_s": 94.62,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12595,
+        "output_tokens": 6048,
+        "duration_s": 49.35,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[6]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12568,
+        "output_tokens": 4763,
+        "duration_s": 56.43,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[7]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12455,
+        "output_tokens": 3434,
+        "duration_s": 35.61,
+        "attempts": 1,
+        "errors": []
+      }
+    ]
+  },
+  "errors": []
+}

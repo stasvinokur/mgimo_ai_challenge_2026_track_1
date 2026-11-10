@@ -1,0 +1,343 @@
+{
+  "dataset": {
+    "n": 38,
+    "by_kind": {
+      "claim_type": 14,
+      "objection": 12,
+      "promise": 12
+    }
+  },
+  "clef": {
+    "model": "clef:cloud",
+    "n": 38,
+    "accuracy_claim_type": 1.0,
+    "accuracy_objection": 0.917,
+    "accuracy_promise": 1.0,
+    "accuracy_all": 0.974,
+    "robustness": {
+      "choice": {
+        "n": 24,
+        "changed_vs_base": 0.042,
+        "accuracy": 1.0,
+        "mean_abs_dp": 0.054
+      },
+      "negated": {
+        "n": 24,
+        "changed_vs_base": 0.0,
+        "accuracy": 0.958,
+        "mean_abs_dp": 0.037
+      },
+      "perm": {
+        "n": 38,
+        "changed_vs_base": 0.0,
+        "accuracy": 0.974,
+        "mean_abs_dp": 0.053
+      },
+      "renamed": {
+        "n": 38,
+        "changed_vs_base": 0.026,
+        "accuracy": 0.947,
+        "mean_abs_dp": 0.057
+      }
+    },
+    "variant_agreement": {
+      "n": 38,
+      "all_agree_share": 0.947,
+      "accuracy_when_agree": 1.0,
+      "accuracy_when_disagree": 0.5,
+      "base_errors": 1,
+      "base_errors_flagged_by_disagreement": 1
+    },
+    "calibration_maxprob": {
+      "n": 38,
+      "by_threshold": [
+        {
+          "threshold": 0.5,
+          "coverage": 1.0,
+          "accuracy_kept": 0.974,
+          "escalated": 0,
+          "errors_caught": 0,
+          "errors_total": 1
+        },
+        {
+          "threshold": 0.6,
+          "coverage": 1.0,
+          "accuracy_kept": 0.974,
+          "escalated": 0,
+          "errors_caught": 0,
+          "errors_total": 1
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.895,
+          "accuracy_kept": 1.0,
+          "escalated": 4,
+          "errors_caught": 1,
+          "errors_total": 1
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.868,
+          "accuracy_kept": 1.0,
+          "escalated": 5,
+          "errors_caught": 1,
+          "errors_total": 1
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.526,
+          "accuracy_kept": 1.0,
+          "escalated": 18,
+          "errors_caught": 1,
+          "errors_total": 1
+        }
+      ],
+      "ece_5bins": 0.095,
+      "mean_conf": 0.879,
+      "accuracy": 0.974
+    },
+    "calibration_confidence_field": {
+      "n": 14,
+      "by_threshold": [
+        {
+          "threshold": 0.5,
+          "coverage": 0.857,
+          "accuracy_kept": 1.0,
+          "escalated": 2,
+          "errors_caught": 0,
+          "errors_total": 0
+        },
+        {
+          "threshold": 0.6,
+          "coverage": 0.857,
+          "accuracy_kept": 1.0,
+          "escalated": 2,
+          "errors_caught": 0,
+          "errors_total": 0
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.571,
+          "accuracy_kept": 1.0,
+          "escalated": 6,
+          "errors_caught": 0,
+          "errors_total": 0
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.286,
+          "accuracy_kept": 1.0,
+          "escalated": 10,
+          "errors_caught": 0,
+          "errors_total": 0
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.0,
+          "accuracy_kept": null,
+          "escalated": 14,
+          "errors_caught": 0,
+          "errors_total": 0
+        }
+      ],
+      "ece_5bins": 0.302,
+      "mean_conf": 0.698,
+      "accuracy": 1.0
+    },
+    "latency_p50_s": 0.436,
+    "latency_max_s": 0.903,
+    "input_tokens_mean_per_request": 767.9,
+    "questions_per_request_mean": 4.26,
+    "errors": [
+      {
+        "id": "ob04",
+        "gold": "нет",
+        "got": "да",
+        "p": 0.669,
+        "note": "трудный: возражение есть, но это мнение без данных"
+      }
+    ],
+    "independence_check": [
+      {
+        "id": "ct04",
+        "max_abs_dprob_single_vs_packed": 0.0129,
+        "same_choice": true,
+        "input_tokens_single": 341,
+        "latency_single_s": 0.39,
+        "cost_usd_single": 8.18e-05
+      },
+      {
+        "id": "ob05",
+        "max_abs_dprob_single_vs_packed": 0.039,
+        "same_choice": true,
+        "input_tokens_single": 318,
+        "latency_single_s": 0.476,
+        "cost_usd_single": 7.63e-05
+      }
+    ]
+  },
+  "llm": {
+    "gpt-oss-20b-local": {
+      "model": "gpt-oss:20b",
+      "think": "low",
+      "n": 38,
+      "valid_choice": 1.0,
+      "accuracy_claim_type": 0.929,
+      "accuracy_objection": 0.833,
+      "accuracy_promise": 1.0,
+      "accuracy_all": 0.921,
+      "logprobs_available": 1.0,
+      "lp_coverage_mean": 1.0,
+      "lp_agrees_with_choice": 1.0,
+      "calibration_logprobs": {
+        "n": 38,
+        "by_threshold": [
+          {
+            "threshold": 0.5,
+            "coverage": 1.0,
+            "accuracy_kept": 0.921,
+            "escalated": 0,
+            "errors_caught": 0,
+            "errors_total": 3
+          },
+          {
+            "threshold": 0.6,
+            "coverage": 1.0,
+            "accuracy_kept": 0.921,
+            "escalated": 0,
+            "errors_caught": 0,
+            "errors_total": 3
+          },
+          {
+            "threshold": 0.7,
+            "coverage": 1.0,
+            "accuracy_kept": 0.921,
+            "escalated": 0,
+            "errors_caught": 0,
+            "errors_total": 3
+          },
+          {
+            "threshold": 0.8,
+            "coverage": 1.0,
+            "accuracy_kept": 0.921,
+            "escalated": 0,
+            "errors_caught": 0,
+            "errors_total": 3
+          },
+          {
+            "threshold": 0.9,
+            "coverage": 1.0,
+            "accuracy_kept": 0.921,
+            "escalated": 0,
+            "errors_caught": 0,
+            "errors_total": 3
+          }
+        ],
+        "ece_5bins": 0.079,
+        "mean_conf": 1.0,
+        "accuracy": 0.921
+      },
+      "calibration_self_report": {
+        "n": 38,
+        "by_threshold": [
+          {
+            "threshold": 0.5,
+            "coverage": 1.0,
+            "accuracy_kept": 0.921,
+            "escalated": 0,
+            "errors_caught": 0,
+            "errors_total": 3
+          },
+          {
+            "threshold": 0.6,
+            "coverage": 1.0,
+            "accuracy_kept": 0.921,
+            "escalated": 0,
+            "errors_caught": 0,
+            "errors_total": 3
+          },
+          {
+            "threshold": 0.7,
+            "coverage": 1.0,
+            "accuracy_kept": 0.921,
+            "escalated": 0,
+            "errors_caught": 0,
+            "errors_total": 3
+          },
+          {
+            "threshold": 0.8,
+            "coverage": 1.0,
+            "accuracy_kept": 0.921,
+            "escalated": 0,
+            "errors_caught": 0,
+            "errors_total": 3
+          },
+          {
+            "threshold": 0.9,
+            "coverage": 0.974,
+            "accuracy_kept": 0.919,
+            "escalated": 1,
+            "errors_caught": 0,
+            "errors_total": 3
+          }
+        ],
+        "ece_5bins": 0.042,
+        "mean_conf": 0.963,
+        "accuracy": 0.921
+      },
+      "robustness": {
+        "perm": {
+          "n": 14,
+          "changed_vs_base": 0.143,
+          "accuracy": 0.857,
+          "base_accuracy_same_subset": 0.929
+        },
+        "renamed": {
+          "n": 14,
+          "changed_vs_base": 0.071,
+          "accuracy": 0.857,
+          "base_accuracy_same_subset": 0.929
+        }
+      },
+      "variant_agreement": {
+        "n": 14,
+        "all_agree_share": 0.857,
+        "accuracy_when_agree": 1.0,
+        "accuracy_when_disagree": 0.5,
+        "base_errors": 1,
+        "base_errors_flagged_by_disagreement": 1
+      },
+      "latency_p50_s": 1.63,
+      "latency_max_s": 7.41,
+      "prompt_tokens_mean": 321.2,
+      "eval_tokens_mean": 79.4,
+      "errors": [
+        {
+          "id": "ct14",
+          "gold": "synthetic",
+          "got": "derived_metric",
+          "p_lp": 1.0,
+          "self": 0.95,
+          "note": "трудный: выглядит как количественные данные опроса, но респонденты синтетические"
+        },
+        {
+          "id": "ob03",
+          "gold": "нет",
+          "got": "да",
+          "p_lp": 1.0,
+          "self": 0.95,
+          "note": "данные поддерживают вариант"
+        },
+        {
+          "id": "ob10",
+          "gold": "нет",
+          "got": "да",
+          "p_lp": 1.0,
+          "self": 0.95,
+          "note": "данные поддерживают дешёвый вариант"
+        }
+      ]
+    }
+  },
+  "live_calls_this_run": {}
+}

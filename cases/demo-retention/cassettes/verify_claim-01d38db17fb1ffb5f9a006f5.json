@@ -1,0 +1,21 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"properties\":{\"label\":\"entailment\",\"confidence\":1,\"rationale\":\"Цитата содержит те же цифры, периоды и категории обращений, что и утверждение.\"}}",
+ "data": {
+  "properties": {
+   "label": "entailment",
+   "confidence": 1,
+   "rationale": "Цитата содержит те же цифры, периоды и категории обращений, что и утверждение."
+  }
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 332,
+  "output_tokens": 39,
+  "estimated": false,
+  "latency_ms": 496,
+  "escalated": false
+ }
+}

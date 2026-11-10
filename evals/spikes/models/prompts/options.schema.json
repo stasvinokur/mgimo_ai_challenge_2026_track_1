@@ -1,0 +1,69 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "options": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "status_quo",
+              "close",
+              "improve",
+              "pivot",
+              "new_direction"
+            ],
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "thesis": {
+            "type": "string"
+          },
+          "key_assumptions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "expected_effect": {
+            "type": "string"
+          },
+          "cost_level": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ],
+            "type": "string"
+          },
+          "strongest_objection": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "title",
+          "thesis",
+          "key_assumptions",
+          "expected_effect",
+          "cost_level",
+          "strongest_objection"
+        ],
+        "type": "object"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "type": "array"
+    }
+  },
+  "required": [
+    "options"
+  ],
+  "type": "object"
+}

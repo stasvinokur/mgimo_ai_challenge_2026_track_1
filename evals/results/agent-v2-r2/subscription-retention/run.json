@@ -1,0 +1,38 @@
+{
+  "brief_id": "subscription-retention",
+  "approach": "agent",
+  "status": "ok",
+  "started_at": "2026-11-09T09:23:48+00:00",
+  "finished_at": "2026-11-09T09:27:45+00:00",
+  "duration_s": 237.2,
+  "materials": [
+    "cohorts_by_channel.csv",
+    "content_team_memo.md",
+    "exit_survey.csv",
+    "market_online_cinema_2025.md",
+    "market_partner_subscriptions.md",
+    "partner_terms.md"
+  ],
+  "quality_off": "",
+  "costs": {
+    "calls": 139,
+    "input_tokens": 227439,
+    "output_tokens": 42960,
+    "usd_list_price": 0.104423,
+    "model_latency_s": 282.3,
+    "by_model": {
+      "deepseek-v4.1-flash:cloud": {
+        "calls": 43,
+        "tokens": 186532
+      },
+      "gemma4:31b-cloud": {
+        "calls": 31,
+        "tokens": 58304
+      },
+      "clef:cloud": {
+        "calls": 65,
+        "tokens": 25563
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "StrongVerifyDTO",
+ "text": "{\"label\":\"supported\",\"confidence\":0.95,\"note\":\"Цитата прямо указывает скидку 25% при годовой оплате и отмену подписки в один клик для сервиса «Где мои».\"}",
+ "data": {
+  "label": "supported",
+  "confidence": 0.95,
+  "note": "Цитата прямо указывает скидку 25% при годовой оплате и отмену подписки в один клик для сервиса «Где мои»."
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 371,
+  "output_tokens": 55,
+  "estimated": false,
+  "latency_ms": 1483,
+  "escalated": true
+ }
+}

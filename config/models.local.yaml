@@ -1,0 +1,29 @@
+# Профиль «дешёвый маршрут»: всё локально, без облака и без оплаты.
+# Включается переменной STRATEGIST_MODELS_PROFILE=local и накладывается поверх config/models.yaml
+# (словари сливаются по ключам, списки и значения заменяются).
+# gpt-oss:20b по замерам TASK-2: судьи 3,0/5 против 4,4–4,6 у облачных, p50 10,5 с; 13 ГБ.
+# decide() — запасной путь на той же модели (logprobs и enum работают только локально).
+# Локальная модель на ноутбуке отвечает медленнее облака — таймаут запроса длиннее.
+request_timeout_seconds: 900
+
+roles:
+  reasoning:
+    model: gpt-oss:20b
+    fallbacks: []
+    think: low
+    temperature: 0.3
+    num_ctx: 32768
+  workhorse:
+    model: gpt-oss:20b
+    fallbacks: []
+    think: low
+    temperature: 0.2
+    num_ctx: 32768
+  vision:
+    model: gpt-oss:20b
+    fallbacks: []
+
+decide:
+  default_backend: llm
+  llm_role: workhorse
+  escalate_role: reasoning

@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"Цитата подтверждает, что причина в цене, но не указывает конкретную сумму (199 ₽).\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "Цитата подтверждает, что причина в цене, но не указывает конкретную сумму (199 ₽)."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 262,
+  "output_tokens": 37,
+  "estimated": false,
+  "latency_ms": 525,
+  "escalated": false
+ }
+}

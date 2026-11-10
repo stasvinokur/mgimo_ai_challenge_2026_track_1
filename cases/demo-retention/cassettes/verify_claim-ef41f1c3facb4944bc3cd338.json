@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"В цитате не упоминается название сервиса «Скворечник».\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "В цитате не упоминается название сервиса «Скворечник»."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 331,
+  "output_tokens": 31,
+  "estimated": false,
+  "latency_ms": 466,
+  "escalated": false
+ }
+}

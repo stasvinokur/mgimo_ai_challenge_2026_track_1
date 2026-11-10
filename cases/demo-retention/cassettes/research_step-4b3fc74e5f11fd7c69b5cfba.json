@@ -1,0 +1,26 @@
+{
+ "task": "research_step",
+ "schema": "ResearchActionDTO",
+ "text": "```json\n{\"action\": \"compute_metric\", \"reason\": \"Для ответа на RQ-003 нужно детально проанализировать воронку онбординга, чтобы понять, на каком именно шаге теряются пользователи, и сравнить конверсии по платформам (iOS vs Android) и версиям ОС, если они доступны в данных.\", \"question_id\": \"RQ-003\", \"table_source_id\": \"SRC-004\", \"metric\": {\"agg\": \"ratio\", \"column\": \"5. Подключили ребёнка (разрешение на геолокацию за 3 дня)\", \"denominator_column\": \"4. Ребёнок установил приложение\", \"group_by\": \"cohort_month\"}}\n```",
+ "data": {
+  "action": "compute_metric",
+  "reason": "Для ответа на RQ-003 нужно детально проанализировать воронку онбординга, чтобы понять, на каком именно шаге теряются пользователи, и сравнить конверсии по платформам (iOS vs Android) и версиям ОС, если они доступны в данных.",
+  "question_id": "RQ-003",
+  "table_source_id": "SRC-004",
+  "metric": {
+   "agg": "ratio",
+   "column": "5. Подключили ребёнка (разрешение на геолокацию за 3 дня)",
+   "denominator_column": "4. Ребёнок установил приложение",
+   "group_by": "cohort_month"
+  }
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 3296,
+  "output_tokens": 162,
+  "estimated": false,
+  "latency_ms": 1122,
+  "escalated": false
+ }
+}

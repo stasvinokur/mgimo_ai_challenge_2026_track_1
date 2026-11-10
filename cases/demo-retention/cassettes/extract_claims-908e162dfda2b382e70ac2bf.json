@@ -1,0 +1,78 @@
+{
+ "task": "extract_claims",
+ "schema": "MetricPlanDTO",
+ "text": "{\"metrics\":[{\"name\":\"conversion_step_2\",\"description\":\"Конверсия из подключения услуги в установку приложения родителя\",\"agg\":\"ratio\",\"column\":\"2. Установили приложение родителя\",\"denominator_column\":\"1. Подключили услугу\",\"group_by\":\"Канал\",\"unit\":\"доля\",\"segment_column\":\"Канал\"},{\"name\":\"conversion_step_3\",\"description\":\"Конверсия из установки приложения родителя в отправку приглашения\",\"agg\":\"ratio\",\"column\":\"3. Отправили приглашение ребёнку\",\"denominator_column\":\"2. Установили приложение родителя\",\"group_by\":\"Канал\",\"unit\":\"доля\",\"segment_column\":\"Канал\"},{\"name\":\"conversion_step_4\",\"description\":\"Конверсия из приглашения в установку приложения ребёнком\",\"agg\":\"ratio\",\"column\":\"4. Ребёнок установил приложение\",\"denominator_column\":\"3. Отправили приглашение ребёнку\",\"group_by\":\"Канал\",\"unit\":\"доля\",\"segment_column\":\"Канал\"},{\"name\":\"conversion_step_5\",\"description\":\"Конверсия из установки приложения ребёнком в подключение (геолокация)\",\"agg\":\"ratio\",\"column\":\"5. Подключили ребёнка (разрешение на геолокацию за 3 дня)\",\"denominator_column\":\"4. Ребёнок установил приложение\",\"group_by\":\"Канал\",\"unit\":\"доля\",\"segment_column\":\"Канал\"},{\"name\":\"iphone_share_step_4\",\"description\":\"Доля iPhone среди установивших приложение ребёнок\",\"agg\":\"ratio\",\"column\":\"4a. …из них iPhone\",\"denominator_column\":\"4. Ребёнок установил приложение\",\"group_by\":\"Канал\",\"unit\":\"доля\",\"segment_column\":\"Канал\"},{\"name\":\"iphone_share_step_5\",\"description\":\"Доля iPhone среди подключивших ребёнка (геолокация)\",\"agg\":\"ratio\",\"column\":\"5a. …из них iPhone\",\"denominator_column\":\"5. Подключили ребёнка (разрешение на геолокацию за 3 дня)\",\"group_by\":\"Канал\",\"unit\":\"доля\",\"segment_column\":\"Канал\"}]}",
+ "data": {
+  "metrics": [
+   {
+    "name": "conversion_step_2",
+    "description": "Конверсия из подключения услуги в установку приложения родителя",
+    "agg": "ratio",
+    "column": "2. Установили приложение родителя",
+    "denominator_column": "1. Подключили услугу",
+    "group_by": "Канал",
+    "unit": "доля",
+    "segment_column": "Канал"
+   },
+   {
+    "name": "conversion_step_3",
+    "description": "Конверсия из установки приложения родителя в отправку приглашения",
+    "agg": "ratio",
+    "column": "3. Отправили приглашение ребёнку",
+    "denominator_column": "2. Установили приложение родителя",
+    "group_by": "Канал",
+    "unit": "доля",
+    "segment_column": "Канал"
+   },
+   {
+    "name": "conversion_step_4",
+    "description": "Конверсия из приглашения в установку приложения ребёнком",
+    "agg": "ratio",
+    "column": "4. Ребёнок установил приложение",
+    "denominator_column": "3. Отправили приглашение ребёнку",
+    "group_by": "Канал",
+    "unit": "доля",
+    "segment_column": "Канал"
+   },
+   {
+    "name": "conversion_step_5",
+    "description": "Конверсия из установки приложения ребёнком в подключение (геолокация)",
+    "agg": "ratio",
+    "column": "5. Подключили ребёнка (разрешение на геолокацию за 3 дня)",
+    "denominator_column": "4. Ребёнок установил приложение",
+    "group_by": "Канал",
+    "unit": "доля",
+    "segment_column": "Канал"
+   },
+   {
+    "name": "iphone_share_step_4",
+    "description": "Доля iPhone среди установивших приложение ребёнок",
+    "agg": "ratio",
+    "column": "4a. …из них iPhone",
+    "denominator_column": "4. Ребёнок установил приложение",
+    "group_by": "Канал",
+    "unit": "доля",
+    "segment_column": "Канал"
+   },
+   {
+    "name": "iphone_share_step_5",
+    "description": "Доля iPhone среди подключивших ребёнка (геолокация)",
+    "agg": "ratio",
+    "column": "5a. …из них iPhone",
+    "denominator_column": "5. Подключили ребёнка (разрешение на геолокацию за 3 дня)",
+    "group_by": "Канал",
+    "unit": "доля",
+    "segment_column": "Канал"
+   }
+  ]
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 1834,
+  "output_tokens": 460,
+  "estimated": false,
+  "latency_ms": 2929,
+  "escalated": false
+ }
+}

@@ -1,0 +1,37 @@
+{
+  "brief_id": "feature-sunset",
+  "approach": "agent",
+  "status": "ok",
+  "started_at": "2026-11-07T09:06:13+00:00",
+  "finished_at": "2026-11-07T09:37:51+00:00",
+  "duration_s": 1898.3,
+  "materials": [
+    "app_reviews_list.csv",
+    "eng_cost_note.md",
+    "feature_usage_monthly.csv",
+    "market_egrocery_2025.md",
+    "retention_by_list_usage.csv"
+  ],
+  "quality_off": "",
+  "costs": {
+    "calls": 140,
+    "input_tokens": 237462,
+    "output_tokens": 41044,
+    "usd_list_price": 0.107127,
+    "model_latency_s": 3819.2,
+    "by_model": {
+      "deepseek-v4.1-flash:cloud": {
+        "calls": 56,
+        "tokens": 201062
+      },
+      "gemma4:31b-cloud": {
+        "calls": 25,
+        "tokens": 51901
+      },
+      "clef:cloud": {
+        "calls": 59,
+        "tokens": 25543
+      }
+    }
+  }
+}

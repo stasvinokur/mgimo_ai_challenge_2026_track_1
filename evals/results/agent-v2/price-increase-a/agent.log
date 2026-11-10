@@ -1,0 +1,234 @@
+Кейс eval-price-increase-a создан: материалов 5
+▶ intake
+   frame → deepseek-v4.1-flash:cloud · 1857/1529 ток. · 70.8 с
+   frame → deepseek-v4.1-flash:cloud · 1857/1529 ток. · 70.8 с
+✓ intake
+▶ clarify
+✓ clarify
+▶ research_plan:0
+   research_plan → deepseek-v4.1-flash:cloud · 2327/3452 ток. · 45.5 с
+   research_plan → deepseek-v4.1-flash:cloud · 2327/3452 ток. · 45.5 с
+✓ research_plan:0
+▶ research_gate:0
+✓ research_gate:0
+▶ read:SRC-002
+▶ read:SRC-004
+▶ read:SRC-003
+▶ read:SRC-001
+   extract_evidence → gemma4:31b-cloud · 1414/663 ток. · 47.2 с
+   extract_evidence → gemma4:31b-cloud · 1414/663 ток. · 47.2 с
+✓ read:SRC-004
+▶ read:SRC-005
+   extract_evidence → gemma4:31b-cloud · 1237/372 ток. · 48.6 с
+   extract_evidence → gemma4:31b-cloud · 1237/372 ток. · 48.6 с
+✓ read:SRC-002
+   extract_evidence → gemma4:31b-cloud · 1314/233 ток. · 49.3 с
+   extract_evidence → gemma4:31b-cloud · 1314/233 ток. · 49.3 с
+✓ read:SRC-003
+   extract_evidence → gemma4:31b-cloud · 1428/627 ток. · 50.8 с
+   extract_evidence → gemma4:31b-cloud · 1428/627 ток. · 50.8 с
+✓ read:SRC-001
+   extract_claims → gemma4:31b-cloud · 1448/243 ток. · 11.0 с
+   extract_claims → gemma4:31b-cloud · 1448/243 ток. · 11.0 с
+✓ read:SRC-005
+▶ merge
+✓ merge
+▶ research_loop
+   research_step → gemma4:31b-cloud · 2088/149 ток. · 72.1 с
+   research_step → gemma4:31b-cloud · 2088/149 ток. · 72.1 с
+   research_step → gemma4:31b-cloud · 2166/88 ток. · 10.0 с
+   research_step → gemma4:31b-cloud · 2166/88 ток. · 10.0 с
+   research_step → gemma4:31b-cloud · 2190/87 ток. · 49.3 с
+   research_step → gemma4:31b-cloud · 2190/87 ток. · 49.3 с
+   research_step → gemma4:31b-cloud · 2215/75 ток. · 31.6 с
+   research_step → gemma4:31b-cloud · 2215/75 ток. · 31.6 с
+   research_step → gemma4:31b-cloud · 2239/156 ток. · 31.1 с
+   research_step → gemma4:31b-cloud · 2239/156 ток. · 31.1 с
+✓ research_loop
+▶ claims
+   extract_claims → gemma4:31b-cloud · 3772/1619 ток. · 37.1 с
+   extract_claims → gemma4:31b-cloud · 3772/1619 ток. · 37.1 с
+   ↻ route.misrouted: {'question': 'eval-price-increase-a:CL-009:type', 'task': 
+'claim_type', 'confidence': 0.447, 'backend': 'systemone'}
+   ↻ route.misrouted: {'question': 'eval-price-increase-a:CL-014:type', 'task': 
+'claim_type', 'confidence': 0.494, 'backend': 'systemone'}
+   claim_type → deepseek-v4.1-flash:cloud · 322/13 ток. · 6.4 с
+   ↻ route.misrouted: {'question': 'eval-price-increase-a:CL-016:type', 'task': 
+'claim_type', 'confidence': 0.5007, 'backend': 'systemone'}
+   ↻ route.misrouted: {'question': 'eval-price-increase-a:CL-017:type', 'task': 
+'claim_type', 'confidence': 0.5662, 'backend': 'systemone'}
+   ↻ route.misrouted: {'question': 'eval-price-increase-a:CL-018:type', 'task': 
+'claim_type', 'confidence': 0.5062, 'backend': 'systemone'}
+   claim_type → deepseek-v4.1-flash:cloud · 300/13 ток. · 26.2 с
+   claim_type → deepseek-v4.1-flash:cloud · 317/12 ток. · 33.6 с
+   claim_type → deepseek-v4.1-flash:cloud · 316/12 ток. · 33.6 с
+   claim_type → deepseek-v4.1-flash:cloud · 316/12 ток. · 34.0 с
+   ↻ route.misrouted: {'question': 'eval-price-increase-a:CL-021:type', 'task': 
+'claim_type', 'confidence': 0.5809, 'backend': 'systemone'}
+   claim_type → deepseek-v4.1-flash:cloud · 311/13 ток. · 26.5 с
+   verify_claim → gemma4:31b-cloud · 262/36 ток. · 7.8 с
+   ↻ route.escalated: {'task': 'verify_claim', 'role': 'reasoning', 'level': 1}
+   verify_claim → deepseek-v4.1-flash:cloud · 352/42 ток. · 22.4 с
+   verify_claim → deepseek-v4.1-flash:cloud · 352/42 ток. · 22.4 с
+   verify_claim → gemma4:31b-cloud · 259/28 ток. · 16.9 с
+   verify_claim → gemma4:31b-cloud · 270/37 ток. · 17.0 с
+   verify_claim → gemma4:31b-cloud · 260/38 ток. · 28.7 с
+   verify_claim → gemma4:31b-cloud · 348/49 ток. · 11.2 с
+   verify_claim → gemma4:31b-cloud · 281/28 ток. · 30.7 с
+   verify_claim → gemma4:31b-cloud · 282/44 ток. · 26.5 с
+   verify_claim → gemma4:31b-cloud · 286/32 ток. · 27.8 с
+   verify_claim → gemma4:31b-cloud · 303/45 ток. · 23.3 с
+   verify_claim → gemma4:31b-cloud · 256/36 ток. · 14.9 с
+   ↻ route.escalated: {'task': 'verify_claim', 'role': 'reasoning', 'level': 1}
+   verify_claim → deepseek-v4.1-flash:cloud · 344/41 ток. · 30.6 с
+   verify_claim → deepseek-v4.1-flash:cloud · 344/41 ток. · 30.6 с
+   verify_claim → gemma4:31b-cloud · 278/41 ток. · 14.1 с
+   verify_claim → gemma4:31b-cloud · 318/36 ток. · 17.0 с
+   verify_claim → gemma4:31b-cloud · 293/53 ток. · 30.7 с
+   ↻ route.escalated: {'task': 'verify_claim', 'role': 'reasoning', 'level': 1}
+   verify_claim → deepseek-v4.1-flash:cloud · 364/55 ток. · 3.8 с
+   verify_claim → deepseek-v4.1-flash:cloud · 364/55 ток. · 3.8 с
+   verify_claim → gemma4:31b-cloud · 299/39 ток. · 34.4 с
+   verify_claim → gemma4:31b-cloud · 320/59 ток. · 34.4 с
+   ↻ route.escalated: {'task': 'verify_claim', 'role': 'reasoning', 'level': 1}
+   verify_claim → deepseek-v4.1-flash:cloud · 405/41 ток. · 15.8 с
+   verify_claim → deepseek-v4.1-flash:cloud · 405/41 ток. · 15.8 с
+   verify_claim → gemma4:31b-cloud · 278/28 ток. · 13.4 с
+   verify_claim → gemma4:31b-cloud · 292/44 ток. · 21.4 с
+✓ claims
+▶ situation
+   frame → deepseek-v4.1-flash:cloud · 2896/272 ток. · 22.0 с
+   frame → deepseek-v4.1-flash:cloud · 2896/272 ток. · 22.0 с
+✓ situation
+▶ options
+   options → deepseek-v4.1-flash:cloud · 3261/3894 ток. · 40.9 с
+   options → deepseek-v4.1-flash:cloud · 3261/3894 ток. · 40.9 с
+✓ options
+▶ stress
+   premortem → deepseek-v4.1-flash:cloud · 3589/1216 ток. · 21.1 с
+   premortem → deepseek-v4.1-flash:cloud · 3589/1216 ток. · 21.1 с
+   steelman → deepseek-v4.1-flash:cloud · 3409/396 ток. · 8.3 с
+   steelman → deepseek-v4.1-flash:cloud · 3409/396 ток. · 8.3 с
+   premortem → deepseek-v4.1-flash:cloud · 3580/1025 ток. · 25.7 с
+   premortem → deepseek-v4.1-flash:cloud · 3580/1025 ток. · 25.7 с
+   steelman → deepseek-v4.1-flash:cloud · 3409/329 ток. · 30.4 с
+   steelman → deepseek-v4.1-flash:cloud · 3409/329 ток. · 30.4 с
+   premortem → deepseek-v4.1-flash:cloud · 3567/1062 ток. · 13.7 с
+   premortem → deepseek-v4.1-flash:cloud · 3567/1062 ток. · 13.7 с
+   steelman → deepseek-v4.1-flash:cloud · 3409/325 ток. · 42.0 с
+   steelman → deepseek-v4.1-flash:cloud · 3409/325 ток. · 42.0 с
+   premortem → deepseek-v4.1-flash:cloud · 3590/1217 ток. · 6.4 с
+   premortem → deepseek-v4.1-flash:cloud · 3590/1217 ток. · 6.4 с
+   steelman → deepseek-v4.1-flash:cloud · 3409/281 ток. · 5.8 с
+   steelman → deepseek-v4.1-flash:cloud · 3409/281 ток. · 5.8 с
+   premortem → deepseek-v4.1-flash:cloud · 3576/1132 ток. · 6.1 с
+   premortem → deepseek-v4.1-flash:cloud · 3576/1132 ток. · 6.1 с
+   steelman → deepseek-v4.1-flash:cloud · 3409/300 ток. · 14.4 с
+   steelman → deepseek-v4.1-flash:cloud · 3409/300 ток. · 14.4 с
+   role_panel → gemma4:31b-cloud · 4163/371 ток. · 11.2 с
+   role_panel → gemma4:31b-cloud · 4163/371 ток. · 11.2 с
+   role_panel → gemma4:31b-cloud · 4163/253 ток. · 2.4 с
+   role_panel → gemma4:31b-cloud · 4163/253 ток. · 2.4 с
+   role_panel → gemma4:31b-cloud · 4165/354 ток. · 2.7 с
+   role_panel → gemma4:31b-cloud · 4165/354 ток. · 2.7 с
+   role_panel → gemma4:31b-cloud · 4165/257 ток. · 2.2 с
+   role_panel → gemma4:31b-cloud · 4165/257 ток. · 2.2 с
+   role_panel → gemma4:31b-cloud · 4171/348 ток. · 2.5 с
+   role_panel → gemma4:31b-cloud · 4171/348 ток. · 2.5 с
+   role_panel → gemma4:31b-cloud · 4171/231 ток. · 2.2 с
+   role_panel → gemma4:31b-cloud · 4171/231 ток. · 2.2 с
+   decision_model → deepseek-v4.1-flash:cloud · 4435/722 ток. · 2.7 с
+   decision_model → deepseek-v4.1-flash:cloud · 4435/722 ток. · 2.7 с
+✓ stress
+▶ option_gate
+✓ option_gate
+▶ product
+   product_strategy → deepseek-v4.1-flash:cloud · 4421/2979 ток. · 10.6 с
+   product_strategy → deepseek-v4.1-flash:cloud · 4421/2979 ток. · 10.6 с
+   product_strategy → deepseek-v4.1-flash:cloud · 5853/2747 ток. · 8.6 с
+   product_strategy → deepseek-v4.1-flash:cloud · 5853/2747 ток. · 8.6 с
+✓ product
+▶ comms:0
+   comms_strategy → deepseek-v4.1-flash:cloud · 5377/3734 ток. · 9.9 с
+   comms_strategy → deepseek-v4.1-flash:cloud · 5377/3734 ток. · 9.9 с
+✓ comms:0
+▶ promise_lint:0
+   ↻ route.misrouted: {'question': 'eval-price-increase-a:PRM-007:semantic', 
+'task': 'promise_supported', 'confidence': 0.0, 'backend': 'systemone'}
+   promise_supported → deepseek-v4.1-flash:cloud · 335/10 ток. · 2.9 с
+✓ promise_lint:0
+▶ comms:1
+   comms_strategy → deepseek-v4.1-flash:cloud · 5938/3893 ток. · 13.7 с
+   comms_strategy → deepseek-v4.1-flash:cloud · 5938/3893 ток. · 13.7 с
+✓ comms:1
+▶ promise_lint:1
+   ↻ route.misrouted: {'question': 'eval-price-increase-a:PRM-010:semantic', 
+'task': 'promise_supported', 'confidence': 0.0, 'backend': 'systemone'}
+   ↻ route.misrouted: {'question': 'eval-price-increase-a:PRM-013:semantic', 
+'task': 'promise_supported', 'confidence': 0.0, 'backend': 'systemone'}
+   ↻ route.misrouted: {'question': 'eval-price-increase-a:PRM-014:semantic', 
+'task': 'promise_supported', 'confidence': 0.0, 'backend': 'systemone'}
+   promise_supported → deepseek-v4.1-flash:cloud · 277/10 ток. · 4.5 с
+   promise_supported → deepseek-v4.1-flash:cloud · 390/10 ток. · 4.3 с
+   promise_supported → deepseek-v4.1-flash:cloud · 357/10 ток. · 4.8 с
+✓ promise_lint:1
+▶ experiments
+   experiments → deepseek-v4.1-flash:cloud · 3097/2540 ток. · 15.0 с
+   experiments → deepseek-v4.1-flash:cloud · 3097/2540 ток. · 15.0 с
+   experiments → deepseek-v4.1-flash:cloud · 3027/194 ток. · 4.7 с
+   experiments → deepseek-v4.1-flash:cloud · 3027/194 ток. · 4.7 с
+   judge → deepseek-v4.1-flash:cloud · 3021/188 ток. · 6.3 с
+   judge → deepseek-v4.1-flash:cloud · 3021/188 ток. · 6.3 с
+   experiments → deepseek-v4.1-flash:cloud · 3020/187 ток. · 8.0 с
+   experiments → deepseek-v4.1-flash:cloud · 3020/187 ток. · 8.0 с
+   experiments → deepseek-v4.1-flash:cloud · 3021/207 ток. · 4.6 с
+   experiments → deepseek-v4.1-flash:cloud · 3021/207 ток. · 4.6 с
+   judge → deepseek-v4.1-flash:cloud · 3015/154 ток. · 2.1 с
+   judge → deepseek-v4.1-flash:cloud · 3015/154 ток. · 2.1 с
+   experiments → deepseek-v4.1-flash:cloud · 3014/193 ток. · 2.0 с
+   experiments → deepseek-v4.1-flash:cloud · 3014/193 ток. · 2.0 с
+   experiments → deepseek-v4.1-flash:cloud · 3013/176 ток. · 2.1 с
+   experiments → deepseek-v4.1-flash:cloud · 3013/176 ток. · 2.1 с
+   judge → deepseek-v4.1-flash:cloud · 3007/201 ток. · 5.8 с
+   judge → deepseek-v4.1-flash:cloud · 3007/201 ток. · 5.8 с
+   experiments → deepseek-v4.1-flash:cloud · 3006/181 ток. · 3.9 с
+   experiments → deepseek-v4.1-flash:cloud · 3006/181 ток. · 3.9 с
+   experiments → deepseek-v4.1-flash:cloud · 3039/185 ток. · 5.7 с
+   experiments → deepseek-v4.1-flash:cloud · 3039/185 ток. · 5.7 с
+   judge → deepseek-v4.1-flash:cloud · 3033/195 ток. · 4.4 с
+   judge → deepseek-v4.1-flash:cloud · 3033/195 ток. · 4.4 с
+   experiments → deepseek-v4.1-flash:cloud · 3032/245 ток. · 4.0 с
+   experiments → deepseek-v4.1-flash:cloud · 3032/245 ток. · 4.0 с
+   experiments → deepseek-v4.1-flash:cloud · 3025/200 ток. · 2.0 с
+   experiments → deepseek-v4.1-flash:cloud · 3025/200 ток. · 2.0 с
+   judge → deepseek-v4.1-flash:cloud · 3019/217 ток. · 2.1 с
+   judge → deepseek-v4.1-flash:cloud · 3019/217 ток. · 2.1 с
+   experiments → deepseek-v4.1-flash:cloud · 3018/187 ток. · 2.1 с
+   experiments → deepseek-v4.1-flash:cloud · 3018/187 ток. · 2.1 с
+✓ experiments
+▶ commit
+   experiments → deepseek-v4.1-flash:cloud · 2620/1537 ток. · 7.2 с
+   experiments → deepseek-v4.1-flash:cloud · 2620/1537 ток. · 7.2 с
+✓ commit
+▶ summary
+   executive_summary → deepseek-v4.1-flash:cloud · 4917/932 ток. · 4.4 с
+   executive_summary → deepseek-v4.1-flash:cloud · 4917/932 ток. · 4.4 с
+✓ summary
+▶ report
+✓ report
+         Кейс eval-price-increase-a         
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Поле                  ┃ Значение         ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│ Этап                  │ Готово           │
+│ Ждёт решения человека │ —                │
+│ Завершено             │ да               │
+│ Шагов выполнено       │ 25               │
+│ Вызовов моделей       │ 153              │
+│ Токены вход/выход     │ 207 517 / 45 517 │
+│ Стоимость по прайсу   │ $0.1018 ≈ 8.14 ₽ │
+└───────────────────────┴──────────────────┘
+Готово. Отчёт: 
+evals/results/agent-v
+2/cases/eval-price-increase-a/out/report.md
+

@@ -1,0 +1,25 @@
+# Локальные хуки: работают без загрузки сторонних репозиториев, через окружение uv.
+repos:
+  - repo: local
+    hooks:
+      - id: check-secrets
+        name: Сканер секретов
+        entry: uv run python scripts/check_secrets.py
+        language: system
+        pass_filenames: true
+      - id: ruff
+        name: ruff
+        entry: uv run ruff check
+        language: system
+        types: [python]
+      - id: ruff-format
+        name: ruff format
+        entry: uv run ruff format --check --force-exclude
+        language: system
+        types: [python]
+      - id: lint-imports
+        name: Контракты слоёв (import-linter)
+        entry: uv run lint-imports
+        language: system
+        pass_filenames: false
+        types: [python]

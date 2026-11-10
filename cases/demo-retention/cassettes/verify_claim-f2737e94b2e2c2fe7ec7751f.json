@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"Цитата говорит об отказе из-за альтернативы в экосистеме в общем, но не называет конкретные приложения «Скворечник» и «Локатор».\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "Цитата говорит об отказе из-за альтернативы в экосистеме в общем, но не называет конкретные приложения «Скворечник» и «Локатор»."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 274,
+  "output_tokens": 54,
+  "estimated": false,
+  "latency_ms": 625,
+  "escalated": false
+ }
+}

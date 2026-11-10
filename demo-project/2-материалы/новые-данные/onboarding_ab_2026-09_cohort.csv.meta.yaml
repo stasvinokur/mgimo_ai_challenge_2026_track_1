@@ -1,0 +1,9 @@
+title: "Когорта сентября 2026: A/B-тест нового онбординга «Скворечника», первая оплата"
+kind: table
+synthetic: true
+source_url: null
+publisher: "Аналитика продукта «Скворечник» (вымышленная команда)"
+published: 2026-11-02
+retrieved: 2026-11-04
+note: "СИНТЕТИКА: продукт и данные вымышлены. Свежая когорта подключений 2026-09, данные по 31.10.2026. arm — control (старый онбординг) или new_onboarding (QR-код, инструкция разрешений для iPhone, напоминание через 24 часа). Одна строка — плечо x канал x возраст ребёнка; столбцы — шаги воронки в тех же определениях, что internal_onboarding_funnel.xlsx (для child_age_group = unknown приложение родителя не установлено, connected — число таких подключений), paid_m1 — первая оплата, paid_m1_paired — из них подключившие ребёнка. Протокол — onboarding_ab_2026-09_protocol.md."
+generator: "uv run python cases/demo-retention/generate.py"

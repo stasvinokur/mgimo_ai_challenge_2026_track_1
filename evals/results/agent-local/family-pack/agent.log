@@ -1,0 +1,218 @@
+Кейс eval-family-pack создан: материалов 6
+▶ intake
+   playbook → gpt-oss:20b · 461/97 ток. · 3.9 с
+   frame → gpt-oss:20b · 1789/352 ток. · 18.7 с
+   frame → gpt-oss:20b · 1789/352 ток. · 18.7 с
+✓ intake
+▶ research_plan:0
+   research_plan → gpt-oss:20b · 1860/1105 ток. · 52.4 с
+   research_plan → gpt-oss:20b · 1860/1105 ток. · 52.4 с
+✓ research_plan:0
+▶ research_gate:0
+✓ research_gate:0
+▶ read:SRC-004
+▶ read:SRC-001
+▶ read:SRC-003
+▶ read:SRC-002
+   extract_evidence → gpt-oss:20b · 1068/245 ток. · 12.9 с
+   extract_evidence → gpt-oss:20b · 1068/245 ток. · 12.9 с
+✓ read:SRC-002
+▶ read:SRC-005
+   extract_evidence → gpt-oss:20b · 1210/314 ток. · 28.0 с
+   extract_evidence → gpt-oss:20b · 1210/314 ток. · 28.0 с
+✓ read:SRC-003
+▶ read:SRC-006
+   extract_evidence → gpt-oss:20b · 1526/651 ток. · 59.3 с
+   extract_evidence → gpt-oss:20b · 1526/651 ток. · 59.3 с
+✓ read:SRC-004
+   extract_evidence → gpt-oss:20b · 1116/253 ток. · 70.3 с
+   extract_evidence → gpt-oss:20b · 1116/253 ток. · 70.3 с
+✓ read:SRC-001
+   extract_claims → gpt-oss:20b · 1195/185 ток. · 67.2 с
+   extract_claims → gpt-oss:20b · 1195/185 ток. · 67.2 с
+✓ read:SRC-005
+   extract_claims → gpt-oss:20b · 1265/228 ток. · 63.2 с
+   extract_claims → gpt-oss:20b · 1265/228 ток. · 63.2 с
+✓ read:SRC-006
+▶ merge
+✓ merge
+▶ research_loop
+   research_step → gpt-oss:20b · 1940/100 ток. · 7.6 с
+   research_step → gpt-oss:20b · 1940/100 ток. · 7.6 с
+✓ research_loop
+▶ claims
+   extract_claims → gpt-oss:20b · 3298/1453 ток. · 73.7 с
+   extract_claims → gpt-oss:20b · 3298/1453 ток. · 73.7 с
+   claim_type → gpt-oss:20b · 385/77 ток. · 3.6 с
+   claim_type → gpt-oss:20b · 377/89 ток. · 4.4 с
+   claim_type → gpt-oss:20b · 358/118 ток. · 5.3 с
+   claim_type → gpt-oss:20b · 361/85 ток. · 4.2 с
+   claim_type → gpt-oss:20b · 366/117 ток. · 5.1 с
+   claim_type → gpt-oss:20b · 358/69 ток. · 3.0 с
+   claim_type → gpt-oss:20b · 353/70 ток. · 3.0 с
+   claim_type → gpt-oss:20b · 359/87 ток. · 3.8 с
+   claim_type → gpt-oss:20b · 361/77 ток. · 3.5 с
+   claim_type → gpt-oss:20b · 361/62 ток. · 2.9 с
+   claim_type → gpt-oss:20b · 361/77 ток. · 3.7 с
+   claim_type → gpt-oss:20b · 361/76 ток. · 3.6 с
+   claim_type → gpt-oss:20b · 374/64 ток. · 2.6 с
+   claim_type → gpt-oss:20b · 367/83 ток. · 4.3 с
+   claim_type → gpt-oss:20b · 374/86 ток. · 3.6 с
+   claim_type → gpt-oss:20b · 381/36 ток. · 1.8 с
+   claim_type → gpt-oss:20b · 371/82 ток. · 3.9 с
+   claim_type → gpt-oss:20b · 358/69 ток. · 3.5 с
+   claim_type → gpt-oss:20b · 369/86 ток. · 3.7 с
+   claim_type → gpt-oss:20b · 371/79 ток. · 3.3 с
+   claim_type → gpt-oss:20b · 373/83 ток. · 3.9 с
+   claim_type → gpt-oss:20b · 376/83 ток. · 3.8 с
+   claim_type → gpt-oss:20b · 376/77 ток. · 3.6 с
+   claim_type → gpt-oss:20b · 366/80 ток. · 3.8 с
+   claim_type → gpt-oss:20b · 374/100 ток. · 4.3 с
+   claim_type → gpt-oss:20b · 373/68 ток. · 3.3 с
+   verify_claim → gpt-oss:20b · 373/227 ток. · 9.7 с
+   ↻ route.escalated: {'task': 'verify_claim', 'role': 'reasoning', 'level': 1}
+   verify_claim → gpt-oss:20b · 437/81 ток. · 4.8 с
+   verify_claim → gpt-oss:20b · 437/81 ток. · 4.8 с
+   verify_claim → gpt-oss:20b · 364/48 ток. · 2.5 с
+   verify_claim → gpt-oss:20b · 324/165 ток. · 8.0 с
+   ↻ route.escalated: {'task': 'verify_claim', 'role': 'reasoning', 'level': 1}
+   verify_claim → gpt-oss:20b · 390/91 ток. · 4.9 с
+   verify_claim → gpt-oss:20b · 390/91 ток. · 4.9 с
+   verify_claim → gpt-oss:20b · 329/219 ток. · 9.7 с
+   ↻ route.escalated: {'task': 'verify_claim', 'role': 'reasoning', 'level': 1}
+   verify_claim → gpt-oss:20b · 395/55 ток. · 2.7 с
+   verify_claim → gpt-oss:20b · 395/55 ток. · 2.7 с
+   verify_claim → gpt-oss:20b · 341/100 ток. · 5.0 с
+   verify_claim → gpt-oss:20b · 337/108 ток. · 5.2 с
+   verify_claim → gpt-oss:20b · 321/135 ток. · 6.1 с
+   verify_claim → gpt-oss:20b · 341/68 ток. · 3.3 с
+   verify_claim → gpt-oss:20b · 338/74 ток. · 3.6 с
+   verify_claim → gpt-oss:20b · 338/119 ток. · 5.5 с
+   verify_claim → gpt-oss:20b · 338/78 ток. · 3.6 с
+   verify_claim → gpt-oss:20b · 338/73 ток. · 3.3 с
+   verify_claim → gpt-oss:20b · 340/100 ток. · 4.3 с
+   verify_claim → gpt-oss:20b · 340/127 ток. · 4.5 с
+   verify_claim → gpt-oss:20b · 340/127 ток. · 5.0 с
+   verify_claim → gpt-oss:20b · 340/122 ток. · 5.1 с
+   verify_claim → gpt-oss:20b · 371/50 ток. · 2.0 с
+   verify_claim → gpt-oss:20b · 371/193 ток. · 8.2 с
+   ↻ route.escalated: {'task': 'verify_claim', 'role': 'reasoning', 'level': 1}
+   verify_claim → gpt-oss:20b · 433/167 ток. · 6.8 с
+   verify_claim → gpt-oss:20b · 433/167 ток. · 6.8 с
+   verify_claim → gpt-oss:20b · 410/98 ток. · 4.3 с
+   verify_claim → gpt-oss:20b · 452/102 ток. · 5.2 с
+   verify_claim → gpt-oss:20b · 465/115 ток. · 5.4 с
+   verify_claim → gpt-oss:20b · 452/85 ток. · 4.1 с
+   verify_claim → gpt-oss:20b · 334/111 ток. · 5.5 с
+   verify_claim → gpt-oss:20b · 337/112 ток. · 5.7 с
+   verify_claim → gpt-oss:20b · 342/124 ток. · 5.1 с
+   verify_claim → gpt-oss:20b · 348/129 ток. · 5.8 с
+   verify_claim → gpt-oss:20b · 348/129 ток. · 5.9 с
+   verify_claim → gpt-oss:20b · 328/90 ток. · 3.7 с
+   verify_claim → gpt-oss:20b · 344/89 ток. · 4.1 с
+   verify_claim → gpt-oss:20b · 341/95 ток. · 4.2 с
+✓ claims
+▶ situation
+✓ situation
+▶ options
+   options → gpt-oss:20b · 3455/203 ток. · 19.6 с
+   options → gpt-oss:20b · 3455/203 ток. · 19.6 с
+   options → gpt-oss:20b · 3489/187 ток. · 9.0 с
+   options → gpt-oss:20b · 3489/187 ток. · 9.0 с
+✓ options
+▶ stress
+   premortem → gpt-oss:20b · 3355/462 ток. · 36.1 с
+   premortem → gpt-oss:20b · 3355/462 ток. · 36.1 с
+   steelman → gpt-oss:20b · 2853/212 ток. · 13.2 с
+   steelman → gpt-oss:20b · 2853/212 ток. · 13.2 с
+   premortem → gpt-oss:20b · 3358/459 ток. · 24.1 с
+   premortem → gpt-oss:20b · 3358/459 ток. · 24.1 с
+   steelman → gpt-oss:20b · 2853/256 ток. · 13.3 с
+   steelman → gpt-oss:20b · 2853/256 ток. · 13.3 с
+   objection_strength → gpt-oss:20b · 309/57 ток. · 2.6 с
+   objection_strength → gpt-oss:20b · 328/78 ток. · 3.0 с
+   objection_strength → gpt-oss:20b · 339/73 ток. · 3.5 с
+   objection_strength → gpt-oss:20b · 306/37 ток. · 1.7 с
+   objection_strength → gpt-oss:20b · 317/95 ток. · 4.9 с
+   objection_strength → gpt-oss:20b · 444/60 ток. · 2.2 с
+   objection_strength → gpt-oss:20b · 305/57 ток. · 2.6 с
+   objection_strength → gpt-oss:20b · 302/65 ток. · 2.6 с
+   objection_strength → gpt-oss:20b · 308/63 ток. · 2.6 с
+   objection_strength → gpt-oss:20b · 346/37 ток. · 1.9 с
+   objection_strength → gpt-oss:20b · 306/74 ток. · 3.3 с
+   objection_strength → gpt-oss:20b · 447/58 ток. · 2.5 с
+   role_panel → gpt-oss:20b · 3229/164 ток. · 12.1 с
+   role_panel → gpt-oss:20b · 3229/164 ток. · 12.1 с
+   role_panel → gpt-oss:20b · 3229/166 ток. · 12.0 с
+   role_panel → gpt-oss:20b · 3229/166 ток. · 12.0 с
+   role_panel → gpt-oss:20b · 3231/142 ток. · 10.6 с
+   role_panel → gpt-oss:20b · 3231/142 ток. · 10.6 с
+   role_panel → gpt-oss:20b · 3231/159 ток. · 11.2 с
+   role_panel → gpt-oss:20b · 3231/159 ток. · 11.2 с
+   role_panel → gpt-oss:20b · 3233/147 ток. · 10.4 с
+   role_panel → gpt-oss:20b · 3233/147 ток. · 10.4 с
+   role_panel → gpt-oss:20b · 3233/149 ток. · 11.5 с
+   role_panel → gpt-oss:20b · 3233/149 ток. · 11.5 с
+   decision_model → gpt-oss:20b · 3592/312 ток. · 22.3 с
+   decision_model → gpt-oss:20b · 3592/312 ток. · 22.3 с
+✓ stress
+▶ option_gate
+✓ option_gate
+▶ product
+   product_strategy → gpt-oss:20b · 3977/1052 ток. · 57.5 с
+   product_strategy → gpt-oss:20b · 3977/1052 ток. · 57.5 с
+✓ product
+▶ comms:0
+   comms_strategy → gpt-oss:20b · 4400/1217 ток. · 74.2 с
+   comms_strategy → gpt-oss:20b · 4400/1217 ток. · 74.2 с
+✓ comms:0
+▶ promise_lint:0
+   promise_supported → gpt-oss:20b · 313/96 ток. · 4.9 с
+   promise_supported → gpt-oss:20b · 336/79 ток. · 4.9 с
+   promise_supported → gpt-oss:20b · 387/70 ток. · 4.2 с
+   promise_supported → gpt-oss:20b · 287/39 ток. · 1.9 с
+✓ promise_lint:0
+▶ experiments
+   experiments → gpt-oss:20b · 4001/924 ток. · 52.1 с
+   experiments → gpt-oss:20b · 4001/924 ток. · 52.1 с
+   experiments → gpt-oss:20b · 4140/700 ток. · 35.5 с
+   experiments → gpt-oss:20b · 4140/700 ток. · 35.5 с
+   experiments → gpt-oss:20b · 2805/106 ток. · 10.6 с
+   experiments → gpt-oss:20b · 2805/106 ток. · 10.6 с
+   judge → gpt-oss:20b · 2802/100 ток. · 10.8 с
+   judge → gpt-oss:20b · 2802/100 ток. · 10.8 с
+   experiments → gpt-oss:20b · 2802/114 ток. · 9.0 с
+   experiments → gpt-oss:20b · 2802/114 ток. · 9.0 с
+   experiments → gpt-oss:20b · 2812/152 ток. · 11.4 с
+   experiments → gpt-oss:20b · 2812/152 ток. · 11.4 с
+   judge → gpt-oss:20b · 2809/122 ток. · 9.8 с
+   judge → gpt-oss:20b · 2809/122 ток. · 9.8 с
+   experiments → gpt-oss:20b · 2809/168 ток. · 12.2 с
+   experiments → gpt-oss:20b · 2809/168 ток. · 12.2 с
+✓ experiments
+▶ commit
+   experiments → gpt-oss:20b · 3260/599 ток. · 30.6 с
+   experiments → gpt-oss:20b · 3260/599 ток. · 30.6 с
+✓ commit
+▶ summary
+   executive_summary → gpt-oss:20b · 3970/527 ток. · 29.3 с
+   executive_summary → gpt-oss:20b · 3970/527 ток. · 29.3 с
+✓ summary
+▶ report
+✓ report
+           Кейс eval-family-pack            
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Поле                  ┃ Значение         ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│ Этап                  │ Готово           │
+│ Ждёт решения человека │ —                │
+│ Завершено             │ да               │
+│ Шагов выполнено       │ 23               │
+│ Вызовов моделей       │ 112              │
+│ Токены вход/выход     │ 126 940 / 20 706 │
+│ Стоимость по прайсу   │ $0.0000 ≈ 0.00 ₽ │
+└───────────────────────┴──────────────────┘
+Готово. Отчёт: 
+evals/results/agent-l
+ocal/cases/eval-family-pack/out/report.md
+

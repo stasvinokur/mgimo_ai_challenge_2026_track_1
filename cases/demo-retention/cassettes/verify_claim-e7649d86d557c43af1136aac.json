@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "StrongVerifyDTO",
+ "text": "{\"label\":\"supported\",\"confidence\":0.97,\"note\":\"Цитата прямо подтверждает оба числа и период: 678 в месяц в 2025 году и 1936 в сентябре 2026 года.\"}",
+ "data": {
+  "label": "supported",
+  "confidence": 0.97,
+  "note": "Цитата прямо подтверждает оба числа и период: 678 в месяц в 2025 году и 1936 в сентябре 2026 года."
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 394,
+  "output_tokens": 50,
+  "estimated": false,
+  "latency_ms": 541,
+  "escalated": true
+ }
+}

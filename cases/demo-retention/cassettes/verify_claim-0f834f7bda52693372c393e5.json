@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"Цитата подтверждает условия и наличие приложений, но в ней не упоминается название сервиса «Где мои».\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "Цитата подтверждает условия и наличие приложений, но в ней не упоминается название сервиса «Где мои»."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 273,
+  "output_tokens": 39,
+  "estimated": false,
+  "latency_ms": 933,
+  "escalated": false
+ }
+}

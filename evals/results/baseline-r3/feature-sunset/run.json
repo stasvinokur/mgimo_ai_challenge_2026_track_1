@@ -1,0 +1,80 @@
+{
+  "brief_id": "feature-sunset",
+  "approach": "chat_baseline",
+  "status": "ok",
+  "instruction": "Сделай продуктовую и коммуникационную стратегию по запросу руководителя. Используй приложенные материалы.",
+  "model": "deepseek-v4.1-flash:cloud",
+  "model_role": "reasoning",
+  "fallbacks_used": false,
+  "host": "http://127.0.0.1:11434",
+  "params": {
+    "think": false,
+    "temperature": 0.3,
+    "num_ctx": 65536
+  },
+  "started_at": "2026-11-06T21:03:33+00:00",
+  "finished_at": "2026-11-06T21:04:49+00:00",
+  "duration_s": 76.7,
+  "attempts": 1,
+  "done_reason": "stop",
+  "tokens": {
+    "input": 4432,
+    "output": 4412,
+    "total": 8844,
+    "note": "output включает токены рассуждения (thinking) модели"
+  },
+  "ollama_durations_s": {
+    "total_duration": 14.289,
+    "load_duration": 0.0,
+    "prompt_eval_duration": 0.0,
+    "eval_duration": 0.0
+  },
+  "prompt": {
+    "chars": 12191,
+    "sha256": "e56f35e1635ce2f851260c6a21473aa995b0b1ef8b62b16d46d7a920ce83bd48",
+    "materials": [
+      {
+        "file": "materials/app_reviews_list.csv",
+        "sha256": "3bd35905bec1cc3be70c326e04c39c94edfa6dd0d410cc3d25d7e104837a8e3c",
+        "bytes": 6024,
+        "synthetic": true
+      },
+      {
+        "file": "materials/eng_cost_note.md",
+        "sha256": "95034d3b0987208c9ff09ff915cb741c9950a3249724724edd1d8254f5314678",
+        "bytes": 2562,
+        "synthetic": true
+      },
+      {
+        "file": "materials/feature_usage_monthly.csv",
+        "sha256": "ba92dc2afd0d893ab7f7a4fa249f977c54e644bb649a8705555283460d9817a0",
+        "bytes": 665,
+        "synthetic": true
+      },
+      {
+        "file": "materials/market_egrocery_2025.md",
+        "sha256": "e8bd640cce6a3a4be6f0351abee152c7bb8ce4137838c2c6cd341f0187297e7e",
+        "bytes": 2186,
+        "synthetic": false
+      },
+      {
+        "file": "materials/retention_by_list_usage.csv",
+        "sha256": "b1f35d3dcdbe60f5ee4bef955fe7999321a1a663a19193f5c6de2dadf78198b6",
+        "bytes": 502,
+        "synthetic": true
+      }
+    ]
+  },
+  "output": {
+    "chars": 12177,
+    "sha256": "43615e614efc1e6567cae628227f44f25b75ac3881db35e050d25f3468e1eb02",
+    "thinking_chars": 0
+  },
+  "cost_estimate": {
+    "usd": 0.006624,
+    "rub": 0.5299,
+    "estimated": false,
+    "basis": "config/prices.yaml (as_of 2026-11-04): $0.3/1.2 за 1 млн токенов вход/выход"
+  },
+  "errors": []
+}

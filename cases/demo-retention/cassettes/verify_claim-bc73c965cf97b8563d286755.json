@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"entailment\",\"confidence\":1,\"rationale\":\"Цитата полностью подтверждает дату, объект, долю аудитории и состав элементов A/B-теста.\"}",
+ "data": {
+  "label": "entailment",
+  "confidence": 1,
+  "rationale": "Цитата полностью подтверждает дату, объект, долю аудитории и состав элементов A/B-теста."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 349,
+  "output_tokens": 40,
+  "estimated": false,
+  "latency_ms": 530,
+  "escalated": false
+ }
+}

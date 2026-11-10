@@ -1,0 +1,86 @@
+{
+  "brief_id": "b2b-field-service",
+  "approach": "chat_baseline",
+  "status": "ok",
+  "instruction": "Сделай продуктовую и коммуникационную стратегию по запросу руководителя. Используй приложенные материалы.",
+  "model": "deepseek-v4.1-flash:cloud",
+  "model_role": "reasoning",
+  "fallbacks_used": false,
+  "host": "http://127.0.0.1:11434",
+  "params": {
+    "think": false,
+    "temperature": 0.3,
+    "num_ctx": 65536
+  },
+  "started_at": "2026-11-04T10:43:56+00:00",
+  "finished_at": "2026-11-04T10:44:09+00:00",
+  "duration_s": 12.94,
+  "attempts": 1,
+  "done_reason": "stop",
+  "tokens": {
+    "input": 4429,
+    "output": 2601,
+    "total": 7030,
+    "note": "output включает токены рассуждения (thinking) модели"
+  },
+  "ollama_durations_s": {
+    "total_duration": 12.409,
+    "load_duration": 0.0,
+    "prompt_eval_duration": 0.0,
+    "eval_duration": 0.0
+  },
+  "prompt": {
+    "chars": 12031,
+    "sha256": "6eed759e99701942aac56f54a0a165100b26d86753b035bebb4b323aa9397dfc",
+    "materials": [
+      {
+        "file": "materials/competitor_page.md",
+        "sha256": "1792b355f537a48490604c518995603b494946c451cba1ffcce423c67204e048",
+        "bytes": 2654,
+        "synthetic": true
+      },
+      {
+        "file": "materials/market_smb_digital.md",
+        "sha256": "38cd1a8125f37e77256c8c65e086cf4baccb4964e53584cd17f14a55c871eae5",
+        "bytes": 1562,
+        "synthetic": false
+      },
+      {
+        "file": "materials/market_smb_registry.md",
+        "sha256": "62b4d44c49bb7dc23362c2c23147d69e1514d95d60f69cf4ee2ca27eb3a725e0",
+        "bytes": 1265,
+        "synthetic": false
+      },
+      {
+        "file": "materials/pilot_interviews.md",
+        "sha256": "8fa194ad078b20623f3d5157c2fc61a62020fa2d7a7c5eb13de3d34b052dba2f",
+        "bytes": 4709,
+        "synthetic": true
+      },
+      {
+        "file": "materials/pilot_results.xlsx",
+        "sha256": "7e462903a8f1a02255775b10fe7896cd69f93a2ab9e66917849ad4a98fe808a3",
+        "bytes": 8323,
+        "synthetic": true
+      },
+      {
+        "file": "materials/sales_funnel.csv",
+        "sha256": "3b82a238864f9beddac11a033436370748bef0f3f17200152d10afc6a363f812",
+        "bytes": 887,
+        "synthetic": true
+      }
+    ]
+  },
+  "output": {
+    "chars": 6742,
+    "sha256": "c372812f5a43f32d367ff6d110af7d66a5fa307638fa97698f8d9755dd514c54",
+    "thinking_chars": 0
+  },
+  "cost_estimate": {
+    "usd": 0.00445,
+    "rub": 0.356,
+    "estimated": false,
+    "basis": "config/prices.yaml (as_of 2026-11-04): $0.3/1.2 за 1 млн токенов вход/выход"
+  },
+  "errors": []
+}

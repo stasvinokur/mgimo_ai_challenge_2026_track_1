@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"Цитата говорит о росте доли обращений по денежным вопросам, но не называет их основной причиной оттока и не указывает стоимость подписки.\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "Цитата говорит о росте доли обращений по денежным вопросам, но не называет их основной причиной оттока и не указывает стоимость подписки."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 299,
+  "output_tokens": 46,
+  "estimated": false,
+  "latency_ms": 517,
+  "escalated": false
+ }
+}

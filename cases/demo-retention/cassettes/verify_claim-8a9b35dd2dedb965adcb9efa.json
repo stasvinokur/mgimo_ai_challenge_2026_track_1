@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"В цитате не указано, что пользователь использует iPhone.\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "В цитате не указано, что пользователь использует iPhone."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 278,
+  "output_tokens": 27,
+  "estimated": false,
+  "latency_ms": 1041,
+  "escalated": false
+ }
+}

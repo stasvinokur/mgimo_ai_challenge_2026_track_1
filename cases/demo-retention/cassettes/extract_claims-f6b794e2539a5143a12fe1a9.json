@@ -1,0 +1,99 @@
+{
+ "task": "extract_claims",
+ "schema": "MetricPlanDTO",
+ "text": "{\"metrics\":[{\"name\":\"churn_setup_failure\",\"description\":\"Доля отказов из-за проблем с подключением телефона ребёнка по платформам\",\"agg\":\"share\",\"filters\":[{\"column\":\"main_reason\",\"op\":\"==\",\"value\":\"Не получилось подключить телефон ребёнка\"}],\"group_by\":\"child_platform\",\"unit\":\"доля\"},{\"name\":\"churn_tech_issues\",\"description\":\"Доля отказов из-за технических проблем (геолокация/уведомления) по платформам\",\"agg\":\"share\",\"filters\":[{\"column\":\"main_reason\",\"op\":\"==\",\"value\":\"Неточная геолокация / уведомления опаздывают\"}],\"group_by\":\"child_platform\",\"unit\":\"доля\"},{\"name\":\"churn_child_resistance\",\"description\":\"Доля отказов из-за сопротивления ребёнка по платформам\",\"agg\":\"share\",\"filters\":[{\"column\":\"main_reason\",\"op\":\"==\",\"value\":\"Ребёнок против / отключил приложение\"}],\"group_by\":\"child_platform\",\"unit\":\"доля\"},{\"name\":\"avg_paid_months_tech\",\"description\":\"Средний срок оплаты до отмены при технических причинах отказа\",\"agg\":\"mean\",\"column\":\"paid_months_before_cancel\",\"filters\":[{\"column\":\"main_reason\",\"op\":\"in\",\"value\":[\"Не получилось подключить телефон ребёнка\",\"Неточная геолокация / уведомления опаздывают\"]}],\"unit\":\"месяцы\"},{\"name\":\"pairing_status_share\",\"description\":\"Доля пользователей с привязанным устройством по платформам\",\"agg\":\"share\",\"filters\":[{\"column\":\"paired_child_device\",\"op\":\"==\",\"value\":\"yes\"}],\"group_by\":\"child_platform\",\"unit\":\"доля\"},{\"name\":\"nps_by_platform\",\"description\":\"Средний NPS по платформам\",\"agg\":\"mean\",\"column\":\"nps_0_10\",\"group_by\":\"child_platform\",\"unit\":\"балл\"}]}",
+ "data": {
+  "metrics": [
+   {
+    "name": "churn_setup_failure",
+    "description": "Доля отказов из-за проблем с подключением телефона ребёнка по платформам",
+    "agg": "share",
+    "filters": [
+     {
+      "column": "main_reason",
+      "op": "==",
+      "value": "Не получилось подключить телефон ребёнка"
+     }
+    ],
+    "group_by": "child_platform",
+    "unit": "доля"
+   },
+   {
+    "name": "churn_tech_issues",
+    "description": "Доля отказов из-за технических проблем (геолокация/уведомления) по платформам",
+    "agg": "share",
+    "filters": [
+     {
+      "column": "main_reason",
+      "op": "==",
+      "value": "Неточная геолокация / уведомления опаздывают"
+     }
+    ],
+    "group_by": "child_platform",
+    "unit": "доля"
+   },
+   {
+    "name": "churn_child_resistance",
+    "description": "Доля отказов из-за сопротивления ребёнка по платформам",
+    "agg": "share",
+    "filters": [
+     {
+      "column": "main_reason",
+      "op": "==",
+      "value": "Ребёнок против / отключил приложение"
+     }
+    ],
+    "group_by": "child_platform",
+    "unit": "доля"
+   },
+   {
+    "name": "avg_paid_months_tech",
+    "description": "Средний срок оплаты до отмены при технических причинах отказа",
+    "agg": "mean",
+    "column": "paid_months_before_cancel",
+    "filters": [
+     {
+      "column": "main_reason",
+      "op": "in",
+      "value": [
+       "Не получилось подключить телефон ребёнка",
+       "Неточная геолокация / уведомления опаздывают"
+      ]
+     }
+    ],
+    "unit": "месяцы"
+   },
+   {
+    "name": "pairing_status_share",
+    "description": "Доля пользователей с привязанным устройством по платформам",
+    "agg": "share",
+    "filters": [
+     {
+      "column": "paired_child_device",
+      "op": "==",
+      "value": "yes"
+     }
+    ],
+    "group_by": "child_platform",
+    "unit": "доля"
+   },
+   {
+    "name": "nps_by_platform",
+    "description": "Средний NPS по платформам",
+    "agg": "mean",
+    "column": "nps_0_10",
+    "group_by": "child_platform",
+    "unit": "балл"
+   }
+  ]
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 1400,
+  "output_tokens": 407,
+  "estimated": false,
+  "latency_ms": 2990,
+  "escalated": false
+ }
+}

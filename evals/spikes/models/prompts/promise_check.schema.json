@@ -1,0 +1,50 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "checks": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "promise_id": {
+            "enum": [
+              "P1",
+              "P2",
+              "P3",
+              "P4",
+              "P5"
+            ],
+            "type": "string"
+          },
+          "verdict": {
+            "enum": [
+              "supported",
+              "partial",
+              "unsupported"
+            ],
+            "type": "string"
+          },
+          "product_evidence": {
+            "type": "string"
+          },
+          "fix": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "promise_id",
+          "verdict",
+          "product_evidence",
+          "fix"
+        ],
+        "type": "object"
+      },
+      "maxItems": 5,
+      "minItems": 5,
+      "type": "array"
+    }
+  },
+  "required": [
+    "checks"
+  ],
+  "type": "object"
+}

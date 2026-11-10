@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "StrongVerifyDTO",
+ "text": "{\"label\":\"supported\",\"confidence\":0.9,\"note\":\"Цитаты прямо называют цену 199 ₽ главной причиной оттока и подтверждают жалобы на дороговизну.\"}",
+ "data": {
+  "label": "supported",
+  "confidence": 0.9,
+  "note": "Цитаты прямо называют цену 199 ₽ главной причиной оттока и подтверждают жалобы на дороговизну."
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 612,
+  "output_tokens": 46,
+  "estimated": false,
+  "latency_ms": 964,
+  "escalated": true
+ }
+}

@@ -1,0 +1,29 @@
+{
+  "brief_id": "family-pack",
+  "approach": "agent",
+  "status": "ok",
+  "started_at": "2026-11-05T14:03:38+00:00",
+  "finished_at": "2026-11-05T14:22:31+00:00",
+  "duration_s": 1132.5,
+  "materials": [
+    "landing_draft.docx",
+    "market_households.md",
+    "market_mobile_traffic.md",
+    "product_sheet.md",
+    "support_tickets.csv",
+    "survey_family.csv"
+  ],
+  "costs": {
+    "calls": 112,
+    "input_tokens": 126940,
+    "output_tokens": 20706,
+    "usd_list_price": 0.0,
+    "model_latency_s": 1323.1,
+    "by_model": {
+      "gpt-oss:20b": {
+        "calls": 112,
+        "tokens": 147646
+      }
+    }
+  }
+}

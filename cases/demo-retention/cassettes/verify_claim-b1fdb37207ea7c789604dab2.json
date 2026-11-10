@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"В цитате указано, что бюджет не растет, но не упоминается конкретный 2027 год.\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "В цитате указано, что бюджет не растет, но не упоминается конкретный 2027 год."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 317,
+  "output_tokens": 40,
+  "estimated": false,
+  "latency_ms": 921,
+  "escalated": false
+ }
+}

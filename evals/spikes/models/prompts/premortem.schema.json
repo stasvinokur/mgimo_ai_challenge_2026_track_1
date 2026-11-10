@@ -1,0 +1,56 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "failure_story": {
+      "type": "string"
+    },
+    "causes": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "cause": {
+            "type": "string"
+          },
+          "likelihood": {
+            "enum": [
+              "unlikely",
+              "roughly_even",
+              "likely",
+              "very_likely"
+            ],
+            "type": "string"
+          },
+          "early_signal": {
+            "type": "string"
+          },
+          "mitigation": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "cause",
+          "likelihood",
+          "early_signal",
+          "mitigation"
+        ],
+        "type": "object"
+      },
+      "maxItems": 6,
+      "minItems": 3,
+      "type": "array"
+    },
+    "kill_criteria": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "failure_story",
+    "causes",
+    "kill_criteria"
+  ],
+  "type": "object"
+}

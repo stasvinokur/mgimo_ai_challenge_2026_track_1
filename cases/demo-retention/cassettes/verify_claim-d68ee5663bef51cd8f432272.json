@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"Цитата описывает проблему с настройками на iPhone, но не говорит о снижении удержания и не называет эту причину единственной.\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "Цитата описывает проблему с настройками на iPhone, но не говорит о снижении удержания и не называет эту причину единственной."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 277,
+  "output_tokens": 45,
+  "estimated": false,
+  "latency_ms": 542,
+  "escalated": false
+ }
+}

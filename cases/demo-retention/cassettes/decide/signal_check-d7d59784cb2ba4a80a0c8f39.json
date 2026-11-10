@@ -1,0 +1,16 @@
+{
+ "question_id": "demo-retention-run:DEC-0001:signal:5",
+ "kind": "choice",
+ "choice": "fired",
+ "probability": null,
+ "score": null,
+ "probs": {
+  "fired": 0.9
+ },
+ "confidence": 0.9,
+ "backend": "llm",
+ "model": "deepseek-v4.1-flash:cloud",
+ "escalated": true,
+ "input_tokens": 1936,
+ "latency_ms": 470
+}

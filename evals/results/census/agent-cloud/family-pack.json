@@ -1,0 +1,5280 @@
+{
+  "metrics_version": "1.2",
+  "brief_id": "family-pack",
+  "label": "agent-cloud",
+  "output_path": "evals/results/agent-cloud/family-pack/output.md",
+  "output_sha256": "5fedd905db6cced80a1a2d6f47dd2b94d0c5573c8150871a87eb77c00020ede4",
+  "output_chars": 73740,
+  "judge_model": "mistral-large-4:cloud",
+  "judge_candidates": [
+    "mistral-large-4:cloud",
+    "kimi-k2.6:cloud"
+  ],
+  "judge_notes": [],
+  "judge_params": {
+    "think": false,
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 65536
+  },
+  "agent_model": "deepseek-v4.1-flash:cloud",
+  "seed": 42,
+  "census": true,
+  "claims_only": true,
+  "started_at": "2026-11-07T11:01:59+00:00",
+  "finished_at": "2026-11-07T11:48:08+00:00",
+  "claims": {
+    "extracted": 240,
+    "sample_size": 240,
+    "verified": 240,
+    "supported": 177,
+    "partial": 6,
+    "unsupported": 57,
+    "contradicted": 43,
+    "unsupported_share": 0.237,
+    "unsupported_ci95": [
+      0.1881,
+      0.2952
+    ],
+    "partial_share": 0.025,
+    "supported_share": 0.738,
+    "by_section": {
+      "Решение на одной странице": {
+        "verified": 15,
+        "unsupported": 3,
+        "partial": 0
+      },
+      "Картина ситуации": {
+        "verified": 71,
+        "unsupported": 25,
+        "partial": 3
+      },
+      "Варианты": {
+        "verified": 74,
+        "unsupported": 13,
+        "partial": 1
+      },
+      "Стресс-тест решения": {
+        "verified": 8,
+        "unsupported": 8,
+        "partial": 0
+      },
+      "Продуктовая стратегия": {
+        "verified": 24,
+        "unsupported": 2,
+        "partial": 1
+      },
+      "Коммуникационная стратегия": {
+        "verified": 23,
+        "unsupported": 2,
+        "partial": 0
+      },
+      "План проверки": {
+        "verified": 6,
+        "unsupported": 0,
+        "partial": 0
+      },
+      "Журнал решения": {
+        "verified": 13,
+        "unsupported": 0,
+        "partial": 1
+      },
+      "Источники": {
+        "verified": 6,
+        "unsupported": 4,
+        "partial": 0
+      }
+    },
+    "quotes_not_found": 12,
+    "sample": [
+      {
+        "id": "c001",
+        "text": "Доля респондентов, указавших барьер «непонятно, как делится интернет», составляет 28,0%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| R-0003 | подростки 14–17 | 3 | 0 | нет | нет | непонятно, как делится интернет | родительский контроль | 5 |",
+        "quote_found": true,
+        "comment": "84 из 300 респондентов указали барьер «непонятно, как делится интернет»: 84/300 = 28,0%"
+      },
+      {
+        "id": "c002",
+        "text": "Доля респондентов, указавших барьер «один израсходует весь пакет», составляет 21,0%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| R-0001 | пожилые родители | 3 | 1 | да | нет | один израсходует весь пакет | перенос остатка | 5 |",
+        "quote_found": true,
+        "comment": "63 из 300 респондентов указали барьер «один израсходует весь пакет»: 63/300 = 21,0%"
+      },
+      {
+        "id": "c003",
+        "text": "Доля запросов на лимит для участника составляет 30,7%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| R-0008 | пожилые родители | 1 | 1 | да | нет | родные у другого оператора | лимит для участника | 3 |",
+        "quote_found": true,
+        "comment": "92 из 300 респондентов выбрали «лимит для участника»: 92/300 = 30,666...% ≈ 30,7%"
+      },
+      {
+        "id": "c004",
+        "text": "Доля запросов на перенос остатка составляет 25,0%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| R-0002 | пара без детей | 4 | 1 | нет | да | родные у другого оператора | перенос остатка | 4 |",
+        "quote_found": true,
+        "comment": "75 из 300 респондентов выбрали «перенос остатка»: 75/300 = 25,0%"
+      },
+      {
+        "id": "c005",
+        "text": "Перенос остатка в продукте отсутствует",
+        "kind": "product",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Общий пакет мобильного интернета — 80 ГБ в месяц на всех участников. Остаток на следующий месяц **не переносится**.",
+        "quote_found": true,
+        "comment": "В продуктовой карточке прямо указано, что остаток не переносится"
+      },
+      {
+        "id": "c006",
+        "text": "Доля обращений по теме «как добавить участника» составляет 30,0%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0015 | 2026-04 | как добавить участника | звонок | да | Спрашивает, нужно ли участнику приходить в салон |",
+        "quote_found": true,
+        "comment": "45 из 150 обращений имеют тему «как добавить участника»: 45/150 = 30,0%"
+      },
+      {
+        "id": "c007",
+        "text": "Доля обращений по теме «общий пакет закончился раньше срока» составляет 15,3%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0025 | 2026-05 | общий пакет закончился раньше срока | звонок | нет | Пакет закончился 18-го числа, просит лимит для дочери |",
+        "quote_found": true,
+        "comment": "23 из 150 обращений имеют тему «общий пакет закончился раньше срока»: 23/150 = 15,333...% ≈ 15,3%"
+      },
+      {
+        "id": "c008",
+        "text": "План подключений составляет 40 тыс.",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800.",
+        "quote_found": true,
+        "comment": "План указан как 40 000 пакетов (40 тыс.)"
+      },
+      {
+        "id": "c009",
+        "text": "Окупаемость доработки пока не проверена",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний об окупаемости или её проверке"
+      },
+      {
+        "id": "c010",
+        "text": "Текущее количество подключений составляет 6,8 тыс.",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800.",
+        "quote_found": true,
+        "comment": "Фактическое количество подключений — 6 800 (6,8 тыс.)"
+      },
+      {
+        "id": "c011",
+        "text": "Главные барьеры в опросе являются продуктовыми, а не коммуникационными",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "**Лимитов трафика для отдельных участников** — в бэклоге, срок не определён. **Родительского контроля** (фильтрация сайтов, расписание) — не планируется в 2026 году.",
+        "quote_found": false,
+        "comment": "В опросе главные барьеры — «один израсходует весь пакет», «родные у другого оператора», «не хочу платить за всех» — это продуктовые ограничения (отсутствие лимитов, переноса остатка, работа только с номерами «Восход»), а не коммуникационные."
+      },
+      {
+        "id": "c012",
+        "text": "Обращения подтверждают условия пакета, а не непонимание",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0122 | 2026-04 | списания и счёт | чат в приложении | нет | Не понимает, за что списали 290 ₽ |",
+        "quote_found": true,
+        "comment": "Обращения содержат прямые указания на непонимание условий пакета («Не понимает, за что списали», «Не знал, что остаток не переносится», «Не понимает, почему нельзя добавить номер другого оператора»), что противоречит утверждению."
+      },
+      {
+        "id": "c013",
+        "text": "Малое количество подключений обусловлено условиями пакета, а не слабым объяснением выгоды",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| R-0001 | пожилые родители | 3 | 1 | да | нет | один израсходует весь пакет | перенос остатка | 5 |",
+        "quote_found": true,
+        "comment": "Главный барьер в опросе — продуктовый («один израсходует весь пакет»), а не «непонимание выгоды»; карточка продукта подтверждает отсутствие лимитов для участников и переноса остатка."
+      },
+      {
+        "id": "c014",
+        "text": "Посылка «Люди не понимают выгоду пакета — поэтому подключений мало и нужна кампания с лендингом, объясняющим ценность» не подтверждена",
+        "kind": "other",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "Маркетинг считает, что люди просто не понимают выгоду, агентство уже прислало черновик лендинга для декабрьской кампании.",
+        "quote_found": true,
+        "comment": "Данные опроса и карточка продукта показывают, что барьеры продуктовые (условия пакета), а не в непонимании ценности; посылка о необходимости лендинга для объяснения выгоды не подтверждена материалами."
+      },
+      {
+        "id": "c015",
+        "text": "Статус варианта «Переделать условия пакета под реальные барьеры семей» — принято",
+        "kind": "other",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах брифа нет упоминания варианта «Переделать условия пакета под реальные барьеры семей» и его статуса «принято»."
+      },
+      {
+        "id": "c016",
+        "text": "Доля обращений, решенных с первого контакта, в апреле 2026 года составляла 80.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0015 | 2026-04 | как добавить участника | звонок | да | Спрашивает, нужно ли участнику приходить в салон |",
+        "quote_found": true,
+        "comment": "Апрель 2026: 5 обращений (T-0015, T-0016, T-0022, T-0052, T-0122), из них 4 с resolved_first_contact=да → 4/5 = 80.0%."
+      },
+      {
+        "id": "c017",
+        "text": "Доля обращений, решенных с первого контакта, в мае 2026 года составляла 68.8%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0002 | 2026-05 | как добавить участника | чат в приложении | да | Пытался добавить номер мамы — кнопка неактивна |",
+        "quote_found": true,
+        "comment": "Май 2026: 16 обращений, 11 с resolved_first_contact=да → 11/16 = 68.75% ≈ 68.8%."
+      },
+      {
+        "id": "c018",
+        "text": "Доля обращений, решенных с первого контакта, в июне 2026 года составляла 76.2%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0020 | 2026-06 | общий пакет закончился раньше срока | чат в приложении | да | Ребёнок потратил весь общий интернет за неделю |",
+        "quote_found": true,
+        "comment": "Июнь 2026: 21 обращение, 16 с resolved_first_contact=да → 16/21 = 76.19% ≈ 76.2%."
+      },
+      {
+        "id": "c019",
+        "text": "Доля обращений, решенных с первого контакта, в июле 2026 года составляла 52.4%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0004 | 2026-07 | списания и счёт | звонок | нет | Хочет видеть разбивку счёта по участникам |",
+        "quote_found": true,
+        "comment": "Июль 2026: 21 обращение, 11 с resolved_first_contact=да → 11/21 = 52.38% ≈ 52.4%."
+      },
+      {
+        "id": "c020",
+        "text": "Доля обращений, решенных с первого контакта, в августе 2026 года составляла 71.4%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0001 | 2026-08 | не пришло приглашение или SMS | звонок | нет | SMS с подтверждением пришло через сутки |",
+        "quote_found": true,
+        "comment": "Август 2026: 28 обращений, 20 с resolved_first_contact=да → 20/28 = 71.43% ≈ 71.4%."
+      },
+      {
+        "id": "c021",
+        "text": "Доля обращений, решенных с первого контакта, в сентябре 2026 года составляла 88.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "В сентябре 2026 (2026-09): 25 обращений, из них resolved_first_contact=да у 22. 22/25 = 88.0%"
+      },
+      {
+        "id": "c022",
+        "text": "Доля обращений, решенных с первого контакта, в октябре 2026 года составляла 70.6%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "В октябре 2026 (2026-10): 34 обращения, из них resolved_first_contact=да у 24. 24/34 = 70.6%"
+      },
+      {
+        "id": "c023",
+        "text": "Доля обращений через канал «чат в приложении» составляла 58.7%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Канал «чат в приложении»: 88 из 150 обращений. 88/150 = 58.7%"
+      },
+      {
+        "id": "c024",
+        "text": "Доля обращений через канал «звонок» составляла 34.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Канал «звонок»: 51 из 150 обращений. 51/150 = 34.0%"
+      },
+      {
+        "id": "c025",
+        "text": "Доля обращений через канал «салон» составляла 7.3%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Канал «салон»: 11 из 150 обращений. 11/150 = 7.3%"
+      },
+      {
+        "id": "c026",
+        "text": "FCR по каналу «чат в приложении» составлял 77.3%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Чат в приложении: 68 из 88 решено с первого контакта. 68/88 = 77.3%"
+      },
+      {
+        "id": "c027",
+        "text": "FCR по каналу «звонок» составлял 66.7%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Звонок: 34 из 51 решено с первого контакта. 34/51 = 66.7%"
+      },
+      {
+        "id": "c028",
+        "text": "FCR по каналу «салон» составлял 54.5%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Салон: 6 из 11 решено с первого контакта. 6/11 = 54.5%"
+      },
+      {
+        "id": "c029",
+        "text": "Общее количество обращений за период составляло 150",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Общее количество обращений указано в метаданных файла: 150"
+      },
+      {
+        "id": "c030",
+        "text": "Доля респондентов, знающих о пакете «Семейный круг», составляла 57.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "n=300",
+        "quote_found": false,
+        "comment": "171 из 300 респондентов ответили «да» в колонке aware_of_pack. 171/300 = 57.0%"
+      },
+      {
+        "id": "c031",
+        "text": "Доля респондентов, понимающих принцип общего пула, составляла 38.7%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "understands_shared_pool: \"Правильно понял, как делится общий интернет\"",
+        "quote_found": true,
+        "comment": "Подсчёт по таблице: 116 респондентов ответили «да» из 300; 116/300 = 38.67% ≈ 38.7%"
+      },
+      {
+        "id": "c032",
+        "text": "Наиболее распространенным барьером являлось «непонятно, как делится интернет» — 28.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"Главная причина не подключать (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Подсчёт: 84 респондента выбрали «непонятно, как делится интернет» из 300; 84/300 = 28.0%"
+      },
+      {
+        "id": "c033",
+        "text": "Барьер «один израсходует весь пакет» составлял 21.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"один израсходует весь пакет\"",
+        "quote_found": false,
+        "comment": "Подсчёт: 62 респондента из 300; 62/300 = 20.67%, что округляется до 20.7%, а не до 21.0%"
+      },
+      {
+        "id": "c034",
+        "text": "Барьер «родные у другого оператора» составлял 21.3%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"родные у другого оператора\"",
+        "quote_found": false,
+        "comment": "Подсчёт: 64 респондента из 300; 64/300 = 21.33% ≈ 21.3%"
+      },
+      {
+        "id": "c035",
+        "text": "Средний уровень интереса после объяснения для домохозяйств с детьми до 14 лет составлял 3.87 балла",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Расчёт по домохозяйствам «дети до 14» (n=86): сумма interest_after_explanation = 302, среднее = 302/86 ≈ 3.51, а не 3.87"
+      },
+      {
+        "id": "c036",
+        "text": "Средний уровень интереса после объяснения для домохозяйств «пара без детей» составлял 2.88 балла",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Расчёт по домохозяйствам «пара без детей» даёт среднее около 2.35–2.88 (зависит от точного подсчёта), но не подтверждается как 2.88 с точностью до округления по предоставленным данным"
+      },
+      {
+        "id": "c037",
+        "text": "Средний уровень интереса после объяснения для домохозяйств с подростками 14–17 лет составлял 3.86 балла",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Расчёт по домохозяйствам «подростки 14–17» (n=56): сумма = 220, среднее = 220/56 ≈ 3.93, а не 3.86"
+      },
+      {
+        "id": "c038",
+        "text": "Средний уровень интереса после объяснения для домохозяйств с пожилыми родителями составлял 3.4 балла",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Расчёт по домохозяйствам «пожилые родители» (n=54): сумма = 198, среднее = 198/54 ≈ 3.67, а не 3.4"
+      },
+      {
+        "id": "c039",
+        "text": "Среднее количество номеров Восход в домохозяйствах с детьми до 14 лет составляло 2.05",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "numbers_on_voskhod: \"Номеров в семье у «Восход Телеком»\"",
+        "quote_found": true,
+        "comment": "Подсчёт для «дети до 14» (n=86): сумма = 176; 176/86 = 2.0465 ≈ 2.05"
+      },
+      {
+        "id": "c040",
+        "text": "Среднее количество номеров Восход в домохозяйствах «пара без детей» составляло 2.03",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Расчёт для «пара без детей» (n=86): сумма ≈ 202, среднее ≈ 2.35, а не 2.03"
+      },
+      {
+        "id": "c041",
+        "text": "Среднее количество номеров Восход в домохозяйствах с подростками 14–17 лет составляло 1.75",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| respondent_id | household_type | numbers_on_voskhod | numbers_other_operator | aware_of_pack | understands_shared_pool | main_barrier | most_wanted_feature | interest_after_explanation |",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу numbers_on_voskhod для household_type='подростки 14–17': 58 респондентов, сумма 102, среднее 102/58≈1.76, а не 1.75."
+      },
+      {
+        "id": "c042",
+        "text": "Среднее количество номеров Восход в домохозяйствах с пожилыми родителями составляло 2.07",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| R-0001 | пожилые родители | 3 | 1 | да | нет | один израсходует весь пакет | перенос остатка | 5 |",
+        "quote_found": true,
+        "comment": "Подсчёт для household_type='пожилые родители': 57 респондентов, сумма 117, среднее 117/57≈2.05, а не 2.07."
+      },
+      {
+        "id": "c043",
+        "text": "Самой востребованной функцией являлся «лимит для участника» — 30.7%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| respondent_id | household_type | numbers_on_voskhod | numbers_other_operator | aware_of_pack | understands_shared_pool | main_barrier | most_wanted_feature | interest_after_explanation |",
+        "quote_found": true,
+        "comment": "Подсчёт most_wanted_feature='лимит для участника': 92 из 300, 92/300=30.67%≈30.7%."
+      },
+      {
+        "id": "c044",
+        "text": "Наиболее частой темой обращений являлось «как добавить участника» — 30.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0015 | 2026-04 | как добавить участника | звонок | да | Спрашивает, нужно ли участнику приходить в салон |",
+        "quote_found": true,
+        "comment": "Подсчёт topic='как добавить участника' в 150 обращениях: 45/150=30.0%."
+      },
+      {
+        "id": "c045",
+        "text": "FCR по теме «отключить участника» составлял 100.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0090 | 2026-05 | отключить участника | салон | да | Как вывести номер из пакета и оставить тариф |",
+        "quote_found": true,
+        "comment": "Все 9 обращений по теме 'отключить участника' имеют resolved_first_contact='да': 9/9=100.0%."
+      },
+      {
+        "id": "c046",
+        "text": "FCR по теме «участник у другого оператора — перенос номера» составлял 30.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0085 | 2026-05 | участник у другого оператора — перенос номера | звонок | да | Сын на другом операторе, хочет добавить без переноса номера |",
+        "quote_found": true,
+        "comment": "По теме 'участник у другого оператора — перенос номера' 20 обращений, из них 6 с resolved_first_contact='да': 6/20=30.0%."
+      },
+      {
+        "id": "c047",
+        "text": "Общий счёт: 12.3%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| respondent_id | household_type | numbers_on_voskhod | numbers_other_operator | aware_of_pack | understands_shared_pool | main_barrier | most_wanted_feature | interest_after_explanation |",
+        "quote_found": true,
+        "comment": "Подсчёт most_wanted_feature='общий счёт': 37 из 300, 37/300=12.33%≈12.3%."
+      },
+      {
+        "id": "c048",
+        "text": "Перенос остатка: 25.0%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| respondent_id | household_type | numbers_on_voskhod | numbers_other_operator | aware_of_pack | understands_shared_pool | main_barrier | most_wanted_feature | interest_after_explanation |",
+        "quote_found": true,
+        "comment": "Подсчёт most_wanted_feature='перенос остатка': 75 из 300, 75/300=25.0%."
+      },
+      {
+        "id": "c049",
+        "text": "Родительский контроль: 17.7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| respondent_id | household_type | numbers_on_voskhod | numbers_other_operator | aware_of_pack | understands_shared_pool | main_barrier | most_wanted_feature | interest_after_explanation |",
+        "quote_found": true,
+        "comment": "Подсчёт most_wanted_feature='родительский контроль': 53 из 300, 53/300=17.67%≈17.7%."
+      },
+      {
+        "id": "c050",
+        "text": "Для домохозяйств «дети до 14»: лимит для участника 32.6%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| R-0004 | дети до 14 | 3 | 0 | да | да | непонятно, как делится интернет | ничего | 4 |",
+        "quote_found": true,
+        "comment": "Среди household_type='дети до 14' (92 респондента) most_wanted_feature='лимит для участника' у 30: 30/92=32.6%."
+      },
+      {
+        "id": "c051",
+        "text": "Для домохозяйств «дети до 14»: ничего 14.0%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "По данным опроса для домохозяйств «дети до 14» (n=86) доля most_wanted_feature=«ничего» составляет 6/86=7.0%, а не 14.0%."
+      },
+      {
+        "id": "c052",
+        "text": "Для домохозяйств «дети до 14»: общий счёт 29.7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Для «дети до 14» (n=86) доля «общий счёт» = 11/86=12.8%, а не 29.7%."
+      },
+      {
+        "id": "c053",
+        "text": "Для домохозяйств «дети до 14»: перенос остатка 22.7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Для «дети до 14» (n=86) доля «перенос остатка» = 17/86=19.8%, а не 22.7%."
+      },
+      {
+        "id": "c054",
+        "text": "Для домохозяйств «дети до 14»: родительский контроль 41.5%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Для «дети до 14» (n=86) доля «родительский контроль» = 22/86=25.6%, а не 41.5%."
+      },
+      {
+        "id": "c055",
+        "text": "Для домохозяйств «пара без детей»: лимит для участника 27.2%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Для «пара без детей» (n=98) доля «лимит для участника» = 25/98=25.5%, а не 27.2%."
+      },
+      {
+        "id": "c056",
+        "text": "Для домохозяйств «пара без детей»: ничего 44.2%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Для «пара без детей» (n=98) доля «ничего» = 20/98=20.4%, а не 44.2%."
+      },
+      {
+        "id": "c057",
+        "text": "Для домохозяйств «пара без детей»: общий счёт 37.8%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Для «пара без детей» (n=98) доля «общий счёт» = 10/98=10.2%, а не 37.8%."
+      },
+      {
+        "id": "c058",
+        "text": "Для домохозяйств «пара без детей»: перенос остатка 41.3%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Для «пара без детей» (n=98) доля «перенос остатка» = 32/98=32.7%, а не 41.3%."
+      },
+      {
+        "id": "c059",
+        "text": "Для домохозяйств «пара без детей»: родительский контроль 17.0%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Для «пара без детей» (n=98) доля «родительский контроль» = 9/98=9.2%, а не 17.0%."
+      },
+      {
+        "id": "c060",
+        "text": "Для домохозяйств «подростки 14–17»: лимит для участника 25.0%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Для «подростки 14–17» (n=59) доля «лимит для участника» = 24/59=40.7%, а не 25.0%."
+      },
+      {
+        "id": "c061",
+        "text": "Для домохозяйств «подростки 14–17»: ничего 4.7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В сегменте «подростки 14–17» (n=59) значение «ничего» встречается 2 раза (R-0068, R-0196), что составляет 3.4%, а не 4.7%."
+      },
+      {
+        "id": "c062",
+        "text": "Для домохозяйств «подростки 14–17»: общий счёт 16.2%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В сегменте «подростки 14–17» (n=59) значение «общий счёт» встречается 6 раз, что составляет 10.2%, а не 16.2%."
+      },
+      {
+        "id": "c063",
+        "text": "Для домохозяйств «подростки 14–17»: перенос остатка 10.7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В сегменте «подростки 14–17» (n=59) значение «перенос остатка» встречается 8 раз, что составляет 13.6%, а не 10.7%."
+      },
+      {
+        "id": "c064",
+        "text": "Для домохозяйств «подростки 14–17»: родительский контроль 37.7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В сегменте «подростки 14–17» (n=59) значение «родительский контроль» встречается 20 раз, что составляет 33.9%, а не 37.7%."
+      },
+      {
+        "id": "c065",
+        "text": "Для домохозяйств «пожилые родители»: лимит для участника 15.2%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В сегменте «пожилые родители» (n=57) значение «лимит для участника» встречается 13 раз, что составляет 22.8%, а не 15.2%."
+      },
+      {
+        "id": "c066",
+        "text": "Для домохозяйств «пожилые родители»: ничего 37.2%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В сегменте «пожилые родители» (n=57) значение «ничего» встречается 16 раз, что составляет 28.1%, а не 37.2%."
+      },
+      {
+        "id": "c067",
+        "text": "Для домохозяйств «пожилые родители»: общий счёт 16.2%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В сегменте «пожилые родители» (n=57) значение «общий счёт» встречается 6 раз, что составляет 10.5%, а не 16.2%."
+      },
+      {
+        "id": "c068",
+        "text": "Для домохозяйств «пожилые родители»: перенос остатка 25.3%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В сегменте «пожилые родители» (n=57) значение «перенос остатка» встречается 20 раз, что составляет 35.1%, а не 25.3%."
+      },
+      {
+        "id": "c069",
+        "text": "Для домохозяйств «пожилые родители»: родительский контроль 3.8%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В сегменте «пожилые родители» (n=57) значение «родительский контроль» встречается 2 раза, что составляет 3.5%, а не 3.8%."
+      },
+      {
+        "id": "c070",
+        "text": "В целом лидирует «лимит для участника», но внутри 4 из 4 сегментов лидирует «ничего»",
+        "kind": "other",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В сегменте «подростки 14–17» лидирует «лимит для участника» (23 из 59), а не «ничего» (2 из 59); в сегменте «пожилые родители» лидирует «перенос остатка» (20 из 57), а не «ничего» (16 из 57). Утверждение о лидерстве «ничего» во всех 4 сегментах противоречит данным."
+      },
+      {
+        "id": "c071",
+        "text": "Обращения: где включить родительский контроль — 14",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0022 | 2026-04 | где включить родительский контроль | чат в приложении | да | Спрашивает про расписание доступа к интернету для детей |",
+        "quote_found": true,
+        "comment": "Подсчёт строк с topic «где включить родительский контроль»: T-0022, T-0047, T-0019, T-0118, T-0003, T-0086, T-0106, T-0107, T-0013, T-0014, T-0041, T-0076, T-0089, T-0110 — всего 14."
+      },
+      {
+        "id": "c072",
+        "text": "Обращения: как добавить участника — 45",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0015 | 2026-04 | как добавить участника | звонок | да | Спрашивает, нужно ли участнику приходить в салон |",
+        "quote_found": true,
+        "comment": "Подсчёт строк с topic «как добавить участника»: 2 (апр) + 6 (май) + 6 (июн) + 6 (июл) + 8 (авг) + 8 (сен) + 9 (окт) = 45."
+      },
+      {
+        "id": "c073",
+        "text": "Обращения: не пришло приглашение или SMS — 16",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0016 | 2026-04 | не пришло приглашение или SMS | чат в приложении | да | Приглашение не дошло до участника |",
+        "quote_found": true,
+        "comment": "Подсчёт строк с topic «не пришло приглашение или SMS»: 1 (апр) + 3 (июн) + 3 (июл) + 6 (авг) + 2 (сен) + 1 (окт) = 16."
+      },
+      {
+        "id": "c074",
+        "text": "Обращения: общий пакет закончился раньше срока — 23",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0025 | 2026-05 | общий пакет закончился раньше срока | звонок | нет | Пакет закончился 18-го числа, просит лимит для дочери |",
+        "quote_found": true,
+        "comment": "Подсчёт строк с topic «общий пакет закончился раньше срока»: 2 (май) + 5 (июн) + 2 (июл) + 5 (авг) + 3 (сен) + 6 (окт) = 23."
+      },
+      {
+        "id": "c075",
+        "text": "Обращения: отключить участника — 9",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0090 | 2026-05 | отключить участника | салон | да | Как вывести номер из пакета и оставить тариф |",
+        "quote_found": true,
+        "comment": "Подсчёт строк с topic «отключить участника»: T-0090, T-0074, T-0027, T-0128, T-0141, T-0051, T-0062, T-0045, T-0088 — всего 9."
+      },
+      {
+        "id": "c076",
+        "text": "Обращения: списания и счёт — 23",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0122 | 2026-04 | списания и счёт | чат в приложении | нет | Не понимает, за что списали 290 ₽ |",
+        "quote_found": true,
+        "comment": "Подсчёт строк с topic «списания и счёт»: 1 (апр) + 4 (май) + 4 (июн) + 3 (июл) + 1 (авг) + 5 (сен) + 5 (окт) = 23."
+      },
+      {
+        "id": "c077",
+        "text": "Обращения: участник у другого оператора — перенос номера — 20",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0085 | 2026-05 | участник у другого оператора — перенос номера | звонок | да | Сын на другом операторе, хочет добавить без переноса номера |",
+        "quote_found": true,
+        "comment": "Подсчёт строк с topic «участник у другого оператора — перенос номера»: 3 (май) + 3 (июн) + 5 (июл) + 3 (авг) + 1 (сен) + 5 (окт) = 20."
+      },
+      {
+        "id": "c078",
+        "text": "Пакет «Семейный круг» запущен 01.04.2026",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Запуск: 01.04.2026. План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800.",
+        "quote_found": true,
+        "comment": "Дата запуска указана прямо в продуктовой карточке."
+      },
+      {
+        "id": "c079",
+        "text": "План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Запуск: 01.04.2026. План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800.",
+        "quote_found": true,
+        "comment": "План и факт указаны прямо в продуктовой карточке, числа совпадают."
+      },
+      {
+        "id": "c080",
+        "text": "Стоимость пакета «Семейный круг» составляет 990 ₽ в месяц за владельца и 290 ₽ за каждого из до 4 участников",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "- Владелец пакета платит 990 ₽ в месяц за себя и 290 ₽ за каждого участника (до 4 участников, всего до 5 номеров).",
+        "quote_found": true,
+        "comment": "Стоимость владельца и участников, а также лимит в 4 участника указаны прямо в условиях продукта."
+      },
+      {
+        "id": "c081",
+        "text": "Общий объём мобильного интернета в пакете «Семейный круг» составляет 80 ГБ в месяц на всех участников",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Общий пакет мобильного интернета — 80 ГБ в месяц на всех участников.",
+        "quote_found": true,
+        "comment": "Прямое указание в продуктовой карточке."
+      },
+      {
+        "id": "c082",
+        "text": "Остаток интернета в пакете «Семейный круг» не переносится на следующий месяц",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Остаток на следующий месяц **не переносится**.",
+        "quote_found": true,
+        "comment": "Прямое указание в продуктовой карточке."
+      },
+      {
+        "id": "c083",
+        "text": "В пакете «Семейный круг» отсутствует безлимитный интернет во всех вариантах",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Безлимитного интернета — нет ни в одном варианте пакета.",
+        "quote_found": true,
+        "comment": "Прямое указание в разделе «Чего в продукте нет»."
+      },
+      {
+        "id": "c084",
+        "text": "Участником пакета «Семейный круг» может быть только номер оператора «Восход Телеком», перенос номера другого оператора занимает до 8 дней",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Участником может быть только номер «Восход Телеком». Номер другого оператора сначала переносится к нам (перенос номера занимает до 8 дней, нужен визит в салон или подписание через Госуслуги).",
+        "quote_found": true,
+        "comment": "Оба условия прямо указаны в продуктовой карточке."
+      },
+      {
+        "id": "c085",
+        "text": "Черновик лендинга утверждает наличие безлимитного интернета для всей семьи",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/landing_draft.docx",
+        "quote": "Безлимитный интернет для всей семьи — в одном тарифе.",
+        "quote_found": true,
+        "comment": "Прямая цитата с первого экрана черновика лендинга."
+      },
+      {
+        "id": "c086",
+        "text": "Черновик лендинга утверждает, что интернет не сгорает, и возможность подключения родных с другим оператором за минуту",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/landing_draft.docx",
+        "quote": "Подключите родных за минуту прямо в приложении — даже если они с другим оператором. [...] Интернет не сгорает — то, что не потратили, остаётся семье.",
+        "quote_found": false,
+        "comment": "Оба утверждения дословно присутствуют в разделе «Преимущества»."
+      },
+      {
+        "id": "c087",
+        "text": "План составлял 40 тыс. подключений",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800.",
+        "quote_found": true,
+        "comment": "План указан в продуктовой карточке; также упомянут в brief.md («6,8 тыс. вместо 40 тыс.»)."
+      },
+      {
+        "id": "c088",
+        "text": "Фактическое количество подключений составило 6,8 тыс.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800.",
+        "quote_found": true,
+        "comment": "Факт указан в продуктовой карточке; также в brief.md («6,8 тыс.»)."
+      },
+      {
+        "id": "c089",
+        "text": "Разрыв между планом и фактом составляет 5,9 раза",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800.",
+        "quote_found": true,
+        "comment": "Расчёт: 40 000 / 6 800 = 5,88 ≈ 5,9 раза."
+      },
+      {
+        "id": "c090",
+        "text": "Происхождение плана в 40 тыс. не раскрыто",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800.",
+        "quote_found": true,
+        "comment": "Ни в одном из материалов не указано, кто и на каком основании установил план в 40 тыс.; везде план приводится как данность без объяснения происхождения."
+      },
+      {
+        "id": "c091",
+        "text": "Полнота подсчёта подключений в 6,8 тыс. не раскрыта",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "Пакет «Семейный круг» запустили в апреле, а подключений в разы меньше плана: 6,8 тыс. вместо 40 тыс.",
+        "quote_found": true,
+        "comment": "В материалах приведена цифра 6,8 тыс. (факт — 6 800 в product_sheet.md), но методика подсчёта и полнота данных не раскрыты."
+      },
+      {
+        "id": "c092",
+        "text": "Надёжность цифры 6,8 тыс. оценивается как очень низкая",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет оценки надёжности цифры 6,8 тыс. как «очень низкой»."
+      },
+      {
+        "id": "c093",
+        "text": "В лендинге заявлены преимущества: безлимит, перенос остатка, подключение родных с другим оператором за минуту",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/landing_draft.docx",
+        "quote": "Безлимитный интернет для всей семьи — в одном тарифе. Подключите родных за минуту прямо в приложении — даже если они с другим оператором. Интернет не сгорает — то, что не потратили, остаётся семье.",
+        "quote_found": false,
+        "comment": "Все три преимущества дословно заявлены в черновике лендинга."
+      },
+      {
+        "id": "c094",
+        "text": "В продукте отсутствует безлимит",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Безлимитного интернета — нет ни в одном варианте пакета.",
+        "quote_found": true,
+        "comment": "Прямое указание в продуктовой карточке."
+      },
+      {
+        "id": "c095",
+        "text": "В продукте остаток не переносится",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Остаток на следующий месяц **не переносится**.",
+        "quote_found": true,
+        "comment": "Прямое указание в продуктовой карточке."
+      },
+      {
+        "id": "c096",
+        "text": "В продукте можно подключать только номера «Восход Телеком»",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Участником может быть только номер «Восход Телеком».",
+        "quote_found": true,
+        "comment": "Прямое указание в продуктовой карточке; номер другого оператора сначала переносится."
+      },
+      {
+        "id": "c097",
+        "text": "Перенос номера в продукте занимает до 8 дней",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "перенос номера занимает до 8 дней",
+        "quote_found": true,
+        "comment": "Указано в продуктовой карточке в условиях подключения участника."
+      },
+      {
+        "id": "c098",
+        "text": "28% пользователей указывают барьер «непонятно, как делится интернет»",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"Главная причина не подключать (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Подсчёт по колонке main_barrier: 84 из 300 респондентов указали «непонятно, как делится интернет»; 84/300 = 28%."
+      },
+      {
+        "id": "c099",
+        "text": "21% пользователей указывают барьер «один израсходует весь пакет»",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"Главная причина не подключать (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Подсчёт по колонке main_barrier: 63 из 300 респондентов указали «один израсходует весь пакет»; 63/300 = 21%."
+      },
+      {
+        "id": "c100",
+        "text": "10,7% пользователей указывают барьер «не хочу платить за всех»",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"Главная причина не подключать (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Подсчёт по колонке main_barrier: 32 из 300 респондентов указали «не хочу платить за всех»; 32/300 = 10,67% ≈ 10,7%."
+      },
+      {
+        "id": "c101",
+        "text": "Интерес после объяснения у сегментов с детьми составляет 3,86–3,87 из 5",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Расчёт по household_type «дети до 14» (n=85, сумма 314) и «подростки 14–17» (n=58, сумма 224): среднее 538/143 ≈ 3,76, а не 3,86–3,87. Значение 3,86 соответствует только сегменту «подростки 14–17» (224/58 ≈ 3,86)."
+      },
+      {
+        "id": "c102",
+        "text": "Цена пакета составляет 990 ₽ за владельца",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Владелец пакета платит 990 ₽ в месяц за себя и 290 ₽ за каждого участника (до 4 участников, всего до 5 номеров).",
+        "quote_found": true,
+        "comment": "Прямо указано в условиях продукта."
+      },
+      {
+        "id": "c103",
+        "text": "Цена пакета составляет 290 ₽ за участника",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Владелец пакета платит 990 ₽ в месяц за себя и 290 ₽ за каждого участника (до 4 участников, всего до 5 номеров).",
+        "quote_found": true,
+        "comment": "Прямо указано в условиях продукта."
+      },
+      {
+        "id": "c104",
+        "text": "Пакет включает 80 ГБ на всех участников",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Общий пакет мобильного интернета — 80 ГБ в месяц на всех участников.",
+        "quote_found": true,
+        "comment": "Прямо указано в условиях продукта."
+      },
+      {
+        "id": "c105",
+        "text": "43% респондентов не знают о пакете",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| respondent_id | household_type | numbers_on_voskhod | numbers_other_operator | aware_of_pack | understands_shared_pool | main_barrier | most_wanted_feature | interest_after_explanation |",
+        "quote_found": true,
+        "comment": "Подсчёт по колонке aware_of_pack: «нет» — 129 из 300; 129/300 = 43,0%."
+      },
+      {
+        "id": "c106",
+        "text": "61,3% респондентов не понимают принцип общего пула",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| respondent_id | household_type | numbers_on_voskhod | numbers_other_operator | aware_of_pack | understands_shared_pool | main_barrier | most_wanted_feature | interest_after_explanation |",
+        "quote_found": true,
+        "comment": "Подсчёт по колонке understands_shared_pool: «нет» — 184 из 300; 184/300 = 61,33% ≈ 61,3%."
+      },
+      {
+        "id": "c107",
+        "text": "FCR по теме «как добавить участника» составляет 86,7%",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| ticket_id | month | topic | channel | resolved_first_contact | summary |",
+        "quote_found": true,
+        "comment": "Тема «как добавить участника»: всего 45 обращений, из них resolved_first_contact=«да» — 39; 39/45 = 86,67% ≈ 86,7%."
+      },
+      {
+        "id": "c108",
+        "text": "FCR по теме «не пришло приглашение» составляет 68,8%",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| ticket_id | month | topic | channel | resolved_first_contact | summary |",
+        "quote_found": true,
+        "comment": "Тема «не пришло приглашение или SMS»: всего 16 обращений, resolved_first_contact=«да» — 11; 11/16 = 68,75% ≈ 68,8%."
+      },
+      {
+        "id": "c109",
+        "text": "Общий FCR в чате составляет 77,3%",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| ticket_id | month | topic | channel | resolved_first_contact | summary |",
+        "quote_found": true,
+        "comment": "Канал «чат в приложении»: подсчёт resolved_first_contact=«да» среди всех обращений этого канала даёт 77,3%."
+      },
+      {
+        "id": "c110",
+        "text": "Общий FCR в салоне составляет 54,5%",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Канал «салон»: всего 10 обращений (T-0003, T-0005, T-0035, T-0057, T-0059, T-0065, T-0090, T-0098, T-0126, T-0147), из них resolved_first_contact=«да» — 5; 5/10 = 50,0%, а не 54,5%."
+      },
+      {
+        "id": "c111",
+        "text": "Продукт «Семейный круг» запущен 01.04.2026.",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Запуск: 01.04.2026.",
+        "quote_found": true,
+        "comment": "Дата запуска прямо указана в продуктовой карточке."
+      },
+      {
+        "id": "c112",
+        "text": "К 01.10.2026 подключено 6,8 тыс. абонентов при плане 40 тыс.",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800.",
+        "quote_found": true,
+        "comment": "6,8 тыс. = 6 800, что совпадает с фактом; план 40 тыс. = 40 000."
+      },
+      {
+        "id": "c113",
+        "text": "В условиях пакета отсутствует безлимит.",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Безлимитного интернета — нет ни в одном варианте пакета.",
+        "quote_found": true,
+        "comment": "Прямое указание на отсутствие безлимита в условиях пакета."
+      },
+      {
+        "id": "c114",
+        "text": "Остаток трафика в пакете не переносится.",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Остаток на следующий месяц **не переносится**.",
+        "quote_found": true,
+        "comment": "Условие о непереносимости остатка прямо зафиксировано."
+      },
+      {
+        "id": "c115",
+        "text": "Участником пакета может быть только номер оператора «Восход Телеком».",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Участником может быть только номер «Восход Телеком».",
+        "quote_found": true,
+        "comment": "Ограничение по оператору прямо указано в карточке продукта."
+      },
+      {
+        "id": "c116",
+        "text": "Черновик лендинга содержит обещание безлимита.",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/landing_draft.docx",
+        "quote": "Безлимитный интернет для всей семьи — в одном тарифе.",
+        "quote_found": true,
+        "comment": "Первый экран черновика лендинга содержит обещание безлимита."
+      },
+      {
+        "id": "c117",
+        "text": "Черновик лендинга содержит обещание непереносимости остатка.",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Черновик лендинга обещает обратное: «Интернет не сгорает — то, что не потратили, остаётся семье», тогда как в продукте остаток не переносится."
+      },
+      {
+        "id": "c118",
+        "text": "Черновик лендинга содержит обещание подключения родных с другим оператором за минуту.",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/landing_draft.docx",
+        "quote": "Подключите родных за минуту прямо в приложении — даже если они с другим оператором.",
+        "quote_found": true,
+        "comment": "Обещание подключения родных с другим оператором за минуту присутствует в блоке преимуществ."
+      },
+      {
+        "id": "c119",
+        "text": "28% респондентов не понимают, как делится интернет.",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "По данным опроса (survey_family.csv), 183 из 300 респондентов (61%) ответили «нет» на вопрос о понимании разделения интернета, а не 28%."
+      },
+      {
+        "id": "c120",
+        "text": "21% респондентов боятся, что один участник израсходует весь пакет.",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| R-0001 | пожилые родители | 3 | 1 | да | нет | один израсходует весь пакет | перенос остатка | 5 |",
+        "quote_found": true,
+        "comment": "Барьер «один израсходует весь пакет» указан у 62 из 300 респондентов: 62/300 = 20,7% ≈ 21%."
+      },
+      {
+        "id": "c121",
+        "text": "10,7% респондентов не хотят платить за всех участников.",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"Главная причина не подключать (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "В колонке main_barrier значение «не хочу платить за всех» встречается 32 раза из n=300: 32/300 = 10,67% ≈ 10,7%."
+      },
+      {
+        "id": "c122",
+        "text": "Лишь 38,7% респондентов понимают принцип общего пула.",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "understands_shared_pool: \"Правильно понял, как делится общий интернет\"",
+        "quote_found": true,
+        "comment": "Значение «да» в колонке understands_shared_pool встречается 116 раз из n=300: 116/300 = 38,67% ≈ 38,7%."
+      },
+      {
+        "id": "c123",
+        "text": "Лимит для участника является самой востребованной функцией (30,7%).",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "most_wanted_feature: \"Чего больше всего не хватает в пакете (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Значение «лимит для участника» встречается 92 раза из 300 — это максимальное значение среди всех вариантов: 92/300 = 30,67% ≈ 30,7%."
+      },
+      {
+        "id": "c124",
+        "text": "Перенос остатка востребован 25,0% респондентов.",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "most_wanted_feature: \"Чего больше всего не хватает в пакете (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Значение «перенос остатка» встречается 75 раз из 300: 75/300 = 25,0%."
+      },
+      {
+        "id": "c125",
+        "text": "Перенос остатка в продукте отсутствует.",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Остаток на следующий месяц **не переносится**.",
+        "quote_found": true,
+        "comment": "Прямо указано в продуктовой карточке, что остаток не переносится."
+      },
+      {
+        "id": "c126",
+        "text": "15,3% обращений в поддержку касаются темы «общий пакет закончился раньше срока».",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "topic: \"Тема (классификатор поддержки)\"",
+        "quote_found": true,
+        "comment": "Тема «общий пакет закончился раньше срока» встречается 23 раза из 150 обращений: 23/150 = 15,33% ≈ 15,3%."
+      },
+      {
+        "id": "c127",
+        "text": "30,0% обращений касаются темы «как добавить участника».",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "topic: \"Тема (классификатор поддержки)\"",
+        "quote_found": true,
+        "comment": "Тема «как добавить участника» встречается 45 раз из 150: 45/150 = 30,0%."
+      },
+      {
+        "id": "c128",
+        "text": "10,7% обращений касаются темы «не пришло приглашение или SMS».",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "topic: \"Тема (классификатор поддержки)\"",
+        "quote_found": true,
+        "comment": "Тема «не пришло приглашение или SMS» встречается 16 раз из 150: 16/150 = 10,67% ≈ 10,7%."
+      },
+      {
+        "id": "c129",
+        "text": "За период зафиксировано 150 обращений, из них 45 — «как добавить участника» и 23 — «общий пакет закончился раньше срока».",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "В метаданных указано 150 обращений; подсчёт по теме даёт 45 («как добавить участника») и 23 («общий пакет закончился раньше срока»)."
+      },
+      {
+        "id": "c130",
+        "text": "Стоимость пакета составляет 990 ₽ за владельца и 290 ₽ за каждого участника.",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Владелец пакета платит 990 ₽ в месяц за себя и 290 ₽ за каждого участника (до 4 участников, всего до 5 номеров).",
+        "quote_found": true,
+        "comment": "Прямо указано в разделе «Условия» продуктовой карточки."
+      },
+      {
+        "id": "c131",
+        "text": "Объём общего пула составляет 80 ГБ.",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Общий пакет мобильного интернета — 80 ГБ в месяц на всех участников.",
+        "quote_found": true,
+        "comment": "Прямо указано в продуктовой карточке."
+      },
+      {
+        "id": "c132",
+        "text": "Перенос номера занимает до 8 дней и требует визита в салон или использования портала Госуслуг.",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "перенос номера занимает до 8 дней, нужен визит в салон или подписание через Госуслуги",
+        "quote_found": true,
+        "comment": "Условие переноса номера дословно соответствует продуктовой карточке."
+      },
+      {
+        "id": "c133",
+        "text": "Показатель FCR в чате составляет 77%, в салоне — 55%.",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Расчёт по таблице: чат — 61/77 ≈ 79,2%, салон — 6/10 = 60%, а не 77% и 55%."
+      },
+      {
+        "id": "c134",
+        "text": "Средний интерес после объяснения составляет 3,4–3,9 балла у сегментов с детьми и подростками.",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| household_type | interest_after_explanation |",
+        "quote_found": false,
+        "comment": "Среднее по сегменту «дети до 14»: 337/87 ≈ 3,87; «подростки 14–17»: 228/59 ≈ 3,86 — оба значения в диапазоне 3,4–3,9."
+      },
+      {
+        "id": "c135",
+        "text": "Уровень интереса после объяснения у семей с детьми до 14 лет составляет 3,87 балла, у семей с подростками — 3,86 балла.",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| household_type | interest_after_explanation |",
+        "quote_found": false,
+        "comment": "Расчёт: дети до 14 — 337/87 ≈ 3,87; подростки 14–17 — 228/59 ≈ 3,86."
+      },
+      {
+        "id": "c136",
+        "text": "80 ГБ без переноса остатка и без безлимита не покрывают реального потребления пользователей.",
+        "kind": "causal",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Общий пакет мобильного интернета — 80 ГБ в месяц на всех участников. Остаток на следующий месяц **не переносится**.",
+        "quote_found": true,
+        "comment": "Факты (80 ГБ, без переноса, без безлимита) подтверждены; в support_tickets.csv зафиксированы обращения «общий пакет закончился раньше срока», что подтверждает недостаточность объёма."
+      },
+      {
+        "id": "c137",
+        "text": "Интерес после объяснения у домохозяйств с детьми до 14 составляет 3,87 балла",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| household_type | interest_after_explanation |",
+        "quote_found": false,
+        "comment": "Среднее по сегменту «дети до 14»: 337/87 ≈ 3,87 балла."
+      },
+      {
+        "id": "c138",
+        "text": "Интерес после объяснения у подростков 14–17 составляет 3,86 балла",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| household_type | interest_after_explanation |",
+        "quote_found": false,
+        "comment": "Среднее по сегменту «подростки 14–17»: 228/59 ≈ 3,86 балла."
+      },
+      {
+        "id": "c139",
+        "text": "Интерес после объяснения у пар без детей составляет 2,88 балла",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| household_type | interest_after_explanation |",
+        "quote_found": false,
+        "comment": "Среднее по сегменту «пара без детей»: 276/96 = 2,875 ≈ 2,88 балла."
+      },
+      {
+        "id": "c140",
+        "text": "В домохозяйствах с детьми до 14 в среднем 2,05 номера «Восход»",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Среднее количество номеров «Восход» в домохозяйствах с детьми до 14: 177/87 ≈ 2,03, а не 2,05."
+      },
+      {
+        "id": "c141",
+        "text": "В домохозяйствах с подростками 14–17 в среднем 1,75 номера «Восход»",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Среднее по сегменту «подростки 14–17»: 102/56≈1,82, а не 1,75"
+      },
+      {
+        "id": "c142",
+        "text": "Самая востребованная функция — лимит для участника (30,7%)",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| respondent_id | household_type | numbers_on_voskhod | numbers_other_operator | aware_of_pack | understands_shared_pool | main_barrier | most_wanted_feature | interest_after_explanation |",
+        "quote_found": true,
+        "comment": "«лимит для участника» выбран 92 раза из 300: 92/300=30,67%≈30,7%"
+      },
+      {
+        "id": "c143",
+        "text": "У сегмента с детьми до 14 лимит для участника востребован у 32,6%",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В сегменте «дети до 14» (86 чел.) «лимит для участника» у 30 чел.: 30/86≈34,9%, а не 32,6%"
+      },
+      {
+        "id": "c144",
+        "text": "Знание о пакете составляет 57,0%",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "«да» в aware_of_pack: 173 из 300 = 57,67%≈57,7%, а не 57,0%"
+      },
+      {
+        "id": "c145",
+        "text": "Понимание пула составляет 38,7%",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "«да» в understands_shared_pool: 114 из 300 = 38,0%, а не 38,7%"
+      },
+      {
+        "id": "c146",
+        "text": "Лучший канал по FCR — чат в приложении (77,3%)",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| ticket_id | month | topic | channel | resolved_first_contact | summary |",
+        "quote_found": true,
+        "comment": "Чат в приложении — лучший канал (62/79≈78,5% FCR), но указанное значение 77,3% не совпадает с расчётом"
+      },
+      {
+        "id": "c147",
+        "text": "28% не понимают, как делится интернет",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "«непонятно, как делится интернет» у 79 из 300 = 26,3%, а не 28%"
+      },
+      {
+        "id": "c148",
+        "text": "21% боятся, что один израсходует весь пул",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/survey_family.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "«один израсходует весь пакет» у 56 из 300 = 18,7%, а не 21%"
+      },
+      {
+        "id": "c149",
+        "text": "25% называют самой востребованной функцией перенос остатка",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| respondent_id | household_type | numbers_on_voskhod | numbers_other_operator | aware_of_pack | understands_shared_pool | main_barrier | most_wanted_feature | interest_after_explanation |",
+        "quote_found": true,
+        "comment": "«перенос остатка» выбран 75 раз из 300: 75/300=25,0%"
+      },
+      {
+        "id": "c150",
+        "text": "15,3% обращений — «общий пакет закончился раньше срока»",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| ticket_id | month | topic | channel | resolved_first_contact | summary |",
+        "quote_found": true,
+        "comment": "Тема «общий пакет закончился раньше срока»: 23 из 150 = 15,33%≈15,3%"
+      },
+      {
+        "id": "c151",
+        "text": "В продукте отсутствует перенос остатка",
+        "kind": "product",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Остаток на следующий месяц **не переносится**.",
+        "quote_found": true,
+        "comment": "Прямо указано в карточке продукта."
+      },
+      {
+        "id": "c152",
+        "text": "Потребление мобильного трафика в 2026 году снизится на 5–10%",
+        "kind": "market",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_mobile_traffic.md",
+        "quote": "По итогам 2026 года ожидается сокращение на величину от 5 % до 10 %, считают эксперты.",
+        "quote_found": true,
+        "comment": "Прямая цитата из материала о трафике."
+      },
+      {
+        "id": "c153",
+        "text": "Участниками пакета могут быть только номера «Восход Телеком»",
+        "kind": "product",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Участником может быть только номер «Восход Телеком».",
+        "quote_found": true,
+        "comment": "Прямо указано в условиях пакета."
+      },
+      {
+        "id": "c154",
+        "text": "Перенос номера при подключении родных с другим оператором занимает до 8 дней",
+        "kind": "product",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "перенос номера занимает до 8 дней, нужен визит в салон или подписание через Госуслуги",
+        "quote_found": true,
+        "comment": "Прямо указано в карточке продукта."
+      },
+      {
+        "id": "c155",
+        "text": "Цена пакета — 990 ₽ за владельца плюс 290 ₽ за участника",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Владелец пакета платит 990 ₽ в месяц за себя и 290 ₽ за каждого участника",
+        "quote_found": true,
+        "comment": "Цены совпадают с утверждением."
+      },
+      {
+        "id": "c156",
+        "text": "Объём пакета — 80 ГБ на всех участников",
+        "kind": "product",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Общий пакет мобильного интернета — 80 ГБ в месяц на всех участников.",
+        "quote_found": true,
+        "comment": "Объём пакета указан прямо."
+      },
+      {
+        "id": "c157",
+        "text": "Черновик лендинга содержит утверждение о безлимите",
+        "kind": "company_data",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/landing_draft.docx",
+        "quote": "Безлимитный интернет для всей семьи — в одном тарифе.",
+        "quote_found": true,
+        "comment": "Утверждение о безлимите присутствует в первом экране черновика."
+      },
+      {
+        "id": "c158",
+        "text": "Черновик лендинга содержит утверждение «интернет не сгорает»",
+        "kind": "company_data",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/landing_draft.docx",
+        "quote": "Интернет не сгорает — то, что не потратили, остаётся семье.",
+        "quote_found": true,
+        "comment": "Фраза дословно присутствует в блоке преимуществ."
+      },
+      {
+        "id": "c159",
+        "text": "Черновик лендинга содержит утверждение о подключении родных с другим оператором за минуту",
+        "kind": "company_data",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/landing_draft.docx",
+        "quote": "Подключите родных за минуту прямо в приложении — даже если они с другим оператором.",
+        "quote_found": true,
+        "comment": "Утверждение о подключении за минуту присутствует в черновике."
+      },
+      {
+        "id": "c160",
+        "text": "10,7% не хотят платить за всех участников",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "n=300",
+        "quote_found": false,
+        "comment": "Подсчёт по столбцу main_barrier: 32 респондента из 300 выбрали «не хочу платить за всех»; 32/300 = 10,67% ≈ 10,7%."
+      },
+      {
+        "id": "c161",
+        "text": "OPT-003 выигрывает в базовом сценарии",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний OPT-003, базового сценария или модели выбора решения."
+      },
+      {
+        "id": "c162",
+        "text": "OPT-003 остаётся лучшим в 30 из 81 сценариев",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о 81 сценарии и победителях OPT-003."
+      },
+      {
+        "id": "c163",
+        "text": "Вероятность сохранения лидерства OPT-003 составляет примерно 45%",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет расчёта вероятности лидерства OPT-003."
+      },
+      {
+        "id": "c164",
+        "text": "На выбор решения влияют факторы: эффективность коммуникации «объяснение выгоды», реалистичность плана 40 тыс. и полнота учёта подключений, соответствие продукта потребностям семей, доля и поведение целевого семейного сегмента",
+        "kind": "causal",
+        "chunk": 9,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет перечня факторов выбора решения с указанными названиями."
+      },
+      {
+        "id": "c165",
+        "text": "При уровне «high» эффективности коммуникации «объяснение выгоды» выигрывает OPT-004",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний OPT-004 и уровней эффективности коммуникации."
+      },
+      {
+        "id": "c166",
+        "text": "При уровне «high» реалистичности плана 40 тыс. и полноты учёта подключений выигрывает OPT-001",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний OPT-001 и уровней реалистичности плана."
+      },
+      {
+        "id": "c167",
+        "text": "При уровне «low» соответствия продукта потребностям семей выигрывает OPT-004",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний OPT-004 и уровня соответствия продукта потребностям семей."
+      },
+      {
+        "id": "c168",
+        "text": "При уровне «high» доли и поведения целевого семейного сегмента выигрывает OPT-004",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний OPT-004 и уровня доли целевого сегмента."
+      },
+      {
+        "id": "c169",
+        "text": "Барьер «непонятно, как делится интернет» называют 28,0% респондентов",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| R-0003 | подростки 14–17 | 3 | 0 | нет | нет | непонятно, как делится интернет | родительский контроль | 5 |",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу main_barrier: 84 из 300 респондентов указали «непонятно, как делится интернет» (84/300 = 28,0%)."
+      },
+      {
+        "id": "c170",
+        "text": "Барьер «один израсходует весь пакет» называют 21,0% респондентов",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| R-0001 | пожилые родители | 3 | 1 | да | нет | один израсходует весь пакет | перенос остатка | 5 |",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу main_barrier: 63 из 300 респондентов указали «один израсходует весь пакет» (63/300 = 21,0%)."
+      },
+      {
+        "id": "c171",
+        "text": "Барьер «не хочу платить за всех» называют 10,7% респондентов",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| respondent_id | household_type | numbers_on_voskhod | numbers_other_operator | aware_of_pack | understands_shared_pool | main_barrier | most_wanted_feature | interest_after_explanation |",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу main_barrier: 32 из 300 респондентов выбрали «не хочу платить за всех»; 32/300 = 10,67% ≈ 10,7%"
+      },
+      {
+        "id": "c172",
+        "text": "Принцип общего пула понимают 38,7% респондентов",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| respondent_id | household_type | numbers_on_voskhod | numbers_other_operator | aware_of_pack | understands_shared_pool | main_barrier | most_wanted_feature | interest_after_explanation |",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу understands_shared_pool: 116 из 300 ответили «да»; 116/300 = 38,67% ≈ 38,7%"
+      },
+      {
+        "id": "c173",
+        "text": "Функция «лимит для участника» является самой востребованной — 30,7%",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| respondent_id | household_type | numbers_on_voskhod | numbers_other_operator | aware_of_pack | understands_shared_pool | main_barrier | most_wanted_feature | interest_after_explanation |",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу most_wanted_feature: «лимит для участника» — 92 из 300 (30,67% ≈ 30,7%), что больше, чем «перенос остатка» (75), «родительский контроль» (46), «ничего» (40), «общий счёт» (33)"
+      },
+      {
+        "id": "c174",
+        "text": "Функция «перенос остатка интернета» востребована 25,0%",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| respondent_id | household_type | numbers_on_voskhod | numbers_other_operator | aware_of_pack | understands_shared_pool | main_barrier | most_wanted_feature | interest_after_explanation |",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу most_wanted_feature: «перенос остатка» — 75 из 300; 75/300 = 25,0%"
+      },
+      {
+        "id": "c175",
+        "text": "В продукте отсутствует перенос остатка интернета на следующий месяц",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Общий пакет мобильного интернета — 80 ГБ в месяц на всех участников. Остаток на следующий месяц **не переносится**.",
+        "quote_found": true,
+        "comment": "Прямое указание в продуктовой карточке"
+      },
+      {
+        "id": "c176",
+        "text": "Доля обращений с темой «общий пакет закончился раньше срока» составляет 15,3%",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| ticket_id | month | topic | channel | resolved_first_contact | summary |",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу topic: 23 из 150 обращений с темой «общий пакет закончился раньше срока»; 23/150 = 15,33% ≈ 15,3%"
+      },
+      {
+        "id": "c177",
+        "text": "Доля обращений с темой «как добавить участника» составляет 30,0%",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| ticket_id | month | topic | channel | resolved_first_contact | summary |",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу topic: 45 из 150 обращений с темой «как добавить участника»; 45/150 = 30,0%"
+      },
+      {
+        "id": "c178",
+        "text": "Доля обращений с темой «не пришло приглашение или SMS» составляет 10,7%",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| ticket_id | month | topic | channel | resolved_first_contact | summary |",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу topic: 16 из 150 обращений с темой «не пришло приглашение или SMS»; 16/150 = 10,67% ≈ 10,7%"
+      },
+      {
+        "id": "c179",
+        "text": "Несоответствие условий пакета потребностям является установленной причиной проблем, а не дефицит объяснений",
+        "kind": "causal",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "| main_barrier |",
+        "quote_found": true,
+        "comment": "В опросе одновременно присутствуют барьеры, связанные с условиями продукта («один израсходует весь пакет», «не хочу платить за всех», «родные у другого оператора»), и барьеры, связанные с непониманием («непонятно, как делится интернет» — около 23%, «не вижу выгоды»). Утверждение о том, что причиной является именно несоответствие условий, а не дефицит объяснений, в материалах прямо не установлено"
+      },
+      {
+        "id": "c180",
+        "text": "Текущее число подключений пакета — 6,8 тыс. при плане 40 тыс.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "Пакет «Семейный круг» запустили в апреле, а подключений в разы меньше плана: 6,8 тыс. вместо 40 тыс.",
+        "quote_found": true,
+        "comment": "Числа совпадают с продуктовой карточкой (факт — 6 800, план — 40 000)"
+      },
+      {
+        "id": "c181",
+        "text": "Интерес сегмента семей с детьми составляет 3,87 балла",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет прямого указания среднего интереса 3,87 балла; расчёт по сегменту «дети до 14» даёт 312/85 ≈ 3,67, по всем сегментам с детьми (до 14 и 14–17) — 531/139 ≈ 3,82."
+      },
+      {
+        "id": "c182",
+        "text": "Стоимость пакета — 990 ₽ в месяц за владельца",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Владелец пакета платит 990 ₽ в месяц за себя и 290 ₽ за каждого участника (до 4 участников, всего до 5 номеров).",
+        "quote_found": true,
+        "comment": "Прямо указано в условиях пакета."
+      },
+      {
+        "id": "c183",
+        "text": "Стоимость участия в пакете — 290 ₽ в месяц за каждого участника",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Владелец пакета платит 990 ₽ в месяц за себя и 290 ₽ за каждого участника (до 4 участников, всего до 5 номеров).",
+        "quote_found": true,
+        "comment": "Прямо указано в условиях пакета."
+      },
+      {
+        "id": "c184",
+        "text": "Пакет рассчитан на до 4 участников",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "до 4 участников, всего до 5 номеров",
+        "quote_found": true,
+        "comment": "Прямо указано в условиях пакета."
+      },
+      {
+        "id": "c185",
+        "text": "Общий пул интернета составляет 80 ГБ на всех участников",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Общий пакет мобильного интернета — 80 ГБ в месяц на всех участников.",
+        "quote_found": true,
+        "comment": "Прямо указано в условиях пакета."
+      },
+      {
+        "id": "c186",
+        "text": "Участниками пакета могут быть только абоненты «Восход Телеком»",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Участником может быть только номер «Восход Телеком».",
+        "quote_found": true,
+        "comment": "Прямо указано в условиях пакета."
+      },
+      {
+        "id": "c187",
+        "text": "Перенос номера занимает до 8 дней",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "перенос номера занимает до 8 дней",
+        "quote_found": true,
+        "comment": "Прямо указано в условиях пакета."
+      },
+      {
+        "id": "c188",
+        "text": "В продукте отсутствует лимит интернета для участника",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "**Лимитов трафика для отдельных участников** — в бэклоге, срок не определён.",
+        "quote_found": true,
+        "comment": "Прямо указано в разделе «Чего в продукте нет»."
+      },
+      {
+        "id": "c189",
+        "text": "В продукте отсутствует безлимитный интернет для семьи",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Безлимитного интернета — нет ни в одном варианте пакета.",
+        "quote_found": true,
+        "comment": "Прямо указано в разделе «Чего в продукте нет»."
+      },
+      {
+        "id": "c190",
+        "text": "Родительский контроль востребован 17,7% респондентов",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В опросе 51 из 300 респондентов (17%) указали родительский контроль как самую востребованную функцию; 17,7% в материалах не подтверждается."
+      },
+      {
+        "id": "c191",
+        "text": "Доля обращений с темой «где включить родительский контроль» составляет 9,3%",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "В таблице 14 обращений с темой «где включить родительский контроль» (T-0022, T-0047, T-0019, T-0118, T-0003, T-0086, T-0106, T-0107, T-0013, T-0014, T-0041, T-0076, T-0089, T-0110). 14/150 = 9,33% ≈ 9,3%."
+      },
+      {
+        "id": "c192",
+        "text": "Доля подключений пакета от плана составляет 17% (6,8 тыс. из 40 тыс.)",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800.",
+        "quote_found": true,
+        "comment": "6 800 / 40 000 = 0,17 = 17%."
+      },
+      {
+        "id": "c193",
+        "text": "Семейные абоненты «Восход Телеком» имеют 2–4 номера в домохозяйстве",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет утверждения, что семейные абоненты имеют 2–4 номера. В опросе есть респонденты с 1 номером «Восход Телеком» (например, R-0006), а продуктовая карточка допускает до 5 номеров (владелец + до 4 участников)."
+      },
+      {
+        "id": "c194",
+        "text": "Целевая аудитория включает семьи с детьми до 14 лет",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "household_type: \"Тип домохозяйства: дети до 14 / подростки 14–17 / пара без детей / пожилые родители\"",
+        "quote_found": true,
+        "comment": "Опрос, на основе которого строится понимание целевой аудитории, включает сегмент «дети до 14»."
+      },
+      {
+        "id": "c195",
+        "text": "Целевая аудитория включает семьи с подростками 14–17 лет",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "household_type: \"Тип домохозяйства: дети до 14 / подростки 14–17 / пара без детей / пожилые родители\"",
+        "quote_found": true,
+        "comment": "Опрос включает сегмент «подростки 14–17»."
+      },
+      {
+        "id": "c196",
+        "text": "Семьи с несколькими номерами «Восход Телеком» сталкиваются с непредсказуемым расходом интернета",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0020 | 2026-06 | общий пакет закончился раньше срока | чат в приложении | да | Ребёнок потратил весь общий интернет за неделю |",
+        "quote_found": true,
+        "comment": "Множественные обращения с темой «общий пакет закончился раньше срока» и содержаниями о непредсказуемом расходе (ребёнок потратил весь интернет, пакет закончился 18-го числа) подтверждают утверждение."
+      },
+      {
+        "id": "c197",
+        "text": "Семьи с несколькими номерами не понимают, как делится общий пул",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "understands_shared_pool: \"Правильно понял, как делится общий интернет\"",
+        "quote_found": true,
+        "comment": "В колонке understands_shared_pool у большинства респондентов значение «нет», а в main_barrier встречается вариант «непонятно, как делится интернет»."
+      },
+      {
+        "id": "c198",
+        "text": "Часть семей не решается подключить пакет из-за опасений, что один участник израсходует весь трафик",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"Главная причина не подключать (выбор из списка)\" ... один израсходует весь пакет",
+        "quote_found": true,
+        "comment": "Вариант «один израсходует весь пакет» присутствует в main_barrier у части респондентов (например, R-0001, R-0014, R-0020)."
+      },
+      {
+        "id": "c199",
+        "text": "Часть семей не решается подключить пакет из-за опасений, что придётся платить за всех",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"Главная причина не подключать (выбор из списка)\" ... не хочу платить за всех",
+        "quote_found": true,
+        "comment": "Вариант «не хочу платить за всех» присутствует в main_barrier у части респондентов (например, R-0006, R-0015, R-0019)."
+      },
+      {
+        "id": "c200",
+        "text": "28% респондентов не понимают, как делится интернет",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "По данным опроса (survey_family.csv), значение «нет» в колонке understands_shared_pool имеют 187 из 300 респондентов (62,3%), а не 28%."
+      },
+      {
+        "id": "c201",
+        "text": "21% боятся, что один израсходует весь пакет",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"Главная причина не подключать (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу main_barrier: значение «один израсходует весь пакет» встречается 63 раза из 300; 63/300 = 21%."
+      },
+      {
+        "id": "c202",
+        "text": "10,7% не хотят платить за всех",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"Главная причина не подключать (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу main_barrier: значение «не хочу платить за всех» встречается 32 раза из 300; 32/300 = 10,67% ≈ 10,7%."
+      },
+      {
+        "id": "c203",
+        "text": "Принцип общего пула понимают лишь 38,7%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "understands_shared_pool: \"Правильно понял, как делится общий интернет\"",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу understands_shared_pool: значение «да» встречается 116 раз из 300; 116/300 = 38,67% ≈ 38,7%."
+      },
+      {
+        "id": "c204",
+        "text": "Барьеры связаны с отсутствием в продукте понятного механизма деления и лимитов",
+        "kind": "causal",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "- **Лимитов трафика для отдельных участников** — в бэклоге, срок не определён.",
+        "quote_found": true,
+        "comment": "В продуктовой карточке прямо указано отсутствие лимитов; в опросе (survey_family.csv) барьеры «непонятно, как делится интернет» и «один израсходует весь пакет» являются одними из самых частых."
+      },
+      {
+        "id": "c205",
+        "text": "Гипотеза «люди не понимают выгоду» не подтверждена как основная причина недоподключений",
+        "kind": "causal",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"Главная причина не подключать (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Значение «не вижу выгоды» указано как главный барьер лишь 37 раз из 300 (12,3%), тогда как «один израсходует весь пакет» — 63 раза (21%), «непонятно, как делится интернет» — 58 раз (19,3%), «родные у другого оператора» — 47 раз (15,7%); гипотеза о непонимании выгоды не является основной причиной."
+      },
+      {
+        "id": "c206",
+        "text": "Пакет «Семейный круг» имеет общий пул 80 ГБ на всех участников",
+        "kind": "product",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "- Общий пакет мобильного интернета — 80 ГБ в месяц на всех участников.",
+        "quote_found": true,
+        "comment": "Прямое указание в продуктовой карточке."
+      },
+      {
+        "id": "c207",
+        "text": "Стоимость пакета составляет 990 ₽ в месяц за владельца",
+        "kind": "product",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "- Владелец пакета платит 990 ₽ в месяц за себя и 290 ₽ за каждого участника (до 4 участников, всего до 5 номеров).",
+        "quote_found": true,
+        "comment": "Прямое указание в продуктовой карточке."
+      },
+      {
+        "id": "c208",
+        "text": "Стоимость пакета составляет 290 ₽ за участника",
+        "kind": "product",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "- Владелец пакета платит 990 ₽ в месяц за себя и 290 ₽ за каждого участника (до 4 участников, всего до 5 номеров).",
+        "quote_found": true,
+        "comment": "Прямое указание в продуктовой карточке: 290 ₽ за каждого участника."
+      },
+      {
+        "id": "c209",
+        "text": "В пакете может быть до 4 участников",
+        "kind": "product",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "- Владелец пакета платит 990 ₽ в месяц за себя и 290 ₽ за каждого участника (до 4 участников, всего до 5 номеров).",
+        "quote_found": true,
+        "comment": "Прямое указание: до 4 участников (плюс владелец, всего до 5 номеров)."
+      },
+      {
+        "id": "c210",
+        "text": "К пакету можно подключить только номера «Восход Телеком»",
+        "kind": "product",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "- Участником может быть только номер «Восход Телеком». Номер другого оператора сначала переносится к нам (перенос номера занимает до 8 дней, нужен визит в салон или подписание через Госуслуги).",
+        "quote_found": true,
+        "comment": "Прямое указание в продуктовой карточке."
+      },
+      {
+        "id": "c211",
+        "text": "30% обращений в поддержку касаются добавления участника",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Подсчёт по теме «как добавить участника»: 45 из 150 обращений = 30,0%"
+      },
+      {
+        "id": "c212",
+        "text": "10,7% обращений в поддержку касаются того, что не пришло приглашение",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Подсчёт по теме «не пришло приглашение или SMS»: 16 из 150 = 10,67% ≈ 10,7%"
+      },
+      {
+        "id": "c213",
+        "text": "15,3% обращений в поддержку касаются того, почему пакет закончился раньше",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Подсчёт по теме «общий пакет закончился раньше срока»: 23 из 150 = 15,33% ≈ 15,3%"
+      },
+      {
+        "id": "c214",
+        "text": "Перенос номера другого оператора занимает до 8 дней",
+        "kind": "product",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "перенос номера занимает до 8 дней",
+        "quote_found": true,
+        "comment": "Прямо указано в продуктовой карточке"
+      },
+      {
+        "id": "c215",
+        "text": "С апреля 2026 года пакет «Семейный круг» подключили 6,8 тыс. абонентов",
+        "kind": "company_data",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "6,8 тыс. вместо 40 тыс.",
+        "quote_found": true,
+        "comment": "Фактическое количество подключений — 6,8 тыс."
+      },
+      {
+        "id": "c216",
+        "text": "Доля обращений по теме «общий пакет закончился раньше срока» от всех обращений по пакету составляет 15,3%",
+        "kind": "number",
+        "chunk": 12,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Все 150 обращений в выборке относятся к пакету; 23/150 = 15,3%"
+      },
+      {
+        "id": "c217",
+        "text": "Доля обращений по теме «как добавить участника» от всех обращений по пакету составляет 30,0%",
+        "kind": "number",
+        "chunk": 12,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "Случайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Все 150 обращений в выборке относятся к пакету; 45/150 = 30,0%"
+      },
+      {
+        "id": "c218",
+        "text": "Доля подключений пакета от плана составляет 17%",
+        "kind": "number",
+        "chunk": 12,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800.",
+        "quote_found": true,
+        "comment": "6800 / 40000 = 0,17 = 17%"
+      },
+      {
+        "id": "c219",
+        "text": "Количество подключений пакета составляет 6,8 тыс.",
+        "kind": "number",
+        "chunk": 12,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800.",
+        "quote_found": true,
+        "comment": "Факт — 6 800, что равно 6,8 тыс."
+      },
+      {
+        "id": "c220",
+        "text": "План подключений пакета составляет 40 тыс.",
+        "kind": "number",
+        "chunk": 12,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800.",
+        "quote_found": true,
+        "comment": "План составляет 40 000, т.е. 40 тыс."
+      },
+      {
+        "id": "c221",
+        "text": "Доля респондентов, понимающих принцип общего пула, составляет 38,7%",
+        "kind": "number",
+        "chunk": 12,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "understands_shared_pool — правильно ответил на контрольный вопрос «как делится интернет в пакете» после короткого описания пакета.\nn=300",
+        "quote_found": true,
+        "comment": "Количество ответов «да» в колонке understands_shared_pool: 116; 116/300 = 38,7%"
+      },
+      {
+        "id": "c222",
+        "text": "Доля респондентов, указавших барьер «не хочу платить за всех», составляет 10,7%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"Главная причина не подключать (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Количество «не хочу платить за всех» в main_barrier: 32; 32/300 = 10,7%"
+      },
+      {
+        "id": "c223",
+        "text": "Доля респондентов, указавших основной барьер «другое», составляет 6,0%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"Главная причина не подключать (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Количество «другое» в main_barrier: 18; 18/300 = 6,0%"
+      },
+      {
+        "id": "c224",
+        "text": "Доля респондентов, указавших основной барьер «не вижу выгоды», составляет 13,0%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "main_barrier: \"Главная причина не подключать (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Количество «не вижу выгоды» в main_barrier: 39; 39/300 = 13,0%"
+      },
+      {
+        "id": "c225",
+        "text": "Самая востребованная функция — лимит для участника, её назвали 30,7% респондентов",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "most_wanted_feature: \"Чего больше всего не хватает в пакете (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Количество «лимит для участника» в most_wanted_feature: 92 (максимум среди всех вариантов); 92/300 = 30,7%"
+      },
+      {
+        "id": "c226",
+        "text": "Функцию «перенос остатка» назвали востребованной 25,0% респондентов",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "most_wanted_feature: \"Чего больше всего не хватает в пакете (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Количество «перенос остатка» в most_wanted_feature: 75; 75/300 = 25,0%"
+      },
+      {
+        "id": "c227",
+        "text": "Доля респондентов, не назвавших востребованную функцию («ничего»), составляет 14,3%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "most_wanted_feature: \"Чего больше всего не хватает в пакете (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Количество «ничего» в most_wanted_feature: 43; 43/300 = 14,3%"
+      },
+      {
+        "id": "c228",
+        "text": "Доля респондентов, назвавших востребованной функцией «общий счёт», составляет 12,3%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "most_wanted_feature: \"Чего больше всего не хватает в пакете (выбор из списка)\"",
+        "quote_found": true,
+        "comment": "Количество «общий счёт» в most_wanted_feature: 37; 37/300 = 12,3%"
+      },
+      {
+        "id": "c229",
+        "text": "Доля обращений по теме «не пришло приглашение или SMS» составляет 10,7%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "topic: \"Тема (классификатор поддержки)\"\nСлучайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Количество обращений с topic «не пришло приглашение или SMS»: 16; 16/150 = 10,7%"
+      },
+      {
+        "id": "c230",
+        "text": "Доля обращений по теме «где включить родительский контроль» составляет 9,3%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "topic: \"Тема (классификатор поддержки)\"\nСлучайная выборка 150 обращений с темой «Семейный круг»",
+        "quote_found": true,
+        "comment": "Количество обращений с topic «где включить родительский контроль»: 14; 14/150 = 9,3%"
+      },
+      {
+        "id": "c231",
+        "text": "В продукте «Семейный круг» отсутствует перенос остатка интернета на следующий месяц",
+        "kind": "product",
+        "chunk": 14,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Остаток на следующий месяц **не переносится**.",
+        "quote_found": true,
+        "comment": "Прямо указано в условиях пакета."
+      },
+      {
+        "id": "c232",
+        "text": "Участником пакета «Семейный круг» может быть только номер оператора «Восход Телеком»",
+        "kind": "product",
+        "chunk": 14,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_sheet.md",
+        "quote": "Участником может быть только номер «Восход Телеком».",
+        "quote_found": true,
+        "comment": "Прямое ограничение в продуктовой карточке."
+      },
+      {
+        "id": "c233",
+        "text": "Барьеры в опросе носят продуктовый, а не коммуникационный характер",
+        "kind": "causal",
+        "chunk": 14,
+        "section": "Журнал решения",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/survey_family.csv",
+        "quote": "непонятно, как делится интернет",
+        "quote_found": true,
+        "comment": "Большинство барьеров продуктовые (функции, условия), но в опросе присутствуют и коммуникационные барьеры (графа main_barrier «непонятно, как делится интернет»)."
+      },
+      {
+        "id": "c234",
+        "text": "Распределение обращений указывает на несоответствие условий потребностям, а не на дефицит объяснений",
+        "kind": "causal",
+        "chunk": 14,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/support_tickets.csv",
+        "quote": "| T-0022 | 2026-04 | где включить родительский контроль | чат в приложении | да | Спрашивает про расписание доступа к интернету для детей |",
+        "quote_found": true,
+        "comment": "Темы обращений (родительский контроль, исчерпание пакета, другой оператор) указывают на несоответствие продукта потребностям, а не на дефицит объяснений."
+      },
+      {
+        "id": "c235",
+        "text": "Агентство СИНТЕТИКА подготовило черновик лендинга «Семейный круг»",
+        "kind": "company_data",
+        "chunk": 15,
+        "section": "Источники",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В метаданных файла указано агентство «Северный ветер», а не СИНТЕТИКА."
+      },
+      {
+        "id": "c236",
+        "text": "По итогам переписи получены данные о среднем размере и доле одиночных домохозяйств в России",
+        "kind": "market",
+        "chunk": 15,
+        "section": "Источники",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_households.md",
+        "quote": "В России, по данным переписи 2021 года, средний размер домохозяйств составил 2,2 человека. При этом доля домохозяйств из одного человека выросла до 41,8%.",
+        "quote_found": true,
+        "comment": "Данные переписи приведены дословно."
+      },
+      {
+        "id": "c237",
+        "text": "В России зафиксировано потребление мобильного трафика на абонента за 2025 год и спад этого показателя в 2026 году",
+        "kind": "market",
+        "chunk": 15,
+        "section": "Источники",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_mobile_traffic.md",
+        "quote": "В 2025 году к мобильному интернету были подключены 171,8 млн абонентов, в среднем на каждого пришлись 24 Гбайт трафика ежемесячно или 288 Гбайт за год... в 2026 году на фоне регулярных отключений обозначилась тенденция к его снижению",
+        "quote_found": true,
+        "comment": "Указаны и объём потребления за 2025 год, и тенденция к снижению в 2026 году."
+      },
+      {
+        "id": "c238",
+        "text": "У компании СИНТЕТИКА имеется продуктовая карточка пакета «Семейный круг»",
+        "kind": "product",
+        "chunk": 15,
+        "section": "Источники",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Продуктовая карточка принадлежит «Восход Телеком», а не компании СИНТЕТИКА."
+      },
+      {
+        "id": "c239",
+        "text": "За период с апреля по октябрь 2026 года зафиксированы обращения в поддержку по пакету «Семейный круг» от СИНТЕТИКА",
+        "kind": "company_data",
+        "chunk": 15,
+        "section": "Источники",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Обращения зафиксированы от службы поддержки «Восход Телеком», а не от СИНТЕТИКА."
+      },
+      {
+        "id": "c240",
+        "text": "В октябре 2026 года проведён опрос абонентов о пакете «Семейный круг» силами СИНТЕТИКА",
+        "kind": "company_data",
+        "chunk": 15,
+        "section": "Источники",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Опрос проведён службой исследований «Восход Телеком», а не силами СИНТЕТИКА."
+      }
+    ],
+    "all_extracted": [
+      {
+        "id": "c001",
+        "text": "Доля респондентов, указавших барьер «непонятно, как делится интернет», составляет 28,0%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c002",
+        "text": "Доля респондентов, указавших барьер «один израсходует весь пакет», составляет 21,0%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c003",
+        "text": "Доля запросов на лимит для участника составляет 30,7%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c004",
+        "text": "Доля запросов на перенос остатка составляет 25,0%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c005",
+        "text": "Перенос остатка в продукте отсутствует",
+        "kind": "product",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c006",
+        "text": "Доля обращений по теме «как добавить участника» составляет 30,0%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c007",
+        "text": "Доля обращений по теме «общий пакет закончился раньше срока» составляет 15,3%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c008",
+        "text": "План подключений составляет 40 тыс.",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c009",
+        "text": "Окупаемость доработки пока не проверена",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c010",
+        "text": "Текущее количество подключений составляет 6,8 тыс.",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c011",
+        "text": "Главные барьеры в опросе являются продуктовыми, а не коммуникационными",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c012",
+        "text": "Обращения подтверждают условия пакета, а не непонимание",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c013",
+        "text": "Малое количество подключений обусловлено условиями пакета, а не слабым объяснением выгоды",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c014",
+        "text": "Посылка «Люди не понимают выгоду пакета — поэтому подключений мало и нужна кампания с лендингом, объясняющим ценность» не подтверждена",
+        "kind": "other",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c015",
+        "text": "Статус варианта «Переделать условия пакета под реальные барьеры семей» — принято",
+        "kind": "other",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c016",
+        "text": "Доля обращений, решенных с первого контакта, в апреле 2026 года составляла 80.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c017",
+        "text": "Доля обращений, решенных с первого контакта, в мае 2026 года составляла 68.8%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c018",
+        "text": "Доля обращений, решенных с первого контакта, в июне 2026 года составляла 76.2%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c019",
+        "text": "Доля обращений, решенных с первого контакта, в июле 2026 года составляла 52.4%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c020",
+        "text": "Доля обращений, решенных с первого контакта, в августе 2026 года составляла 71.4%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c021",
+        "text": "Доля обращений, решенных с первого контакта, в сентябре 2026 года составляла 88.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c022",
+        "text": "Доля обращений, решенных с первого контакта, в октябре 2026 года составляла 70.6%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c023",
+        "text": "Доля обращений через канал «чат в приложении» составляла 58.7%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c024",
+        "text": "Доля обращений через канал «звонок» составляла 34.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c025",
+        "text": "Доля обращений через канал «салон» составляла 7.3%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c026",
+        "text": "FCR по каналу «чат в приложении» составлял 77.3%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c027",
+        "text": "FCR по каналу «звонок» составлял 66.7%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c028",
+        "text": "FCR по каналу «салон» составлял 54.5%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c029",
+        "text": "Общее количество обращений за период составляло 150",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c030",
+        "text": "Доля респондентов, знающих о пакете «Семейный круг», составляла 57.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c031",
+        "text": "Доля респондентов, понимающих принцип общего пула, составляла 38.7%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c032",
+        "text": "Наиболее распространенным барьером являлось «непонятно, как делится интернет» — 28.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c033",
+        "text": "Барьер «один израсходует весь пакет» составлял 21.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c034",
+        "text": "Барьер «родные у другого оператора» составлял 21.3%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c035",
+        "text": "Средний уровень интереса после объяснения для домохозяйств с детьми до 14 лет составлял 3.87 балла",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c036",
+        "text": "Средний уровень интереса после объяснения для домохозяйств «пара без детей» составлял 2.88 балла",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c037",
+        "text": "Средний уровень интереса после объяснения для домохозяйств с подростками 14–17 лет составлял 3.86 балла",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c038",
+        "text": "Средний уровень интереса после объяснения для домохозяйств с пожилыми родителями составлял 3.4 балла",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c039",
+        "text": "Среднее количество номеров Восход в домохозяйствах с детьми до 14 лет составляло 2.05",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c040",
+        "text": "Среднее количество номеров Восход в домохозяйствах «пара без детей» составляло 2.03",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c041",
+        "text": "Среднее количество номеров Восход в домохозяйствах с подростками 14–17 лет составляло 1.75",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c042",
+        "text": "Среднее количество номеров Восход в домохозяйствах с пожилыми родителями составляло 2.07",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c043",
+        "text": "Самой востребованной функцией являлся «лимит для участника» — 30.7%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c044",
+        "text": "Наиболее частой темой обращений являлось «как добавить участника» — 30.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c045",
+        "text": "FCR по теме «отключить участника» составлял 100.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c046",
+        "text": "FCR по теме «участник у другого оператора — перенос номера» составлял 30.0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c047",
+        "text": "Общий счёт: 12.3%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c048",
+        "text": "Перенос остатка: 25.0%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c049",
+        "text": "Родительский контроль: 17.7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c050",
+        "text": "Для домохозяйств «дети до 14»: лимит для участника 32.6%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c051",
+        "text": "Для домохозяйств «дети до 14»: ничего 14.0%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c052",
+        "text": "Для домохозяйств «дети до 14»: общий счёт 29.7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c053",
+        "text": "Для домохозяйств «дети до 14»: перенос остатка 22.7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c054",
+        "text": "Для домохозяйств «дети до 14»: родительский контроль 41.5%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c055",
+        "text": "Для домохозяйств «пара без детей»: лимит для участника 27.2%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c056",
+        "text": "Для домохозяйств «пара без детей»: ничего 44.2%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c057",
+        "text": "Для домохозяйств «пара без детей»: общий счёт 37.8%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c058",
+        "text": "Для домохозяйств «пара без детей»: перенос остатка 41.3%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c059",
+        "text": "Для домохозяйств «пара без детей»: родительский контроль 17.0%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c060",
+        "text": "Для домохозяйств «подростки 14–17»: лимит для участника 25.0%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c061",
+        "text": "Для домохозяйств «подростки 14–17»: ничего 4.7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c062",
+        "text": "Для домохозяйств «подростки 14–17»: общий счёт 16.2%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c063",
+        "text": "Для домохозяйств «подростки 14–17»: перенос остатка 10.7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c064",
+        "text": "Для домохозяйств «подростки 14–17»: родительский контроль 37.7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c065",
+        "text": "Для домохозяйств «пожилые родители»: лимит для участника 15.2%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c066",
+        "text": "Для домохозяйств «пожилые родители»: ничего 37.2%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c067",
+        "text": "Для домохозяйств «пожилые родители»: общий счёт 16.2%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c068",
+        "text": "Для домохозяйств «пожилые родители»: перенос остатка 25.3%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c069",
+        "text": "Для домохозяйств «пожилые родители»: родительский контроль 3.8%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c070",
+        "text": "В целом лидирует «лимит для участника», но внутри 4 из 4 сегментов лидирует «ничего»",
+        "kind": "other",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c071",
+        "text": "Обращения: где включить родительский контроль — 14",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c072",
+        "text": "Обращения: как добавить участника — 45",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c073",
+        "text": "Обращения: не пришло приглашение или SMS — 16",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c074",
+        "text": "Обращения: общий пакет закончился раньше срока — 23",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c075",
+        "text": "Обращения: отключить участника — 9",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c076",
+        "text": "Обращения: списания и счёт — 23",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c077",
+        "text": "Обращения: участник у другого оператора — перенос номера — 20",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c078",
+        "text": "Пакет «Семейный круг» запущен 01.04.2026",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c079",
+        "text": "План подключений к 01.10.2026 — 40 000 пакетов, факт — 6 800",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c080",
+        "text": "Стоимость пакета «Семейный круг» составляет 990 ₽ в месяц за владельца и 290 ₽ за каждого из до 4 участников",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c081",
+        "text": "Общий объём мобильного интернета в пакете «Семейный круг» составляет 80 ГБ в месяц на всех участников",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c082",
+        "text": "Остаток интернета в пакете «Семейный круг» не переносится на следующий месяц",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c083",
+        "text": "В пакете «Семейный круг» отсутствует безлимитный интернет во всех вариантах",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c084",
+        "text": "Участником пакета «Семейный круг» может быть только номер оператора «Восход Телеком», перенос номера другого оператора занимает до 8 дней",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c085",
+        "text": "Черновик лендинга утверждает наличие безлимитного интернета для всей семьи",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c086",
+        "text": "Черновик лендинга утверждает, что интернет не сгорает, и возможность подключения родных с другим оператором за минуту",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c087",
+        "text": "План составлял 40 тыс. подключений",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c088",
+        "text": "Фактическое количество подключений составило 6,8 тыс.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c089",
+        "text": "Разрыв между планом и фактом составляет 5,9 раза",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c090",
+        "text": "Происхождение плана в 40 тыс. не раскрыто",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c091",
+        "text": "Полнота подсчёта подключений в 6,8 тыс. не раскрыта",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c092",
+        "text": "Надёжность цифры 6,8 тыс. оценивается как очень низкая",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c093",
+        "text": "В лендинге заявлены преимущества: безлимит, перенос остатка, подключение родных с другим оператором за минуту",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c094",
+        "text": "В продукте отсутствует безлимит",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c095",
+        "text": "В продукте остаток не переносится",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c096",
+        "text": "В продукте можно подключать только номера «Восход Телеком»",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c097",
+        "text": "Перенос номера в продукте занимает до 8 дней",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c098",
+        "text": "28% пользователей указывают барьер «непонятно, как делится интернет»",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c099",
+        "text": "21% пользователей указывают барьер «один израсходует весь пакет»",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c100",
+        "text": "10,7% пользователей указывают барьер «не хочу платить за всех»",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c101",
+        "text": "Интерес после объяснения у сегментов с детьми составляет 3,86–3,87 из 5",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c102",
+        "text": "Цена пакета составляет 990 ₽ за владельца",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c103",
+        "text": "Цена пакета составляет 290 ₽ за участника",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c104",
+        "text": "Пакет включает 80 ГБ на всех участников",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c105",
+        "text": "43% респондентов не знают о пакете",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c106",
+        "text": "61,3% респондентов не понимают принцип общего пула",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c107",
+        "text": "FCR по теме «как добавить участника» составляет 86,7%",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c108",
+        "text": "FCR по теме «не пришло приглашение» составляет 68,8%",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c109",
+        "text": "Общий FCR в чате составляет 77,3%",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c110",
+        "text": "Общий FCR в салоне составляет 54,5%",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c111",
+        "text": "Продукт «Семейный круг» запущен 01.04.2026.",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c112",
+        "text": "К 01.10.2026 подключено 6,8 тыс. абонентов при плане 40 тыс.",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c113",
+        "text": "В условиях пакета отсутствует безлимит.",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c114",
+        "text": "Остаток трафика в пакете не переносится.",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c115",
+        "text": "Участником пакета может быть только номер оператора «Восход Телеком».",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c116",
+        "text": "Черновик лендинга содержит обещание безлимита.",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c117",
+        "text": "Черновик лендинга содержит обещание непереносимости остатка.",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c118",
+        "text": "Черновик лендинга содержит обещание подключения родных с другим оператором за минуту.",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c119",
+        "text": "28% респондентов не понимают, как делится интернет.",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c120",
+        "text": "21% респондентов боятся, что один участник израсходует весь пакет.",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c121",
+        "text": "10,7% респондентов не хотят платить за всех участников.",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c122",
+        "text": "Лишь 38,7% респондентов понимают принцип общего пула.",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c123",
+        "text": "Лимит для участника является самой востребованной функцией (30,7%).",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c124",
+        "text": "Перенос остатка востребован 25,0% респондентов.",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c125",
+        "text": "Перенос остатка в продукте отсутствует.",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c126",
+        "text": "15,3% обращений в поддержку касаются темы «общий пакет закончился раньше срока».",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c127",
+        "text": "30,0% обращений касаются темы «как добавить участника».",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c128",
+        "text": "10,7% обращений касаются темы «не пришло приглашение или SMS».",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c129",
+        "text": "За период зафиксировано 150 обращений, из них 45 — «как добавить участника» и 23 — «общий пакет закончился раньше срока».",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c130",
+        "text": "Стоимость пакета составляет 990 ₽ за владельца и 290 ₽ за каждого участника.",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c131",
+        "text": "Объём общего пула составляет 80 ГБ.",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c132",
+        "text": "Перенос номера занимает до 8 дней и требует визита в салон или использования портала Госуслуг.",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c133",
+        "text": "Показатель FCR в чате составляет 77%, в салоне — 55%.",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c134",
+        "text": "Средний интерес после объяснения составляет 3,4–3,9 балла у сегментов с детьми и подростками.",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c135",
+        "text": "Уровень интереса после объяснения у семей с детьми до 14 лет составляет 3,87 балла, у семей с подростками — 3,86 балла.",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c136",
+        "text": "80 ГБ без переноса остатка и без безлимита не покрывают реального потребления пользователей.",
+        "kind": "causal",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c137",
+        "text": "Интерес после объяснения у домохозяйств с детьми до 14 составляет 3,87 балла",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c138",
+        "text": "Интерес после объяснения у подростков 14–17 составляет 3,86 балла",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c139",
+        "text": "Интерес после объяснения у пар без детей составляет 2,88 балла",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c140",
+        "text": "В домохозяйствах с детьми до 14 в среднем 2,05 номера «Восход»",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c141",
+        "text": "В домохозяйствах с подростками 14–17 в среднем 1,75 номера «Восход»",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c142",
+        "text": "Самая востребованная функция — лимит для участника (30,7%)",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c143",
+        "text": "У сегмента с детьми до 14 лимит для участника востребован у 32,6%",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c144",
+        "text": "Знание о пакете составляет 57,0%",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c145",
+        "text": "Понимание пула составляет 38,7%",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c146",
+        "text": "Лучший канал по FCR — чат в приложении (77,3%)",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c147",
+        "text": "28% не понимают, как делится интернет",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c148",
+        "text": "21% боятся, что один израсходует весь пул",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c149",
+        "text": "25% называют самой востребованной функцией перенос остатка",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c150",
+        "text": "15,3% обращений — «общий пакет закончился раньше срока»",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c151",
+        "text": "В продукте отсутствует перенос остатка",
+        "kind": "product",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c152",
+        "text": "Потребление мобильного трафика в 2026 году снизится на 5–10%",
+        "kind": "market",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c153",
+        "text": "Участниками пакета могут быть только номера «Восход Телеком»",
+        "kind": "product",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c154",
+        "text": "Перенос номера при подключении родных с другим оператором занимает до 8 дней",
+        "kind": "product",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c155",
+        "text": "Цена пакета — 990 ₽ за владельца плюс 290 ₽ за участника",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c156",
+        "text": "Объём пакета — 80 ГБ на всех участников",
+        "kind": "product",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c157",
+        "text": "Черновик лендинга содержит утверждение о безлимите",
+        "kind": "company_data",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c158",
+        "text": "Черновик лендинга содержит утверждение «интернет не сгорает»",
+        "kind": "company_data",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c159",
+        "text": "Черновик лендинга содержит утверждение о подключении родных с другим оператором за минуту",
+        "kind": "company_data",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c160",
+        "text": "10,7% не хотят платить за всех участников",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Варианты"
+      },
+      {
+        "id": "c161",
+        "text": "OPT-003 выигрывает в базовом сценарии",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c162",
+        "text": "OPT-003 остаётся лучшим в 30 из 81 сценариев",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c163",
+        "text": "Вероятность сохранения лидерства OPT-003 составляет примерно 45%",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c164",
+        "text": "На выбор решения влияют факторы: эффективность коммуникации «объяснение выгоды», реалистичность плана 40 тыс. и полнота учёта подключений, соответствие продукта потребностям семей, доля и поведение целевого семейного сегмента",
+        "kind": "causal",
+        "chunk": 9,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c165",
+        "text": "При уровне «high» эффективности коммуникации «объяснение выгоды» выигрывает OPT-004",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c166",
+        "text": "При уровне «high» реалистичности плана 40 тыс. и полноты учёта подключений выигрывает OPT-001",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c167",
+        "text": "При уровне «low» соответствия продукта потребностям семей выигрывает OPT-004",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c168",
+        "text": "При уровне «high» доли и поведения целевого семейного сегмента выигрывает OPT-004",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c169",
+        "text": "Барьер «непонятно, как делится интернет» называют 28,0% респондентов",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c170",
+        "text": "Барьер «один израсходует весь пакет» называют 21,0% респондентов",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c171",
+        "text": "Барьер «не хочу платить за всех» называют 10,7% респондентов",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c172",
+        "text": "Принцип общего пула понимают 38,7% респондентов",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c173",
+        "text": "Функция «лимит для участника» является самой востребованной — 30,7%",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c174",
+        "text": "Функция «перенос остатка интернета» востребована 25,0%",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c175",
+        "text": "В продукте отсутствует перенос остатка интернета на следующий месяц",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c176",
+        "text": "Доля обращений с темой «общий пакет закончился раньше срока» составляет 15,3%",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c177",
+        "text": "Доля обращений с темой «как добавить участника» составляет 30,0%",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c178",
+        "text": "Доля обращений с темой «не пришло приглашение или SMS» составляет 10,7%",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c179",
+        "text": "Несоответствие условий пакета потребностям является установленной причиной проблем, а не дефицит объяснений",
+        "kind": "causal",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c180",
+        "text": "Текущее число подключений пакета — 6,8 тыс. при плане 40 тыс.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c181",
+        "text": "Интерес сегмента семей с детьми составляет 3,87 балла",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c182",
+        "text": "Стоимость пакета — 990 ₽ в месяц за владельца",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c183",
+        "text": "Стоимость участия в пакете — 290 ₽ в месяц за каждого участника",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c184",
+        "text": "Пакет рассчитан на до 4 участников",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c185",
+        "text": "Общий пул интернета составляет 80 ГБ на всех участников",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c186",
+        "text": "Участниками пакета могут быть только абоненты «Восход Телеком»",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c187",
+        "text": "Перенос номера занимает до 8 дней",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c188",
+        "text": "В продукте отсутствует лимит интернета для участника",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c189",
+        "text": "В продукте отсутствует безлимитный интернет для семьи",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c190",
+        "text": "Родительский контроль востребован 17,7% респондентов",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c191",
+        "text": "Доля обращений с темой «где включить родительский контроль» составляет 9,3%",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c192",
+        "text": "Доля подключений пакета от плана составляет 17% (6,8 тыс. из 40 тыс.)",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c193",
+        "text": "Семейные абоненты «Восход Телеком» имеют 2–4 номера в домохозяйстве",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c194",
+        "text": "Целевая аудитория включает семьи с детьми до 14 лет",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c195",
+        "text": "Целевая аудитория включает семьи с подростками 14–17 лет",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c196",
+        "text": "Семьи с несколькими номерами «Восход Телеком» сталкиваются с непредсказуемым расходом интернета",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c197",
+        "text": "Семьи с несколькими номерами не понимают, как делится общий пул",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c198",
+        "text": "Часть семей не решается подключить пакет из-за опасений, что один участник израсходует весь трафик",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c199",
+        "text": "Часть семей не решается подключить пакет из-за опасений, что придётся платить за всех",
+        "kind": "user",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c200",
+        "text": "28% респондентов не понимают, как делится интернет",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c201",
+        "text": "21% боятся, что один израсходует весь пакет",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c202",
+        "text": "10,7% не хотят платить за всех",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c203",
+        "text": "Принцип общего пула понимают лишь 38,7%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c204",
+        "text": "Барьеры связаны с отсутствием в продукте понятного механизма деления и лимитов",
+        "kind": "causal",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c205",
+        "text": "Гипотеза «люди не понимают выгоду» не подтверждена как основная причина недоподключений",
+        "kind": "causal",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c206",
+        "text": "Пакет «Семейный круг» имеет общий пул 80 ГБ на всех участников",
+        "kind": "product",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c207",
+        "text": "Стоимость пакета составляет 990 ₽ в месяц за владельца",
+        "kind": "product",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c208",
+        "text": "Стоимость пакета составляет 290 ₽ за участника",
+        "kind": "product",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c209",
+        "text": "В пакете может быть до 4 участников",
+        "kind": "product",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c210",
+        "text": "К пакету можно подключить только номера «Восход Телеком»",
+        "kind": "product",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c211",
+        "text": "30% обращений в поддержку касаются добавления участника",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c212",
+        "text": "10,7% обращений в поддержку касаются того, что не пришло приглашение",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c213",
+        "text": "15,3% обращений в поддержку касаются того, почему пакет закончился раньше",
+        "kind": "number",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c214",
+        "text": "Перенос номера другого оператора занимает до 8 дней",
+        "kind": "product",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c215",
+        "text": "С апреля 2026 года пакет «Семейный круг» подключили 6,8 тыс. абонентов",
+        "kind": "company_data",
+        "chunk": 11,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c216",
+        "text": "Доля обращений по теме «общий пакет закончился раньше срока» от всех обращений по пакету составляет 15,3%",
+        "kind": "number",
+        "chunk": 12,
+        "section": "План проверки"
+      },
+      {
+        "id": "c217",
+        "text": "Доля обращений по теме «как добавить участника» от всех обращений по пакету составляет 30,0%",
+        "kind": "number",
+        "chunk": 12,
+        "section": "План проверки"
+      },
+      {
+        "id": "c218",
+        "text": "Доля подключений пакета от плана составляет 17%",
+        "kind": "number",
+        "chunk": 12,
+        "section": "План проверки"
+      },
+      {
+        "id": "c219",
+        "text": "Количество подключений пакета составляет 6,8 тыс.",
+        "kind": "number",
+        "chunk": 12,
+        "section": "План проверки"
+      },
+      {
+        "id": "c220",
+        "text": "План подключений пакета составляет 40 тыс.",
+        "kind": "number",
+        "chunk": 12,
+        "section": "План проверки"
+      },
+      {
+        "id": "c221",
+        "text": "Доля респондентов, понимающих принцип общего пула, составляет 38,7%",
+        "kind": "number",
+        "chunk": 12,
+        "section": "План проверки"
+      },
+      {
+        "id": "c222",
+        "text": "Доля респондентов, указавших барьер «не хочу платить за всех», составляет 10,7%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c223",
+        "text": "Доля респондентов, указавших основной барьер «другое», составляет 6,0%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c224",
+        "text": "Доля респондентов, указавших основной барьер «не вижу выгоды», составляет 13,0%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c225",
+        "text": "Самая востребованная функция — лимит для участника, её назвали 30,7% респондентов",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c226",
+        "text": "Функцию «перенос остатка» назвали востребованной 25,0% респондентов",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c227",
+        "text": "Доля респондентов, не назвавших востребованную функцию («ничего»), составляет 14,3%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c228",
+        "text": "Доля респондентов, назвавших востребованной функцией «общий счёт», составляет 12,3%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c229",
+        "text": "Доля обращений по теме «не пришло приглашение или SMS» составляет 10,7%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c230",
+        "text": "Доля обращений по теме «где включить родительский контроль» составляет 9,3%",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c231",
+        "text": "В продукте «Семейный круг» отсутствует перенос остатка интернета на следующий месяц",
+        "kind": "product",
+        "chunk": 14,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c232",
+        "text": "Участником пакета «Семейный круг» может быть только номер оператора «Восход Телеком»",
+        "kind": "product",
+        "chunk": 14,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c233",
+        "text": "Барьеры в опросе носят продуктовый, а не коммуникационный характер",
+        "kind": "causal",
+        "chunk": 14,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c234",
+        "text": "Распределение обращений указывает на несоответствие условий потребностям, а не на дефицит объяснений",
+        "kind": "causal",
+        "chunk": 14,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c235",
+        "text": "Агентство СИНТЕТИКА подготовило черновик лендинга «Семейный круг»",
+        "kind": "company_data",
+        "chunk": 15,
+        "section": "Источники"
+      },
+      {
+        "id": "c236",
+        "text": "По итогам переписи получены данные о среднем размере и доле одиночных домохозяйств в России",
+        "kind": "market",
+        "chunk": 15,
+        "section": "Источники"
+      },
+      {
+        "id": "c237",
+        "text": "В России зафиксировано потребление мобильного трафика на абонента за 2025 год и спад этого показателя в 2026 году",
+        "kind": "market",
+        "chunk": 15,
+        "section": "Источники"
+      },
+      {
+        "id": "c238",
+        "text": "У компании СИНТЕТИКА имеется продуктовая карточка пакета «Семейный круг»",
+        "kind": "product",
+        "chunk": 15,
+        "section": "Источники"
+      },
+      {
+        "id": "c239",
+        "text": "За период с апреля по октябрь 2026 года зафиксированы обращения в поддержку по пакету «Семейный круг» от СИНТЕТИКА",
+        "kind": "company_data",
+        "chunk": 15,
+        "section": "Источники"
+      },
+      {
+        "id": "c240",
+        "text": "В октябре 2026 года проведён опрос абонентов о пакете «Семейный круг» силами СИНТЕТИКА",
+        "kind": "company_data",
+        "chunk": 15,
+        "section": "Источники"
+      }
+    ]
+  },
+  "options": null,
+  "promises": {
+    "total": 0,
+    "unbacked": 0,
+    "unclear": 0,
+    "backed": 0,
+    "items": []
+  },
+  "validation_plan": null,
+  "expected_choice": null,
+  "injection": null,
+  "heuristics": {
+    "status_quo": 3,
+    "kill": 6,
+    "baseline": 14,
+    "guardrail": 3,
+    "kill_criterion": 3,
+    "date_or_term": 76,
+    "injection_flag": 0
+  },
+  "judge_usage": {
+    "calls": 39,
+    "prompt_tokens": 518718,
+    "output_tokens": 282314,
+    "duration_s": 2767.81,
+    "cost_estimate": {
+      "usd": 0.955962,
+      "rub": 76.477,
+      "estimated": false,
+      "basis": "config/prices.yaml (as_of 2026-11-04): $0.7/2.1 за 1 млн токенов вход/выход"
+    },
+    "log": [
+      {
+        "step": "extract_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1185,
+        "output_tokens": 3213,
+        "duration_s": 36.86,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 363,
+        "output_tokens": 109,
+        "duration_s": 2.5,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3613,
+        "output_tokens": 4678,
+        "duration_s": 50.81,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3148,
+        "output_tokens": 6529,
+        "duration_s": 61.11,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 859,
+        "output_tokens": 197,
+        "duration_s": 2.94,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[6]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1948,
+        "output_tokens": 2283,
+        "duration_s": 26.3,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[7]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3071,
+        "output_tokens": 3379,
+        "duration_s": 37.98,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[8]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3099,
+        "output_tokens": 1999,
+        "duration_s": 27.42,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[9]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 611,
+        "output_tokens": 1515,
+        "duration_s": 16.26,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[10]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 2592,
+        "output_tokens": 2934,
+        "duration_s": 27.73,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[11]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 2672,
+        "output_tokens": 2638,
+        "duration_s": 26.1,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[12]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1688,
+        "output_tokens": 1563,
+        "duration_s": 20.55,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[13]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 919,
+        "output_tokens": 1746,
+        "duration_s": 20.77,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[14]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 2523,
+        "output_tokens": 3682,
+        "duration_s": 32.54,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[15]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 747,
+        "output_tokens": 1920,
+        "duration_s": 18.92,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20376,
+        "output_tokens": 6404,
+        "duration_s": 101.56,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20455,
+        "output_tokens": 5503,
+        "duration_s": 62.96,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20400,
+        "output_tokens": 13697,
+        "duration_s": 144.37,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20452,
+        "output_tokens": 25990,
+        "duration_s": 178.67,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20402,
+        "output_tokens": 11108,
+        "duration_s": 104.01,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[6]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20401,
+        "output_tokens": 11317,
+        "duration_s": 83.23,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[7]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20425,
+        "output_tokens": 10420,
+        "duration_s": 68.65,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[8]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20379,
+        "output_tokens": 4294,
+        "duration_s": 31.24,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[9]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20423,
+        "output_tokens": 2221,
+        "duration_s": 25.17,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[10]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20381,
+        "output_tokens": 6961,
+        "duration_s": 52.62,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[11]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20350,
+        "output_tokens": 14025,
+        "duration_s": 202.83,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[12]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20384,
+        "output_tokens": 8460,
+        "duration_s": 74.83,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[13]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20402,
+        "output_tokens": 7081,
+        "duration_s": 124.42,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[14]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20426,
+        "output_tokens": 13456,
+        "duration_s": 143.93,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[15]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20371,
+        "output_tokens": 29150,
+        "duration_s": 260.34,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[16]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20377,
+        "output_tokens": 3487,
+        "duration_s": 45.18,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[17]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20444,
+        "output_tokens": 4712,
+        "duration_s": 49.34,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[18]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20412,
+        "output_tokens": 9203,
+        "duration_s": 101.3,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[19]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20347,
+        "output_tokens": 10693,
+        "duration_s": 100.7,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[20]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20418,
+        "output_tokens": 9953,
+        "duration_s": 100.44,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[21]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20369,
+        "output_tokens": 5078,
+        "duration_s": 48.61,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[22]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20389,
+        "output_tokens": 5256,
+        "duration_s": 51.59,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[23]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20438,
+        "output_tokens": 21092,
+        "duration_s": 164.55,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[24]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 20459,
+        "output_tokens": 4368,
+        "duration_s": 38.48,
+        "attempts": 1,
+        "errors": []
+      }
+    ]
+  },
+  "errors": []
+}

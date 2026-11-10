@@ -1,0 +1,57 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "computations": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "metric": {
+            "type": "string"
+          },
+          "formula": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          },
+          "unit": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "metric",
+          "formula",
+          "value",
+          "unit"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "avg_monthly_churn_pct": {
+      "type": "number"
+    },
+    "end_base": {
+      "type": "integer"
+    },
+    "base_change_pct": {
+      "type": "number"
+    },
+    "claim_correct": {
+      "type": "boolean"
+    },
+    "explanation": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "computations",
+    "avg_monthly_churn_pct",
+    "end_base",
+    "base_change_pct",
+    "claim_correct",
+    "explanation"
+  ],
+  "type": "object"
+}

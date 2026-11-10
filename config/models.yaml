@@ -1,0 +1,108 @@
+# Роли моделей и маршрутизация. Имена — как их вызывает локальный демон: облачные из каталога
+# https://ollama.com/api/tags вызываются с суффиксом `:cloud` (или `-cloud` для тегов из `ollama list`);
+# скачивать заглушку не нужно — демон 0.40 принимает имя напрямую после `ollama signin`.
+# Выбор ролей обоснован измерениями TASK-2 (evals/spikes/models/REPORT.md, 2026-11-04).
+# Важно: облачные модели Ollama игнорируют `format` (JSON Schema) и не отдают `logprobs` —
+# схему дублируем в промпте и валидируем ответ; ограничение декодирования и logprobs есть только локально.
+# Каталог облака меняется: deepseek-v3.1, qwen3-coder, qwen3-vl сняты (HTTP 410 «retired»).
+host_env: OLLAMA_HOST
+default_host: http://127.0.0.1:11434
+# Прямой доступ к Ollama Cloud без демона: host https://ollama.com + OLLAMA_API_KEY.
+cloud_host: https://ollama.com
+api_key_env: OLLAMA_API_KEY
+# Таймаут одного запроса к модели. Облако иногда обрывает соединение, а демон держит его открытым: при 600 с
+# и трёх повторах один обрыв останавливал демо на ~40 минут. Самый медленный настоящий вызов в прогонах — 62 с.
+request_timeout_seconds: 180
+
+roles:
+  reasoning:
+    # Судьи 4,6/5 (лучший), JSON 100%, p50 2,0 с. think=true качества не прибавил (5,0 против 5,0
+    # на трудных у второго судьи), но в 5 раз медленнее и в 3 раза больше токенов.
+    model: deepseek-v4.1-flash:cloud
+    fallbacks: [gemma4:31b-cloud, gpt-oss:120b-cloud]
+    think: false
+    temperature: 0.3
+    num_ctx: 65536
+  workhorse:
+    # Судьи 4,4/5, авто-проверки 100%, самая быстрая (p50 1,6 с) и одна из самых дешёвых.
+    model: gemma4:31b-cloud
+    fallbacks: [deepseek-v4.1-flash:cloud, gpt-oss:20b]
+    think: false
+    temperature: 0.2
+    num_ctx: 32768
+  local_small:
+    # Единственная локальная LLM: соблюдает format=schema, отдаёт logprobs, скрининг инъекций 100%.
+    model: gpt-oss:20b
+    fallbacks: []
+    think: low
+    temperature: 0.0
+    num_ctx: 16384
+  embeddings:
+    # recall@1 0,85 / recall@3 0,95 на 20 русских парах (с инструкцией в запросе).
+    model: qwen3-embedding:8b
+    fallbacks: []
+  vision:
+    # qwen3-vl:235b снят. gemma4 — валидный JSON, весь видимый текст, 1,1 с.
+    model: gemma4:31b-cloud
+    fallbacks: [glm-5.3-flash:cloud]
+    temperature: 0.1
+
+# Порядок эскалации при невалидном структурированном выводе или низкой уверенности.
+escalation: [local_small, workhorse, reasoning]
+
+# Тип задачи → роль. Сильная модель только там, где нужно рассуждение.
+tasks:
+  frame: reasoning
+  research_plan: reasoning
+  research_step: workhorse
+  extract_evidence: workhorse
+  extract_claims: workhorse
+  verify_claim: workhorse
+  options: reasoning
+  premortem: reasoning
+  steelman: reasoning
+  role_panel: workhorse
+  decision_model: reasoning
+  product_strategy: reasoning
+  executive_summary: reasoning
+  comms_strategy: reasoning
+  experiments: reasoning
+  revise: reasoning
+  report: workhorse
+  persona: workhorse
+  interview_lint: workhorse
+  injection_screen: local_small
+  ux_review: vision
+  baseline_chat: reasoning
+  judge: reasoning
+
+# decide(): «умный if» для узких частых решений (выбор, да/нет, шкала).
+# Рекомендация TASK-3 (evals/spikes/decide/REPORT.md): бэкенд System One — Clef (`clef:cloud`, POST
+# {OLLAMA_HOST}/v1/systemone, без отдельного ключа): 97% на русском наборе, p50 0,44 с, настоящие
+# вероятности. Jev — тот же протокол (base_url ниже), вживую не проверен: нет ключа.
+decide:
+  backend_env: STRATEGIST_DECIDE_BACKEND   # systemone (Clef, по умолчанию) | jev | llm
+  default_backend: systemone
+  llm_role: workhorse
+  confidence_threshold: 0.7     # по вероятности выбранного класса System One; ниже — эскалация
+  # Шкала (score) — справочная оценка (сила возражения): не эскалируем, берём дробный уровень.
+  # Живой прогон 2026-11-04: при пороге 0,7 эскалировались все оценки силы возражений.
+  score_threshold: 0.0
+  escalate_role: reasoning
+  # Критичные вопросы: в тот же запрос добавляется отрицание (noul) или перестановка (choice);
+  # расхождение ответов — эскалация (TASK-3: поймана 1 из 1 ошибки при 100% точности на согласных).
+  consistency_tasks: [promise_supported, distinct_options]
+  systemone:
+    model: clef:cloud            # через локальный демон: {OLLAMA_HOST}/v1/systemone, без ключа
+  jev:
+    # Проверен 05.11: 86,8% на русском наборе (Clef 97,4%); ошибки — в силе возражений при p 0,50–0,73,
+    # поэтому порог эскалации выше общего: при 0,8 пойманы 5 из 5 ошибок, 71% вопросов без эскалации.
+    model: jev-1.13.0
+    confidence_threshold: 0.8
+    base_url: https://api.typesafe.ai/v1
+    api_key_env: TYPESAFE_API_KEY
+    openrouter_model: typesafe/jev-latest
+    openrouter_key_env: OPENROUTER_API_KEY
+
+# Судьи для слепого сравнения — других семейств, чем модели агента (deepseek, gemma, gpt-oss).
+judges: [mistral-large-4:cloud, kimi-k2.6:cloud]

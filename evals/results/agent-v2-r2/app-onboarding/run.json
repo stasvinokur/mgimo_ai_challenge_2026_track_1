@@ -1,0 +1,38 @@
+{
+  "brief_id": "app-onboarding",
+  "approach": "agent",
+  "status": "ok",
+  "started_at": "2026-11-09T08:59:56+00:00",
+  "finished_at": "2026-11-09T09:04:43+00:00",
+  "duration_s": 286.8,
+  "materials": [
+    "callcenter_reasons.csv",
+    "market_mobile_usage.md",
+    "nng_mobile_onboarding.md",
+    "onboarding_funnel.csv",
+    "product_facts.md",
+    "usability_notes.md"
+  ],
+  "quality_off": "",
+  "costs": {
+    "calls": 191,
+    "input_tokens": 253138,
+    "output_tokens": 45605,
+    "usd_list_price": 0.108962,
+    "model_latency_s": 351.6,
+    "by_model": {
+      "deepseek-v4.1-flash:cloud": {
+        "calls": 55,
+        "tokens": 182561
+      },
+      "gemma4:31b-cloud": {
+        "calls": 55,
+        "tokens": 86600
+      },
+      "clef:cloud": {
+        "calls": 81,
+        "tokens": 29582
+      }
+    }
+  }
+}

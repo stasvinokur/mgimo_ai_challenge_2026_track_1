@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"В цитате упоминается расширение аудитории на детей 11–15 лет, но нет никакой информации о падении удержания или причинах этого падения.\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "В цитате упоминается расширение аудитории на детей 11–15 лет, но нет никакой информации о падении удержания или причинах этого падения."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 396,
+  "output_tokens": 52,
+  "estimated": false,
+  "latency_ms": 721,
+  "escalated": false
+ }
+}

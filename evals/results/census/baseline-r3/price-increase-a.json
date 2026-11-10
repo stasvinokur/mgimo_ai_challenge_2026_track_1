@@ -1,0 +1,1065 @@
+{
+  "metrics_version": "1.2",
+  "brief_id": "price-increase-a",
+  "label": "baseline-r3",
+  "output_path": "evals/results/baseline-r3/price-increase-a/output.md",
+  "output_sha256": "33e77e4f1186520857c8a4e82d8ab25b56e4d03401f18cf04e50e32cb6ef8cb4",
+  "output_chars": 10286,
+  "judge_model": "mistral-large-4:cloud",
+  "judge_candidates": [
+    "mistral-large-4:cloud",
+    "kimi-k2.6:cloud"
+  ],
+  "judge_notes": [],
+  "judge_params": {
+    "think": false,
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 65536
+  },
+  "agent_model": "deepseek-v4.1-flash:cloud",
+  "seed": 42,
+  "census": true,
+  "claims_only": true,
+  "started_at": "2026-11-07T09:17:29+00:00",
+  "finished_at": "2026-11-07T09:25:02+00:00",
+  "claims": {
+    "extracted": 44,
+    "sample_size": 44,
+    "verified": 44,
+    "supported": 36,
+    "partial": 1,
+    "unsupported": 7,
+    "contradicted": 1,
+    "unsupported_share": 0.159,
+    "unsupported_ci95": [
+      0.0793,
+      0.2937
+    ],
+    "partial_share": 0.023,
+    "supported_share": 0.818,
+    "by_section": {
+      "Резюме для руководителя": {
+        "verified": 13,
+        "unsupported": 1,
+        "partial": 0
+      },
+      "1. Продуктовая стратегия": {
+        "verified": 17,
+        "unsupported": 0,
+        "partial": 0
+      },
+      "2. Коммуникационная стратегия": {
+        "verified": 3,
+        "unsupported": 0,
+        "partial": 0
+      },
+      "3. Что сказать руководителю прямо": {
+        "verified": 11,
+        "unsupported": 6,
+        "partial": 1
+      }
+    },
+    "quotes_not_found": 0,
+    "sample": [
+      {
+        "id": "c001",
+        "text": "Маржа упала с 31% до 26%",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Резюме для руководителя",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Валовая маржа снизилась с 31% до 26%.",
+        "quote_found": true,
+        "comment": ""
+      },
+      {
+        "id": "c002",
+        "text": "Роялти выросли на 12% год к году",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Резюме для руководителя",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Из-за этого совокупные роялти выросли на 12% год к году при росте выручки на 5%.",
+        "quote_found": true,
+        "comment": ""
+      },
+      {
+        "id": "c003",
+        "text": "Инфляция составляет 6,35%",
+        "kind": "market",
+        "chunk": 1,
+        "section": "Резюме для руководителя",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_inflation.md",
+        "quote": "Годовая инфляция в сентябре почти не изменилась и составила 6,35% (+0,02 п.п.).",
+        "quote_found": true,
+        "comment": ""
+      },
+      {
+        "id": "c004",
+        "text": "Конкуренты подняли цены на 12,5–33%",
+        "kind": "market",
+        "chunk": 1,
+        "section": "Резюме для руководителя",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "в конце 2025 года цена подписки на экосистему «Плюс» от «Яндекса» выросла на 12,5%, до 449 руб., с октября 2024-го. «СберПрайм» выросла в январе текущего года на 33%, до 399 руб. Цена на «Газпром Бонус» в начале 2026 года также выросла на 33%, до 399 руб.",
+        "quote_found": true,
+        "comment": ""
+      },
+      {
+        "id": "c005",
+        "text": "В окне наблюдения renewals_at_new_price = 0",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Резюме для руководителя",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": ""
+      },
+      {
+        "id": "c006",
+        "text": "Тестовые подписчики получили уведомление о новой цене",
+        "kind": "product",
+        "chunk": 1,
+        "section": "Резюме для руководителя",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "Текущие подписчики в тесте получили 15.09 уведомление: новая цена применяется с первого продления, наступающего не раньше чем через 30 дней после уведомления",
+        "quote_found": true,
+        "comment": ""
+      },
+      {
+        "id": "c007",
+        "text": "До реального продления по цене 479 ₽ дело не дошло",
+        "kind": "product",
+        "chunk": 1,
+        "section": "Резюме для руководителя",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "поэтому в окно наблюдения продления по новой цене не попали (renewals_at_new_price = 0)",
+        "quote_found": true,
+        "comment": ""
+      },
+      {
+        "id": "c008",
+        "text": "2,1% тестовых подписчиков отключили автопродление заранее",
+        "kind": "user",
+        "chunk": 1,
+        "section": "Резюме для руководителя",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "1256 / 59800 ≈ 0,0210 = 2,1%"
+      },
+      {
+        "id": "c009",
+        "text": "1,7% подписчиков контрольной группы отключили автопродление заранее",
+        "kind": "user",
+        "chunk": 1,
+        "section": "Резюме для руководителя",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | текущие подписчики | 399 | 61300 |  | 1042 |  |  |",
+        "quote_found": true,
+        "comment": "1042 / 61300 ≈ 0,0170 = 1,7%"
+      },
+      {
+        "id": "c010",
+        "text": "Отключение автопродления является слабым прокси оттока",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "Резюме для руководителя",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет оценки силы прокси отключения автопродления как индикатора оттока."
+      },
+      {
+        "id": "c011",
+        "text": "Тест измерил намерение, а не поведение",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "Резюме для руководителя",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "поэтому в окно наблюдения продления по новой цене не попали (renewals_at_new_price = 0)",
+        "quote_found": true,
+        "comment": "В таблице для текущих подписчиков в тестовой группе renewals_at_new_price = 0, что подтверждает: измерялось намерение новых пользователей (конверсия после пробного периода), а не фактическое поведение продления по новой цене у текущих."
+      },
+      {
+        "id": "c012",
+        "text": "Порог безубыточности составляет 21,7% оттока",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Резюме для руководителя",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "отток при продлении по новой цене не превышает **≈ 21,7%** (при базовом ≈ 6%)",
+        "quote_found": true,
+        "comment": "Прямое указание в финансовой записке."
+      },
+      {
+        "id": "c013",
+        "text": "Базовый уровень оттока составляет 6%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Резюме для руководителя",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Отток при ежемесячном продлении у текущих подписчиков | ≈ 6,0%",
+        "quote_found": true,
+        "comment": "Прямое указание в таблице базовых показателей."
+      },
+      {
+        "id": "c014",
+        "text": "Маржа снизилась с 31% до 26%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Валовая маржа снизилась с 31% до 26%",
+        "quote_found": true,
+        "comment": "Прямое указание в тексте."
+      },
+      {
+        "id": "c015",
+        "text": "Роялти выросли на 12% при росте выручки на 5%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "совокупные роялти выросли на 12% год к году при росте выручки на 5%",
+        "quote_found": true,
+        "comment": "Прямое указание в тексте."
+      },
+      {
+        "id": "c016",
+        "text": "Инфляция составила 6,35% год к году в сентябре 2026 года",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_inflation.md",
+        "quote": "Годовая инфляция в сентябре почти не изменилась и составила 6,35% (+0,02 п.п.)",
+        "quote_found": true,
+        "comment": "Прямое указание в тексте обзора Банка России."
+      },
+      {
+        "id": "c017",
+        "text": "Яндекс Плюс повысил цену на 12,5% до 449 ₽",
+        "kind": "market",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "цена подписки на экосистему «Плюс» от «Яндекса» выросла на 12,5%, до 449 руб.",
+        "quote_found": true,
+        "comment": "Прямое указание в тексте."
+      },
+      {
+        "id": "c018",
+        "text": "СберПрайм повысил цену на 33% до 399 ₽",
+        "kind": "market",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "«СберПрайм» выросла в январе текущего года на 33%, до 399 руб.",
+        "quote_found": true,
+        "comment": "Прямое указание в тексте."
+      },
+      {
+        "id": "c019",
+        "text": "Газпром Бонус повысил цену на 33% до 399 ₽",
+        "kind": "market",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "Цена на «Газпром Бонус» в начале 2026 года также выросла на 33%, до 399 руб.",
+        "quote_found": true,
+        "comment": "Прямое указание в тексте."
+      },
+      {
+        "id": "c020",
+        "text": "Конверсия новых пользователей в тесте составила 41,6% против 42,4% в контрольной группе",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| тест | новые (пробный период) | 479 | 4080 | 1697 |  |  | 812863 |\n| контроль | новые (пробный период) | 399 | 4210 | 1785 |  |  | 712215 |",
+        "quote_found": true,
+        "comment": "Расчёт: тест 1697/4080 = 41,59% ≈ 41,6%; контроль 1785/4210 = 42,40% ≈ 42,4%."
+      },
+      {
+        "id": "c021",
+        "text": "ARPU новых пользователей в тесте выше, чем в контрольной группе",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | новые (пробный период) | 399 | 4210 | 1785 |  |  | 712215 |\n| тест | новые (пробный период) | 479 | 4080 | 1697 |  |  | 812863 |",
+        "quote_found": true,
+        "comment": "ARPU новых пользователей: контроль 712215/4210≈169,2 ₽, тест 812863/4080≈199,2 ₽ (или на платящего: 399 ₽ против 479 ₽). В тесте выше."
+      },
+      {
+        "id": "c022",
+        "text": "Отключение автопродления в тесте текущих пользователей составило 2,1% против 1,7% в контроле",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | текущие подписчики | 399 | 61300 |  | 1042 |  |  |\n| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "Доля отключений автопродления: контроль 1042/61300≈1,70%, тест 1256/59800≈2,10%."
+      },
+      {
+        "id": "c023",
+        "text": "Реальный отток при списании по цене 479 ₽ неизвестен",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "поэтому в окно наблюдения продления по новой цене не попали (renewals_at_new_price = 0)",
+        "quote_found": true,
+        "comment": "В окне 30 дней не было ни одного продления по цене 479 ₽, поэтому реальный отток при списании по новой цене не измерен."
+      },
+      {
+        "id": "c024",
+        "text": "Значение renewals_at_new_price равно 0",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "В ячейке renewals_at_new_price для тестовой группы текущих подписчиков указано значение 0."
+      },
+      {
+        "id": "c025",
+        "text": "Разница в отключении автопродления (2,1% против 1,7%) не равна оттоку",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "cancelled_autorenew_30d: \"Текущие: отключили автопродление за 30 дней после старта\"",
+        "quote_found": true,
+        "comment": "В материалах различаются метрики: отключение автопродления (cancelled_autorenew_30d) и отток при продлении. По finance_note базовый отток при продлении ≈6,0%, а в тесте renewals_at_new_price=0, поэтому разница 2,1% vs 1,7% — это не отток."
+      },
+      {
+        "id": "c026",
+        "text": "Порог в 21,7% не проверен",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "то есть отток при продлении по новой цене не превышает **≈ 21,7%** (при базовом ≈ 6%)",
+        "quote_found": true,
+        "comment": "Порог 21,7% рассчитан теоретически, однако в тесте renewals_at_new_price=0, поэтому реальный отток по цене 479 ₽ и, соответственно, порог на практике не проверены."
+      },
+      {
+        "id": "c027",
+        "text": "Эластичность по сегментам не измерена",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "segment: \"Сегмент пользователей\"",
+        "quote_found": true,
+        "comment": "В таблице представлены только два сегмента (новые/текущие); эластичность спроса по сегментам не рассчитана."
+      },
+      {
+        "id": "c028",
+        "text": "Отсутствуют данные по давности подписки",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "columns:\n  group: \"Группа теста\"\n  segment: \"Сегмент пользователей\"\n  price_rub: \"Цена подписки в месяц для группы, ₽\"\n  users: \"Новые: оформили пробный период; текущие: подписчики на дату старта\"",
+        "quote_found": true,
+        "comment": "В материалах отсутствуют данные о давности подписки (tenure) — в таблице нет соответствующего столбца."
+      },
+      {
+        "id": "c029",
+        "text": "Отсутствуют данные по интенсивности потребления",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "columns:\n  group: \"Группа теста\"\n  segment: \"Сегмент пользователей\"\n  price_rub: \"Цена подписки в месяц для группы, ₽\"\n  users: \"Новые: оформили пробный период; текущие: подписчики на дату старта\"",
+        "quote_found": true,
+        "comment": "В материалах отсутствуют данные об интенсивности потребления — в таблице нет соответствующего столбца."
+      },
+      {
+        "id": "c030",
+        "text": "Отсутствуют данные по каналу привлечения",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "columns:\n  group: \"Группа теста\"\n  segment: \"Сегмент пользователей\"\n  price_rub: \"Цена подписки в месяц для группы, ₽\"\n  users: \"Новые: оформили пробный период; текущие: подписчики на дату старта\"",
+        "quote_found": true,
+        "comment": "В материалах отсутствуют данные о канале привлечения — в таблице нет соответствующего столбца."
+      },
+      {
+        "id": "c031",
+        "text": "Стоимость контента и выплат правообладателям выросла на 12% за год",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Из-за этого совокупные роялти выросли на 12% год к году при росте выручки на 5%.",
+        "quote_found": true,
+        "comment": "Прямое указание на рост роялти на 12% за год."
+      },
+      {
+        "id": "c032",
+        "text": "Порог безубыточности оттока при списании составляет 21,7%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "то есть отток при продлении по новой цене не превышает **≈ 21,7%** (при базовом ≈ 6%)",
+        "quote_found": true,
+        "comment": "Число 21,7% прямо указано как порог безубыточности."
+      },
+      {
+        "id": "c033",
+        "text": "Рост стоимости контента и выплат правообладателям является причиной повышения цены подписки",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "2. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Валовая маржа снизилась с 31% до 26%. Цель на 2027 год — вернуть 30%... Повышение необходимо для возврата маржи.",
+        "quote_found": true,
+        "comment": "Рост роялти привёл к снижению маржи, а повышение цены призвано её восстановить."
+      },
+      {
+        "id": "c034",
+        "text": "Конкуренты уже подняли цены",
+        "kind": "market",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "конкуренты тоже дорожают",
+        "quote_found": true,
+        "comment": "В запросе руководителя прямо указано, что конкуренты повышают цены; также подтверждено в market_subscription_prices.md."
+      },
+      {
+        "id": "c035",
+        "text": "Маржа требует повышения цен",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Повышение необходимо для возврата маржи.",
+        "quote_found": true,
+        "comment": "Финансовая служба прямо заявляет о необходимости повышения для маржи."
+      },
+      {
+        "id": "c036",
+        "text": "Тест не проверил реальный отток",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "поэтому в окно наблюдения продления по новой цене не попали (renewals_at_new_price = 0)",
+        "quote_found": true,
+        "comment": "В метаданных указано, что продлений по новой цене в окне не было, следовательно, реальный отток по новой цене не измерен."
+      },
+      {
+        "id": "c037",
+        "text": "Декабрь является худшим окном для повышения",
+        "kind": "market",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о том, что декабрь — худшее окно; упоминается лишь дата 1 декабря как предлагаемая."
+      },
+      {
+        "id": "c038",
+        "text": "Дифференциация сохранит больше выручки, чем единое повышение",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет сравнения дифференцированного и единого повышения цены."
+      },
+      {
+        "id": "c039",
+        "text": "Ключевая метрика оттока при списании не измерена",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "renewals_at_new_price = 0, то есть метрика оттока при новой цене не была измерена в тесте."
+      },
+      {
+        "id": "c040",
+        "text": "Сегментация отсутствует",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | новые (пробный период) | 399 | 4210 | 1785 |  |  | 712215 |\n| контроль | текущие подписчики | 399 | 61300 |  | 1042 |  |  |",
+        "quote_found": true,
+        "comment": "В тесте присутствует сегментация: «новые (пробный период)» и «текущие подписчики»."
+      },
+      {
+        "id": "c041",
+        "text": "Ценность к повышению не усилена",
+        "kind": "product",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет прямых упоминаний о ценности продукта или её изменении; обосновывается только ростом затрат (роялти, инфляция)."
+      },
+      {
+        "id": "c042",
+        "text": "Риск оттока составляет непроверенные 21,7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "отток при продлении по новой цене не превышает **≈ 21,7%**",
+        "quote_found": true,
+        "comment": "21,7% — расчётный порог безубыточности (максимально допустимый отток), а не прогнозируемый «риск оттока»; в материалах не назван риском."
+      },
+      {
+        "id": "c043",
+        "text": "Управляемый риск оттока составляет 10–15%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Значение 10–15% в материалах отсутствует."
+      },
+      {
+        "id": "c044",
+        "text": "Риск оттока в декабре–январе выше",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Данные о сезонности оттока в декабре–январе в материалах отсутствуют."
+      }
+    ],
+    "all_extracted": [
+      {
+        "id": "c001",
+        "text": "Маржа упала с 31% до 26%",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Резюме для руководителя"
+      },
+      {
+        "id": "c002",
+        "text": "Роялти выросли на 12% год к году",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Резюме для руководителя"
+      },
+      {
+        "id": "c003",
+        "text": "Инфляция составляет 6,35%",
+        "kind": "market",
+        "chunk": 1,
+        "section": "Резюме для руководителя"
+      },
+      {
+        "id": "c004",
+        "text": "Конкуренты подняли цены на 12,5–33%",
+        "kind": "market",
+        "chunk": 1,
+        "section": "Резюме для руководителя"
+      },
+      {
+        "id": "c005",
+        "text": "В окне наблюдения renewals_at_new_price = 0",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Резюме для руководителя"
+      },
+      {
+        "id": "c006",
+        "text": "Тестовые подписчики получили уведомление о новой цене",
+        "kind": "product",
+        "chunk": 1,
+        "section": "Резюме для руководителя"
+      },
+      {
+        "id": "c007",
+        "text": "До реального продления по цене 479 ₽ дело не дошло",
+        "kind": "product",
+        "chunk": 1,
+        "section": "Резюме для руководителя"
+      },
+      {
+        "id": "c008",
+        "text": "2,1% тестовых подписчиков отключили автопродление заранее",
+        "kind": "user",
+        "chunk": 1,
+        "section": "Резюме для руководителя"
+      },
+      {
+        "id": "c009",
+        "text": "1,7% подписчиков контрольной группы отключили автопродление заранее",
+        "kind": "user",
+        "chunk": 1,
+        "section": "Резюме для руководителя"
+      },
+      {
+        "id": "c010",
+        "text": "Отключение автопродления является слабым прокси оттока",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "Резюме для руководителя"
+      },
+      {
+        "id": "c011",
+        "text": "Тест измерил намерение, а не поведение",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "Резюме для руководителя"
+      },
+      {
+        "id": "c012",
+        "text": "Порог безубыточности составляет 21,7% оттока",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Резюме для руководителя"
+      },
+      {
+        "id": "c013",
+        "text": "Базовый уровень оттока составляет 6%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Резюме для руководителя"
+      },
+      {
+        "id": "c014",
+        "text": "Маржа снизилась с 31% до 26%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c015",
+        "text": "Роялти выросли на 12% при росте выручки на 5%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c016",
+        "text": "Инфляция составила 6,35% год к году в сентябре 2026 года",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c017",
+        "text": "Яндекс Плюс повысил цену на 12,5% до 449 ₽",
+        "kind": "market",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c018",
+        "text": "СберПрайм повысил цену на 33% до 399 ₽",
+        "kind": "market",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c019",
+        "text": "Газпром Бонус повысил цену на 33% до 399 ₽",
+        "kind": "market",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c020",
+        "text": "Конверсия новых пользователей в тесте составила 41,6% против 42,4% в контрольной группе",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c021",
+        "text": "ARPU новых пользователей в тесте выше, чем в контрольной группе",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c022",
+        "text": "Отключение автопродления в тесте текущих пользователей составило 2,1% против 1,7% в контроле",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c023",
+        "text": "Реальный отток при списании по цене 479 ₽ неизвестен",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c024",
+        "text": "Значение renewals_at_new_price равно 0",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c025",
+        "text": "Разница в отключении автопродления (2,1% против 1,7%) не равна оттоку",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c026",
+        "text": "Порог в 21,7% не проверен",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c027",
+        "text": "Эластичность по сегментам не измерена",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c028",
+        "text": "Отсутствуют данные по давности подписки",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c029",
+        "text": "Отсутствуют данные по интенсивности потребления",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c030",
+        "text": "Отсутствуют данные по каналу привлечения",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Продуктовая стратегия"
+      },
+      {
+        "id": "c031",
+        "text": "Стоимость контента и выплат правообладателям выросла на 12% за год",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Коммуникационная стратегия"
+      },
+      {
+        "id": "c032",
+        "text": "Порог безубыточности оттока при списании составляет 21,7%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Коммуникационная стратегия"
+      },
+      {
+        "id": "c033",
+        "text": "Рост стоимости контента и выплат правообладателям является причиной повышения цены подписки",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "2. Коммуникационная стратегия"
+      },
+      {
+        "id": "c034",
+        "text": "Конкуренты уже подняли цены",
+        "kind": "market",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо"
+      },
+      {
+        "id": "c035",
+        "text": "Маржа требует повышения цен",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо"
+      },
+      {
+        "id": "c036",
+        "text": "Тест не проверил реальный отток",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо"
+      },
+      {
+        "id": "c037",
+        "text": "Декабрь является худшим окном для повышения",
+        "kind": "market",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо"
+      },
+      {
+        "id": "c038",
+        "text": "Дифференциация сохранит больше выручки, чем единое повышение",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо"
+      },
+      {
+        "id": "c039",
+        "text": "Ключевая метрика оттока при списании не измерена",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо"
+      },
+      {
+        "id": "c040",
+        "text": "Сегментация отсутствует",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо"
+      },
+      {
+        "id": "c041",
+        "text": "Ценность к повышению не усилена",
+        "kind": "product",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо"
+      },
+      {
+        "id": "c042",
+        "text": "Риск оттока составляет непроверенные 21,7%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо"
+      },
+      {
+        "id": "c043",
+        "text": "Управляемый риск оттока составляет 10–15%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо"
+      },
+      {
+        "id": "c044",
+        "text": "Риск оттока в декабре–январе выше",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Что сказать руководителю прямо"
+      }
+    ]
+  },
+  "options": null,
+  "promises": {
+    "total": 0,
+    "unbacked": 0,
+    "unclear": 0,
+    "backed": 0,
+    "items": []
+  },
+  "validation_plan": null,
+  "expected_choice": null,
+  "injection": null,
+  "heuristics": {
+    "status_quo": 0,
+    "kill": 0,
+    "baseline": 0,
+    "guardrail": 0,
+    "kill_criterion": 0,
+    "date_or_term": 12,
+    "injection_flag": 0
+  },
+  "judge_usage": {
+    "calls": 9,
+    "prompt_tokens": 20188,
+    "output_tokens": 27192,
+    "duration_s": 452.84,
+    "cost_estimate": {
+      "usd": 0.071235,
+      "rub": 5.6988,
+      "estimated": false,
+      "basis": "config/prices.yaml (as_of 2026-11-04): $0.7/2.1 за 1 млн токенов вход/выход"
+    },
+    "log": [
+      {
+        "step": "extract_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 861,
+        "output_tokens": 3514,
+        "duration_s": 62.95,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1538,
+        "output_tokens": 2979,
+        "duration_s": 72.42,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1587,
+        "output_tokens": 3248,
+        "duration_s": 48.17,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 684,
+        "output_tokens": 2254,
+        "duration_s": 42.41,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3123,
+        "output_tokens": 2745,
+        "duration_s": 31.58,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3144,
+        "output_tokens": 2264,
+        "duration_s": 30.09,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3132,
+        "output_tokens": 4563,
+        "duration_s": 73.61,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3109,
+        "output_tokens": 2742,
+        "duration_s": 39.71,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3010,
+        "output_tokens": 2883,
+        "duration_s": 51.9,
+        "attempts": 1,
+        "errors": []
+      }
+    ]
+  },
+  "errors": []
+}

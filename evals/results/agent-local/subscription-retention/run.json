@@ -1,0 +1,29 @@
+{
+  "brief_id": "subscription-retention",
+  "approach": "agent",
+  "status": "ok",
+  "started_at": "2026-11-05T14:22:31+00:00",
+  "finished_at": "2026-11-05T14:49:43+00:00",
+  "duration_s": 1632.1,
+  "materials": [
+    "cohorts_by_channel.csv",
+    "content_team_memo.md",
+    "exit_survey.csv",
+    "market_online_cinema_2025.md",
+    "market_partner_subscriptions.md",
+    "partner_terms.md"
+  ],
+  "costs": {
+    "calls": 73,
+    "input_tokens": 103463,
+    "output_tokens": 14022,
+    "usd_list_price": 0.0,
+    "model_latency_s": 1715.5,
+    "by_model": {
+      "gpt-oss:20b": {
+        "calls": 73,
+        "tokens": 117485
+      }
+    }
+  }
+}

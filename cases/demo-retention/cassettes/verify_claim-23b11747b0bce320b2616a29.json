@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "StrongVerifyDTO",
+ "text": "{\"label\":\"supported\",\"confidence\":0.97,\"note\":\"Цитата прямо указывает рост доли денежных обращений с 22% в 2025 году до 36% в сентябре 2026 года.\"}",
+ "data": {
+  "label": "supported",
+  "confidence": 0.97,
+  "note": "Цитата прямо указывает рост доли денежных обращений с 22% в 2025 году до 36% в сентябре 2026 года."
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 414,
+  "output_tokens": 50,
+  "estimated": false,
+  "latency_ms": 573,
+  "escalated": true
+ }
+}

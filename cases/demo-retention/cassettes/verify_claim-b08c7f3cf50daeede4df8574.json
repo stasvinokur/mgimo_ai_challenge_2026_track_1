@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"entailment\",\"confidence\":1,\"rationale\":\"Цитата полностью и дословно подтверждает все элементы утверждения.\"}",
+ "data": {
+  "label": "entailment",
+  "confidence": 1,
+  "rationale": "Цитата полностью и дословно подтверждает все элементы утверждения."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 331,
+  "output_tokens": 30,
+  "estimated": false,
+  "latency_ms": 516,
+  "escalated": false
+ }
+}

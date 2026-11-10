@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":0.9,\"rationale\":\"Цитата говорит об одном пользователе, но не упоминает «Скворечник» и ОС iOS.\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 0.9,
+  "rationale": "Цитата говорит об одном пользователе, но не упоминает «Скворечник» и ОС iOS."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 281,
+  "output_tokens": 39,
+  "estimated": false,
+  "latency_ms": 523,
+  "escalated": false
+ }
+}

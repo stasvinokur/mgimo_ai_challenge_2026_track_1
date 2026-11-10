@@ -1,0 +1,49 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "claims": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "fact",
+              "derived_metric",
+              "hypothesis",
+              "forecast",
+              "assumption",
+              "unknown",
+              "synthetic"
+            ],
+            "type": "string"
+          },
+          "quote": {
+            "type": "string"
+          },
+          "numbers": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "text",
+          "type",
+          "quote",
+          "numbers"
+        ],
+        "type": "object"
+      },
+      "minItems": 3,
+      "type": "array"
+    }
+  },
+  "required": [
+    "claims"
+  ],
+  "type": "object"
+}

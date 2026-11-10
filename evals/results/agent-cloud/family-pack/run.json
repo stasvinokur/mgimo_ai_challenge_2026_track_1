@@ -1,0 +1,37 @@
+{
+  "brief_id": "family-pack",
+  "approach": "agent",
+  "status": "ok",
+  "started_at": "2026-11-05T13:48:55+00:00",
+  "finished_at": "2026-11-05T13:53:36+00:00",
+  "duration_s": 280.6,
+  "materials": [
+    "landing_draft.docx",
+    "market_households.md",
+    "market_mobile_traffic.md",
+    "product_sheet.md",
+    "support_tickets.csv",
+    "survey_family.csv"
+  ],
+  "costs": {
+    "calls": 160,
+    "input_tokens": 239484,
+    "output_tokens": 37712,
+    "usd_list_price": 0.097077,
+    "model_latency_s": 407.2,
+    "by_model": {
+      "deepseek-v4.1-flash:cloud": {
+        "calls": 52,
+        "tokens": 168708
+      },
+      "gemma4:31b-cloud": {
+        "calls": 43,
+        "tokens": 85819
+      },
+      "clef:cloud": {
+        "calls": 65,
+        "tokens": 22669
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+ "question_id": "demo-retention-run:playbook",
+ "kind": "choice",
+ "choice": "retention_diagnosis",
+ "probability": null,
+ "score": null,
+ "probs": {
+  "retention_diagnosis": 0.8522,
+  "go_to_market": 0.0099,
+  "communication": 0.0253,
+  "portfolio_kill": 0.0622,
+  "pricing": 0.0149,
+  "generic": 0.0354
+ },
+ "confidence": 0.8522,
+ "backend": "systemone",
+ "model": "clef:cloud",
+ "escalated": false,
+ "input_tokens": 548,
+ "latency_ms": 500
+}

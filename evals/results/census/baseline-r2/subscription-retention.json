@@ -1,0 +1,1645 @@
+{
+  "metrics_version": "1.2",
+  "brief_id": "subscription-retention",
+  "label": "baseline-r2",
+  "output_path": "evals/results/baseline-r2/subscription-retention/output.md",
+  "output_sha256": "348209bdb1dfd67a25dcbe7f76bea48359532ee83c89f1f21db69837169da2e9",
+  "output_chars": 10595,
+  "judge_model": "mistral-large-4:cloud",
+  "judge_candidates": [
+    "mistral-large-4:cloud",
+    "kimi-k2.6:cloud"
+  ],
+  "judge_notes": [],
+  "judge_params": {
+    "think": false,
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 65536
+  },
+  "agent_model": "deepseek-v4.1-flash:cloud",
+  "seed": 42,
+  "census": true,
+  "claims_only": true,
+  "started_at": "2026-11-07T08:38:16+00:00",
+  "finished_at": "2026-11-07T08:50:28+00:00",
+  "claims": {
+    "extracted": 70,
+    "sample_size": 70,
+    "verified": 70,
+    "supported": 55,
+    "partial": 5,
+    "unsupported": 10,
+    "contradicted": 4,
+    "unsupported_share": 0.143,
+    "unsupported_ci95": [
+      0.0795,
+      0.2434
+    ],
+    "partial_share": 0.071,
+    "supported_share": 0.786,
+    "by_section": {
+      "(начало документа)": {
+        "verified": 1,
+        "unsupported": 0,
+        "partial": 0
+      },
+      "1. Главный вывод (executive summary)": {
+        "verified": 13,
+        "unsupported": 2,
+        "partial": 1
+      },
+      "2. Диагностика: что показывают цифры": {
+        "verified": 28,
+        "unsupported": 2,
+        "partial": 2
+      },
+      "3. Продуктовая стратегия": {
+        "verified": 15,
+        "unsupported": 5,
+        "partial": 1
+      },
+      "4. Коммуникационная стратегия": {
+        "verified": 2,
+        "unsupported": 1,
+        "partial": 0
+      },
+      "5. Что сказать правлению (тезисы для слайда)": {
+        "verified": 8,
+        "unsupported": 0,
+        "partial": 1
+      },
+      "6. Риски и оговорки": {
+        "verified": 3,
+        "unsupported": 0,
+        "partial": 0
+      }
+    },
+    "quotes_not_found": 1,
+    "sample": [
+      {
+        "id": "c001",
+        "text": "Документ подготовлен к решению по бюджету до 15 ноября 2026 года",
+        "kind": "number",
+        "chunk": 1,
+        "section": "(начало документа)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "решение по бюджету нужно до 15 ноября",
+        "quote_found": true,
+        "comment": "Год 2026 следует из контекста: когорты за 2026 год, записка контент-команды от 20.10.2026."
+      },
+      {
+        "id": "c002",
+        "text": "Доля первых продлений упала с 63% до 48%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "доля тех, кто оплачивает первое продление, упала с 63% у январских подписчиков до 48% у сентябрьских",
+        "quote_found": true,
+        "comment": "Подтверждается расчётом по таблице: январь (6272+3094)/(9525+5442)=62.6%≈63%, сентябрь (6852+3313+3847)/(10426+5836+12915)=48.0%≈48%."
+      },
+      {
+        "id": "c003",
+        "text": "Падение доли первых продлений вызвано сдвигом структуры привлечения в партнёрский канал",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "Канал partner_bundle запущен в апреле 2026: абоненты тарифов партнёра получают первый месяц за 1 ₽.",
+        "quote_found": true,
+        "comment": "Расчёт: удержание m1 по organic+paid в сентябре (6852+3313)/(10426+5836)=62.5% (как в январе), падение общего показателя до 48% объясняется добавлением partner_bundle с удержанием ~30% и долей ~44%."
+      },
+      {
+        "id": "c004",
+        "text": "Партнёрская программа с «Восход Телеком» запущена в апреле",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "Основные условия (с 01.04.2026)",
+        "quote_found": true,
+        "comment": "01.04.2026 — апрель 2026 года; также в метаданных когорт: «запущен в апреле 2026»."
+      },
+      {
+        "id": "c005",
+        "text": "Первый месяц по партнёрской программе стоил 1 ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "первый месяц стоит 1 ₽",
+        "quote_found": true,
+        "comment": "Прямо указано в условиях программы «Кино в тарифе»."
+      },
+      {
+        "id": "c006",
+        "text": "К августу–сентябрю партнёрская программа дала около 55% новых подписок",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Расчёт доли partner_bundle в августе–сентябре: (11627+12915)/(9830+5720+11627+10426+5836+12915)=24542/56354≈43.5%, а не около 55%."
+      },
+      {
+        "id": "c007",
+        "text": "Партнёрский канал удерживает подписчиков в 2,5–3 раза хуже органического канала",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | organic | 10426 | 6852 |  |  |\n| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "По первому продлению (m1): organic 65.7%, partner 29.8%, отношение ≈2.2 раза. По второму/третьему продлению отношение достигает 2.6–2.8 раза, но для ключевого показателя m1 указанный диапазон 2.5–3 не подтверждается."
+      },
+      {
+        "id": "c008",
+        "text": "Удержание в органическом канале стабильно",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |\n| 2026-09 | organic | 10426 | 6852 |  |  |",
+        "quote_found": true,
+        "comment": "Доля m1 по органике колеблется от 65.4% (июль) до 67.4% (март), среднее ~66%, отклонения в пределах 2 п.п. — стабильно."
+      },
+      {
+        "id": "c009",
+        "text": "Удержание в канале платного трафика стабильно",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | paid_performance | 5442 | 3094 | 2496 | 2168 |\n| 2026-09 | paid_performance | 5836 | 3313 |  |  |",
+        "quote_found": true,
+        "comment": "Доля m1 по платному трафику: от 54.6% (июль) до 56.9% (январь), стабильна около 56%."
+      },
+      {
+        "id": "c010",
+        "text": "Общее падение удержания вызвано разбавлением дешёвыми промо-подписчиками",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "первый месяц стоит 1 ₽",
+        "quote_found": true,
+        "comment": "Partner_bundle (промо за 1 ₽) имеет удержание m1 ~30% против ~66% у органики; при доле ~44% в сентябре общая доля продлений падает до 48% (0.56×0.66 + 0.44×0.30 ≈ 0.48)."
+      },
+      {
+        "id": "c011",
+        "text": "Бюджет на два сериала составляет 38 млн ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "просит 38 млн ₽ на два сериала",
+        "quote_found": true,
+        "comment": "Прямо указано в запросе руководителя; также в materials/content_team_memo.md: «Выделить 38 млн ₽ на лицензии двух сериалов-новинок»"
+      },
+      {
+        "id": "c012",
+        "text": "В сентябре произошёл провал удержания",
+        "kind": "other",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "упала с 63% у январских подписчиков до 48% у сентябрьских",
+        "quote_found": true,
+        "comment": "Расчёт по всем каналам за сентябрь: (6852+3313+3847)/(10426+5836+12915)=14012/29177=48,0% — минимальное значение за период"
+      },
+      {
+        "id": "c013",
+        "text": "Сериалы не решают проблему удержания к 15 ноября",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о том, решат ли новые сериалы проблему удержания к 15 ноября; это прогноз, а не факт"
+      },
+      {
+        "id": "c014",
+        "text": "Промо-механика предусматривает списание 349 ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "первый месяц стоит 1 ₽, далее — 349 ₽ в месяц с привязанной карты или счёта абонента",
+        "quote_found": true,
+        "comment": "Условия партнёрской программы прямо предусматривают списание 349 ₽ после промо-периода"
+      },
+      {
+        "id": "c015",
+        "text": "Удержание M1 (доля новых подписок, оплативших первое продление) по всем каналам в январе составляло 63,0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "упала с 63% у janvierских подписчиков",
+        "quote_found": false,
+        "comment": "Текст прямо указывает 63%; расчёт: (6272+3094)/(9525+5442)=9366/14967=62,6%≈63%"
+      },
+      {
+        "id": "c016",
+        "text": "Удержание M1 по всем каналам в сентябре составляло 48,0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "до 48% у сентябрьских",
+        "quote_found": true,
+        "comment": "Расчёт: (6852+3313+3847)/(10426+5836+12915)=14012/29177=48,02%≈48,0%"
+      },
+      {
+        "id": "c017",
+        "text": "Удержание M1 в органическом канале в течение периода оставалось стабильным на уровне 65–67%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |\n| 2026-09 | organic | 10426 | 6852 |  |  |",
+        "quote_found": true,
+        "comment": "M1 по organic: янв 65,8%, фев 65,8%, мар 67,4%, апр 65,9%, май 66,6%, июн 66,2%, июл 65,4%, авг 66,7%, сен 65,7% — в диапазоне 65–67%"
+      },
+      {
+        "id": "c018",
+        "text": "Удержание M1 в канале paid_performance оставалось стабильным на уровне 55–57%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | paid_performance | 5442 | 3094 | 2496 | 2168 |\n| 2026-09 | paid_performance | 5836 | 3313 |  |  |",
+        "quote_found": true,
+        "comment": "M1 по paid_performance: янв 56,9%, фев 56,6%, мар 56,6%, апр 54,7%, май 56,7%, июн 56,3%, июл 54,6%, авг 55,4%, сен 56,8% — примерно 55–57%"
+      },
+      {
+        "id": "c019",
+        "text": "Удержание M1 в канале partner_bundle составляло около 29–30%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-04 | partner_bundle | 2513 | 705 | 524 | 436 |\n| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "M1 по partner_bundle: апр 28,1%, май 29,8%, июн 29,5%, июл 29,0%, авг 30,0%, сен 29,8% — около 29–30%"
+      },
+      {
+        "id": "c020",
+        "text": "Доля канала partner_bundle в новых подписках выросла с 0% в январе до примерно 44% в сентябре",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "Канал partner_bundle запущен в апреле 2026",
+        "quote_found": true,
+        "comment": "В январе–марте канал отсутствует (0%); в сентябре доля = 12915/(10426+5836+12915)=12915/29177=44,3%≈44%"
+      },
+      {
+        "id": "c021",
+        "text": "В январе доля органики в новых подписках составляла 64%, paid_performance — 36%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |\n| 2026-01 | paid_performance | 5442 | 3094 | 2496 | 2168 |",
+        "quote_found": true,
+        "comment": "9525/(9525+5442)=63.6% organic; 5442/14967=36.4% paid_performance."
+      },
+      {
+        "id": "c022",
+        "text": "В сентябре доля органики составляла 37%, paid_performance — 21%, partner_bundle — 42%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Сентябрь: organic 10426/29177=35.7%, paid 5836/29177=20.0%, partner 12915/29177=44.3%, а не 37/21/42."
+      },
+      {
+        "id": "c023",
+        "text": "Средневзвешенное удержание M1 в январе составляло приблизительно 62,6%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |\n| 2026-01 | paid_performance | 5442 | 3094 | 2496 | 2168 |",
+        "quote_found": true,
+        "comment": "(6272+3094)/(9525+5442)=9366/14967=62.58% ≈ 62.6%."
+      },
+      {
+        "id": "c024",
+        "text": "Средневзвешенное удержание M1 в сентябре составляло приблизительно 48,1%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | organic | 10426 | 6852 |  |  |\n| 2026-09 | paid_performance | 5836 | 3313 |  |  |\n| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "(6852+3313+3847)/(10426+5836+12915)=14012/29177=48.02% ≈ 48.1%."
+      },
+      {
+        "id": "c025",
+        "text": "При сохранении январского микса каналов удержание M1 в сентябре составило бы около 62–63%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | organic | 10426 | 6852 |  |  |\n| 2026-09 | paid_performance | 5836 | 3313 |  |  |",
+        "quote_found": true,
+        "comment": "Сентябрьские ставки M1 по каналам: organic 65.72%, paid 56.78%; при январском миксе 63.64/36.36: 0.6364*65.72+0.3636*56.78=62.5%."
+      },
+      {
+        "id": "c026",
+        "text": "Около 14 процентных пунктов из 15 процентных пунктов падения удержания являются структурным эффектом, связанным с партнёрским каналом",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "Падение 62.58→48.02 = 14.56 п.п.; при janvierском миксе в сентябре было бы 62.5%, структурный эффект ≈14.5 п.п. из ≈14.6 п.п."
+      },
+      {
+        "id": "c027",
+        "text": "Размер выборки опроса ушедших пользователей составил 260 человек",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "ответили 260 человек — около 0,7% от ≈38 515 отменивших первое продление за период",
+        "quote_found": true,
+        "comment": "Мета-файл опроса прямо указывает 260 респондентов."
+      },
+      {
+        "id": "c028",
+        "text": "Доля опрошенных ушедших пользователей от общего числа отмен составила около 0,7%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "ответили 260 человек — около 0,7% от ≈38 515 отменивших первое продление за период",
+        "quote_found": true,
+        "comment": "260/38515=0.675% ≈ 0.7%."
+      },
+      {
+        "id": "c029",
+        "text": "Для органических пользователей наиболее частой причиной отмены подписки являлось «нечего смотреть, каталог устарел»",
+        "kind": "user",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/content_team_memo.md",
+        "quote": "в опросе ушедших среди органических подписчиков\n   43% называют главной причиной «нечего смотреть, каталог устарел»",
+        "quote_found": true,
+        "comment": "В exit_survey.csv среди organic это модальная причина; мемо также указывает 43% для органических подписчиков."
+      },
+      {
+        "id": "c030",
+        "text": "Для пользователей partner_bundle доминирующей причиной отмены являлось «подключался ради акции»",
+        "kind": "user",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "| S-0003 | 2026-09 | partner_bundle | 1 | подключался ради акции | Взял за рубль посмотреть, платить 349 не готов |",
+        "quote_found": true,
+        "comment": "Подсчёт строк exit_survey.csv по channel=partner_bundle: «подключался ради акции» — самая частая main_reason."
+      },
+      {
+        "id": "c031",
+        "text": "Пользователи partner_bundle не были осведомлены о том, что после первого месяца будет списана полная стоимость подписки",
+        "kind": "user",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "Не знал, что потом спишут полную цену",
+        "quote_found": true,
+        "comment": "Лишь отдельные респонденты (S-0133, S-0145, S-0233, S-0245) указали, что не знали о списании полной цены; утверждение необоснованно обобщает на всех пользователей partner_bundle."
+      },
+      {
+        "id": "c032",
+        "text": "Стоимость подписки составляет 349 рублей",
+        "kind": "product",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "Цена подписки | 349 ₽ в месяц",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице затрат финансовой дирекции."
+      },
+      {
+        "id": "c033",
+        "text": "Переменные затраты на одного подписчика составляют 52 рубля в месяц",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "Переменные затраты на активного подписчика (доставка видео, поддержка, платёжная комиссия) | 52 ₽ в месяц",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице затрат финансовой дирекции."
+      },
+      {
+        "id": "c034",
+        "text": "Маржинальность с активного подписчика составляет около 297 рублей в месяц",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "Цена подписки | 349 ₽ в месяц\nПеременные затраты на активного подписчика (доставка видео, поддержка, платёжная комиссия) | 52 ₽ в месяц",
+        "quote_found": true,
+        "comment": "349 − 52 = 297 ₽"
+      },
+      {
+        "id": "c035",
+        "text": "В канале partner_bundle партнёр удерживает 20% выручки",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "Оператор получает 20% платежей подписчиков, пришедших через программу, в течение первых 12 месяцев.",
+        "quote_found": true,
+        "comment": "Прямо указано в основных условиях партнёрской программы."
+      },
+      {
+        "id": "c036",
+        "text": "Маржинальность в канале partner_bundle составляет около 227 рублей в месяц",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "Оператор получает 20% платежей подписчиков, пришедших через программу, в течение первых 12 месяцев.\nЦена подписки | 349 ₽ в месяц\nПеременные затраты на активного подписчика (доставка видео, поддержка, платёжная комиссия) | 52 ₽ в месяц",
+        "quote_found": true,
+        "comment": "349 × (1 − 0,20) − 52 = 227,2 ≈ 227 ₽"
+      },
+      {
+        "id": "c037",
+        "text": "Стоимость привлечения клиента (CAC) в канале partner_bundle приблизительно равна нулю",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "Стоимость привлечения в партнёрском канале (без учёта доли партнёра) | 0 ₽",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице затрат: фиксированной платы за привлечение нет."
+      },
+      {
+        "id": "c038",
+        "text": "Стоимость привлечения клиента (CAC) в канале paid_performance составляет 640 рублей",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "Средняя стоимость привлечения подписки в платной рекламе (paid_performance) | 640 ₽",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице затрат финансовой дирекции."
+      },
+      {
+        "id": "c039",
+        "text": "Средний срок жизни подписчика в канале paid_performance составляет около 4–5 месяцев",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "По когортам paid_performance средний срок жизни ≈ 2,3 мес (сумма new+active_m1..m3 / new), по опросу ушедших среднее months_subscribed ≈ 3 мес; значение 4–5 мес материалами не подтверждается и им противоречит."
+      },
+      {
+        "id": "c040",
+        "text": "Акция «1 рубль за первый месяц» приводит к убытку около 51 рубля на подписчика за первый месяц",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "первый месяц стоит 1 ₽\nПеременные затраты на активного подписчика (доставка видео, поддержка, платёжная комиссия) | 52 ₽ в месяц",
+        "quote_found": true,
+        "comment": "Убыток за первый месяц = 52 − 1 = 51 ₽"
+      },
+      {
+        "id": "c041",
+        "text": "Снижение агрегатного удержания M1 с 63% до 48% вызвано ростом доли канала partner_bundle в структуре новых подписок",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |\n| 2026-01 | paid_performance | 5442 | 3094 | 2496 | 2168 |\n| 2026-09 | organic | 10426 | 6852 |  |  |\n| 2026-09 | paid_performance | 5836 | 3313 |  |  |\n| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "Агрегат M1: янв (6272+3094)/(9525+5442)=62.6%≈63%; сент (6852+3313+3847)/(10426+5836+12915)=48.0%≈48%. Доля partner_bundle в сент 12915/29177=44.3%, его M1=3847/12915=29.8%; без него M1=(6852+3313)/(10426+5836)=62.5%. Рост доли канала с низким удержанием объясняет падение агрегата."
+      },
+      {
+        "id": "c042",
+        "text": "Низкое качество аудитории канала partner_bundle искажает метрики удержания и LTV",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "Подтверждено низкое удержание partner_bundle (M1 29.8% против ~62-66% у других каналов), однако в материалах нет прямых упоминаний «качества аудитории» и метрики LTV."
+      },
+      {
+        "id": "c043",
+        "text": "Стоимость подписки составляет 1 ₽ за первый месяц и 349 ₽ в месяц далее",
+        "kind": "product",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "первый месяц стоит 1 ₽, далее — 349 ₽ в месяц с привязанной карты или счёта абонента.",
+        "quote_found": true,
+        "comment": "Прямо указано в условиях партнёрской программы."
+      },
+      {
+        "id": "c044",
+        "text": "Отмена подписки возможна в любой момент",
+        "kind": "product",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет информации о правилах отмены подписки."
+      },
+      {
+        "id": "c045",
+        "text": "Механика партнёрской программы изменяема с уведомлением за 30 дней",
+        "kind": "product",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "Механику промо (длительность и цена промо-периода) можно изменить, уведомив партнёра за 30 дней.",
+        "quote_found": true,
+        "comment": "Прямо подтверждено в условиях программы."
+      },
+      {
+        "id": "c046",
+        "text": "Сюрприз списания является прямой причиной оттока и негатива",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "| S-0059 | 2026-07 | partner_bundle | 1 | дорого | После акции цена неприятно удивила |\n| S-0133 | 2026-08 | partner_bundle | 1 | подключался ради акции | Не знал, что потом спишут полную цену |",
+        "quote_found": true,
+        "comment": "В комментариях подтверждён эффект «сюрприза списания», однако в основных причинах оттока он не выделен как отдельная категория, а формулировка «прямая причина» сильнее, чем позволяют данные."
+      },
+      {
+        "id": "c047",
+        "text": "«Нечего смотреть» является реальной причиной оттока у органического трафика",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/content_team_memo.md",
+        "quote": "в опросе ушедших среди органических подписчиков 43% называют главной причиной «нечего смотреть, каталог устарел».",
+        "quote_found": true,
+        "comment": "Прямо подтверждено в записке контент-направления; также видно в exit_survey.csv среди organic."
+      },
+      {
+        "id": "c048",
+        "text": "Реактивация после завершения сериала снижает отток по причине «досмотрел — ушёл»",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о реактивации и её влиянии на отток по причине «досмотрел — ушёл»."
+      },
+      {
+        "id": "c049",
+        "text": "43% пользователей органического трафика называют каталог причиной выбора сервиса",
+        "kind": "user",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/content_team_memo.md",
+        "quote": "в опросе ушедших среди органических подписчиков 43% называют главной причиной «нечего смотреть, каталог устарел».",
+        "quote_found": true,
+        "comment": "43% — это доля среди ушедших, называющих каталог причиной ухода, а не причиной выбора сервиса."
+      },
+      {
+        "id": "c050",
+        "text": "Провал сентября объясняется структурным эффектом партнёра",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "В сентябре partner_bundle дал 12915 из 29177 новых подписок (44.3%) с M1-удержанием 29.8%; без этого канала агрегатное M1 September = (6852+3313)/(10426+5836)=62.5%, что объясняет «провал» до 48% структурным эффектом."
+      },
+      {
+        "id": "c051",
+        "text": "Премьера в феврале–марте 2027 не успевает повлиять на удержание когорт осени 2026 и на решение «до 15 ноября»",
+        "kind": "other",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/content_team_memo.md",
+        "quote": "Выделить 38 млн ₽ на лицензии двух сериалов-новинок с премьерой в феврале–марте 2027.",
+        "quote_found": true,
+        "comment": "Премьера février–март 2027 наступает после M1 когорты сентября 2026 (октябрь 2026) и после дедлайна решения 15 ноября 2026, поэтому не влияет на них."
+      },
+      {
+        "id": "c052",
+        "text": "42% новых подписок приходятся на partner_bundle с низкой вовлечённостью",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Доля partner_bundle в общем числе новых подписок за янв–сен 2026 — 26,0% (49 527 / 190 733); в августе–сентябре — 43,5%, а не 42%."
+      },
+      {
+        "id": "c053",
+        "text": "M1 partner_bundle составляет 29,8% по состоянию на сентябрь 2026",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "3847 / 12915 = 29,79% ≈ 29,8%."
+      },
+      {
+        "id": "c054",
+        "text": "M1 organic составляет 65,7% по состоянию на сентябрь 2026",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | organic | 10426 | 6852 |  |  |",
+        "quote_found": true,
+        "comment": "6852 / 10426 = 65,72% ≈ 65,7%."
+      },
+      {
+        "id": "c055",
+        "text": "M1 paid_performance составляет 56,8% по состоянию на сентябрь 2026",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | paid_performance | 5836 | 3313 |  |  |",
+        "quote_found": true,
+        "comment": "3313 / 5836 = 56,78% ≈ 56,8%."
+      },
+      {
+        "id": "c056",
+        "text": "Доля partner_bundle в новых подписках составляет около 44%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "12915 / (10426 + 5836 + 12915) = 12915 / 29177 = 44,26% ≈ 44%."
+      },
+      {
+        "id": "c057",
+        "text": "Доля отмен с причиной «не знал о списании» является высокой",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В опросе exit_survey.csv отсутствует категория main_reason «не знал о списании»; упоминания есть только в свободных комментариях."
+      },
+      {
+        "id": "c058",
+        "text": "По договору с оператором допускается не более 2 SMS/пуш-уведомлений в месяц",
+        "kind": "company_data",
+        "chunk": 5,
+        "section": "4. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "Оператор отправляет участникам программы не более двух сервисных сообщений в месяц (SMS или пуш) по согласованным текстам.",
+        "quote_found": true,
+        "comment": "Прямое указание в условиях договора."
+      },
+      {
+        "id": "c059",
+        "text": "Честность про цену снимает негатив и часть оттока",
+        "kind": "causal",
+        "chunk": 5,
+        "section": "4. Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о влиянии честности о цене на отток; в опросе лишь фиксируются негативные комментарии о неожиданном списании."
+      },
+      {
+        "id": "c060",
+        "text": "Провал удержания является структурным",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "M1 partner_bundle стабильно около 28–30% во всех когортах против 65,7% у organic, что указывает на структурную особенность канала."
+      },
+      {
+        "id": "c061",
+        "text": "Стоимость партнёрского канала составляет 1 ₽ за месяц",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "первый месяц стоит 1 ₽, далее — 349 ₽ в месяц",
+        "quote_found": true,
+        "comment": "1 ₽ — цена только первого месяца; далее 349 ₽. Кроме того, в таблице затрат стоимость привлечения в партнёрском канале указана как 0 ₽."
+      },
+      {
+        "id": "c062",
+        "text": "Партнёрский канал обеспечивает ~44% новых подписок",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "За сентябрь: 12915 / (10426+5836+12915) = 12915/29177 ≈ 44,3%. За август–сентябрь: (11627+12915)/(9830+5720+11627+10426+5836+12915) = 24542/56354 ≈ 43,5%."
+      },
+      {
+        "id": "c063",
+        "text": "Удержание в партнёрском канале составляет ~30%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | partner_bundle | 12915 | 3847 |  |  |",
+        "quote_found": true,
+        "comment": "Сумма active_m1 по partner_bundle: 705+1519+2161+2911+3489+3847 = 14632; new_subscribers = 49527; 14632/49527 ≈ 29,5% ≈ 30%."
+      },
+      {
+        "id": "c064",
+        "text": "Удержание в органическом канале составляет 66%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-09 | organic | 10426 | 6852 |  |  |",
+        "quote_found": true,
+        "comment": "Сумма active_m1 по organic: 6272+6333+6981+6457+6682+6996+6575+6558+6852 = 59706; new_subscribers = 90224; 59706/90224 ≈ 66,2% ≈ 66%."
+      },
+      {
+        "id": "c065",
+        "text": "Внутри каналов удержание стабильно",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "| 2026-01 | organic | 9525 | 6272 | 5258 | 4663 |",
+        "quote_found": true,
+        "comment": "Доли active_m1/new_subscribers внутри каналов стабильны: organic ~66% (65,8–67,4%), paid_performance ~55–57%, partner_bundle ~28–30% по всем когортам."
+      },
+      {
+        "id": "c066",
+        "text": "Расходы в 38 млн на сериалы не решают проблему к 15 ноября",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/content_team_memo.md",
+        "quote": "Выделить 38 млн ₽ на лицензии двух сериалов-новинок с премьерой в феврале–марте 2027.",
+        "quote_found": true,
+        "comment": "Премьера сериалов запланирована на февраль–март 2027, следовательно, к 15 ноября 2026 (срок принятия решения) проблема удержания не может быть решена этими расходами."
+      },
+      {
+        "id": "c067",
+        "text": "Расходы в 38 млн на сериалы не объясняют провал сентября",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "доля тех, кто оплачивает первое продление, упала с 63% у январских подписчиков до 48% у сентябрьских",
+        "quote_found": true,
+        "comment": "38 млн ₽ — запрошенный будущий бюджет (решение до 15 ноября), который не мог повлиять на septembre 2026 года; следовательно, не объясняет провал сентября."
+      },
+      {
+        "id": "c068",
+        "text": "Опрос проведён с выборкой n=260 (0,7%)",
+        "kind": "number",
+        "chunk": 7,
+        "section": "6. Риски и оговорки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/exit_survey.csv",
+        "quote": "ответили 260 человек — около 0,7% от ≈38 515 отменивших первое продление за период",
+        "quote_found": true,
+        "comment": "Мета-файл опроса прямо указывает n=260 и долю 0,7%."
+      },
+      {
+        "id": "c069",
+        "text": "Данные синтетические (кроме рыночных выдержек)",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "6. Риски и оговорки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/cohorts_by_channel.csv",
+        "quote": "synthetic: true",
+        "quote_found": true,
+        "comment": "Все внутренние файлы (когорты, опрос, записка, условия партнёрства) помечены synthetic: true; рыночные выдержки (market_*.md) — synthetic: false."
+      },
+      {
+        "id": "c070",
+        "text": "Пересмотр промо с оператором требует уведомления за 30 дней",
+        "kind": "number",
+        "chunk": 7,
+        "section": "6. Риски и оговорки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/partner_terms.md",
+        "quote": "Механику промо (длительность и цена промо-периода) можно изменить, уведомив партнёра за 30 дней.",
+        "quote_found": true,
+        "comment": "Условия договора прямо устанавливают срок уведомления 30 дней для изменения промо-механики."
+      }
+    ],
+    "all_extracted": [
+      {
+        "id": "c001",
+        "text": "Документ подготовлен к решению по бюджету до 15 ноября 2026 года",
+        "kind": "number",
+        "chunk": 1,
+        "section": "(начало документа)"
+      },
+      {
+        "id": "c002",
+        "text": "Доля первых продлений упала с 63% до 48%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)"
+      },
+      {
+        "id": "c003",
+        "text": "Падение доли первых продлений вызвано сдвигом структуры привлечения в партнёрский канал",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)"
+      },
+      {
+        "id": "c004",
+        "text": "Партнёрская программа с «Восход Телеком» запущена в апреле",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)"
+      },
+      {
+        "id": "c005",
+        "text": "Первый месяц по партнёрской программе стоил 1 ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)"
+      },
+      {
+        "id": "c006",
+        "text": "К августу–сентябрю партнёрская программа дала около 55% новых подписок",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)"
+      },
+      {
+        "id": "c007",
+        "text": "Партнёрский канал удерживает подписчиков в 2,5–3 раза хуже органического канала",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)"
+      },
+      {
+        "id": "c008",
+        "text": "Удержание в органическом канале стабильно",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)"
+      },
+      {
+        "id": "c009",
+        "text": "Удержание в канале платного трафика стабильно",
+        "kind": "user",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)"
+      },
+      {
+        "id": "c010",
+        "text": "Общее падение удержания вызвано разбавлением дешёвыми промо-подписчиками",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)"
+      },
+      {
+        "id": "c011",
+        "text": "Бюджет на два сериала составляет 38 млн ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)"
+      },
+      {
+        "id": "c012",
+        "text": "В сентябре произошёл провал удержания",
+        "kind": "other",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)"
+      },
+      {
+        "id": "c013",
+        "text": "Сериалы не решают проблему удержания к 15 ноября",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)"
+      },
+      {
+        "id": "c014",
+        "text": "Промо-механика предусматривает списание 349 ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "1. Главный вывод (executive summary)"
+      },
+      {
+        "id": "c015",
+        "text": "Удержание M1 (доля новых подписок, оплативших первое продление) по всем каналам в январе составляло 63,0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c016",
+        "text": "Удержание M1 по всем каналам в сентябре составляло 48,0%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c017",
+        "text": "Удержание M1 в органическом канале в течение периода оставалось стабильным на уровне 65–67%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c018",
+        "text": "Удержание M1 в канале paid_performance оставалось стабильным на уровне 55–57%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c019",
+        "text": "Удержание M1 в канале partner_bundle составляло около 29–30%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c020",
+        "text": "Доля канала partner_bundle в новых подписках выросла с 0% в январе до примерно 44% в сентябре",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c021",
+        "text": "В январе доля органики в новых подписках составляла 64%, paid_performance — 36%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c022",
+        "text": "В сентябре доля органики составляла 37%, paid_performance — 21%, partner_bundle — 42%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c023",
+        "text": "Средневзвешенное удержание M1 в январе составляло приблизительно 62,6%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c024",
+        "text": "Средневзвешенное удержание M1 в сентябре составляло приблизительно 48,1%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c025",
+        "text": "При сохранении январского микса каналов удержание M1 в сентябре составило бы около 62–63%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c026",
+        "text": "Около 14 процентных пунктов из 15 процентных пунктов падения удержания являются структурным эффектом, связанным с партнёрским каналом",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c027",
+        "text": "Размер выборки опроса ушедших пользователей составил 260 человек",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c028",
+        "text": "Доля опрошенных ушедших пользователей от общего числа отмен составила около 0,7%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c029",
+        "text": "Для органических пользователей наиболее частой причиной отмены подписки являлось «нечего смотреть, каталог устарел»",
+        "kind": "user",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c030",
+        "text": "Для пользователей partner_bundle доминирующей причиной отмены являлось «подключался ради акции»",
+        "kind": "user",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c031",
+        "text": "Пользователи partner_bundle не были осведомлены о том, что после первого месяца будет списана полная стоимость подписки",
+        "kind": "user",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c032",
+        "text": "Стоимость подписки составляет 349 рублей",
+        "kind": "product",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c033",
+        "text": "Переменные затраты на одного подписчика составляют 52 рубля в месяц",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c034",
+        "text": "Маржинальность с активного подписчика составляет около 297 рублей в месяц",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c035",
+        "text": "В канале partner_bundle партнёр удерживает 20% выручки",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c036",
+        "text": "Маржинальность в канале partner_bundle составляет около 227 рублей в месяц",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c037",
+        "text": "Стоимость привлечения клиента (CAC) в канале partner_bundle приблизительно равна нулю",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c038",
+        "text": "Стоимость привлечения клиента (CAC) в канале paid_performance составляет 640 рублей",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c039",
+        "text": "Средний срок жизни подписчика в канале paid_performance составляет около 4–5 месяцев",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c040",
+        "text": "Акция «1 рубль за первый месяц» приводит к убытку около 51 рубля на подписчика за первый месяц",
+        "kind": "company_data",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c041",
+        "text": "Снижение агрегатного удержания M1 с 63% до 48% вызвано ростом доли канала partner_bundle в структуре новых подписок",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c042",
+        "text": "Низкое качество аудитории канала partner_bundle искажает метрики удержания и LTV",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "2. Диагностика: что показывают цифры"
+      },
+      {
+        "id": "c043",
+        "text": "Стоимость подписки составляет 1 ₽ за первый месяц и 349 ₽ в месяц далее",
+        "kind": "product",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c044",
+        "text": "Отмена подписки возможна в любой момент",
+        "kind": "product",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c045",
+        "text": "Механика партнёрской программы изменяема с уведомлением за 30 дней",
+        "kind": "product",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c046",
+        "text": "Сюрприз списания является прямой причиной оттока и негатива",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c047",
+        "text": "«Нечего смотреть» является реальной причиной оттока у органического трафика",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c048",
+        "text": "Реактивация после завершения сериала снижает отток по причине «досмотрел — ушёл»",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c049",
+        "text": "43% пользователей органического трафика называют каталог причиной выбора сервиса",
+        "kind": "user",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c050",
+        "text": "Провал сентября объясняется структурным эффектом партнёра",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c051",
+        "text": "Премьера в феврале–марте 2027 не успевает повлиять на удержание когорт осени 2026 и на решение «до 15 ноября»",
+        "kind": "other",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c052",
+        "text": "42% новых подписок приходятся на partner_bundle с низкой вовлечённостью",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c053",
+        "text": "M1 partner_bundle составляет 29,8% по состоянию на сентябрь 2026",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c054",
+        "text": "M1 organic составляет 65,7% по состоянию на сентябрь 2026",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c055",
+        "text": "M1 paid_performance составляет 56,8% по состоянию на сентябрь 2026",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c056",
+        "text": "Доля partner_bundle в новых подписках составляет около 44%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c057",
+        "text": "Доля отмен с причиной «не знал о списании» является высокой",
+        "kind": "number",
+        "chunk": 4,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c058",
+        "text": "По договору с оператором допускается не более 2 SMS/пуш-уведомлений в месяц",
+        "kind": "company_data",
+        "chunk": 5,
+        "section": "4. Коммуникационная стратегия"
+      },
+      {
+        "id": "c059",
+        "text": "Честность про цену снимает негатив и часть оттока",
+        "kind": "causal",
+        "chunk": 5,
+        "section": "4. Коммуникационная стратегия"
+      },
+      {
+        "id": "c060",
+        "text": "Провал удержания является структурным",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)"
+      },
+      {
+        "id": "c061",
+        "text": "Стоимость партнёрского канала составляет 1 ₽ за месяц",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)"
+      },
+      {
+        "id": "c062",
+        "text": "Партнёрский канал обеспечивает ~44% новых подписок",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)"
+      },
+      {
+        "id": "c063",
+        "text": "Удержание в партнёрском канале составляет ~30%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)"
+      },
+      {
+        "id": "c064",
+        "text": "Удержание в органическом канале составляет 66%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)"
+      },
+      {
+        "id": "c065",
+        "text": "Внутри каналов удержание стабильно",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)"
+      },
+      {
+        "id": "c066",
+        "text": "Расходы в 38 млн на сериалы не решают проблему к 15 ноября",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)"
+      },
+      {
+        "id": "c067",
+        "text": "Расходы в 38 млн на сериалы не объясняют провал сентября",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "5. Что сказать правлению (тезисы для слайда)"
+      },
+      {
+        "id": "c068",
+        "text": "Опрос проведён с выборкой n=260 (0,7%)",
+        "kind": "number",
+        "chunk": 7,
+        "section": "6. Риски и оговорки"
+      },
+      {
+        "id": "c069",
+        "text": "Данные синтетические (кроме рыночных выдержек)",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "6. Риски и оговорки"
+      },
+      {
+        "id": "c070",
+        "text": "Пересмотр промо с оператором требует уведомления за 30 дней",
+        "kind": "number",
+        "chunk": 7,
+        "section": "6. Риски и оговорки"
+      }
+    ]
+  },
+  "options": null,
+  "promises": {
+    "total": 0,
+    "unbacked": 0,
+    "unclear": 0,
+    "backed": 0,
+    "items": []
+  },
+  "validation_plan": null,
+  "expected_choice": null,
+  "injection": null,
+  "heuristics": {
+    "status_quo": 0,
+    "kill": 0,
+    "baseline": 0,
+    "guardrail": 0,
+    "kill_criterion": 0,
+    "date_or_term": 2,
+    "injection_flag": 0
+  },
+  "judge_usage": {
+    "calls": 14,
+    "prompt_tokens": 94423,
+    "output_tokens": 55019,
+    "duration_s": 732.67,
+    "cost_estimate": {
+      "usd": 0.181636,
+      "rub": 14.5309,
+      "estimated": false,
+      "basis": "config/prices.yaml (as_of 2026-11-04): $0.7/2.1 за 1 млн токенов вход/выход"
+    },
+    "log": [
+      {
+        "step": "extract_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 403,
+        "output_tokens": 852,
+        "duration_s": 13.93,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 697,
+        "output_tokens": 2866,
+        "duration_s": 39.27,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1575,
+        "output_tokens": 3714,
+        "duration_s": 51.81,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1259,
+        "output_tokens": 4763,
+        "duration_s": 69.11,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 873,
+        "output_tokens": 2062,
+        "duration_s": 37.41,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[6]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 599,
+        "output_tokens": 2035,
+        "duration_s": 28.57,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[7]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 590,
+        "output_tokens": 1999,
+        "duration_s": 71.05,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12622,
+        "output_tokens": 6744,
+        "duration_s": 100.2,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12638,
+        "output_tokens": 5596,
+        "duration_s": 86.45,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12679,
+        "output_tokens": 3452,
+        "duration_s": 44.74,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12636,
+        "output_tokens": 8135,
+        "duration_s": 77.01,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12636,
+        "output_tokens": 2969,
+        "duration_s": 27.42,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[6]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12632,
+        "output_tokens": 4722,
+        "duration_s": 43.31,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[7]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 12584,
+        "output_tokens": 5110,
+        "duration_s": 42.39,
+        "attempts": 1,
+        "errors": []
+      }
+    ]
+  },
+  "errors": []
+}

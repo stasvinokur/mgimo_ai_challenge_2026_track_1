@@ -1,0 +1,20 @@
+{
+ "question_id": "demo-retention-run:obj:9",
+ "kind": "score",
+ "choice": null,
+ "probability": null,
+ "score": 2.7914,
+ "probs": {
+  "0": 0.0153,
+  "1": 0.0348,
+  "2": 0.2979,
+  "3": 0.4472,
+  "4": 0.2048
+ },
+ "confidence": 0.4472,
+ "backend": "systemone",
+ "model": "clef:cloud",
+ "escalated": false,
+ "input_tokens": 360,
+ "latency_ms": 818
+}

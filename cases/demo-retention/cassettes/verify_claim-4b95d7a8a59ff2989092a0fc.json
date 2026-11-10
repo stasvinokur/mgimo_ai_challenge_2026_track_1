@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"Цитата не упоминает, что обращения относятся к «Скворечнику».\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "Цитата не упоминает, что обращения относятся к «Скворечнику»."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 319,
+  "output_tokens": 33,
+  "estimated": false,
+  "latency_ms": 495,
+  "escalated": false
+ }
+}

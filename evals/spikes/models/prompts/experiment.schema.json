@@ -1,0 +1,56 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "hypothesis": {
+      "type": "string"
+    },
+    "primary_metric": {
+      "type": "string"
+    },
+    "baseline_pct": {
+      "type": "number"
+    },
+    "baseline_source": {
+      "type": "string"
+    },
+    "mde_pp": {
+      "type": "number"
+    },
+    "comparison": {
+      "type": "string"
+    },
+    "duration_days": {
+      "type": "integer"
+    },
+    "sample_size_per_arm": {
+      "type": "integer"
+    },
+    "guardrails": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "type": "array"
+    },
+    "kill_criteria": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "hypothesis",
+    "primary_metric",
+    "baseline_pct",
+    "baseline_source",
+    "mde_pp",
+    "comparison",
+    "duration_days",
+    "sample_size_per_arm",
+    "guardrails",
+    "kill_criteria"
+  ],
+  "type": "object"
+}

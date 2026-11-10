@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "StrongVerifyDTO",
+ "text": "{\"label\":\"supported\",\"confidence\":0.97,\"note\":\"Цитата прямо указывает, что «Скворечник» — подписочный сервис семейной геолокации мобильного оператора по цене 199 ₽ в месяц.\"}",
+ "data": {
+  "label": "supported",
+  "confidence": 0.97,
+  "note": "Цитата прямо указывает, что «Скворечник» — подписочный сервис семейной геолокации мобильного оператора по цене 199 ₽ в месяц."
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 439,
+  "output_tokens": 59,
+  "estimated": false,
+  "latency_ms": 586,
+  "escalated": true
+ }
+}

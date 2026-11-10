@@ -1,0 +1,187 @@
+Кейс eval-subscription-retention создан: материалов 6
+▶ intake
+   playbook → gpt-oss:20b · 497/34 ток. · 1.9 с
+   frame → gpt-oss:20b · 1891/446 ток. · 21.9 с
+   frame → gpt-oss:20b · 1891/446 ток. · 21.9 с
+✓ intake
+▶ clarify
+✓ clarify
+▶ research_plan:0
+   research_plan → gpt-oss:20b · 2024/1070 ток. · 41.8 с
+   research_plan → gpt-oss:20b · 2024/1070 ток. · 41.8 с
+✓ research_plan:0
+▶ research_gate:0
+✓ research_gate:0
+▶ read:SRC-002
+▶ read:SRC-001
+▶ read:SRC-003
+▶ read:SRC-004
+   extract_evidence → gpt-oss:20b · 1253/176 ток. · 8.7 с
+   extract_evidence → gpt-oss:20b · 1253/176 ток. · 8.7 с
+✓ read:SRC-002
+▶ read:SRC-005
+   extract_evidence → gpt-oss:20b · 1320/43 ток. · 12.7 с
+   extract_evidence → gpt-oss:20b · 1320/43 ток. · 12.7 с
+✓ read:SRC-004
+▶ read:SRC-006
+   extract_claims → gpt-oss:20b · 1194/302 ток. · 27.4 с
+   extract_claims → gpt-oss:20b · 1194/302 ток. · 27.4 с
+✓ read:SRC-001
+   extract_claims → gpt-oss:20b · 1206/132 ток. · 34.4 с
+   extract_claims → gpt-oss:20b · 1206/132 ток. · 34.4 с
+✓ read:SRC-003
+   extract_evidence → gpt-oss:20b · 1228/37 ток. · 29.2 с
+   extract_evidence → gpt-oss:20b · 1228/37 ток. · 29.2 с
+✓ read:SRC-005
+   extract_evidence → gpt-oss:20b · 1285/132 ток. · 31.4 с
+   extract_evidence → gpt-oss:20b · 1285/132 ток. · 31.4 с
+✓ read:SRC-006
+▶ merge
+✓ merge
+▶ research_loop
+   research_step → gpt-oss:20b · 1655/131 ток. · 8.2 с
+   research_step → gpt-oss:20b · 1655/131 ток. · 8.2 с
+   research_step → gpt-oss:20b · 1773/121 ток. · 5.8 с
+   research_step → gpt-oss:20b · 1773/121 ток. · 5.8 с
+   research_step → gpt-oss:20b · 1956/178 ток. · 8.6 с
+   research_step → gpt-oss:20b · 1956/178 ток. · 8.6 с
+   research_step → gpt-oss:20b · 2091/219 ток. · 10.4 с
+   research_step → gpt-oss:20b · 2091/219 ток. · 10.4 с
+   research_step → gpt-oss:20b · 2156/166 ток. · 7.1 с
+   research_step → gpt-oss:20b · 2156/166 ток. · 7.1 с
+   research_step → gpt-oss:20b · 2334/132 ток. · 7.4 с
+   research_step → gpt-oss:20b · 2334/132 ток. · 7.4 с
+   research_step → gpt-oss:20b · 2395/124 ток. · 5.6 с
+   research_step → gpt-oss:20b · 2395/124 ток. · 5.6 с
+   research_step → gpt-oss:20b · 2454/182 ток. · 7.9 с
+   research_step → gpt-oss:20b · 2454/182 ток. · 7.9 с
+   research_step → gpt-oss:20b · 2572/127 ток. · 7.7 с
+   research_step → gpt-oss:20b · 2572/127 ток. · 7.7 с
+   research_step → gpt-oss:20b · 2571/145 ток. · 8.4 с
+   research_step → gpt-oss:20b · 2571/145 ток. · 8.4 с
+✓ research_loop
+▶ claims
+   extract_claims → gpt-oss:20b · 1548/255 ток. · 13.7 с
+   extract_claims → gpt-oss:20b · 1548/255 ток. · 13.7 с
+   claim_type → gpt-oss:20b · 362/57 ток. · 3.4 с
+   claim_type → gpt-oss:20b · 358/70 ток. · 3.3 с
+   claim_type → gpt-oss:20b · 358/71 ток. · 3.4 с
+   claim_type → gpt-oss:20b · 364/72 ток. · 3.6 с
+   claim_type → gpt-oss:20b · 359/74 ток. · 3.5 с
+   verify_claim → gpt-oss:20b · 359/145 ток. · 7.4 с
+   verify_claim → gpt-oss:20b · 347/120 ток. · 6.3 с
+   verify_claim → gpt-oss:20b · 346/133 ток. · 5.7 с
+   verify_claim → gpt-oss:20b · 345/120 ток. · 6.1 с
+   verify_claim → gpt-oss:20b · 334/43 ток. · 1.8 с
+✓ claims
+▶ situation
+✓ situation
+▶ options
+   options → gpt-oss:20b · 2338/176 ток. · 11.8 с
+   options → gpt-oss:20b · 2338/176 ток. · 11.8 с
+   options → gpt-oss:20b · 2372/168 ток. · 7.0 с
+   options → gpt-oss:20b · 2372/168 ток. · 7.0 с
+✓ options
+▶ stress
+   premortem → gpt-oss:20b · 2252/449 ток. · 26.5 с
+   premortem → gpt-oss:20b · 2252/449 ток. · 26.5 с
+   steelman → gpt-oss:20b · 1750/188 ток. · 11.5 с
+   steelman → gpt-oss:20b · 1750/188 ток. · 11.5 с
+   premortem → gpt-oss:20b · 2261/455 ток. · 21.7 с
+   premortem → gpt-oss:20b · 2261/455 ток. · 21.7 с
+   steelman → gpt-oss:20b · 1750/210 ток. · 11.5 с
+   steelman → gpt-oss:20b · 1750/210 ток. · 11.5 с
+   objection_strength → gpt-oss:20b · 320/86 ток. · 3.7 с
+   objection_strength → gpt-oss:20b · 322/78 ток. · 4.3 с
+   objection_strength → gpt-oss:20b · 311/69 ток. · 3.2 с
+   objection_strength → gpt-oss:20b · 326/104 ток. · 4.8 с
+   objection_strength → gpt-oss:20b · 326/77 ток. · 3.3 с
+   objection_strength → gpt-oss:20b · 397/38 ток. · 1.8 с
+   objection_strength → gpt-oss:20b · 313/75 ток. · 3.2 с
+   objection_strength → gpt-oss:20b · 314/96 ток. · 4.4 с
+   objection_strength → gpt-oss:20b · 323/74 ток. · 3.0 с
+   objection_strength → gpt-oss:20b · 319/87 ток. · 3.7 с
+   objection_strength → gpt-oss:20b · 331/68 ток. · 3.1 с
+   objection_strength → gpt-oss:20b · 424/57 ток. · 3.2 с
+   role_panel → gpt-oss:20b · 2194/161 ток. · 11.2 с
+   role_panel → gpt-oss:20b · 2194/161 ток. · 11.2 с
+   role_panel → gpt-oss:20b · 2194/157 ток. · 10.7 с
+   role_panel → gpt-oss:20b · 2194/157 ток. · 10.7 с
+   role_panel → gpt-oss:20b · 2196/136 ток. · 11.3 с
+   role_panel → gpt-oss:20b · 2196/136 ток. · 11.3 с
+   role_panel → gpt-oss:20b · 2196/132 ток. · 10.0 с
+   role_panel → gpt-oss:20b · 2196/132 ток. · 10.0 с
+   role_panel → gpt-oss:20b · 2198/148 ток. · 12.6 с
+   role_panel → gpt-oss:20b · 2198/148 ток. · 12.6 с
+   role_panel → gpt-oss:20b · 2198/162 ток. · 11.9 с
+   role_panel → gpt-oss:20b · 2198/162 ток. · 11.9 с
+   decision_model → gpt-oss:20b · 2486/337 ток. · 18.7 с
+   decision_model → gpt-oss:20b · 2486/337 ток. · 18.7 с
+✓ stress
+▶ option_gate
+✓ option_gate
+▶ product
+   product_strategy → gpt-oss:20b · 2857/774 ток. · 36.7 с
+   product_strategy → gpt-oss:20b · 2857/774 ток. · 36.7 с
+✓ product
+▶ comms:0
+   comms_strategy → gpt-oss:20b · 3156/855 ток. · 40.8 с
+   comms_strategy → gpt-oss:20b · 3156/855 ток. · 40.8 с
+✓ comms:0
+▶ promise_lint:0
+   promise_supported → gpt-oss:20b · 285/42 ток. · 2.0 с
+   promise_supported → gpt-oss:20b · 280/40 ток. · 1.7 с
+   promise_supported → gpt-oss:20b · 285/49 ток. · 2.8 с
+✓ promise_lint:0
+▶ comms:1
+   comms_strategy → gpt-oss:20b · 3259/627 ток. · 29.8 с
+   comms_strategy → gpt-oss:20b · 3259/627 ток. · 29.8 с
+✓ comms:1
+▶ promise_lint:1
+   promise_supported → gpt-oss:20b · 332/75 ток. · 3.9 с
+   promise_supported → gpt-oss:20b · 286/68 ток. · 4.5 с
+✓ promise_lint:1
+▶ experiments
+   experiments → gpt-oss:20b · 2897/261 ток. · 915.5 с
+   experiments → gpt-oss:20b · 2897/261 ток. · 915.5 с
+   experiments → gpt-oss:20b · 2939/622 ток. · 21.8 с
+   experiments → gpt-oss:20b · 2939/622 ток. · 21.8 с
+   experiments → gpt-oss:20b · 1702/152 ток. · 9.0 с
+   experiments → gpt-oss:20b · 1702/152 ток. · 9.0 с
+   judge → gpt-oss:20b · 1699/107 ток. · 7.1 с
+   judge → gpt-oss:20b · 1699/107 ток. · 7.1 с
+   experiments → gpt-oss:20b · 1699/114 ток. · 7.2 с
+   experiments → gpt-oss:20b · 1699/114 ток. · 7.2 с
+   experiments → gpt-oss:20b · 1715/121 ток. · 7.5 с
+   experiments → gpt-oss:20b · 1715/121 ток. · 7.5 с
+   judge → gpt-oss:20b · 1712/98 ток. · 6.5 с
+   judge → gpt-oss:20b · 1712/98 ток. · 6.5 с
+   experiments → gpt-oss:20b · 1712/142 ток. · 8.1 с
+   experiments → gpt-oss:20b · 1712/142 ток. · 8.1 с
+✓ experiments
+▶ commit
+   experiments → gpt-oss:20b · 2080/444 ток. · 20.7 с
+   experiments → gpt-oss:20b · 2080/444 ток. · 20.7 с
+✓ commit
+▶ summary
+   executive_summary → gpt-oss:20b · 3222/586 ток. · 27.3 с
+   executive_summary → gpt-oss:20b · 3222/586 ток. · 27.3 с
+✓ summary
+▶ report
+✓ report
+      Кейс eval-subscription-retention      
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+┃ Поле                  ┃ Значение         ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+│ Этап                  │ Готово           │
+│ Ждёт решения человека │ —                │
+│ Завершено             │ да               │
+│ Шагов выполнено       │ 26               │
+│ Вызовов моделей       │ 73               │
+│ Токены вход/выход     │ 103 463 / 14 022 │
+│ Стоимость по прайсу   │ $0.0000 ≈ 0.00 ₽ │
+└───────────────────────┴──────────────────┘
+Готово. Отчёт: 
+evals/results/agent-l
+ocal/cases/eval-subscription-retention/out/report.md
+

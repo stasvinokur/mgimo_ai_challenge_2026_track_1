@@ -1,0 +1,23 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "has_injection": {
+      "type": "boolean"
+    },
+    "injection_spans": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "safe_summary": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "has_injection",
+    "injection_spans",
+    "safe_summary"
+  ],
+  "type": "object"
+}

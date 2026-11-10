@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":0.9,\"rationale\":\"В цитате нет упоминания названия сервиса «Где мои».\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 0.9,
+  "rationale": "В цитате нет упоминания названия сервиса «Где мои»."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 279,
+  "output_tokens": 32,
+  "estimated": false,
+  "latency_ms": 445,
+  "escalated": false
+ }
+}

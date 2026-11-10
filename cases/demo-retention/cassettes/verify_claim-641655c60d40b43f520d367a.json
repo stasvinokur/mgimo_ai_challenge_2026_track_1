@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"Цитата описывает условия подключения тарифа «Семейный», но не содержит информации о причинах оттока пользователей.\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "Цитата описывает условия подключения тарифа «Семейный», но не содержит информации о причинах оттока пользователей."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 393,
+  "output_tokens": 41,
+  "estimated": false,
+  "latency_ms": 512,
+  "escalated": false
+ }
+}

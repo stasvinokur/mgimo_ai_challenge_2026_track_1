@@ -1,0 +1,86 @@
+{
+  "brief_id": "family-pack",
+  "approach": "chat_baseline",
+  "status": "ok",
+  "instruction": "Сделай продуктовую и коммуникационную стратегию по запросу руководителя. Используй приложенные материалы.",
+  "model": "deepseek-v4.1-flash:cloud",
+  "model_role": "reasoning",
+  "fallbacks_used": false,
+  "host": "http://127.0.0.1:11434",
+  "params": {
+    "think": false,
+    "temperature": 0.3,
+    "num_ctx": 65536
+  },
+  "started_at": "2026-11-06T21:03:18+00:00",
+  "finished_at": "2026-11-06T21:04:35+00:00",
+  "duration_s": 76.86,
+  "attempts": 1,
+  "done_reason": "stop",
+  "tokens": {
+    "input": 21413,
+    "output": 3201,
+    "total": 24614,
+    "note": "output включает токены рассуждения (thinking) модели"
+  },
+  "ollama_durations_s": {
+    "total_duration": 9.834,
+    "load_duration": 0.0,
+    "prompt_eval_duration": 0.0,
+    "eval_duration": 0.0
+  },
+  "prompt": {
+    "chars": 56315,
+    "sha256": "4ced34f0cda122624b38e7b49a8d3d07c69b991719005af8f53f0b7650783faa",
+    "materials": [
+      {
+        "file": "materials/landing_draft.docx",
+        "sha256": "0214f2492660f0deac4c518537d825c73112d835726acfa56bdf03b791ddb142",
+        "bytes": 37520,
+        "synthetic": true
+      },
+      {
+        "file": "materials/market_households.md",
+        "sha256": "ba30cc94e8f2b7b98489737fbebf8bc8e0d2266aaff0cb6c87cc1957673b4c1c",
+        "bytes": 1987,
+        "synthetic": false
+      },
+      {
+        "file": "materials/market_mobile_traffic.md",
+        "sha256": "8cb1d14149daf42a1a61761bda3a1f62576f528b62fa8bdc202d7063b84a4170",
+        "bytes": 2536,
+        "synthetic": false
+      },
+      {
+        "file": "materials/product_sheet.md",
+        "sha256": "97340e33d56606b8e8b78daf58a1462c148abd5e213455e49af42c48ac2a70f0",
+        "bytes": 3685,
+        "synthetic": true
+      },
+      {
+        "file": "materials/support_tickets.csv",
+        "sha256": "2f82d0e67b50f512da3c5408d628221b4ccd4b56d6da7d3ac454c2aa6a4fbaba",
+        "bytes": 27314,
+        "synthetic": true
+      },
+      {
+        "file": "materials/survey_family.csv",
+        "sha256": "0a0ef061c6ca14358c304b02d018af63996362b6a5a1e681314105092510d723",
+        "bytes": 38662,
+        "synthetic": true
+      }
+    ]
+  },
+  "output": {
+    "chars": 8995,
+    "sha256": "f19198ffca23b1f64d698c2e59aff2f1097ca6eca2f67d418e545a2ee2c2b32f",
+    "thinking_chars": 0
+  },
+  "cost_estimate": {
+    "usd": 0.010265,
+    "rub": 0.8212,
+    "estimated": false,
+    "basis": "config/prices.yaml (as_of 2026-11-04): $0.3/1.2 за 1 млн токенов вход/выход"
+  },
+  "errors": []
+}

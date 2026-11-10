@@ -1,0 +1,1532 @@
+{
+  "metrics_version": "1.2",
+  "brief_id": "feature-sunset",
+  "label": "baseline",
+  "output_path": "evals/results/baseline/feature-sunset/output.md",
+  "output_sha256": "bb643892a4aeb4f24447bd41116dd699ec60e8e9f7c1572491de0afd8b90852d",
+  "output_chars": 8789,
+  "judge_model": "mistral-large-4:cloud",
+  "judge_candidates": [
+    "mistral-large-4:cloud",
+    "kimi-k2.6:cloud"
+  ],
+  "judge_notes": [],
+  "judge_params": {
+    "think": false,
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 65536
+  },
+  "agent_model": "deepseek-v4.1-flash:cloud",
+  "seed": 42,
+  "census": true,
+  "claims_only": true,
+  "started_at": "2026-11-07T08:25:12+00:00",
+  "finished_at": "2026-11-07T08:35:24+00:00",
+  "claims": {
+    "extracted": 66,
+    "sample_size": 66,
+    "verified": 66,
+    "supported": 44,
+    "partial": 6,
+    "unsupported": 16,
+    "contradicted": 8,
+    "unsupported_share": 0.242,
+    "unsupported_ci95": [
+      0.1551,
+      0.3581
+    ],
+    "partial_share": 0.091,
+    "supported_share": 0.667,
+    "by_section": {
+      "2. Что говорят данные (и где аналитики правы, а где — нет)": {
+        "verified": 39,
+        "unsupported": 5,
+        "partial": 4
+      },
+      "3. Продуктовая стратегия": {
+        "verified": 12,
+        "unsupported": 9,
+        "partial": 0
+      },
+      "4. Коммуникационная стратегия": {
+        "verified": 4,
+        "unsupported": 0,
+        "partial": 1
+      },
+      "5. Что сказать руководителю (резюме на один слайд)": {
+        "verified": 11,
+        "unsupported": 2,
+        "partial": 1
+      }
+    },
+    "quotes_not_found": 0,
+    "sample": [
+      {
+        "id": "c001",
+        "text": "MAU составляет примерно 1,2 млн",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/feature_usage_monthly.csv",
+        "quote": "| 2026-10 | 1238735 | 45691 | 87258 | 53871 | 1420824 | 67986 |",
+        "quote_found": true,
+        "comment": "MAU за октябрь 2026 — 1 238 735 (≈1,24 млн); за 12 месяцев диапазон 1,08–1,24 млн, что соответствует «примерно 1,2 млн»."
+      },
+      {
+        "id": "c002",
+        "text": "Количество пользователей списка составляет примерно 45–47 тыс.",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/feature_usage_monthly.csv",
+        "quote": "| 2026-06 | 1185527 | 46967 | 93164 | 58223 | 1376766 | 68251 |",
+        "quote_found": true,
+        "comment": "list_users за 12 месяцев варьируется от 44 140 до 46 967, все значения попадают в диапазон 45–47 тыс."
+      },
+      {
+        "id": "c003",
+        "text": "Доля пользователей списка от MAU составляет примерно 3,8%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/feature_usage_monthly.csv",
+        "quote": "| 2026-08 | 1207873 | 45946 | 89920 | 56972 | 1423172 | 65516 |",
+        "quote_found": true,
+        "comment": "45946 / 1207873 = 3,80%; по остальным месяцам доля 3,7–4,1%, что подтверждает «примерно 3,8%»."
+      },
+      {
+        "id": "c004",
+        "text": "Заказы из списка составляют примерно 62–68 тыс. в месяц",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/feature_usage_monthly.csv",
+        "quote": "| 2026-06 | 1185527 | 46967 | 93164 | 58223 | 1376766 | 68251 |",
+        "quote_found": true,
+        "comment": "orders_from_list за 12 месяцев — от 61 886 до 68 251, что попадает в диапазон 62–68 тыс. (с округлением)."
+      },
+      {
+        "id": "c005",
+        "text": "Общее количество заказов составляет 1,35–1,42 млн в месяц",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/feature_usage_monthly.csv",
+        "quote": "| 2026-10 | 1238735 | 45691 | 87258 | 53871 | 1420824 | 67986 |",
+        "quote_found": true,
+        "comment": "orders_total за последние месяцы: 1 423 172 (авг), 1 385 563 (сен), 1 420 824 (окт) — все в диапазоне 1,35–1,42 млн; среднее за 12 мес ≈ 1,35 млн."
+      },
+      {
+        "id": "c006",
+        "text": "Доля заказов из списка от общего числа составляет примерно 4,7%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/feature_usage_monthly.csv",
+        "quote": "| 2026-10 | 1238735 | 45691 | 87258 | 53871 | 1420824 | 67986 |",
+        "quote_found": true,
+        "comment": "67986 / 1420824 = 4,78% ≈ 4,7%; по остальным месяцам 4,5–5,2%."
+      },
+      {
+        "id": "c007",
+        "text": "Средний чек у пользователей списка — 2 640 ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| пользователи списка (начали пользоваться в январе–марте 2026) | 46180 | 2.3 | 2.6 | 78.4 | 2640 |",
+        "quote_found": true,
+        "comment": "В столбце aov_rub для группы пользователей списка указано 2640 ₽."
+      },
+      {
+        "id": "c008",
+        "text": "Средний чек у остальных пользователей — 1 980 ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| не пользуются списком — все активные | 1138500 | 0.9 | 0.9 | 39.6 | 1980 |",
+        "quote_found": true,
+        "comment": "В столбце aov_rub для остальных активных пользователей указано 1980 ₽."
+      },
+      {
+        "id": "c009",
+        "text": "Средний чек пользователей списка выше среднего чека остальных на 33%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| пользователи списка (начали пользоваться в январе–марте 2026) | 46180 | 2.3 | 2.6 | 78.4 | 2640 |\n| не пользуются списком — все активные | 1138500 | 0.9 | 0.9 | 39.6 | 1980 |",
+        "quote_found": true,
+        "comment": "(2640 − 1980) / 1980 = 0,3333… = 33,3% ≈ 33%."
+      },
+      {
+        "id": "c010",
+        "text": "Частота заказов у пользователей списка — 2,6 заказа в месяц",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| пользователи списка (начали пользоваться в январе–марте 2026) | 46180 | 2.3 | 2.6 | 78.4 | 2640 |",
+        "quote_found": true,
+        "comment": "В столбце orders_per_month_after для пользователей списка указано 2.6 заказа в месяц."
+      },
+      {
+        "id": "c011",
+        "text": "Частота заказов у остальных пользователей — 0,9 заказа в месяц",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| не пользуются списком — все активные | 1138500 | 0.9 | 0.9 | 39.6 | 1980 |",
+        "quote_found": true,
+        "comment": "В таблице для группы «не пользуются списком — все активные» указано orders_per_month_after = 0.9."
+      },
+      {
+        "id": "c012",
+        "text": "Маржинальный доход составляет 7% от суммы заказа",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/eng_cost_note.md",
+        "quote": "- Маржинальный доход — около 7% от суммы заказа.",
+        "quote_found": true,
+        "comment": "Прямо указано в справке финансовой службы."
+      },
+      {
+        "id": "c013",
+        "text": "Вклад пользователей списка в маржинальный доход составляет примерно 22,1 млн ₽ в месяц",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| пользователи списка (начали пользоваться в январе–марте 2026) | 46180 | 2.3 | 2.6 | 78.4 | 2640 |",
+        "quote_found": true,
+        "comment": "Расчёт: 46180 × 2.6 × 2640 × 0.07 = 22 188 566 ₽ ≈ 22.2 млн ₽, а не 22.1 млн ₽."
+      },
+      {
+        "id": "c014",
+        "text": "Вклад сопоставимых пользователей без списка в маржинальный доход составляет примерно 20,0 млн ₽ в месяц",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| не пользуются списком — сопоставимые по частоте заказов, сроку жизни аккаунта и городу | 46180 | 2.3 | 2.4 | 75.4 | 2590 |",
+        "quote_found": true,
+        "comment": "Расчёт: 46180 × 2.4 × 2590 × 0.07 = 20 093 870 ₽ ≈ 20.1 млн ₽, а не 20.0 млн ₽."
+      },
+      {
+        "id": "c015",
+        "text": "Разница в маржинальном доходе между группами составляет примерно 2,1 млн ₽ в месяц",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| пользователи списка (начали пользоваться в январе–марте 2026) | 46180 | 2.3 | 2.6 | 78.4 | 2640 |\n| не пользуются списком — сопоставимые по частоте заказов, сроку жизни аккаунта и городу | 46180 | 2.3 | 2.4 | 75.4 | 2590 |",
+        "quote_found": true,
+        "comment": "Расчёт: (46180 × 2.6 × 2640 − 46180 × 2.4 × 2590) × 0.07 = 2 094 697 ₽ ≈ 2.1 млн ₽."
+      },
+      {
+        "id": "c016",
+        "text": "Разница в маржинальном доходе составляет примерно 25 млн ₽ в год",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| пользователи списка (начали пользоваться в январе–марте 2026) | 46180 | 2.3 | 2.6 | 78.4 | 2640 |\n| не пользуются списком — сопоставимые по частоте заказов, сроку жизни аккаунта и городу | 46180 | 2.3 | 2.4 | 75.4 | 2590 |",
+        "quote_found": true,
+        "comment": "Расчёт: 2.094 млн ₽/мес × 12 = 25.13 млн ₽/год ≈ 25 млн ₽/год."
+      },
+      {
+        "id": "c017",
+        "text": "Стоимость поддержки функции составляет 9,8 млн ₽ в год",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/eng_cost_note.md",
+        "quote": "- Итого с учётом фонда оплаты труда — около 9,8 млн ₽ в год.",
+        "quote_found": true,
+        "comment": "Прямо указано в записке техлида."
+      },
+      {
+        "id": "c018",
+        "text": "Разница в маржинальном доходе в 2,5 раза больше стоимости поддержки",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/eng_cost_note.md",
+        "quote": "- Итого с учётом фонда оплаты труда — около 9,8 млн ₽ в год.",
+        "quote_found": true,
+        "comment": "Расчёт: 25.13 млн ₽ / 9.8 млн ₽ = 2.56, что округляется до 2.6, а не до 2.5."
+      },
+      {
+        "id": "c019",
+        "text": "Удержание пользователей списка составляет 78,4%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| пользователи списка (начали пользоваться в январе–марте 2026) | 46180 | 2.3 | 2.6 | 78.4 | 2640 |",
+        "quote_found": true,
+        "comment": "В таблице retention_m3_pct = 78.4 для пользователей списка."
+      },
+      {
+        "id": "c020",
+        "text": "Удержание остальных пользователей составляет 39,6%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| не пользуются списком — все активные | 1138500 | 0.9 | 0.9 | 39.6 | 1980 |",
+        "quote_found": true,
+        "comment": "В таблице retention_m3_pct = 39.6 для остальных активных пользователей."
+      },
+      {
+        "id": "c021",
+        "text": "Пользователи списка изначально заказывают в 2,5 раза чаще (2,3 против 0,9 заказа)",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| пользователи списка (начали пользоваться в январе–марте 2026) | 46180 | 2.3 | 2.6 | 78.4 | 2640 |\n| не пользуются списком — все активные | 1138500 | 0.9 | 0.9 | 39.6 | 1980 |",
+        "quote_found": true,
+        "comment": "2.3 / 0.9 = 2.56 ≈ 2.5 раза"
+      },
+      {
+        "id": "c022",
+        "text": "При корректном сравнении с сопоставимой группой удержание составляет 78,4% против 75,4%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| пользователи списка (начали пользоваться в январе–марте 2026) | 46180 | 2.3 | 2.6 | 78.4 | 2640 |\n| не пользуются списком — сопоставимые по частоте заказов, сроку жизни аккаунта и городу | 46180 | 2.3 | 2.4 | 75.4 | 2590 |",
+        "quote_found": true,
+        "comment": "В сопоставимой группе (3-я строка) удержание 75.4% против 78.4% у пользователей списка"
+      },
+      {
+        "id": "c023",
+        "text": "Разница в удержании при корректном сравнении — +3 п.п.",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| пользователи списка (начали пользоваться в январе–марте 2026) | 46180 | 2.3 | 2.6 | 78.4 | 2640 |\n| не пользуются списком — сопоставимые по частоте заказов, сроку жизни аккаунта и городу | 46180 | 2.3 | 2.4 | 75.4 | 2590 |",
+        "quote_found": true,
+        "comment": "78.4 - 75.4 = 3.0 п.п."
+      },
+      {
+        "id": "c024",
+        "text": "95% доверительный интервал разницы в удержании — от +0,9 до +5,1 п.п.",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "95% доверительный интервал разницы удержания между первой и третьей строкой: от +0,9 до +5,1 п.п.",
+        "quote_found": true,
+        "comment": "Прямо указано в метаданных файла (note)"
+      },
+      {
+        "id": "c025",
+        "text": "За полгода получено 48 отзывов",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "title: \"Отзывы в магазинах приложений, где упоминается «Общий список», май–октябрь 2026\"",
+        "quote_found": true,
+        "comment": "В таблице 48 строк (V-001…V-048), период май–октябрь 2026 — 6 месяцев"
+      },
+      {
+        "id": "c026",
+        "text": "Количество отзывов на 5 звёзд — 18 (37,5%)",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В таблице 15 отзывов с оценкой 5 (31.25%), а не 18 (37.5%)"
+      },
+      {
+        "id": "c027",
+        "text": "Количество отзывов на 1–2 звезды — 22 (46%)",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В таблице 21 отзыв с оценкой 1–2 (43.75%), а не 22 (46%)"
+      },
+      {
+        "id": "c028",
+        "text": "Количество отзывов на 3–4 звезды — 8",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В таблице 12 отзывов с оценкой 3–4, а не 8"
+      },
+      {
+        "id": "c029",
+        "text": "За год произошло 7 инцидентов",
+        "kind": "product",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/eng_cost_note.md",
+        "quote": "За последние 12 месяцев — 7 инцидентов, из них 2 с потерей содержимого списков у части пользователей.",
+        "quote_found": true,
+        "comment": "Прямо указано в записке техлида"
+      },
+      {
+        "id": "c030",
+        "text": "Из 7 инцидентов 2 сопровождались потерей данных",
+        "kind": "product",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/eng_cost_note.md",
+        "quote": "За последние 12 месяцев — 7 инцидентов, из них 2 с потерей содержимого списков у части пользователей.",
+        "quote_found": true,
+        "comment": "2 из 7 инцидентов сопровождались потерей данных"
+      },
+      {
+        "id": "c031",
+        "text": "E-grocery вырос на 27% в 2025 году",
+        "kind": "market",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_egrocery_2025.md",
+        "quote": "В 2025 году рынок онлайн-продаж продуктов питания (e-grocery) в России увеличился на 27%, до 1,6 трлн руб.",
+        "quote_found": true,
+        "comment": "Прямое указание в тексте отчёта."
+      },
+      {
+        "id": "c032",
+        "text": "Замедление роста e-grocery составило 11,4 п.п.",
+        "kind": "market",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_egrocery_2025.md",
+        "quote": "В 2024 году показатель был на 11,4 процентных пункта (п. п.) больше.",
+        "quote_found": true,
+        "comment": "Разница в темпах роста между 2024 и 2025 составляет 11,4 п.п., что и есть замедление."
+      },
+      {
+        "id": "c033",
+        "text": "Топ-5 игроков рынка вырос на 12–61%",
+        "kind": "market",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_egrocery_2025.md",
+        "quote": "Также в топ-5 вошли «Самокат» (рост оборота на 12,3%, до 279,3 млрд руб.), «Вкусвилл» (плюс 16,7%, до 221,1 млрд руб.), Ozon и Ozon Fresh (плюс 61,1%, до 207,2 млрд руб.) и «Яндекс Лавка» (плюс 42,4%, до 203,1 млрд руб.).",
+        "quote_found": true,
+        "comment": "Диапазон роста топ-5 игроков: от 12,3% («Самокат») до 61,1% (Ozon), что соответствует интервалу 12–61%."
+      },
+      {
+        "id": "c034",
+        "text": "В отзывах упоминается, что у конкурентов нет такого функционала",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "Без общего списка ушла бы к конкурентам, у них такого нет",
+        "quote_found": true,
+        "comment": "Фраза встречается в отзывах V-020, V-010, V-004, V-027, V-043 с оценкой 5."
+      },
+      {
+        "id": "c035",
+        "text": "Конкуренты давят ценой и скоростью",
+        "kind": "market",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминания о давлении конкурентов ценой или скоростью."
+      },
+      {
+        "id": "c036",
+        "text": "В насыщающемся рынке семейный сценарий является дифференциатором",
+        "kind": "market",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Хотя рынок описан как замедляющий рост, в материалах нет утверждения, что семейный сценарий является дифференциатором в насыщающемся рынке."
+      },
+      {
+        "id": "c037",
+        "text": "Реальный причинный эффект удержания — скромный, но положительный",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "95% доверительный интервал разницы удержания между первой и третьей строкой: от +0,9 до +5,1 п.п.",
+        "quote_found": true,
+        "comment": "Разница удержания между пользователями списка (78,4%) и сопоставимой группой (75,4%) составляет 3,0 п.п. с доверительным интервалом +0,9...+5,1 п.п. — скромный, но положительный эффект."
+      },
+      {
+        "id": "c038",
+        "text": "Негатив в отзывах вызван тем, что функция не работает, а не тем, что она не нужна",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "Общий список постоянно падает, верните как было",
+        "quote_found": true,
+        "comment": "Негативные отзывы (оценки 1–2) содержат жалобы на технические сбои («падает», «потерялся», «не синхронизировался», «пропали пункты»), а не на ненужность функции; позитивные отзывы, напротив, подчёркивают её ценность."
+      },
+      {
+        "id": "c039",
+        "text": "Репутационный риск уже реализуется",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "Потерялся весь список перед праздником, очень подвели",
+        "quote_found": true,
+        "comment": "В отзывах присутствуют негативные оценки (1 звезда) с жалобами на потерю данных, что свидетельствует о репутационном риске, однако материалы прямо не констатируют, что риск «уже реализуется»."
+      },
+      {
+        "id": "c040",
+        "text": "Количество лояльных пользователей продукта составляет 46 тыс.",
+        "kind": "user",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Число около 46 тыс. относится к пользователям функции «Общий список» (list_users), а не к «лояльным пользователям продукта»; термин «лояльные пользователи» в материалах не используется."
+      },
+      {
+        "id": "c041",
+        "text": "37% отзывов о продукте являются 5-звёздочными",
+        "kind": "user",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В таблице 48 отзывов, из них 5-звёздочных 15 (31,25%), а не 37%."
+      },
+      {
+        "id": "c042",
+        "text": "Экономия 9,8 млн ₽ не оправдывает потерю маржи",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "materials/eng_cost_note.md",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Материалы содержат стоимость поддержки (9,8 млн ₽) и маржинальность (7%), но не содержат расчёта потери маржи при закрытии функции."
+      },
+      {
+        "id": "c043",
+        "text": "Вариант «перенести как есть» сдвигает переезд на 6 недель",
+        "kind": "number",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/eng_cost_note.md",
+        "quote": "| Перенести список как есть (с синхронизацией) | +6 недель работы двух разработчиков | Сдвигает переезд корзины |",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице вариантов переезда."
+      },
+      {
+        "id": "c044",
+        "text": "Вариант «перенести как есть» сохраняет 7 инцидентов в год",
+        "kind": "number",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "materials/eng_cost_note.md",
+        "quote": "",
+        "quote_found": false,
+        "comment": "7 инцидентов указаны для текущей поддержки, но не привязаны явно к варианту «перенести как есть»."
+      },
+      {
+        "id": "c045",
+        "text": "Вариант «перенести как есть» сохраняет технический долг",
+        "kind": "product",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "materials/eng_cost_note.md",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Понятие «технический долг» в материалах не упоминается."
+      },
+      {
+        "id": "c046",
+        "text": "Вариант «упрощённый + выгрузка» сохраняет 80% сценария «список → корзина»",
+        "kind": "number",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "materials/eng_cost_note.md",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о сохранении 80% сценария для упрощённого варианта."
+      },
+      {
+        "id": "c047",
+        "text": "В продукте реализована функция совместного доступа",
+        "kind": "product",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "В приложении «Корзина рядом» есть «Общий список» — список покупок, который семья ведёт вместе.",
+        "quote_found": true,
+        "comment": "Прямое указание на совместное ведение списка семьёй."
+      },
+      {
+        "id": "c048",
+        "text": "В продукте реализована синхронизация в реальном времени",
+        "kind": "product",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Отзывы указывают на задержки синхронизации («иногда долго обновляется», «не синхронизировался»), что противоречит «реальному времени»."
+      },
+      {
+        "id": "c049",
+        "text": "В продукте реализована функция «один клик в корзину» из общего списка",
+        "kind": "product",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "Пишем список всей семьёй, потом в один клик в корзину",
+        "quote_found": true,
+        "comment": "Прямая цитата из отзывов пользователей (встречается несколько раз)."
+      },
+      {
+        "id": "c050",
+        "text": "Текущий уровень заказов из списка составляет 55 тыс. в месяц",
+        "kind": "number",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/feature_usage_monthly.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "По данным за последние месяцы (сентябрь–октябрь 2026) заказов из списка 61 886–67 986, что значительно выше 55 тыс."
+      },
+      {
+        "id": "c051",
+        "text": "Текущая доля отзывов 1–2★ с упоминанием списка составляет 46%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В таблице 48 отзывов; оценки 1–2★ — 21 шт., доля 21/48 = 43,75%, а не 46%."
+      },
+      {
+        "id": "c052",
+        "text": "Пользователи любят функцию",
+        "kind": "user",
+        "chunk": 4,
+        "section": "4. Коммуникационная стратегия",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "| V-014 | 2026-07 | Google Play | 5 | Общий список — лучшее, что есть в приложении: муж видит, что купить |",
+        "quote_found": true,
+        "comment": "Есть явно позитивные отзывы (5★), но 21 из 48 отзывов имеют 1–2★, поэтому «пользователи любят функцию» верно не для всех."
+      },
+      {
+        "id": "c053",
+        "text": "Синхронизация давала сбои",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "4. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "| V-021 | 2026-06 | App Store | 2 | Список не синхронизировался, купили два раза одно и то же |",
+        "quote_found": true,
+        "comment": "Несколько отзывов прямо сообщают о проблемах синхронизации списка."
+      },
+      {
+        "id": "c054",
+        "text": "Функцией пользуются 4% пользователей",
+        "kind": "number",
+        "chunk": 4,
+        "section": "4. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "Пользуются им около 4% активных, а поддержка обходится почти в 10 млн ₽ в год",
+        "quote_found": true,
+        "comment": "Также по feature_usage_monthly.csv list_users/mau ≈ 3,7–4,1% за месяцы."
+      },
+      {
+        "id": "c055",
+        "text": "Существуют пользователи, оставившие негативные отзывы о падениях",
+        "kind": "user",
+        "chunk": 4,
+        "section": "4. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "| V-030 | 2026-05 | App Store | 1 | Общий список постоянно падает, верните как было |",
+        "quote_found": true,
+        "comment": "Есть негативные отзывы с оценкой 1★ и текстом о падениях списка."
+      },
+      {
+        "id": "c056",
+        "text": "Пользователи списка дают ~4,7% заказов",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/feature_usage_monthly.csv",
+        "quote": "| month | mau | list_users | lists_created | lists_converted_to_cart | orders_total | orders_from_list |",
+        "quote_found": true,
+        "comment": "Сумма за 12 месяцев: 785262 / 16169279 = 4,86%, что ближе к ~4,9%, чем к ~4,7%."
+      },
+      {
+        "id": "c057",
+        "text": "Средний чек пользователей списка на 33% выше",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| пользователи списка (начали пользоваться в январе–марте 2026) | 46180 | 2.3 | 2.6 | 78.4 | 2640 |\n| не пользуются списком — все активные | 1138500 | 0.9 | 0.9 | 39.6 | 1980 |",
+        "quote_found": true,
+        "comment": "2640 / 1980 − 1 = 33,3% при сравнении со всеми активными, не пользующимися списком; в сопоставимой группе разница лишь 2640/2590 − 1 ≈ 1,9%."
+      },
+      {
+        "id": "c058",
+        "text": "Частота заказов пользователей списка в 2,9 раза выше",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "| пользователи списка (начали пользоваться в январе–марте 2026) | 46180 | 2.3 | 2.6 | 78.4 | 2640 |\n| не пользуются списком — все активные | 1138500 | 0.9 | 0.9 | 39.6 | 1980 |",
+        "quote_found": true,
+        "comment": "2,6 / 0,9 = 2,89 ≈ 2,9 раза при сравнении со всеми активными, не пользующимися списком; в сопоставимой группе 2,6/2,4 ≈ 1,08."
+      },
+      {
+        "id": "c059",
+        "text": "Расходы на поддержку списка составляют 9,8 млн ₽",
+        "kind": "company_data",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/eng_cost_note.md",
+        "quote": "- Итого с учётом фонда оплаты труда — около 9,8 млн ₽ в год.",
+        "quote_found": true,
+        "comment": "Прямо указано «около 9,8 млн ₽ в год»."
+      },
+      {
+        "id": "c060",
+        "text": "Корректное сравнение эффекта удержания даёт прирост +3 п.п.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv",
+        "quote": "Третья строка — сопоставление 1:1 с первой; 95% доверительный интервал разницы удержания между первой и третьей строкой: от +0,9 до +5,1 п.п.",
+        "quote_found": true,
+        "comment": "Точечная разница по строкам: 78,4% − 75,4% = +3,0 п.п.; доверительный интервал +0,9…+5,1 п.п."
+      },
+      {
+        "id": "c061",
+        "text": "Доверительный интервал прироста удержания составляет от +0,9 до +5,1 п.п.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/retention_by_list_usage.csv.meta.yaml",
+        "quote": "95% доверительный интервал разницы удержания между первой и третьей строкой: от +0,9 до +5,1 п.п.",
+        "quote_found": true,
+        "comment": "В метаданных файла прямо указан доверительный интервал от +0,9 до +5,1 п.п."
+      },
+      {
+        "id": "c062",
+        "text": "46% отзывов о функции имеют оценку 1–2 звезды",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В таблице 48 отзывов, из них 21 с оценкой 1–2 (8×1★ + 13×2★), что составляет 43,75%, а не 46%."
+      },
+      {
+        "id": "c063",
+        "text": "Низкие оценки отзывов (1–2 звезды) вызваны падениями и рассинхронизацией",
+        "kind": "causal",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/app_reviews_list.csv",
+        "quote": "| V-030 | 2026-05 | App Store | 1 | Общий список постоянно падает, верните как было |\n| V-021 | 2026-06 | App Store | 2 | Список не синхронизировался, купили два раза одно и то же |\n| V-005 | 2026-05 | App Store | 1 | Потерялся весь список перед праздником, очень подвели |",
+        "quote_found": true,
+        "comment": "Все отзывы с оценкой 1–2 содержат тексты о падениях («постоянно падает»), рассинхронизации («не синхронизировался») или потере данных."
+      },
+      {
+        "id": "c064",
+        "text": "Количество инцидентов с функцией составляет 7 в год",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/eng_cost_note.md",
+        "quote": "За последние 12 месяцев — 7 инцидентов, из них 2 с потерей содержимого списков у части пользователей.",
+        "quote_found": true,
+        "comment": "12 месяцев = 1 год, указано ровно 7 инцидентов."
+      },
+      {
+        "id": "c065",
+        "text": "При закрытии функции будет потеряно ~25 млн ₽ в год маржи",
+        "kind": "company_data",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет расчёта или упоминания потери ~25 млн ₽ маржи; доступны только данные о заказах, чеках и марже 7%, но итоговая сумма не указана."
+      },
+      {
+        "id": "c066",
+        "text": "При закрытии функции будет сэкономлено 9,8 млн ₽",
+        "kind": "company_data",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/eng_cost_note.md",
+        "quote": "Итого с учётом фонда оплаты труда — около 9,8 млн ₽ в год.",
+        "quote_found": true,
+        "comment": "При закрытии функции эта сумма (затраты на поддержку) будет сэкономлена."
+      }
+    ],
+    "all_extracted": [
+      {
+        "id": "c001",
+        "text": "MAU составляет примерно 1,2 млн",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c002",
+        "text": "Количество пользователей списка составляет примерно 45–47 тыс.",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c003",
+        "text": "Доля пользователей списка от MAU составляет примерно 3,8%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c004",
+        "text": "Заказы из списка составляют примерно 62–68 тыс. в месяц",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c005",
+        "text": "Общее количество заказов составляет 1,35–1,42 млн в месяц",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c006",
+        "text": "Доля заказов из списка от общего числа составляет примерно 4,7%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c007",
+        "text": "Средний чек у пользователей списка — 2 640 ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c008",
+        "text": "Средний чек у остальных пользователей — 1 980 ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c009",
+        "text": "Средний чек пользователей списка выше среднего чека остальных на 33%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c010",
+        "text": "Частота заказов у пользователей списка — 2,6 заказа в месяц",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c011",
+        "text": "Частота заказов у остальных пользователей — 0,9 заказа в месяц",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c012",
+        "text": "Маржинальный доход составляет 7% от суммы заказа",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c013",
+        "text": "Вклад пользователей списка в маржинальный доход составляет примерно 22,1 млн ₽ в месяц",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c014",
+        "text": "Вклад сопоставимых пользователей без списка в маржинальный доход составляет примерно 20,0 млн ₽ в месяц",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c015",
+        "text": "Разница в маржинальном доходе между группами составляет примерно 2,1 млн ₽ в месяц",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c016",
+        "text": "Разница в маржинальном доходе составляет примерно 25 млн ₽ в год",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c017",
+        "text": "Стоимость поддержки функции составляет 9,8 млн ₽ в год",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c018",
+        "text": "Разница в маржинальном доходе в 2,5 раза больше стоимости поддержки",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c019",
+        "text": "Удержание пользователей списка составляет 78,4%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c020",
+        "text": "Удержание остальных пользователей составляет 39,6%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c021",
+        "text": "Пользователи списка изначально заказывают в 2,5 раза чаще (2,3 против 0,9 заказа)",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c022",
+        "text": "При корректном сравнении с сопоставимой группой удержание составляет 78,4% против 75,4%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c023",
+        "text": "Разница в удержании при корректном сравнении — +3 п.п.",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c024",
+        "text": "95% доверительный интервал разницы в удержании — от +0,9 до +5,1 п.п.",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c025",
+        "text": "За полгода получено 48 отзывов",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c026",
+        "text": "Количество отзывов на 5 звёзд — 18 (37,5%)",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c027",
+        "text": "Количество отзывов на 1–2 звезды — 22 (46%)",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c028",
+        "text": "Количество отзывов на 3–4 звезды — 8",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c029",
+        "text": "За год произошло 7 инцидентов",
+        "kind": "product",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c030",
+        "text": "Из 7 инцидентов 2 сопровождались потерей данных",
+        "kind": "product",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c031",
+        "text": "E-grocery вырос на 27% в 2025 году",
+        "kind": "market",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c032",
+        "text": "Замедление роста e-grocery составило 11,4 п.п.",
+        "kind": "market",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c033",
+        "text": "Топ-5 игроков рынка вырос на 12–61%",
+        "kind": "market",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c034",
+        "text": "В отзывах упоминается, что у конкурентов нет такого функционала",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c035",
+        "text": "Конкуренты давят ценой и скоростью",
+        "kind": "market",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c036",
+        "text": "В насыщающемся рынке семейный сценарий является дифференциатором",
+        "kind": "market",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c037",
+        "text": "Реальный причинный эффект удержания — скромный, но положительный",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c038",
+        "text": "Негатив в отзывах вызван тем, что функция не работает, а не тем, что она не нужна",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c039",
+        "text": "Репутационный риск уже реализуется",
+        "kind": "causal",
+        "chunk": 2,
+        "section": "2. Что говорят данные (и где аналитики правы, а где — нет)"
+      },
+      {
+        "id": "c040",
+        "text": "Количество лояльных пользователей продукта составляет 46 тыс.",
+        "kind": "user",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c041",
+        "text": "37% отзывов о продукте являются 5-звёздочными",
+        "kind": "user",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c042",
+        "text": "Экономия 9,8 млн ₽ не оправдывает потерю маржи",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c043",
+        "text": "Вариант «перенести как есть» сдвигает переезд на 6 недель",
+        "kind": "number",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c044",
+        "text": "Вариант «перенести как есть» сохраняет 7 инцидентов в год",
+        "kind": "number",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c045",
+        "text": "Вариант «перенести как есть» сохраняет технический долг",
+        "kind": "product",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c046",
+        "text": "Вариант «упрощённый + выгрузка» сохраняет 80% сценария «список → корзина»",
+        "kind": "number",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c047",
+        "text": "В продукте реализована функция совместного доступа",
+        "kind": "product",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c048",
+        "text": "В продукте реализована синхронизация в реальном времени",
+        "kind": "product",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c049",
+        "text": "В продукте реализована функция «один клик в корзину» из общего списка",
+        "kind": "product",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c050",
+        "text": "Текущий уровень заказов из списка составляет 55 тыс. в месяц",
+        "kind": "number",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c051",
+        "text": "Текущая доля отзывов 1–2★ с упоминанием списка составляет 46%",
+        "kind": "number",
+        "chunk": 3,
+        "section": "3. Продуктовая стратегия"
+      },
+      {
+        "id": "c052",
+        "text": "Пользователи любят функцию",
+        "kind": "user",
+        "chunk": 4,
+        "section": "4. Коммуникационная стратегия"
+      },
+      {
+        "id": "c053",
+        "text": "Синхронизация давала сбои",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "4. Коммуникационная стратегия"
+      },
+      {
+        "id": "c054",
+        "text": "Функцией пользуются 4% пользователей",
+        "kind": "number",
+        "chunk": 4,
+        "section": "4. Коммуникационная стратегия"
+      },
+      {
+        "id": "c055",
+        "text": "Существуют пользователи, оставившие негативные отзывы о падениях",
+        "kind": "user",
+        "chunk": 4,
+        "section": "4. Коммуникационная стратегия"
+      },
+      {
+        "id": "c056",
+        "text": "Пользователи списка дают ~4,7% заказов",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)"
+      },
+      {
+        "id": "c057",
+        "text": "Средний чек пользователей списка на 33% выше",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)"
+      },
+      {
+        "id": "c058",
+        "text": "Частота заказов пользователей списка в 2,9 раза выше",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)"
+      },
+      {
+        "id": "c059",
+        "text": "Расходы на поддержку списка составляют 9,8 млн ₽",
+        "kind": "company_data",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)"
+      },
+      {
+        "id": "c060",
+        "text": "Корректное сравнение эффекта удержания даёт прирост +3 п.п.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)"
+      },
+      {
+        "id": "c061",
+        "text": "Доверительный интервал прироста удержания составляет от +0,9 до +5,1 п.п.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)"
+      },
+      {
+        "id": "c062",
+        "text": "46% отзывов о функции имеют оценку 1–2 звезды",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)"
+      },
+      {
+        "id": "c063",
+        "text": "Низкие оценки отзывов (1–2 звезды) вызваны падениями и рассинхронизацией",
+        "kind": "causal",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)"
+      },
+      {
+        "id": "c064",
+        "text": "Количество инцидентов с функцией составляет 7 в год",
+        "kind": "number",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)"
+      },
+      {
+        "id": "c065",
+        "text": "При закрытии функции будет потеряно ~25 млн ₽ в год маржи",
+        "kind": "company_data",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)"
+      },
+      {
+        "id": "c066",
+        "text": "При закрытии функции будет сэкономлено 9,8 млн ₽",
+        "kind": "company_data",
+        "chunk": 5,
+        "section": "5. Что сказать руководителю (резюме на один слайд)"
+      }
+    ]
+  },
+  "options": null,
+  "promises": {
+    "total": 0,
+    "unbacked": 0,
+    "unclear": 0,
+    "backed": 0,
+    "items": []
+  },
+  "validation_plan": null,
+  "expected_choice": null,
+  "injection": null,
+  "heuristics": {
+    "status_quo": 0,
+    "kill": 7,
+    "baseline": 0,
+    "guardrail": 0,
+    "kill_criterion": 0,
+    "date_or_term": 0,
+    "injection_flag": 0
+  },
+  "judge_usage": {
+    "calls": 12,
+    "prompt_tokens": 37507,
+    "output_tokens": 47680,
+    "duration_s": 611.57,
+    "cost_estimate": {
+      "usd": 0.126383,
+      "rub": 10.1106,
+      "estimated": false,
+      "basis": "config/prices.yaml (as_of 2026-11-04): $0.7/2.1 за 1 млн токенов вход/выход"
+    },
+    "log": [
+      {
+        "step": "extract_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 524,
+        "output_tokens": 1037,
+        "duration_s": 26.05,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1286,
+        "output_tokens": 4033,
+        "duration_s": 53.04,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1054,
+        "output_tokens": 3764,
+        "duration_s": 45.62,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1146,
+        "output_tokens": 2508,
+        "duration_s": 31.35,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 734,
+        "output_tokens": 3967,
+        "duration_s": 51.98,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4672,
+        "output_tokens": 4459,
+        "duration_s": 48.7,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4700,
+        "output_tokens": 5820,
+        "duration_s": 73.2,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4708,
+        "output_tokens": 5133,
+        "duration_s": 56.19,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4680,
+        "output_tokens": 4870,
+        "duration_s": 43.51,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4710,
+        "output_tokens": 3402,
+        "duration_s": 47.04,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[6]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4665,
+        "output_tokens": 3719,
+        "duration_s": 69.43,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[7]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4628,
+        "output_tokens": 4968,
+        "duration_s": 65.46,
+        "attempts": 1,
+        "errors": []
+      }
+    ]
+  },
+  "errors": []
+}

@@ -1,0 +1,80 @@
+{
+  "brief_id": "price-increase-a",
+  "approach": "chat_baseline",
+  "status": "ok",
+  "instruction": "Сделай продуктовую и коммуникационную стратегию по запросу руководителя. Используй приложенные материалы.",
+  "model": "deepseek-v4.1-flash:cloud",
+  "model_role": "reasoning",
+  "fallbacks_used": false,
+  "host": "http://127.0.0.1:11434",
+  "params": {
+    "think": false,
+    "temperature": 0.3,
+    "num_ctx": 65536
+  },
+  "started_at": "2026-11-06T21:04:35+00:00",
+  "finished_at": "2026-11-06T21:05:02+00:00",
+  "duration_s": 27.53,
+  "attempts": 1,
+  "done_reason": "stop",
+  "tokens": {
+    "input": 2826,
+    "output": 3633,
+    "total": 6459,
+    "note": "output включает токены рассуждения (thinking) модели"
+  },
+  "ollama_durations_s": {
+    "total_duration": 12.709,
+    "load_duration": 0.0,
+    "prompt_eval_duration": 0.0,
+    "eval_duration": 0.0
+  },
+  "prompt": {
+    "chars": 8039,
+    "sha256": "351a5310eab3082df194d43b81336a1531421645d193cb510618a9d95013054d",
+    "materials": [
+      {
+        "file": "materials/finance_note.md",
+        "sha256": "9cb27a667e4fb575b3d800989f288fa4c7a4f29d27107518152ea2a7d2c1548f",
+        "bytes": 2489,
+        "synthetic": true
+      },
+      {
+        "file": "materials/market_digital_books.md",
+        "sha256": "402ed0212b008a15d3b6fa592480ca9d08da7763fe6e3addaf6ac84241197be7",
+        "bytes": 2019,
+        "synthetic": false
+      },
+      {
+        "file": "materials/market_inflation.md",
+        "sha256": "4e0c2212e7cd1ad4d9f4e05eced8d62053a864b8ea1a731c9ad8518b248ef419",
+        "bytes": 1830,
+        "synthetic": false
+      },
+      {
+        "file": "materials/market_subscription_prices.md",
+        "sha256": "e6e277e15f663a19f2978a72606b99a1c78575561a6564b76a0703e9c4a31dfe",
+        "bytes": 2714,
+        "synthetic": false
+      },
+      {
+        "file": "materials/price_test_m1.csv",
+        "sha256": "18d827589288f9bbcbb50eb7e22b415a0c05a47c8c965cee7fb0114e9c636616",
+        "bytes": 398,
+        "synthetic": true
+      }
+    ]
+  },
+  "output": {
+    "chars": 10285,
+    "sha256": "eb73da8ca7f31c33c4349198e428148bc16dbec36353bb4c47dcb5e9f4209645",
+    "thinking_chars": 0
+  },
+  "cost_estimate": {
+    "usd": 0.005207,
+    "rub": 0.4166,
+    "estimated": false,
+    "basis": "config/prices.yaml (as_of 2026-11-04): $0.3/1.2 за 1 млн токенов вход/выход"
+  },
+  "errors": []
+}

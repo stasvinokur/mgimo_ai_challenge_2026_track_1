@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"entailment\",\"confidence\":1,\"rationale\":\"Утверждение полностью повторяет смысл и условия цитаты.\"}",
+ "data": {
+  "label": "entailment",
+  "confidence": 1,
+  "rationale": "Утверждение полностью повторяет смысл и условия цитаты."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 273,
+  "output_tokens": 29,
+  "estimated": false,
+  "latency_ms": 470,
+  "escalated": false
+ }
+}

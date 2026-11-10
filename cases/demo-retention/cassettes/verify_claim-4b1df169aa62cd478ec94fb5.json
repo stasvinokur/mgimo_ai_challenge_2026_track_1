@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"entailment\",\"confidence\":1,\"rationale\":\"Цитата прямо описывает трудности с настройкой разрешения «Всегда» на iPhone.\"}",
+ "data": {
+  "label": "entailment",
+  "confidence": 1,
+  "rationale": "Цитата прямо описывает трудности с настройкой разрешения «Всегда» на iPhone."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 284,
+  "output_tokens": 35,
+  "estimated": false,
+  "latency_ms": 477,
+  "escalated": false
+ }
+}

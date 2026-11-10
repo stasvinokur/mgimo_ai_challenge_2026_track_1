@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"entailment\",\"confidence\":1,\"rationale\":\"Цитата полностью совпадает с утверждением по смыслу, срокам и объектам.\"}",
+ "data": {
+  "label": "entailment",
+  "confidence": 1,
+  "rationale": "Цитата полностью совпадает с утверждением по смыслу, срокам и объектам."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 270,
+  "output_tokens": 35,
+  "estimated": false,
+  "latency_ms": 481,
+  "escalated": false
+ }
+}

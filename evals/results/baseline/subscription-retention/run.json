@@ -1,0 +1,86 @@
+{
+  "brief_id": "subscription-retention",
+  "approach": "chat_baseline",
+  "status": "ok",
+  "instruction": "Сделай продуктовую и коммуникационную стратегию по запросу руководителя. Используй приложенные материалы.",
+  "model": "deepseek-v4.1-flash:cloud",
+  "model_role": "reasoning",
+  "fallbacks_used": false,
+  "host": "http://127.0.0.1:11434",
+  "params": {
+    "think": false,
+    "temperature": 0.3,
+    "num_ctx": 65536
+  },
+  "started_at": "2026-11-04T10:44:25+00:00",
+  "finished_at": "2026-11-04T10:44:39+00:00",
+  "duration_s": 13.75,
+  "attempts": 1,
+  "done_reason": "stop",
+  "tokens": {
+    "input": 13056,
+    "output": 3357,
+    "total": 16413,
+    "note": "output включает токены рассуждения (thinking) модели"
+  },
+  "ollama_durations_s": {
+    "total_duration": 13.454,
+    "load_duration": 0.0,
+    "prompt_eval_duration": 0.0,
+    "eval_duration": 0.0
+  },
+  "prompt": {
+    "chars": 35163,
+    "sha256": "e176886c2f8c229b73fb1dc38efdf67baa1710ac7f41429ec693d00fe64516ec",
+    "materials": [
+      {
+        "file": "materials/cohorts_by_channel.csv",
+        "sha256": "54f8709846ef5d4f7389d421ba0a6aa71c53db654f6ff830a787512ea7efe5dc",
+        "bytes": 1022,
+        "synthetic": true
+      },
+      {
+        "file": "materials/content_team_memo.md",
+        "sha256": "6ffecd64c9481f5bcfcc8d13b2ad5643525061400f5ddeac4c2b0630b640acee",
+        "bytes": 2734,
+        "synthetic": true
+      },
+      {
+        "file": "materials/exit_survey.csv",
+        "sha256": "ef9186ae6270b357d15e750a6474d02ab681a27e0ecb1706cb607563320cacbc",
+        "bytes": 30645,
+        "synthetic": true
+      },
+      {
+        "file": "materials/market_online_cinema_2025.md",
+        "sha256": "58e1aa2b0f24c72bde75f7c9ec9fda6418a6ffd17620b4b73787714c69fbd1ab",
+        "bytes": 3169,
+        "synthetic": false
+      },
+      {
+        "file": "materials/market_partner_subscriptions.md",
+        "sha256": "98961ad793dc005e18ff540d8e2dc18bbc55682f9ac286903b700278027cd56d",
+        "bytes": 2935,
+        "synthetic": false
+      },
+      {
+        "file": "materials/partner_terms.md",
+        "sha256": "591b6be653fe1cde7650a11b68b154fa5cd595fc05798d13a2fa1eef8a8e4057",
+        "bytes": 2763,
+        "synthetic": true
+      }
+    ]
+  },
+  "output": {
+    "chars": 9494,
+    "sha256": "fed85cf00128713eba4b82e24998c83113a73570fb6f775d6d94d90574d97a33",
+    "thinking_chars": 0
+  },
+  "cost_estimate": {
+    "usd": 0.007945,
+    "rub": 0.6356,
+    "estimated": false,
+    "basis": "config/prices.yaml (as_of 2026-11-04): $0.3/1.2 за 1 млн токенов вход/выход"
+  },
+  "errors": []
+}

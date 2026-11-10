@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":0.8,\"rationale\":\"Цитата говорит об отсутствии функции прозрачности, но не уточняет, что именно имеется в виду (передача координат или иные данные).\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 0.8,
+  "rationale": "Цитата говорит об отсутствии функции прозрачности, но не уточняет, что именно имеется в виду (передача координат или иные данные)."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 268,
+  "output_tokens": 45,
+  "estimated": false,
+  "latency_ms": 673,
+  "escalated": false
+ }
+}

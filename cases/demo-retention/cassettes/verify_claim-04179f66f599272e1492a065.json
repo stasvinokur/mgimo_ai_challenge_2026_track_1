@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":0.9,\"rationale\":\"Цитата говорит об отказе от платной услуги в пользу бесплатной функции iPhone, но не называет конкретные приложения «Скворечник» и «Локатор».\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 0.9,
+  "rationale": "Цитата говорит об отказе от платной услуги в пользу бесплатной функции iPhone, но не называет конкретные приложения «Скворечник» и «Локатор»."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 277,
+  "output_tokens": 54,
+  "estimated": false,
+  "latency_ms": 600,
+  "escalated": false
+ }
+}

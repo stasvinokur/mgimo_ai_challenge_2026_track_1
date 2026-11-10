@@ -1,0 +1,74 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "audience": {
+      "type": "string"
+    },
+    "situation": {
+      "type": "string"
+    },
+    "barrier": {
+      "type": "string"
+    },
+    "key_message": {
+      "type": "string"
+    },
+    "proof_points": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "claim": {
+            "type": "string"
+          },
+          "product_feature": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "claim",
+          "product_feature"
+        ],
+        "type": "object"
+      },
+      "minItems": 2,
+      "type": "array"
+    },
+    "channels": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "channel": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "channel",
+          "role"
+        ],
+        "type": "object"
+      },
+      "minItems": 2,
+      "type": "array"
+    },
+    "forbidden_promises": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "audience",
+    "situation",
+    "barrier",
+    "key_message",
+    "proof_points",
+    "channels",
+    "forbidden_promises"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"Цитата упоминает трение в разрешениях, но не говорит о снижении удержания и не утверждает, что это единственная причина.\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "Цитата упоминает трение в разрешениях, но не говорит о снижении удержания и не утверждает, что это единственная причина."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 255,
+  "output_tokens": 45,
+  "estimated": false,
+  "latency_ms": 521,
+  "escalated": false
+ }
+}

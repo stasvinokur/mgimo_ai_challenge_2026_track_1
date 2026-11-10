@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"entailment\",\"confidence\":1,\"rationale\":\"Цитата прямо подтверждает необходимость обеспечения безвозмездного доступа взрослых к приложениям родительского контроля.\"}",
+ "data": {
+  "label": "entailment",
+  "confidence": 1,
+  "rationale": "Цитата прямо подтверждает необходимость обеспечения безвозмездного доступа взрослых к приложениям родительского контроля."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 278,
+  "output_tokens": 39,
+  "estimated": false,
+  "latency_ms": 698,
+  "escalated": false
+ }
+}

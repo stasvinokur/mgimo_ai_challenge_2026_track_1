@@ -1,0 +1,3439 @@
+{
+  "metrics_version": "1.2",
+  "brief_id": "price-increase-a",
+  "label": "agent-v2-off",
+  "output_path": "evals/results/agent-v2-off/price-increase-a/output.md",
+  "output_sha256": "2e51eff9f19fad0a231b47c49187360353d95dbe5f10aa7fe304b146e13c6c1a",
+  "output_chars": 64769,
+  "judge_model": "mistral-large-4:cloud",
+  "judge_candidates": [
+    "mistral-large-4:cloud",
+    "kimi-k2.6:cloud"
+  ],
+  "judge_notes": [],
+  "judge_params": {
+    "think": false,
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 65536
+  },
+  "agent_model": "deepseek-v4.1-flash:cloud",
+  "seed": 42,
+  "census": true,
+  "claims_only": true,
+  "started_at": "2026-11-09T15:03:49+00:00",
+  "finished_at": "2026-11-09T15:20:26+00:00",
+  "claims": {
+    "extracted": 152,
+    "sample_size": 152,
+    "verified": 152,
+    "supported": 105,
+    "partial": 4,
+    "unsupported": 43,
+    "contradicted": 3,
+    "unsupported_share": 0.283,
+    "unsupported_ci95": [
+      0.2173,
+      0.3592
+    ],
+    "partial_share": 0.026,
+    "supported_share": 0.691,
+    "by_section": {
+      "Решение на одной странице": {
+        "verified": 5,
+        "unsupported": 0,
+        "partial": 0
+      },
+      "Картина ситуации": {
+        "verified": 17,
+        "unsupported": 2,
+        "partial": 0
+      },
+      "Варианты": {
+        "verified": 60,
+        "unsupported": 9,
+        "partial": 3
+      },
+      "Стресс-тест решения": {
+        "verified": 4,
+        "unsupported": 4,
+        "partial": 0
+      },
+      "Продуктовая стратегия": {
+        "verified": 22,
+        "unsupported": 3,
+        "partial": 0
+      },
+      "Коммуникационная стратегия": {
+        "verified": 19,
+        "unsupported": 14,
+        "partial": 0
+      },
+      "План проверки": {
+        "verified": 18,
+        "unsupported": 10,
+        "partial": 1
+      },
+      "Журнал решения": {
+        "verified": 2,
+        "unsupported": 1,
+        "partial": 0
+      },
+      "Источники": {
+        "verified": 5,
+        "unsupported": 0,
+        "partial": 0
+      }
+    },
+    "quotes_not_found": 0,
+    "sample": [
+      {
+        "id": "c001",
+        "text": "В тесте доля продлений по новой цене составила 0,0%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "В тестовой группе текущих подписчиков renewals_at_new_price = 0, доля = 0/59800 = 0,0%"
+      },
+      {
+        "id": "c002",
+        "text": "Повышение окупается, только если отток при продлении не превысит ≈21,7%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "то есть отток при продлении по новой цене не превышает **≈ 21,7%** (при базовом ≈ 6%)",
+        "quote_found": true,
+        "comment": "Прямо указан порог ≈21,7%"
+      },
+      {
+        "id": "c003",
+        "text": "Базовый отток текущих подписчиков ≈6,0%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Отток при ежемесячном продлении у текущих подписчиков | ≈ 6,0% |",
+        "quote_found": true,
+        "comment": "Указано ≈6,0% в таблице базовых показателей"
+      },
+      {
+        "id": "c004",
+        "text": "Новые подписчики конвертируются из триала ≈42%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Конверсия пробного периода в оплату | ≈ 42% |",
+        "quote_found": true,
+        "comment": "Указано ≈42% в таблице базовых показателей"
+      },
+      {
+        "id": "c005",
+        "text": "Реакция текущей базы на продление по новой цене не измерена",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "поэтому в окно наблюдения продления по новой цене не попали (renewals_at_new_price = 0)",
+        "quote_found": true,
+        "comment": "В метаданных указано, что продления по новой цене не попали в окно наблюдения"
+      },
+      {
+        "id": "c006",
+        "text": "Конверсия в оплату после пробного периода составляет: контроль 42.4%, тест 41.6%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | новые (пробный период) | 399 | 4210 | 1785 |  |  | 712215 |\n| тест | новые (пробный период) | 479 | 4080 | 1697 |  |  | 812863 |",
+        "quote_found": true,
+        "comment": "Контроль: 1785/4210 ≈ 42,4%; тест: 1697/4080 ≈ 41,6%"
+      },
+      {
+        "id": "c007",
+        "text": "Средний доход на пользователя за 30 дней составляет: контроль 169.17 ₽, тест 199.23 ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | новые (пробный период) | 399 | 4210 | 1785 |  |  | 712215 |\n| тест | новые (пробный период) | 479 | 4080 | 1697 |  |  | 812863 |",
+        "quote_found": true,
+        "comment": "Контроль: 712215/4210 ≈ 169,17 ₽; тест: 812863/4080 ≈ 199,23 ₽"
+      },
+      {
+        "id": "c008",
+        "text": "Доля отмен автопродления среди текущих подписчиков составляет: контроль 1.7%, тест 2.1%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | текущие подписчики | 399 | 61300 |  | 1042 |  |  |\n| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "Контроль: 1042/61300 ≈ 1,7%; тест: 1256/59800 ≈ 2,1%"
+      },
+      {
+        "id": "c009",
+        "text": "Доля продлений по новой цене в тестовой группе составляет 0.0%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "renewals_at_new_price = 0, доля = 0/59800 = 0,0%"
+      },
+      {
+        "id": "c010",
+        "text": "Доля отмен автопродления в тестовой и контрольной группах составляет: контроль 50.0%, тест 50.0%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах доли отмен автопродления составляют ≈1,7% (контроль) и ≈2,1% (тест), а не 50,0%"
+      },
+      {
+        "id": "c011",
+        "text": "Распределение по сегментам составляет: новые (пробный период) 50.0%, текущие подписчики 50.0%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В таблице теста новых пользователей 8290 (4210+4080), текущих — 121100 (61300+59800); доля новых ≈ 6,4%, а не 50,0%."
+      },
+      {
+        "id": "c012",
+        "text": "Текущая стоимость подписки «Голосов страниц» составляет 399 ₽ в месяц",
+        "kind": "product",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Цена подписки | 399 ₽ в месяц |",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей."
+      },
+      {
+        "id": "c013",
+        "text": "Количество платящих подписчиков «Голосов страниц» составляет приблизительно 410 тыс.",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Платящих подписчиков | ≈ 410 тыс. |",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей."
+      },
+      {
+        "id": "c014",
+        "text": "Средний отток текущих подписчиков при ежемесячном продлении составляет около 6,0%",
+        "kind": "user",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Отток при ежемесячном продлении у текущих подписчиков | ≈ 6,0% |",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей."
+      },
+      {
+        "id": "c015",
+        "text": "Конверсия из пробного периода в оплату составляет около 42%",
+        "kind": "user",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Конверсия пробного периода в оплату | ≈ 42% |",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей."
+      },
+      {
+        "id": "c016",
+        "text": "Валовая маржа продукта снизилась с 31% до 26%",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Валовая маржа снизилась с 31% до 26%.",
+        "quote_found": true,
+        "comment": "Прямая цитата из раздела «Что изменилось за год»."
+      },
+      {
+        "id": "c017",
+        "text": "Совокупные роялти выросли на 12% год к году при росте выручки на 5%",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Из-за этого совокупные роялти выросли на 12% год к году при росте выручки на 5%.",
+        "quote_found": true,
+        "comment": "Прямая цитата из раздела «Что изменилось за год»."
+      },
+      {
+        "id": "c018",
+        "text": "Годовая инфляция в сентябре составила 6,35%",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_inflation.md",
+        "quote": "Годовая инфляция в сентябре почти не изменилась и составила 6,35% (+0,02 п.п.).",
+        "quote_found": true,
+        "comment": "Прямая цитата из обзора Банка России."
+      },
+      {
+        "id": "c019",
+        "text": "Цена подписки «Яндекс Плюс» выросла на 12,5% до 449 руб. в конце 2025 года",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "в конце 2025 года цена подписки на экосистему «Плюс» от «Яндекса» выросла на 12,5%, до 449 руб., с октября 2024-го.",
+        "quote_found": true,
+        "comment": "Прямая цитата из материала о ценах на подписки."
+      },
+      {
+        "id": "c020",
+        "text": "Цена подписки «СберПрайм» выросла на 33% до 399 руб. в январе текущего года",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "«СберПрайм» выросла в январе текущего года на 33%, до 399 руб.",
+        "quote_found": true,
+        "comment": "Прямая цитата из материала о ценах на подписки."
+      },
+      {
+        "id": "c021",
+        "text": "Цена подписки «Газпром Бонус» выросла на 33% до 399 руб. в начале 2026 года",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "Цена на «Газпром Бонус» в начале 2026 года также выросла на 33%, до 399 руб.",
+        "quote_found": true,
+        "comment": "Прямое соответствие в тексте."
+      },
+      {
+        "id": "c022",
+        "text": "Стоимость подписки Т-Банк Pro составляет 299 руб., МТС Premium — 349 руб.",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "Подписка на Т-Банк Pro на конец апреля стоит 299 руб. в месяц, на МТС Premium — 349 руб.",
+        "quote_found": true,
+        "comment": "Прямое соответствие в тексте."
+      },
+      {
+        "id": "c023",
+        "text": "Продления по новой цене в текущем 30-дневном тесте составили 0,0% (CL-004).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "renewals_at_new_price = 0 при 59800 текущих подписчиках в тестовой группе: 0 / 59800 = 0,0%."
+      },
+      {
+        "id": "c024",
+        "text": "Метрики CL-001 и CL-003 показывают изменения в пределах долей процента при низкой надёжности.",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах отсутствуют метрики с идентификаторами CL-001 и CL-003."
+      },
+      {
+        "id": "c025",
+        "text": "Показатели отмены автопродления по группам и сегментам составили ровно 50% на 50% (CL-005, CL-006).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | текущие подписчики | 399 | 61300 |  | 1042 |  |  |\n| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "Отмены автопродления составили 1042/61300 ≈ 1,7% (контроль) и 1256/59800 ≈ 2,1% (тест), а не 50% на 50%."
+      },
+      {
+        "id": "c026",
+        "text": "Переносимость результатов 30-дневного теста из двух регионов на всю базу подписчиков не установлена (UNK-003).",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет утверждения с идентификатором UNK-003 о переносимости результатов теста."
+      },
+      {
+        "id": "c027",
+        "text": "Порог окупаемости по оттоку при повышении цены составляет примерно 21,7% при очень низкой надёжности расчёта (CL-011).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "то есть отток при продлении по новой цене не превышает **≈ 21,7%** (при базовом ≈ 6%)",
+        "quote_found": true,
+        "comment": "Значение ≈21,7% подтверждено, однако в материалах отсутствует упоминание о «очень низкой надёжности расчёта»."
+      },
+      {
+        "id": "c028",
+        "text": "Допустимый отток для роста вклада в маржу не определён (UNK-002).",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет утверждения с идентификатором UNK-002; порог безубыточности определён (≈21,7%)."
+      },
+      {
+        "id": "c029",
+        "text": "Количество подписчиков составляет 410 тысяч (CL-008).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Платящих подписчиков | ≈ 410 тыс. |",
+        "quote_found": true,
+        "comment": "Прямое соответствие в таблице базовых показателей."
+      },
+      {
+        "id": "c030",
+        "text": "Рост роялти составил 12% при росте выручки 5% (CL-014).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Из-за этого совокупные роялти выросли на 12% год к году при росте выручки на 5%.",
+        "quote_found": true,
+        "comment": "Прямое соответствие в тексте финансовой записки."
+      },
+      {
+        "id": "c031",
+        "text": "Валовая маржа упала с 31% до 26% (CL-012).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Валовая маржа снизилась с 31% до 26%.",
+        "quote_found": true,
+        "comment": "Прямое указание в финансовой записке."
+      },
+      {
+        "id": "c032",
+        "text": "Заявленный отток текущих подписчиков составляет около 6,0% (CL-009).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Отток при ежемесячном продлении у текущих подписчиков | ≈ 6,0%",
+        "quote_found": true,
+        "comment": "Указано в таблице базовых показателей."
+      },
+      {
+        "id": "c033",
+        "text": "30-дневный тест в двух регионах не обладает статистической значимостью для всей базы и не покрывает сезонность, различия регионов и отложенный отток (CL-026, CL-028).",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "Тест: две тестовые и две контрольные области, старт 15.09.2026. Новые пользователи в тесте видят цену 479 ₽ при оформлении пробного периода. Текущие подписчики в тесте получили 15.09 уведомление: новая цена применяется с первого продления, наступающего не раньше чем через 30 дней после уведомления; поэтому в окно наблюдения продления по новой цене не попали (renewals_at_new_price = 0).",
+        "quote_found": true,
+        "comment": "Подтверждены 30-дневный срок, две тестовые области и непокрытый отложенный отток (renewals_at_new_price = 0); статистическая значимость, сезонность и различия регионов в материалах не упоминаются."
+      },
+      {
+        "id": "c034",
+        "text": "Отложенный отток после первого продления является основным риском при повышении цены (CL-027).",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Материалы лишь отмечают, что продления по новой цене не попали в окно наблюдения; утверждение об «основном риске» в них отсутствует."
+      },
+      {
+        "id": "c035",
+        "text": "Зафиксированы цены конкурентов (CL-017, CL-018, CL-019, CL-020).",
+        "kind": "market",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "По данным “Ъ”, в конце 2025 года цена подписки на экосистему «Плюс» от «Яндекса» выросла на 12,5%, до 449 руб., с октября 2024-го. «СберПрайм» выросла в январе текущего года на 33%, до 399 руб. Цена на «Газпром Бонус» в начале 2026 года также выросла на 33%, до 399 руб. Подписка на Т-Банк Pro на конец апреля стоит 299 руб. в месяц, на МТС Premium — 349 руб.",
+        "quote_found": true,
+        "comment": "Зафиксированы конкретные цены конкурентов."
+      },
+      {
+        "id": "c036",
+        "text": "Конкуренты повышают цены в составе экосистемных пакетов с дополнительной ценностью.",
+        "kind": "market",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "По данным “Ъ”, в конце 2025 года цена подписки на экосистему «Плюс» от «Яндекса» выросла на 12,5%, до 449 руб.",
+        "quote_found": true,
+        "comment": "Повышения цен описаны именно для экосистемных подписок (Яндекс Плюс, СберПрайм и др.)."
+      },
+      {
+        "id": "c037",
+        "text": "Текущая цена монопродукта составляет 399 ₽.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Цена подписки | 399 ₽ в месяц",
+        "quote_found": true,
+        "comment": "Указано в таблице базовых показателей."
+      },
+      {
+        "id": "c038",
+        "text": "База подписчиков составляет около 410 тыс. человек.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Платящих подписчиков | ≈ 410 тыс.",
+        "quote_found": true,
+        "comment": "Указано в таблице базовых показателей."
+      },
+      {
+        "id": "c039",
+        "text": "Месячный отток подписчиков составляет 6%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Отток при ежемесячном продлении у текущих подписчиков | ≈ 6,0%",
+        "quote_found": true,
+        "comment": "6% соответствует ≈ 6,0% с точностью до округления."
+      },
+      {
+        "id": "c040",
+        "text": "При текущих показателях база теряет около 25 тыс. подписчиков в месяц.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Платящих подписчиков | ≈ 410 тыс.\nОтток при ежемесячном продлении у текущих подписчиков | ≈ 6,0%",
+        "quote_found": true,
+        "comment": "Расчёт: 410 000 × 6,0% = 24 600 ≈ 25 тыс. в месяц."
+      },
+      {
+        "id": "c041",
+        "text": "Экосистемные пакеты конкурентов стоят от 299 до 449 ₽.",
+        "kind": "market",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "в конце 2025 года цена подписки на экосистему «Плюс» от «Яндекса» выросла на 12,5%, до 449 руб., с октября 2024-го. «СберПрайм» выросла в январе текущего года на 33%, до 399 руб. Цена на «Газпром Бонус» в начале 2026 года также выросла на 33%, до 399 руб. Подписка на Т-Банк Pro на конец апреля стоит 299 руб. в месяц, на МТС Premium — 349 руб.",
+        "quote_found": true,
+        "comment": "Диапазон цен экосистемных подписок: от 299 ₽ (Т-Банк Pro) до 449 ₽ (Яндекс Плюс)."
+      },
+      {
+        "id": "c042",
+        "text": "В 30-дневном тесте в двух регионах доля продлений по новой цене составила 0,0%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "renewals_at_new_price = 0; доля = 0 / 59800 = 0,0%."
+      },
+      {
+        "id": "c043",
+        "text": "В тесте разница в отменах автопродления составила 1,7% против 2,1%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | текущие подписчики | 399 | 61300 |  | 1042 |  |  |\n| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "Контроль: 1042 / 61300 ≈ 1,70%; тест: 1256 / 59800 ≈ 2,10%."
+      },
+      {
+        "id": "c044",
+        "text": "В тесте конверсия составила 42,4% против 41,6%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | новые (пробный период) | 399 | 4210 | 1785 |  |  | 712215 |\n| тест | новые (пробный период) | 479 | 4080 | 1697 |  |  | 812863 |",
+        "quote_found": true,
+        "comment": "Контроль: 1785 / 4210 ≈ 42,4%; тест: 1697 / 4080 ≈ 41,6%."
+      },
+      {
+        "id": "c045",
+        "text": "Валовая маржа упала с 31% до 26%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Валовая маржа снизилась с 31% до 26%.",
+        "quote_found": true,
+        "comment": "Прямое указание в финансовой записке."
+      },
+      {
+        "id": "c046",
+        "text": "Роялти выросли на 12% год к году.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "совокупные роялти выросли на 12% год к году при росте выручки на 5%.",
+        "quote_found": true,
+        "comment": "Прямое указание: рост роялти 12% г/г."
+      },
+      {
+        "id": "c047",
+        "text": "Выручка выросла на 5%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "совокупные роялти выросли на 12% год к году при росте выручки на 5%.",
+        "quote_found": true,
+        "comment": "Прямое указание: рост выручки 5%."
+      },
+      {
+        "id": "c048",
+        "text": "Рост роялти опережает рост выручки.",
+        "kind": "causal",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "совокупные роялти выросли на 12% год к году при росте выручки на 5%.",
+        "quote_found": true,
+        "comment": "12% > 5%, следовательно рост роялти опережает рост выручки."
+      },
+      {
+        "id": "c049",
+        "text": "Порог оттока для окупаемости повышения цены составляет примерно 21,7%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "то есть отток при продлении по новой цене не превышает **≈ 21,7%**",
+        "quote_found": true,
+        "comment": "Прямой расчёт порога безубыточности в финансовой записке."
+      },
+      {
+        "id": "c050",
+        "text": "Голое повышение цены монопродукта на 20% без усиления упаковки проигрывает по воспринимаемой ценности экосистемным пакетам конкурентов.",
+        "kind": "causal",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет прямого сравнения воспринимаемой ценности «голого» повышения цены монопродукта и экосистемных пакетов конкурентов."
+      },
+      {
+        "id": "c051",
+        "text": "Отток текущих подписчиков при ежемесячном продлении составляет ≈6,0%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Отток при ежемесячном продлении у текущих подписчиков | ≈ 6,0%",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей."
+      },
+      {
+        "id": "c052",
+        "text": "Конверсия из триала составляет ≈42%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Конверсия пробного периода в оплату | ≈ 42%",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей."
+      },
+      {
+        "id": "c053",
+        "text": "Порог оттока для окупаемости составляет ≈21,7%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "то есть отток при продлении по новой цене не превышает **≈ 21,7%** (при базовом ≈ 6%)",
+        "quote_found": true,
+        "comment": "Прямо рассчитано в разделе о пороге безубыточности."
+      },
+      {
+        "id": "c054",
+        "text": "Доля продлений по новой цене составляет 0,0%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "В таблице renewals_at_new_price = 0 для тестовой группы текущих подписчиков; доля 0/59800 = 0,0%."
+      },
+      {
+        "id": "c055",
+        "text": "Цены конкурентов составляют 299–449 ₽",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "По данным “Ъ”, в конце 2025 года цена подписки на экосистему «Плюс» от «Яндекса» выросла на 12,5%, до 449 руб., с октября 2024-го. «СберПрайм» выросла в январе текущего года на 33%, до 399 руб. Цена на «Газпром Бонус» в начале 2026 года также выросла на 33%, до 399 руб. Подписка на Т-Банк Pro на конец апреля стоит 299 руб. в месяц, на МТС Premium — 349 руб.",
+        "quote_found": true,
+        "comment": "Упомянуты цены от 299 ₽ (Т-Банк Pro) до 449 ₽ (Яндекс Плюс)."
+      },
+      {
+        "id": "c056",
+        "text": "Рост аудитории экосистемных конкурентов замедляется из-за экономии пользователей на подписках",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "Эксперты связывают замедление со стремлением граждан экономить, в частности, на подписках",
+        "quote_found": true,
+        "comment": "Прямая цитата о причине замедления роста аудитории."
+      },
+      {
+        "id": "c057",
+        "text": "Валовая маржа снизилась с 31% до 26%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Валовая маржа снизилась с 31% до 26%.",
+        "quote_found": true,
+        "comment": "Прямо указано в разделе «Что изменилось за год»."
+      },
+      {
+        "id": "c058",
+        "text": "Рост роялти составляет 12% при росте выручки на 5%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Из-за этого совокупные роялти выросли на 12% год к году при росте выручки на 5%.",
+        "quote_found": true,
+        "comment": "Прямо указано в разделе о роялти."
+      },
+      {
+        "id": "c059",
+        "text": "Издательства переходят на минимальную гарантию",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "с 2026 года три крупных издательства перешли на минимальную гарантию за час прослушивания.",
+        "quote_found": true,
+        "comment": "Прямо указано в разделе «Что изменилось за год»."
+      },
+      {
+        "id": "c060",
+        "text": "Решение принимается на основе данных 30-дневного теста в двух регионах",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "Ценовой тест в двух регионах прошёл спокойно, результаты в материалах.",
+        "quote_found": true,
+        "comment": "Два региона подтверждены в brief.md; 30-дневный период подтверждён в materials/price_test_m1.csv (заголовок: «первые 30 дней (15.09–14.10.2026)», две тестовые области)."
+      },
+      {
+        "id": "c061",
+        "text": "Данные 30-дневного теста в двух регионах не обладают статистической значимостью",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о статистической значимости (p-value, доверительные интервалы, мощность теста)."
+      },
+      {
+        "id": "c062",
+        "text": "Тест в двух регионах не покрывает сезонность, различия регионов и отложенный отток",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "поэтому в окно наблюдения продления по новой цене не попали (renewals_at_new_price = 0)",
+        "quote_found": true,
+        "comment": "Прямо подтверждено только про отложенный отток; про сезонность и различия регионов в материалах не сказано."
+      },
+      {
+        "id": "c063",
+        "text": "Текущие подписчики более чувствительны к повышению цены на 20%, чем новые подписчики",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Материалы не содержат прямого сравнения чувствительности текущих и новых подписчиков; данные по текущим подписчикам не включают продления по новой цене (renewals_at_new_price = 0)."
+      },
+      {
+        "id": "c064",
+        "text": "Новые подписчики не заякорены на цене 399 ₽",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Утверждение является интерпретацией данных конверсии, а не прямым следствием материалов; прямого указания на отсутствие ценового якоря нет."
+      },
+      {
+        "id": "c065",
+        "text": "Порог окупаемости по оттоку ≈21,7% рассчитан на новую цену, а не на смешанную базу подписчиков",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Для текущих подписчиков повышение окупается по выручке, если после продления по новой цене остаётся не меньше (1 − 0,06) × 399 / 479 ≈ 78,3% базы, то есть отток при продлении по новой цене не превышает **≈ 21,7%**",
+        "quote_found": true,
+        "comment": "Расчёт явно привязан к новой цене 479 ₽ для текущих подписчиков, а не к смешанной базе."
+      },
+      {
+        "id": "c066",
+        "text": "Роялти выросли на 12% при росте выручки на 5%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Из-за этого совокупные роялти выросли на 12% год к году при росте выручки на 5%.",
+        "quote_found": true,
+        "comment": "Числа совпадают дословно."
+      },
+      {
+        "id": "c067",
+        "text": "Инфляция составляет 6,35%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_inflation.md",
+        "quote": "Годовая инфляция в сентябре почти не изменилась и составила 6,35% (+0,02 п.п.).",
+        "quote_found": true,
+        "comment": "Число совпадает дословно."
+      },
+      {
+        "id": "c068",
+        "text": "Один конкурент повысил цену на 12,5%",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "цена подписки на экосистему «Плюс» от «Яндекса» выросла на 12,5%, до 449 руб.",
+        "quote_found": true,
+        "comment": "Один конкурент (Яндекс Плюс) повысил цену на 12,5%."
+      },
+      {
+        "id": "c069",
+        "text": "Два конкурента повысили цены на 33%",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "«СберПрайм» выросла в январе текущего года на 33%, до 399 руб. Цена на «Газпром Бонус» в начале 2026 года также выросла на 33%, до 399 руб.",
+        "quote_found": true,
+        "comment": "Два конкурента (СберПрайм и Газпром Бонус) повысили цены на 33%."
+      },
+      {
+        "id": "c070",
+        "text": "Порог оттока составляет примерно 21,7%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "то есть отток при продлении по новой цене не превышает **≈ 21,7%**",
+        "quote_found": true,
+        "comment": "Порог оттока прямо указан как ≈21,7%."
+      },
+      {
+        "id": "c071",
+        "text": "Текущий отток подписчиков составляет примерно 6,0%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Отток при ежемесячном продлении у текущих подписчиков | ≈ 6,0%",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей (сентябрь 2026)."
+      },
+      {
+        "id": "c072",
+        "text": "Т-Банк Pro стоит 299 ₽",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "Подписка на Т-Банк Pro на конец апреля стоит 299 руб. в месяц",
+        "quote_found": true,
+        "comment": "Цена указана дословно в тексте."
+      },
+      {
+        "id": "c073",
+        "text": "МТС Premium стоит 349 ₽",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "на МТС Premium — 349 руб.",
+        "quote_found": true,
+        "comment": "Цена указана дословно в тексте."
+      },
+      {
+        "id": "c074",
+        "text": "Рост роялти составляет 12% год к году",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "совокупные роялти выросли на 12% год к году",
+        "quote_found": true,
+        "comment": "Прямо указано в разделе «Что изменилось за год»."
+      },
+      {
+        "id": "c075",
+        "text": "Издательства перешли на минимальную гарантию",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "с 2026 года три крупных издательства перешли на минимальную гарантию за час прослушивания",
+        "quote_found": true,
+        "comment": "Прямо указано в тексте финансовой записки."
+      },
+      {
+        "id": "c076",
+        "text": "Конверсия из триала составляет примерно 42%",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Конверсия пробного периода в оплату | ≈ 42%",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей."
+      },
+      {
+        "id": "c077",
+        "text": "Продления по новой цене составляют 0,0%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "В таблице renewals_at_new_price = 0 для тестовой группы текущих подписчиков (59800 чел.), что составляет 0,0%."
+      },
+      {
+        "id": "c078",
+        "text": "Количество платящих подписчиков составляет около 410 тыс.",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Платящих подписчиков | ≈ 410 тыс.",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей."
+      },
+      {
+        "id": "c079",
+        "text": "ARPU в тесте составил 199,23 ₽ против 169,17 ₽",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | новые (пробный период) | 399 | 4210 | 1785 |  |  | 712215 |\n| тест | новые (пробный период) | 479 | 4080 | 1697 |  |  | 812863 |",
+        "quote_found": true,
+        "comment": "ARPU = выручка / все пользователи: 712215 / 4210 ≈ 169,17 ₽ (контроль), 812863 / 4080 ≈ 199,23 ₽ (тест)."
+      },
+      {
+        "id": "c080",
+        "text": "Конверсия триала в тесте составила 41,6% против 42,4%",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | новые (пробный период) | 399 | 4210 | 1785 |  |  | 712215 |\n| тест | новые (пробный период) | 479 | 4080 | 1697 |  |  | 812863 |",
+        "quote_found": true,
+        "comment": "Конверсия = paid_after_trial / users: 1697 / 4080 ≈ 41,6% (тест), 1785 / 4210 ≈ 42,4% (контроль)."
+      },
+      {
+        "id": "c081",
+        "text": "Текущая база подписчиков заякорена на цене 399 ₽",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Цена подписки | 399 ₽ в месяц |",
+        "quote_found": true,
+        "comment": "В таблице базовых показателей прямо указана текущая цена 399 ₽; в brief.md также указано повышение с 399 ₽."
+      },
+      {
+        "id": "c082",
+        "text": "Тест проводится в течение 30 дней в двух регионах",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "Ценовой тест в двух регионах прошёл спокойно",
+        "quote_found": true,
+        "comment": "В brief.md указано проведение теста в двух регионах; в materials/price_test_m1.csv.meta.yaml в заголовке указано «первые 30 дней (15.09–14.10.2026)»."
+      },
+      {
+        "id": "c083",
+        "text": "OPT-003 выигрывает в базовом сценарии",
+        "kind": "product",
+        "chunk": 8,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний OPT-003 или базового сценария."
+      },
+      {
+        "id": "c084",
+        "text": "OPT-003 остаётся лучшим в 63 из 81 сценариев",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний OPT-003 или статистики 63 из 81 сценариев."
+      },
+      {
+        "id": "c085",
+        "text": "Вероятность сохранения победителя составляет примерно 85%",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о вероятности сохранения победителя."
+      },
+      {
+        "id": "c086",
+        "text": "Ни один фактор по отдельности не меняет победителя",
+        "kind": "causal",
+        "chunk": 8,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет анализа факторов, меняющих победителя."
+      },
+      {
+        "id": "c087",
+        "text": "Текущая цена подписки «Голосов страниц» составляет 399 ₽ в месяц",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Цена подписки | 399 ₽ в месяц |",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей."
+      },
+      {
+        "id": "c088",
+        "text": "База платящих подписчиков составляет примерно 410 тыс. человек",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Платящих подписчиков | ≈ 410 тыс. |",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей."
+      },
+      {
+        "id": "c089",
+        "text": "Базовый отток текущих подписчиков при ежемесячном продлении составляет примерно 6,0%",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Отток при ежемесячном продлении у текущих подписчиков | ≈ 6,0% |",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей."
+      },
+      {
+        "id": "c090",
+        "text": "Конверсия из пробного периода в оплату составляет примерно 42%",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Конверсия пробного периода в оплату | ≈ 42% |",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей."
+      },
+      {
+        "id": "c091",
+        "text": "Порог окупаемости повышения цены составляет примерно 21,7% оттока",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "то есть отток при продлении по новой цене не превышает **≈ 21,7%** (при базовом ≈ 6%)",
+        "quote_found": true,
+        "comment": "Прямо указано в расчёте порога безубыточности."
+      },
+      {
+        "id": "c092",
+        "text": "Измеренный эффект на текущих подписчиках по новой цене — 0,0% продлений",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| тест | текущие подписчики | 479 | 59800 |  | 1256 | 0 |  |",
+        "quote_found": true,
+        "comment": "В таблице renewals_at_new_price = 0 для тестовой группы текущих подписчиков."
+      },
+      {
+        "id": "c093",
+        "text": "Рост выручки составляет 5% год к году",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "при росте выручки на 5%",
+        "quote_found": true,
+        "comment": "Прямо указано в разделе «Что изменилось за год»."
+      },
+      {
+        "id": "c094",
+        "text": "Целевая валовая маржа на 2027 год составляет 30%",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Цель на 2027 год — вернуть 30%.",
+        "quote_found": true,
+        "comment": "Прямо указана целевая валовая маржа."
+      },
+      {
+        "id": "c095",
+        "text": "Контрольный уровень отмен автопродления составляет 1,7%",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | текущие подписчики | 399 | 61300 |  | 1042 |  |  |",
+        "quote_found": true,
+        "comment": "1042 / 61300 ≈ 0,0170 = 1,7%."
+      },
+      {
+        "id": "c096",
+        "text": "Контрольная конверсия из пробного периода в оплату составляет 42,4%",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | новые (пробный период) | 399 | 4210 | 1785 |  |  | 712215 |",
+        "quote_found": true,
+        "comment": "1785 / 4210 ≈ 0,4240 = 42,4%."
+      },
+      {
+        "id": "c097",
+        "text": "Контрольный средний доход на пользователя за 30 дней составляет 169,17 ₽",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | новые (пробный период) | 399 | 4210 | 1785 |  |  | 712215 |",
+        "quote_found": true,
+        "comment": "712215 ₽ / 4210 пользователей ≈ 169,17 ₽."
+      },
+      {
+        "id": "c098",
+        "text": "Цена подписки Яндекс Плюс составляет 449 ₽",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "цена подписки на экосистему «Плюс» от «Яндекса» выросла на 12,5%, до 449 руб.",
+        "quote_found": true,
+        "comment": "Цена 449 ₽ указана прямо."
+      },
+      {
+        "id": "c099",
+        "text": "Цена подписки СберПрайм составляет 399 ₽",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "«СберПрайм» выросла в январе текущего года на 33%, до 399 руб.",
+        "quote_found": true,
+        "comment": "Цена 399 ₽ указана прямо."
+      },
+      {
+        "id": "c100",
+        "text": "Цена подписки Газпром Бонус составляет 399 ₽",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "Цена на «Газпром Бонус» в начале 2026 года также выросла на 33%, до 399 руб.",
+        "quote_found": true,
+        "comment": "Цена 399 ₽ указана прямо."
+      },
+      {
+        "id": "c101",
+        "text": "Цена подписки Т-Банк Pro составляет 299 ₽",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "Подписка на Т-Банк Pro на конец апреля стоит 299 руб. в месяц",
+        "quote_found": true,
+        "comment": "Цена прямо указана в материале."
+      },
+      {
+        "id": "c102",
+        "text": "Цена подписки МТС Premium составляет 349 ₽",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "на МТС Premium — 349 руб.",
+        "quote_found": true,
+        "comment": "Цена прямо указана в материале."
+      },
+      {
+        "id": "c103",
+        "text": "Новые подписчики не заякорены на цене 399 ₽, поэтому повышение цены не бьёт по уже сформированной привычке платить",
+        "kind": "causal",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет утверждения об отсутствии ценового якоря у новых подписчиков или о привычке платить."
+      },
+      {
+        "id": "c104",
+        "text": "Grandfathering и поэтапность снижают риск оттока выше порога окупаемости ≈21,7%",
+        "kind": "causal",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Порог ≈21,7% указан, но в материалах нет связи grandfathering/поэтапности со снижением риска оттока выше этого порога."
+      },
+      {
+        "id": "c105",
+        "text": "Заблаговременное уведомление и усиление упаковки удерживают отток ниже порога окупаемости",
+        "kind": "causal",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Упоминание заблаговременного уведомления есть в тесте, но «усиление упаковки» и вывод об удержании оттока ниже порога в материалах отсутствуют."
+      },
+      {
+        "id": "c106",
+        "text": "Действует тариф подписки «Голосов страниц» по 399 ₽ в месяц для текущей базы",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "Хотим с 1 декабря поднять цену подписки «Голосов страниц» с 399 до 479 ₽ в месяц.",
+        "quote_found": true,
+        "comment": "Текущая цена 399 ₽ прямо следует из формулировки повышения «с 399 до 479 ₽»."
+      },
+      {
+        "id": "c107",
+        "text": "Действует пробный период с конверсией в оплату как воронка привлечения новых подписчиков",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Конверсия пробного периода в оплату | ≈ 42%",
+        "quote_found": true,
+        "comment": "Наличие пробного периода и конверсии в оплату подтверждено показателем 42%."
+      },
+      {
+        "id": "c108",
+        "text": "Действует механизм ежемесячного автопродления подписки",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Отток при ежемесячном продлении у текущих подписчиков | ≈ 6,0%",
+        "quote_found": true,
+        "comment": "Наличие ежемесячного автопродления подтверждено показателем оттока при ежемесячном продлении."
+      },
+      {
+        "id": "c109",
+        "text": "Подписчики слушают книги по подписке за 399 ₽ в месяц.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Цена подписки | 399 ₽ в месяц",
+        "quote_found": true,
+        "comment": "Текущая цена подписки указана как 399 ₽ в месяц."
+      },
+      {
+        "id": "c110",
+        "text": "Подписчики получают уведомление об изменении цены с 1 декабря.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах 1 декабря — планируемая дата повышения, а уведомление в тесте рассылалось 15.09; факт уведомления подписчиков с 1 декабря не подтверждён."
+      },
+      {
+        "id": "c111",
+        "text": "База подписчиков заякорена на цене 399 ₽.",
+        "kind": "user",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Цена подписки | 399 ₽ в месяц |",
+        "quote_found": true,
+        "comment": "В финансовой записке указана текущая цена подписки 399 ₽ для базы платящих подписчиков (≈410 тыс.)."
+      },
+      {
+        "id": "c112",
+        "text": "Повышение цены на 20% воспринимается как потеря привычных условий.",
+        "kind": "user",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминания о восприятии повышения цены как потери привычных условий; указан лишь факт повышения с 399 до 479 ₽."
+      },
+      {
+        "id": "c113",
+        "text": "Ценность библиотеки не изменилась.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах отсутствуют данные об изменении ценности библиотеки контента."
+      },
+      {
+        "id": "c114",
+        "text": "Переключение на отказ от подписки кажется дешёвым.",
+        "kind": "user",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о том, воспринимается ли отказ от подписки как дешёвый."
+      },
+      {
+        "id": "c115",
+        "text": "Для новых подписчиков месячная подписка стоит 479 ₽ с первого платежа.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Цена 479 ₽ для новых пользователей указана только в тестовой группе (price_test_m1.csv); общая текущая цена для новых подписчиков — 399 ₽."
+      },
+      {
+        "id": "c116",
+        "text": "С 1 декабря 2026 года цена для новых подписчиков составляет 479 ₽ в месяц.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В брифе выражено намерение («Хотим с 1 декабря поднять цену»), но не подтверждено фактическое решение о повышении для новых подписчиков."
+      },
+      {
+        "id": "c117",
+        "text": "Текущие подписчики с ежемесячным продлением сохраняют цену 399 ₽ на переходный период.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Переходный период с сохранением 399 ₽ описан только для участников ценового теста, а не для всей базы текущих подписчиков."
+      },
+      {
+        "id": "c118",
+        "text": "Условия годовых планов не меняются с 1 декабря.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах отсутствуют какие-либо упоминания о годовых планах и их условиях."
+      },
+      {
+        "id": "c119",
+        "text": "Совокупные роялти выросли на 12% год к году.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Из-за этого совокупные роялти выросли на 12% год к году при росте выручки на 5%.",
+        "quote_found": true,
+        "comment": "Прямое указание в финансовой записке."
+      },
+      {
+        "id": "c120",
+        "text": "Валовая маржа снизилась с 31% до 26%.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Валовая маржа снизилась с 31% до 26%.",
+        "quote_found": true,
+        "comment": "Прямое указание в финансовой записке."
+      },
+      {
+        "id": "c121",
+        "text": "Решение об изменении цены связано с ростом роялти и изменением условий договоров с издательствами.",
+        "kind": "causal",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Роялти по большинству договоров — доля выручки (в среднем 46%), но с 2026 года три крупных издательства перешли на минимальную гарантию за час прослушивания.",
+        "quote_found": true,
+        "comment": "В брифе и финансовой записке прямо указано, что роялти выросли из-за изменения условий договоров с издательствами, что стало основанием для повышения цены."
+      },
+      {
+        "id": "c122",
+        "text": "Доступ к библиотеке остаётся прежним.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний об изменении или сохранении доступа к библиотеке."
+      },
+      {
+        "id": "c123",
+        "text": "Механика автопродления остаётся прежней.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет информации о механике автопродления; в тесте лишь зафиксированы факты отключения автопродления."
+      },
+      {
+        "id": "c124",
+        "text": "Пробный период работает как раньше.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Материалы не содержат утверждения о том, что пробный период работает без изменений."
+      },
+      {
+        "id": "c125",
+        "text": "Конверсия в оплату работает как раньше.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Хотя приведены данные по конверсии (≈42% в финансовой записке и расчёты в тесте), утверждение о том, что она «работает как раньше», в материалах не подтверждено."
+      },
+      {
+        "id": "c126",
+        "text": "В приложении отображается текущая цена.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминания об отображении текущей цены в приложении."
+      },
+      {
+        "id": "c127",
+        "text": "В приложении отображается дата следующего списания.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминания об отображении даты следующего списания в приложении."
+      },
+      {
+        "id": "c128",
+        "text": "Проводился 30-дневный тест в двух регионах",
+        "kind": "market",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "Ценовой тест «Голосов страниц»: первые 30 дней (15.09–14.10.2026)... Тест: две тестовые и две контрольные области",
+        "quote_found": true,
+        "comment": "Метафайл теста указывает на 30-дневный период (15.09–14.10.2026) и две тестовые области (регионы); бриф также подтверждает «тест в двух регионах»."
+      },
+      {
+        "id": "c129",
+        "text": "Текущая цена подписки составляет 399 ₽",
+        "kind": "product",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "Цена подписки | 399 ₽ в месяц",
+        "quote_found": true,
+        "comment": "Текущая цена 399 ₽ указана в брифе («с 399 до 479 ₽») и в таблице базовых показателей финансовой записки."
+      },
+      {
+        "id": "c130",
+        "text": "Новая цена подписки составляет 479 ₽",
+        "kind": "product",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "Хотим с 1 декабря поднять цену подписки «Голосов страниц» с 399 до 479 ₽ в месяц.",
+        "quote_found": true,
+        "comment": "Новая цена 479 ₽ прямо указана в запросе руководителя и в финансовой записке."
+      },
+      {
+        "id": "c131",
+        "text": "Данные биллинга доступны за последние 12 месяцев",
+        "kind": "company_data",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминания о доступности данных биллинга за 12 месяцев; указан только 30-дневный период теста."
+      },
+      {
+        "id": "c132",
+        "text": "Контрольный уровень доли отмен автопродления среди текущих подписчиков (CL-003) составляет 1,7%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | текущие подписчики | 399 | 61300 |  | 1042 |  |  |",
+        "quote_found": true,
+        "comment": "Расчёт: 1042 / 61300 ≈ 0,0170 = 1,7%."
+      },
+      {
+        "id": "c133",
+        "text": "Контрольное значение среднего дохода на пользователя за 30 дней (CL-002) составляет 169,17 ₽",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | новые (пробный период) | 399 | 4210 | 1785 |  |  | 712215 |",
+        "quote_found": true,
+        "comment": "Расчёт: 712215 ₽ / 4210 пользователей ≈ 169,17 ₽."
+      },
+      {
+        "id": "c134",
+        "text": "Контрольная конверсия из пробного периода в оплату по 479 ₽ (CL-001) составляет 42,4%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "| контроль | новые (пробный период) | 399 | 4210 | 1785 |  |  | 712215 |",
+        "quote_found": true,
+        "comment": "Конверсия контрольной группы: 1785 / 4210 ≈ 42,4%, однако контрольная группа имеет цену 399 ₽, а не 479 ₽ (479 ₽ — в тестовой группе)."
+      },
+      {
+        "id": "c135",
+        "text": "Порог окупаемости оттока (CL-011) составляет примерно 21,7%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "отток при продлении по новой цене не превышает **≈ 21,7%** (при базовом ≈ 6%)",
+        "quote_found": true,
+        "comment": "Прямо указано в финансовой записке."
+      },
+      {
+        "id": "c136",
+        "text": "Базовый отток текущих подписчиков (CL-009) составляет примерно 6,0%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "| Отток при ежемесячном продлении у текущих подписчиков | ≈ 6,0% |",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице базовых показателей."
+      },
+      {
+        "id": "c137",
+        "text": "MDE для эксперимента EXP-001 составляет +3 п.п. к базовому оттоку",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминания эксперимента EXP-001 или MDE +3 п.п."
+      },
+      {
+        "id": "c138",
+        "text": "Мощность статистического теста составляет 80%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о мощности статистического теста."
+      },
+      {
+        "id": "c139",
+        "text": "Уровень значимости α составляет 0,05",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных об уровне значимости α."
+      },
+      {
+        "id": "c140",
+        "text": "Срок наблюдения составляет 180 дней",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах указан срок наблюдения 30 дней (15.09–14.10.2026), а не 180 дней."
+      },
+      {
+        "id": "c141",
+        "text": "MDE для эксперимента EXP-002 составляет −2 п.п. к оттоку",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминания эксперимента EXP-002 или MDE −2 п.п."
+      },
+      {
+        "id": "c142",
+        "text": "Льготный период grandfathering составляет 3–6 месяцев",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах указано 30 дней до применения новой цены, а не 3–6 месяцев grandfathering"
+      },
+      {
+        "id": "c143",
+        "text": "Срок наблюдения когорты продлений до 2027-03-31",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Дата 2027-03-31 не упоминается в материалах"
+      },
+      {
+        "id": "c144",
+        "text": "Срок до 2027-06-30",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Дата 2027-06-30 не упоминается в материалах"
+      },
+      {
+        "id": "c145",
+        "text": "Доверительный интервал составляет 95%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Доверительный интервал 95% не указан в материалах"
+      },
+      {
+        "id": "c146",
+        "text": "Порог окупаемости составляет примерно 21,7%",
+        "kind": "number",
+        "chunk": 13,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "отток при продлении по новой цене не превышает **≈ 21,7%** (при базовом ≈ 6%)",
+        "quote_found": true,
+        "comment": "Прямо указано в финансовой записке; расчёт: (1−0,06)×399/479 ≈ 78,3%, порог оттока ≈ 21,7%"
+      },
+      {
+        "id": "c147",
+        "text": "Новые подписчики менее заякорены на цене 399 ₽, чем текущие подписчики",
+        "kind": "user",
+        "chunk": 13,
+        "section": "Журнал решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет прямого утверждения о заякоренности новых подписчиков на цене 399 ₽"
+      },
+      {
+        "id": "c148",
+        "text": "Существует финансовая записка о роялти, марже и пороге безубыточности повышения цены",
+        "kind": "company_data",
+        "chunk": 14,
+        "section": "Источники",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/finance_note.md",
+        "quote": "title: \"Финансовая записка: роялти, маржа и порог безубыточности повышения цены\"",
+        "quote_found": true,
+        "comment": "Файл существует с указанным содержанием"
+      },
+      {
+        "id": "c149",
+        "text": "Существует рынок электронных и аудиокниг в России с итогами 2025 года",
+        "kind": "market",
+        "chunk": 14,
+        "section": "Источники",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_digital_books.md",
+        "quote": "title: \"Рынок электронных и аудиокниг в России по итогам 2025 года\"",
+        "quote_found": true,
+        "comment": "Файл существует с итогами 2025 года"
+      },
+      {
+        "id": "c150",
+        "text": "В России существует годовая инфляция с итогом за 2025 год и данными за сентябрь 2026 года",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Источники",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_inflation.md",
+        "quote": "title: \"Годовая инфляция в России: итог 2025 года и сентябрь 2026 года\"",
+        "quote_found": true,
+        "comment": "Файл существует с данными за 2025 год и сентябрь 2026"
+      },
+      {
+        "id": "c151",
+        "text": "В России в 2025–2026 годах происходило повышение цен на экосистемные подписки",
+        "kind": "market",
+        "chunk": 14,
+        "section": "Источники",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_subscription_prices.md",
+        "quote": "в конце 2025 года цена подписки на экосистему «Плюс» от «Яндекса» выросла на 12,5%, до 449 руб., с октября 2024-го. «СберПрайм» выросла в январе текущего года на 33%, до 399 руб. Цена на «Газпром Бонус» в начале 2026 года также выросла на 33%, до 399 руб.",
+        "quote_found": true,
+        "comment": "Материал прямо подтверждает повышение цен на экосистемные подписки (Яндекс Плюс, СберПрайм, Газпром Бонус) в 2025–2026 годах."
+      },
+      {
+        "id": "c152",
+        "text": "Ценовой тест «Голосов страниц» проводился в течение первых 30 дней (с 15.09 по 14.10.2026)",
+        "kind": "product",
+        "chunk": 14,
+        "section": "Источники",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/price_test_m1.csv",
+        "quote": "Ценовой тест «Голосов страниц»: первые 30 дней (15.09–14.10.2026)",
+        "quote_found": true,
+        "comment": "В метаданных файла указано название теста с точным периодом 15.09–14.10.2026, что соответствует первым 30 дням."
+      }
+    ],
+    "all_extracted": [
+      {
+        "id": "c001",
+        "text": "В тесте доля продлений по новой цене составила 0,0%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c002",
+        "text": "Повышение окупается, только если отток при продлении не превысит ≈21,7%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c003",
+        "text": "Базовый отток текущих подписчиков ≈6,0%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c004",
+        "text": "Новые подписчики конвертируются из триала ≈42%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c005",
+        "text": "Реакция текущей базы на продление по новой цене не измерена",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c006",
+        "text": "Конверсия в оплату после пробного периода составляет: контроль 42.4%, тест 41.6%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c007",
+        "text": "Средний доход на пользователя за 30 дней составляет: контроль 169.17 ₽, тест 199.23 ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c008",
+        "text": "Доля отмен автопродления среди текущих подписчиков составляет: контроль 1.7%, тест 2.1%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c009",
+        "text": "Доля продлений по новой цене в тестовой группе составляет 0.0%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c010",
+        "text": "Доля отмен автопродления в тестовой и контрольной группах составляет: контроль 50.0%, тест 50.0%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c011",
+        "text": "Распределение по сегментам составляет: новые (пробный период) 50.0%, текущие подписчики 50.0%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c012",
+        "text": "Текущая стоимость подписки «Голосов страниц» составляет 399 ₽ в месяц",
+        "kind": "product",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c013",
+        "text": "Количество платящих подписчиков «Голосов страниц» составляет приблизительно 410 тыс.",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c014",
+        "text": "Средний отток текущих подписчиков при ежемесячном продлении составляет около 6,0%",
+        "kind": "user",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c015",
+        "text": "Конверсия из пробного периода в оплату составляет около 42%",
+        "kind": "user",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c016",
+        "text": "Валовая маржа продукта снизилась с 31% до 26%",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c017",
+        "text": "Совокупные роялти выросли на 12% год к году при росте выручки на 5%",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c018",
+        "text": "Годовая инфляция в сентябре составила 6,35%",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c019",
+        "text": "Цена подписки «Яндекс Плюс» выросла на 12,5% до 449 руб. в конце 2025 года",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c020",
+        "text": "Цена подписки «СберПрайм» выросла на 33% до 399 руб. в январе текущего года",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c021",
+        "text": "Цена подписки «Газпром Бонус» выросла на 33% до 399 руб. в начале 2026 года",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c022",
+        "text": "Стоимость подписки Т-Банк Pro составляет 299 руб., МТС Premium — 349 руб.",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c023",
+        "text": "Продления по новой цене в текущем 30-дневном тесте составили 0,0% (CL-004).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c024",
+        "text": "Метрики CL-001 и CL-003 показывают изменения в пределах долей процента при низкой надёжности.",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c025",
+        "text": "Показатели отмены автопродления по группам и сегментам составили ровно 50% на 50% (CL-005, CL-006).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c026",
+        "text": "Переносимость результатов 30-дневного теста из двух регионов на всю базу подписчиков не установлена (UNK-003).",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c027",
+        "text": "Порог окупаемости по оттоку при повышении цены составляет примерно 21,7% при очень низкой надёжности расчёта (CL-011).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c028",
+        "text": "Допустимый отток для роста вклада в маржу не определён (UNK-002).",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c029",
+        "text": "Количество подписчиков составляет 410 тысяч (CL-008).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c030",
+        "text": "Рост роялти составил 12% при росте выручки 5% (CL-014).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c031",
+        "text": "Валовая маржа упала с 31% до 26% (CL-012).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c032",
+        "text": "Заявленный отток текущих подписчиков составляет около 6,0% (CL-009).",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c033",
+        "text": "30-дневный тест в двух регионах не обладает статистической значимостью для всей базы и не покрывает сезонность, различия регионов и отложенный отток (CL-026, CL-028).",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c034",
+        "text": "Отложенный отток после первого продления является основным риском при повышении цены (CL-027).",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c035",
+        "text": "Зафиксированы цены конкурентов (CL-017, CL-018, CL-019, CL-020).",
+        "kind": "market",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c036",
+        "text": "Конкуренты повышают цены в составе экосистемных пакетов с дополнительной ценностью.",
+        "kind": "market",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c037",
+        "text": "Текущая цена монопродукта составляет 399 ₽.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c038",
+        "text": "База подписчиков составляет около 410 тыс. человек.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c039",
+        "text": "Месячный отток подписчиков составляет 6%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c040",
+        "text": "При текущих показателях база теряет около 25 тыс. подписчиков в месяц.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c041",
+        "text": "Экосистемные пакеты конкурентов стоят от 299 до 449 ₽.",
+        "kind": "market",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c042",
+        "text": "В 30-дневном тесте в двух регионах доля продлений по новой цене составила 0,0%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c043",
+        "text": "В тесте разница в отменах автопродления составила 1,7% против 2,1%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c044",
+        "text": "В тесте конверсия составила 42,4% против 41,6%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c045",
+        "text": "Валовая маржа упала с 31% до 26%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c046",
+        "text": "Роялти выросли на 12% год к году.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c047",
+        "text": "Выручка выросла на 5%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c048",
+        "text": "Рост роялти опережает рост выручки.",
+        "kind": "causal",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c049",
+        "text": "Порог оттока для окупаемости повышения цены составляет примерно 21,7%.",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c050",
+        "text": "Голое повышение цены монопродукта на 20% без усиления упаковки проигрывает по воспринимаемой ценности экосистемным пакетам конкурентов.",
+        "kind": "causal",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c051",
+        "text": "Отток текущих подписчиков при ежемесячном продлении составляет ≈6,0%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c052",
+        "text": "Конверсия из триала составляет ≈42%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c053",
+        "text": "Порог оттока для окупаемости составляет ≈21,7%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c054",
+        "text": "Доля продлений по новой цене составляет 0,0%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c055",
+        "text": "Цены конкурентов составляют 299–449 ₽",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c056",
+        "text": "Рост аудитории экосистемных конкурентов замедляется из-за экономии пользователей на подписках",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c057",
+        "text": "Валовая маржа снизилась с 31% до 26%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c058",
+        "text": "Рост роялти составляет 12% при росте выручки на 5%",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c059",
+        "text": "Издательства переходят на минимальную гарантию",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c060",
+        "text": "Решение принимается на основе данных 30-дневного теста в двух регионах",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c061",
+        "text": "Данные 30-дневного теста в двух регионах не обладают статистической значимостью",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c062",
+        "text": "Тест в двух регионах не покрывает сезонность, различия регионов и отложенный отток",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c063",
+        "text": "Текущие подписчики более чувствительны к повышению цены на 20%, чем новые подписчики",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c064",
+        "text": "Новые подписчики не заякорены на цене 399 ₽",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c065",
+        "text": "Порог окупаемости по оттоку ≈21,7% рассчитан на новую цену, а не на смешанную базу подписчиков",
+        "kind": "causal",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c066",
+        "text": "Роялти выросли на 12% при росте выручки на 5%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c067",
+        "text": "Инфляция составляет 6,35%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c068",
+        "text": "Один конкурент повысил цену на 12,5%",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c069",
+        "text": "Два конкурента повысили цены на 33%",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c070",
+        "text": "Порог оттока составляет примерно 21,7%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c071",
+        "text": "Текущий отток подписчиков составляет примерно 6,0%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c072",
+        "text": "Т-Банк Pro стоит 299 ₽",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c073",
+        "text": "МТС Premium стоит 349 ₽",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c074",
+        "text": "Рост роялти составляет 12% год к году",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c075",
+        "text": "Издательства перешли на минимальную гарантию",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c076",
+        "text": "Конверсия из триала составляет примерно 42%",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c077",
+        "text": "Продления по новой цене составляют 0,0%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c078",
+        "text": "Количество платящих подписчиков составляет около 410 тыс.",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c079",
+        "text": "ARPU в тесте составил 199,23 ₽ против 169,17 ₽",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c080",
+        "text": "Конверсия триала в тесте составила 41,6% против 42,4%",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c081",
+        "text": "Текущая база подписчиков заякорена на цене 399 ₽",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c082",
+        "text": "Тест проводится в течение 30 дней в двух регионах",
+        "kind": "company_data",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c083",
+        "text": "OPT-003 выигрывает в базовом сценарии",
+        "kind": "product",
+        "chunk": 8,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c084",
+        "text": "OPT-003 остаётся лучшим в 63 из 81 сценариев",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c085",
+        "text": "Вероятность сохранения победителя составляет примерно 85%",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c086",
+        "text": "Ни один фактор по отдельности не меняет победителя",
+        "kind": "causal",
+        "chunk": 8,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c087",
+        "text": "Текущая цена подписки «Голосов страниц» составляет 399 ₽ в месяц",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c088",
+        "text": "База платящих подписчиков составляет примерно 410 тыс. человек",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c089",
+        "text": "Базовый отток текущих подписчиков при ежемесячном продлении составляет примерно 6,0%",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c090",
+        "text": "Конверсия из пробного периода в оплату составляет примерно 42%",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c091",
+        "text": "Порог окупаемости повышения цены составляет примерно 21,7% оттока",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c092",
+        "text": "Измеренный эффект на текущих подписчиках по новой цене — 0,0% продлений",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c093",
+        "text": "Рост выручки составляет 5% год к году",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c094",
+        "text": "Целевая валовая маржа на 2027 год составляет 30%",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c095",
+        "text": "Контрольный уровень отмен автопродления составляет 1,7%",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c096",
+        "text": "Контрольная конверсия из пробного периода в оплату составляет 42,4%",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c097",
+        "text": "Контрольный средний доход на пользователя за 30 дней составляет 169,17 ₽",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c098",
+        "text": "Цена подписки Яндекс Плюс составляет 449 ₽",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c099",
+        "text": "Цена подписки СберПрайм составляет 399 ₽",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c100",
+        "text": "Цена подписки Газпром Бонус составляет 399 ₽",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c101",
+        "text": "Цена подписки Т-Банк Pro составляет 299 ₽",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c102",
+        "text": "Цена подписки МТС Premium составляет 349 ₽",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c103",
+        "text": "Новые подписчики не заякорены на цене 399 ₽, поэтому повышение цены не бьёт по уже сформированной привычке платить",
+        "kind": "causal",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c104",
+        "text": "Grandfathering и поэтапность снижают риск оттока выше порога окупаемости ≈21,7%",
+        "kind": "causal",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c105",
+        "text": "Заблаговременное уведомление и усиление упаковки удерживают отток ниже порога окупаемости",
+        "kind": "causal",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c106",
+        "text": "Действует тариф подписки «Голосов страниц» по 399 ₽ в месяц для текущей базы",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c107",
+        "text": "Действует пробный период с конверсией в оплату как воронка привлечения новых подписчиков",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c108",
+        "text": "Действует механизм ежемесячного автопродления подписки",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c109",
+        "text": "Подписчики слушают книги по подписке за 399 ₽ в месяц.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c110",
+        "text": "Подписчики получают уведомление об изменении цены с 1 декабря.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c111",
+        "text": "База подписчиков заякорена на цене 399 ₽.",
+        "kind": "user",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c112",
+        "text": "Повышение цены на 20% воспринимается как потеря привычных условий.",
+        "kind": "user",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c113",
+        "text": "Ценность библиотеки не изменилась.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c114",
+        "text": "Переключение на отказ от подписки кажется дешёвым.",
+        "kind": "user",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c115",
+        "text": "Для новых подписчиков месячная подписка стоит 479 ₽ с первого платежа.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c116",
+        "text": "С 1 декабря 2026 года цена для новых подписчиков составляет 479 ₽ в месяц.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c117",
+        "text": "Текущие подписчики с ежемесячным продлением сохраняют цену 399 ₽ на переходный период.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c118",
+        "text": "Условия годовых планов не меняются с 1 декабря.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c119",
+        "text": "Совокупные роялти выросли на 12% год к году.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c120",
+        "text": "Валовая маржа снизилась с 31% до 26%.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c121",
+        "text": "Решение об изменении цены связано с ростом роялти и изменением условий договоров с издательствами.",
+        "kind": "causal",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c122",
+        "text": "Доступ к библиотеке остаётся прежним.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c123",
+        "text": "Механика автопродления остаётся прежней.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c124",
+        "text": "Пробный период работает как раньше.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c125",
+        "text": "Конверсия в оплату работает как раньше.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c126",
+        "text": "В приложении отображается текущая цена.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c127",
+        "text": "В приложении отображается дата следующего списания.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c128",
+        "text": "Проводился 30-дневный тест в двух регионах",
+        "kind": "market",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c129",
+        "text": "Текущая цена подписки составляет 399 ₽",
+        "kind": "product",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c130",
+        "text": "Новая цена подписки составляет 479 ₽",
+        "kind": "product",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c131",
+        "text": "Данные биллинга доступны за последние 12 месяцев",
+        "kind": "company_data",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c132",
+        "text": "Контрольный уровень доли отмен автопродления среди текущих подписчиков (CL-003) составляет 1,7%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c133",
+        "text": "Контрольное значение среднего дохода на пользователя за 30 дней (CL-002) составляет 169,17 ₽",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c134",
+        "text": "Контрольная конверсия из пробного периода в оплату по 479 ₽ (CL-001) составляет 42,4%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c135",
+        "text": "Порог окупаемости оттока (CL-011) составляет примерно 21,7%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c136",
+        "text": "Базовый отток текущих подписчиков (CL-009) составляет примерно 6,0%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c137",
+        "text": "MDE для эксперимента EXP-001 составляет +3 п.п. к базовому оттоку",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c138",
+        "text": "Мощность статистического теста составляет 80%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c139",
+        "text": "Уровень значимости α составляет 0,05",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c140",
+        "text": "Срок наблюдения составляет 180 дней",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c141",
+        "text": "MDE для эксперимента EXP-002 составляет −2 п.п. к оттоку",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c142",
+        "text": "Льготный период grandfathering составляет 3–6 месяцев",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c143",
+        "text": "Срок наблюдения когорты продлений до 2027-03-31",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c144",
+        "text": "Срок до 2027-06-30",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c145",
+        "text": "Доверительный интервал составляет 95%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c146",
+        "text": "Порог окупаемости составляет примерно 21,7%",
+        "kind": "number",
+        "chunk": 13,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c147",
+        "text": "Новые подписчики менее заякорены на цене 399 ₽, чем текущие подписчики",
+        "kind": "user",
+        "chunk": 13,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c148",
+        "text": "Существует финансовая записка о роялти, марже и пороге безубыточности повышения цены",
+        "kind": "company_data",
+        "chunk": 14,
+        "section": "Источники"
+      },
+      {
+        "id": "c149",
+        "text": "Существует рынок электронных и аудиокниг в России с итогами 2025 года",
+        "kind": "market",
+        "chunk": 14,
+        "section": "Источники"
+      },
+      {
+        "id": "c150",
+        "text": "В России существует годовая инфляция с итогом за 2025 год и данными за сентябрь 2026 года",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Источники"
+      },
+      {
+        "id": "c151",
+        "text": "В России в 2025–2026 годах происходило повышение цен на экосистемные подписки",
+        "kind": "market",
+        "chunk": 14,
+        "section": "Источники"
+      },
+      {
+        "id": "c152",
+        "text": "Ценовой тест «Голосов страниц» проводился в течение первых 30 дней (с 15.09 по 14.10.2026)",
+        "kind": "product",
+        "chunk": 14,
+        "section": "Источники"
+      }
+    ]
+  },
+  "options": null,
+  "promises": {
+    "total": 0,
+    "unbacked": 0,
+    "unclear": 0,
+    "backed": 0,
+    "items": []
+  },
+  "validation_plan": null,
+  "expected_choice": null,
+  "injection": null,
+  "heuristics": {
+    "status_quo": 3,
+    "kill": 1,
+    "baseline": 5,
+    "guardrail": 2,
+    "kill_criterion": 3,
+    "date_or_term": 73,
+    "injection_flag": 0
+  },
+  "judge_usage": {
+    "calls": 30,
+    "prompt_tokens": 75804,
+    "output_tokens": 87666,
+    "duration_s": 995.58,
+    "cost_estimate": {
+      "usd": 0.237161,
+      "rub": 18.9729,
+      "estimated": false,
+      "basis": "config/prices.yaml (as_of 2026-11-04): $0.7/2.1 за 1 млн токенов вход/выход"
+    },
+    "log": [
+      {
+        "step": "extract_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1242,
+        "output_tokens": 2058,
+        "duration_s": 32.7,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3359,
+        "output_tokens": 2035,
+        "duration_s": 11.35,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1015,
+        "output_tokens": 1184,
+        "duration_s": 9.0,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 2491,
+        "output_tokens": 3029,
+        "duration_s": 50.78,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1901,
+        "output_tokens": 3378,
+        "duration_s": 20.26,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[6]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1953,
+        "output_tokens": 3662,
+        "duration_s": 47.45,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[7]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3001,
+        "output_tokens": 3427,
+        "duration_s": 25.66,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[8]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 411,
+        "output_tokens": 1566,
+        "duration_s": 12.22,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[9]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 2513,
+        "output_tokens": 2858,
+        "duration_s": 20.26,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[10]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 2108,
+        "output_tokens": 3900,
+        "duration_s": 40.89,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[11]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1411,
+        "output_tokens": 4969,
+        "duration_s": 50.51,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[12]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 997,
+        "output_tokens": 296,
+        "duration_s": 4.7,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[13]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 2319,
+        "output_tokens": 3374,
+        "duration_s": 52.57,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[14]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 711,
+        "output_tokens": 2869,
+        "duration_s": 92.8,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3181,
+        "output_tokens": 2501,
+        "duration_s": 15.43,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3195,
+        "output_tokens": 2144,
+        "duration_s": 33.47,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3238,
+        "output_tokens": 2045,
+        "duration_s": 18.72,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3191,
+        "output_tokens": 5427,
+        "duration_s": 61.22,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3175,
+        "output_tokens": 4226,
+        "duration_s": 34.48,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[6]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3134,
+        "output_tokens": 4048,
+        "duration_s": 32.93,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[7]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3155,
+        "output_tokens": 4024,
+        "duration_s": 44.23,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[8]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3108,
+        "output_tokens": 3487,
+        "duration_s": 43.33,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[9]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3130,
+        "output_tokens": 3375,
+        "duration_s": 35.9,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[10]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3127,
+        "output_tokens": 2338,
+        "duration_s": 25.14,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[11]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3174,
+        "output_tokens": 2851,
+        "duration_s": 38.78,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[12]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3140,
+        "output_tokens": 3228,
+        "duration_s": 56.21,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[13]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3099,
+        "output_tokens": 2721,
+        "duration_s": 21.76,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[14]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3160,
+        "output_tokens": 2572,
+        "duration_s": 19.67,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[15]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3156,
+        "output_tokens": 2417,
+        "duration_s": 23.02,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[16]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3009,
+        "output_tokens": 1657,
+        "duration_s": 20.14,
+        "attempts": 1,
+        "errors": []
+      }
+    ]
+  },
+  "errors": []
+}

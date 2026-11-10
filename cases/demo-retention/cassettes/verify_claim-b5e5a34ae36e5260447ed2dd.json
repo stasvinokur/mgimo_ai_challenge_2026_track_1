@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"Цитата описывает конкретную техническую проблему, но не говорит о причинах снижения удержания или об исключительности этой причины.\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "Цитата описывает конкретную техническую проблему, но не говорит о причинах снижения удержания или об исключительности этой причины."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 271,
+  "output_tokens": 44,
+  "estimated": false,
+  "latency_ms": 549,
+  "escalated": false
+ }
+}

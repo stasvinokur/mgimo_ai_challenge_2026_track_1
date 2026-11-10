@@ -1,0 +1,16 @@
+{
+ "question_id": "demo-retention-run:CL-036:type",
+ "kind": "choice",
+ "choice": "forecast",
+ "probability": null,
+ "score": null,
+ "probs": {
+  "forecast": 0.9
+ },
+ "confidence": 0.9,
+ "backend": "llm",
+ "model": "deepseek-v4.1-flash:cloud",
+ "escalated": true,
+ "input_tokens": 325,
+ "latency_ms": 914
+}

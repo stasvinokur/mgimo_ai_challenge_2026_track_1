@@ -1,0 +1,111 @@
+{
+ "by_kind": {
+  "value_shift": {
+   "n": 30,
+   "flagged": 27
+  },
+  "pct_pp": {
+   "n": 30,
+   "flagged": 28
+  },
+  "days_months": {
+   "n": 4,
+   "flagged": 4
+  },
+  "no_ref": {
+   "n": 22,
+   "flagged": 22
+  },
+  "wrong_ref": {
+   "n": 22,
+   "flagged": 22
+  },
+  "original": {
+   "n": 30,
+   "flagged": 0
+  },
+  "rounding": {
+   "n": 30,
+   "flagged": 0
+  },
+  "derived_diff": {
+   "n": 30,
+   "flagged": 0
+  },
+  "target": {
+   "n": 30,
+   "flagged": 0
+  },
+  "date_year": {
+   "n": 30,
+   "flagged": 0
+  },
+  "id_codes": {
+   "n": 30,
+   "flagged": 0
+  },
+  "rub_pct": {
+   "n": 19,
+   "flagged": 19
+  },
+  "thousands": {
+   "n": 5,
+   "flagged": 0
+  },
+  "derived_ratio": {
+   "n": 8,
+   "flagged": 0
+  },
+  "brief_number": {
+   "n": 20,
+   "flagged": 0
+  },
+  "lost_minus": {
+   "n": 1,
+   "flagged": 1
+  },
+  "churn_label": {
+   "n": 9,
+   "flagged": 9
+  }
+ },
+ "recall": 0.964,
+ "false_positive_rate": 0.0,
+ "mutants": 137,
+ "benign": 213,
+ "original_gaps": [],
+ "errors": [
+  {
+   "id": "price-increase-b-value_shift-02",
+   "kind": "value_shift",
+   "text": "Повышение цены для всех может не покрыть рост затрат, если отток превысит 28,2% [CL-025], а цель по марже 30% к 2027 [CL-029] останется недостижимой."
+  },
+  {
+   "id": "price-increase-b-value_shift-05",
+   "kind": "value_shift",
+   "text": "Экономика: рост роялти на 16% при выручке +5% [CL-027] и падение валовой маржи с 31% до 26% [CL-028] создают давление на прибыль."
+  },
+  {
+   "id": "price-increase-b-value_shift-09",
+   "kind": "value_shift",
+   "text": "Порог безубыточности ≈28,2% — превышен; выручка на продление 375 ₽ → 360 ₽ (−4%) [CL-9002]."
+  },
+  {
+   "id": "price-increase-b-pct_pp-02",
+   "kind": "pct_pp",
+   "text": "Повышение цены для всех может не покрыть рост затрат, если отток превысит 21,7 п.п. [CL-025], а цель по марже 30% к 2027 [CL-029] останется недостижимой."
+  },
+  {
+   "id": "price-increase-b-pct_pp-10",
+   "kind": "pct_pp",
+   "text": "При этом рост роялти на 12 п.п. при росте выручки на 5% и падении маржи с 31% до 26% (CL-027, CL-028) можно частично закрыть неценовыми мерами — переговорами по модели минимальной гарантии (CL-026, CL-049), переупаковкой и удержанием (CL-050), — не трогая цену для всей базы."
+  }
+ ],
+ "checker": "v2",
+ "split": "holdout",
+ "briefs": [
+  "app-onboarding",
+  "b2b-field-service",
+  "price-increase-b"
+ ]
+}

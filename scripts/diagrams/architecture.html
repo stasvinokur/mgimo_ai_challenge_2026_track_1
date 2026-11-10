@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Как работает агент</title>
+<style>
+  :root { --ink: #1b1e22; --soft: #5b6470; --rule: #d9dde3; --card: #ffffff; --ground: #f6f7f9; --gate: #b42318;
+          --gate-bg: #fdecea; --loop: #1f5f8b; --loop-bg: #e8f1f8; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); font: 15px/1.35 -apple-system, "Helvetica Neue", Arial, sans-serif;
+         color: var(--ink); }
+  #diagram { width: 1600px; padding: 28px 32px 30px; background: var(--ground); }
+  h1 { font-size: 22px; margin: 0 0 4px; } .lead { color: var(--soft); margin: 0 0 20px; }
+  .row { display: flex; align-items: stretch; gap: 0; margin-bottom: 14px; }
+  .row + .row { margin-top: 0; }
+  .card { flex: 1; background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 12px 14px;
+          display: flex; flex-direction: column; gap: 6px; }
+  .card b { font-size: 16px; } .card span { color: var(--soft); font-size: 13.5px; }
+  .input { flex: 0.8; background: #eef0f3; }
+  .arrow { width: 34px; display: flex; align-items: center; justify-content: center; color: var(--soft); font-size: 22px; }
+  .gate { margin-top: auto; align-self: flex-start; background: var(--gate-bg); color: var(--gate); border-radius: 999px;
+          padding: 3px 10px; font-size: 12.5px; font-weight: 600; }
+  /* связка строк: вниз от «Сбора», влево, вниз к «Реестру» (центры карточек: 189 px справа, 140 px слева) */
+  .wrap { position: relative; height: 30px; margin: -14px 0 0; }
+  .wrap i { position: absolute; border-color: var(--soft); border-style: solid; border-width: 0; }
+  .wrap .up { right: 188px; top: 0; height: 15px; border-right-width: 1.5px; }
+  .wrap .h { left: 140px; right: 188px; top: 14px; border-top-width: 1.5px; }
+  .wrap .dn { left: 140px; top: 14px; height: 16px; border-left-width: 1.5px; }
+  .wrap .tip { left: 133px; top: 23px; width: 0; height: 0; border-left: 7.5px solid transparent;
+               border-right: 7.5px solid transparent; border-top: 9px solid var(--soft); }
+  .loop { display: flex; align-items: center; gap: 12px; background: var(--loop-bg); border: 1px dashed var(--loop);
+          border-radius: 12px; padding: 12px 16px; color: var(--loop); margin: 4px 0 18px; }
+  .loop b { font-size: 16px; } .loop span { font-size: 14px; }
+  .base { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .base div { background: var(--card); border: 1px solid var(--rule); border-radius: 12px; padding: 10px 14px; }
+  .base b { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--soft);
+            margin-bottom: 4px; }
+  .base span { font-size: 13.5px; }
+</style>
+</head>
+<body>
+<div id="diagram">
+  <h1>Как работает агент</h1>
+  <p class="lead">Граф шагов на LangGraph: каждый шаг записан в журнал, на четырёх шлюзах решает человек, работу можно
+    прервать и продолжить с того же места.</p>
+
+  <div class="row">
+    <div class="card input"><b>Запрос и материалы</b><span>запрос как есть; таблицы, документы, интервью, выдержки сайтов
+      из allowlist — неизменяемые копии с SHA-256</span></div>
+    <div class="arrow">→</div>
+    <div class="card"><b>Постановка</b><span>рамка задачи; посылка запроса проверяется по данным, а не подтверждается</span>
+      <div class="gate">шлюз · уточнения</div></div>
+    <div class="arrow">→</div>
+    <div class="card"><b>План и смета</b><span>исследуются только вопросы, ответ на которые может изменить выбор</span>
+      <div class="gate">шлюз · план исследования</div></div>
+    <div class="arrow">→</div>
+    <div class="card"><b>Сбор</b><span>читатели на карантине, параллельно: только дословные цитаты; команды из источников
+      не исполняются</span></div>
+  </div>
+  <div class="wrap"><i class="up"></i><i class="h"></i><i class="dn"></i><i class="tip"></i></div>
+
+  <div class="row">
+    <div class="card"><b>Реестр утверждений</b><span>факт, гипотеза, прогноз или неизвестное; числа считает код двумя
+      движками (pandas и DuckDB)</span></div>
+    <div class="arrow">→</div>
+    <div class="card"><b>Варианты</b><span>не меньше четырёх, всегда «оставить как есть» и «закрыть»; возражения, панель
+      ролей, стресс-тест</span><div class="gate">шлюз · выбор варианта</div></div>
+    <div class="arrow">→</div>
+    <div class="card"><b>Стратегии</b><span>продуктовая и коммуникационная; каждое обещание сверено с функцией продукта</span></div>
+    <div class="arrow">→</div>
+    <div class="card"><b>План проверки</b><span>метрика, baseline, минимальный эффект, guardrails, kill-критерий с датой</span>
+      <div class="gate">шлюз · фиксация решения</div></div>
+    <div class="arrow">→</div>
+    <div class="card"><b>Отчёт и журнал решения</b><span>решение на одной странице; основания, сигналы пересмотра,
+      обязательства</span></div>
+  </div>
+
+  <div class="loop"><b>Новые данные</b><span>→ связь с прежними строками реестра → обход графа зависимостей → пересмотр
+    только затронутых выводов → «Что изменилось»; решение открывается заново, если сработал его сигнал</span></div>
+
+  <div class="base">
+    <div><b>Модели</b><span>deepseek-v4.1-flash — рассуждение; gemma4:31b — цитаты и утверждения; Clef — решения
+      «да/нет»; qwen3-embedding:8b — поиск</span></div>
+    <div><b>Состояние и знания</b><span>SQLite: версии кейса, реестр, журнал шагов, стоимость, чекпоинты графа;
+      FTS5 и векторы для базы знаний</span></div>
+    <div><b>Интерфейсы</b><span>панель руководителя в браузере, CLI, MCP-сервер для IDE-агентов</span></div>
+    <div><b>Чистая архитектура</b><span>domain → application → infrastructure и interfaces; границы слоёв проверяются
+      при каждом коммите</span></div>
+  </div>
+</div>
+</body>
+</html>

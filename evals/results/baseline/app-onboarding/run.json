@@ -1,0 +1,86 @@
+{
+  "brief_id": "app-onboarding",
+  "approach": "chat_baseline",
+  "status": "ok",
+  "instruction": "Сделай продуктовую и коммуникационную стратегию по запросу руководителя. Используй приложенные материалы.",
+  "model": "deepseek-v4.1-flash:cloud",
+  "model_role": "reasoning",
+  "fallbacks_used": false,
+  "host": "http://127.0.0.1:11434",
+  "params": {
+    "think": false,
+    "temperature": 0.3,
+    "num_ctx": 65536
+  },
+  "started_at": "2026-11-04T10:43:56+00:00",
+  "finished_at": "2026-11-04T10:44:11+00:00",
+  "duration_s": 14.88,
+  "attempts": 1,
+  "done_reason": "stop",
+  "tokens": {
+    "input": 4366,
+    "output": 2862,
+    "total": 7228,
+    "note": "output включает токены рассуждения (thinking) модели"
+  },
+  "ollama_durations_s": {
+    "total_duration": 14.368,
+    "load_duration": 0.0,
+    "prompt_eval_duration": 0.0,
+    "eval_duration": 0.0
+  },
+  "prompt": {
+    "chars": 12251,
+    "sha256": "8577a9981b43338d6d9f78bc03ad35ce5ce1b84895f8b2171e1f76b6a84f62c3",
+    "materials": [
+      {
+        "file": "materials/callcenter_reasons.csv",
+        "sha256": "48abfa7721981255199bd183da4f48b8fb4ae5bc9fc0e52b8190b94b48309d96",
+        "bytes": 1514,
+        "synthetic": true
+      },
+      {
+        "file": "materials/market_mobile_usage.md",
+        "sha256": "49d63ec89468df1476ee401994695e3f8ed52ff45a8e1beec100f1aeaddea54c",
+        "bytes": 1741,
+        "synthetic": false
+      },
+      {
+        "file": "materials/nng_mobile_onboarding.md",
+        "sha256": "14142983f356a7ed64cbe9618b17a7312def96fca59ccd68d6304fa7b7ce0416",
+        "bytes": 2095,
+        "synthetic": false
+      },
+      {
+        "file": "materials/onboarding_funnel.csv",
+        "sha256": "c79a4dd9ef573f67b9ba4a1ce78ee5545bea8575290fe08094079e95ee5a111f",
+        "bytes": 1507,
+        "synthetic": true
+      },
+      {
+        "file": "materials/product_facts.md",
+        "sha256": "d173a1040015816288592594ca35d869c313d84374d6314b659ef80f4362743b",
+        "bytes": 2282,
+        "synthetic": true
+      },
+      {
+        "file": "materials/usability_notes.md",
+        "sha256": "2b810d0df56aba10ceea617b57e5495480c128e28b4b3078a65e9e8a7f206a7e",
+        "bytes": 3148,
+        "synthetic": true
+      }
+    ]
+  },
+  "output": {
+    "chars": 8320,
+    "sha256": "a0fa14647316a8ffdb3db65d54deecf33bb33b637eb682e80cd490b9f3e4677a",
+    "thinking_chars": 0
+  },
+  "cost_estimate": {
+    "usd": 0.004744,
+    "rub": 0.3795,
+    "estimated": false,
+    "basis": "config/prices.yaml (as_of 2026-11-04): $0.3/1.2 за 1 млн токенов вход/выход"
+  },
+  "errors": []
+}

@@ -1,0 +1,17 @@
+{
+ "question_id": "demo-retention-run:PRM-004:semantic",
+ "kind": "noul",
+ "choice": null,
+ "probability": 0.8787,
+ "score": null,
+ "probs": {
+  "да": 0.8787,
+  "нет": 0.12129999999999996
+ },
+ "confidence": 0.8787,
+ "backend": "systemone",
+ "model": "clef:cloud",
+ "escalated": false,
+ "input_tokens": 487,
+ "latency_ms": 844
+}

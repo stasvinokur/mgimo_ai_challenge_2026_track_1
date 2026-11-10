@@ -1,0 +1,234 @@
+{
+ "checked_at": "2026-11-05",
+ "scenario": "Кейс начат в CLI (`strategist new port … --run`, ввод закрыт) и остановился на шлюзе «Уточнение задачи»; в той же папке Codex продолжил его только через MCP-сервер strategist.",
+ "codex": {
+  "cli": "codex-cli 0.166.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "xhigh",
+  "sandbox": "read-only",
+  "approval_policy": "never",
+  "mcp_default_tools_approval_mode": "approve",
+  "duration": "4 мин 50 с",
+  "usage": {
+   "input_tokens": 497004,
+   "cached_input_tokens": 452480,
+   "cache_write_input_tokens": 0,
+   "output_tokens": 1918,
+   "reasoning_output_tokens": 488
+  }
+ },
+ "first_try": "Без default_tools_approval_mode Codex выполнил case_status (инструмент помечен только для чтения), а answer_gate отклонил: «MCP tool call requires approval, but approval policy is never».",
+ "mcp_calls": [
+  {
+   "tool": "case_status",
+   "arguments": {
+    "case_id": "port"
+   },
+   "status": "completed",
+   "waiting_gate_after": "clarify",
+   "finished_after": false
+  },
+  {
+   "tool": "answer_gate",
+   "arguments": {
+    "case_id": "port",
+    "answers": [
+     "Главное — выручка на горизонте квартала, отток держим под контролем",
+     "Главное — выручка на горизонте квартала, отток держим под контролем",
+     "Главное — выручка на горизонте квартала, отток держим под контролем"
+    ]
+   },
+   "status": "completed",
+   "waiting_gate_after": "research_plan",
+   "finished_after": false
+  },
+  {
+   "tool": "answer_gate",
+   "arguments": {
+    "case_id": "port",
+    "action": "approve"
+   },
+   "status": "completed",
+   "waiting_gate_after": "option_choice",
+   "finished_after": false
+  },
+  {
+   "tool": "answer_gate",
+   "arguments": {
+    "case_id": "port",
+    "action": "approve",
+    "choice": "OPT-002"
+   },
+   "status": "completed",
+   "waiting_gate_after": "decision_commit",
+   "finished_after": false
+  },
+  {
+   "tool": "answer_gate",
+   "arguments": {
+    "case_id": "port",
+    "action": "approve",
+    "approver": "руководитель продукта"
+   },
+   "status": "completed",
+   "waiting_gate_after": null,
+   "finished_after": true
+  },
+  {
+   "tool": "report",
+   "arguments": {
+    "case_id": "port"
+   },
+   "status": "completed",
+   "waiting_gate_after": null,
+   "finished_after": null
+  },
+  {
+   "tool": "decide_now",
+   "arguments": {
+    "case_id": "port"
+   },
+   "status": "completed",
+   "waiting_gate_after": null,
+   "finished_after": null
+  }
+ ],
+ "shell_commands": 0,
+ "journal": [
+  {
+   "step": "intake",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "clarify",
+   "status": "done",
+   "attempt": 2
+  },
+  {
+   "step": "research_plan:0",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "research_gate:0",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "read:SRC-002",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "read:SRC-001",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "read:SRC-003",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "read:SRC-004",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "read:SRC-005",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "merge",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "research_loop",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "claims",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "situation",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "options",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "stress",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "option_gate",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "product",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "comms:0",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "promise_lint:0",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "comms:1",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "promise_lint:1",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "experiments",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "commit",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "summary",
+   "status": "done",
+   "attempt": 1
+  },
+  {
+   "step": "report",
+   "status": "done",
+   "attempt": 1
+  }
+ ],
+ "repeated_after_handoff": [],
+ "note_on_clarify": "clarify — шаг-шлюз: в CLI он ждал ответа, после ответа из Codex выполнен (попытка 2). Завершённые до передачи шаги (intake) не повторялись.",
+ "stage": "done",
+ "decision": [
+  {
+   "id": "DEC-0001",
+   "status": "accepted",
+   "approver": "руководитель продукта"
+  }
+ ]
+}

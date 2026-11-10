@@ -1,0 +1,42 @@
+# Секреты
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Рабочее состояние кейсов (SQLite, чекпоинты) — кроме закоммиченного демо-кейса
+cases/*/state/*.sqlite-wal
+cases/*/state/*.sqlite-shm
+cases/*/state/*.db-wal
+cases/*/state/*.db-shm
+cases/scratch-*/
+.strategist-tmp/
+
+# IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Прогоны агента на стенде (agent, agent-cloud, agent-local): состояние кейсов не коммитим, только отчёты и run.json
+evals/results/agent*/cases/
+
+# Демо: состояние прогона не коммитим (кассеты и отчёт — коммитим)
+cases/demo-retention-run/state/
+cases/demo-retention-run/materials/
+
+# Кэш эмбеддингов и индекс базы знаний (пересобирается `strategist kb index`)
+cases/.cache/
+cases/.knowledge/

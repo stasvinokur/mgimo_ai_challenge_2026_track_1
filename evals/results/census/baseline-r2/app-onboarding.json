@@ -1,0 +1,1045 @@
+{
+  "metrics_version": "1.2",
+  "brief_id": "app-onboarding",
+  "label": "baseline-r2",
+  "output_path": "evals/results/baseline-r2/app-onboarding/output.md",
+  "output_sha256": "48aa2e516805f1fe5f4b3e1e7e40525366fad831ed032f3fe5d73becd90ea281",
+  "output_chars": 7616,
+  "judge_model": "mistral-large-4:cloud",
+  "judge_candidates": [
+    "mistral-large-4:cloud",
+    "kimi-k2.6:cloud"
+  ],
+  "judge_notes": [],
+  "judge_params": {
+    "think": false,
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 65536
+  },
+  "agent_model": "deepseek-v4.1-flash:cloud",
+  "seed": 42,
+  "census": true,
+  "claims_only": true,
+  "started_at": "2026-11-07T08:09:23+00:00",
+  "finished_at": "2026-11-07T08:16:27+00:00",
+  "claims": {
+    "extracted": 43,
+    "sample_size": 43,
+    "verified": 43,
+    "supported": 39,
+    "partial": 1,
+    "unsupported": 3,
+    "contradicted": 2,
+    "unsupported_share": 0.07,
+    "unsupported_ci95": [
+      0.024,
+      0.1861
+    ],
+    "partial_share": 0.023,
+    "supported_share": 0.907,
+    "by_section": {
+      "1. Главный вывод: проблема не в онбординге, а во входе": {
+        "verified": 25,
+        "unsupported": 1,
+        "partial": 1
+      },
+      "2. Продуктовая стратегия": {
+        "verified": 11,
+        "unsupported": 1,
+        "partial": 0
+      },
+      "3. Коммуникационная стратегия": {
+        "verified": 6,
+        "unsupported": 1,
+        "partial": 0
+      },
+      "4. План по этапам": {
+        "verified": 1,
+        "unsupported": 0,
+        "partial": 0
+      }
+    },
+    "quotes_not_found": 5,
+    "sample": [
+      {
+        "id": "c001",
+        "text": "Установка → первый запуск: ~92%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/onboarding_funnel.csv",
+        "quote": "| week_start | platform | installs | first_open | login_started | login_success | home_screen | first_action_7d |",
+        "quote_found": true,
+        "comment": "Сумма по всем строкам: first_open 63027 / installs 68594 = 91,9% ≈ 92%."
+      },
+      {
+        "id": "c002",
+        "text": "Первый запуск → начали вход: ~87%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/onboarding_funnel.csv",
+        "quote": "| week_start | platform | installs | first_open | login_started | login_success | home_screen | first_action_7d |",
+        "quote_found": true,
+        "comment": "login_started 55220 / first_open 63027 = 87,6% ≈ 87%."
+      },
+      {
+        "id": "c003",
+        "text": "Начали вход → успешно вошли: ~50%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/onboarding_funnel.csv",
+        "quote": "| week_start | platform | installs | first_open | login_started | login_success | home_screen | first_action_7d |",
+        "quote_found": true,
+        "comment": "login_success 29045 / login_started 55220 = 52,6%, то есть около половины."
+      },
+      {
+        "id": "c004",
+        "text": "Вошли → главный экран: ~97%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/onboarding_funnel.csv",
+        "quote": "| week_start | platform | installs | first_open | login_started | login_success | home_screen | first_action_7d |",
+        "quote_found": true,
+        "comment": "home_screen 28141 / login_success 29045 = 96,9% ≈ 97%."
+      },
+      {
+        "id": "c005",
+        "text": "Главный экран → полезное действие за 7 дней: ~65%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/onboarding_funnel.csv",
+        "quote": "| week_start | platform | installs | first_open | login_started | login_success | home_screen | first_action_7d |",
+        "quote_found": true,
+        "comment": "first_action_7d 17958 / home_screen 28141 = 63,8% ≈ 65%."
+      },
+      {
+        "id": "c006",
+        "text": "Из 100 установок до полезного действия доходят ~25",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/onboarding_funnel.csv",
+        "quote": "| week_start | platform | installs | first_open | login_started | login_success | home_screen | first_action_7d |",
+        "quote_found": true,
+        "comment": "first_action_7d 17958 / installs 68594 = 26,2% — около четверти из 100 установок, что также подтверждено в brief.md: «до первого полезного действия доходит около четверти установивших»."
+      },
+      {
+        "id": "c007",
+        "text": "Основная потеря пользователей происходит на шаге входа, а не на главном экране",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/onboarding_funnel.csv",
+        "quote": "| 2026-08-03 | Android | 3714 | 3433 | 3009 | 1684 | 1656 | 1072 |",
+        "quote_found": true,
+        "comment": "Потери по шагам (суммы по таблице): вход начали→успешно вошли: 55220−29045 = 26175 (47,4%); успешно вошли→главный экран: 29045−28141 = 904 (3,1%). Наибольшая абсолютная и относительная потеря — на шаге входа."
+      },
+      {
+        "id": "c008",
+        "text": "Те, кто вошёл в приложение, дальше действуют быстро и успешно",
+        "kind": "user",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/usability_notes.md",
+        "quote": "4. **После входа всё просто.** Оплату и смену пароля Wi-Fi выполнили все, кто вошёл (4 из 6), в среднем за 1,5 минуты.",
+        "quote_found": true,
+        "comment": "Прямо подтверждено: все вошедшие (4 из 6) выполнили задачи в среднем за 1,5 минуты; воронка также показывает 96,9% перехода от входа к главному экрану."
+      },
+      {
+        "id": "c009",
+        "text": "4 из 6 пользователей выполнили задачу за 1,5 минуты",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/usability_notes.md",
+        "quote": "4. **После входа всё просто.** Оплату и смену пароля Wi-Fi выполнили все, кто вошёл (4 из 6), в среднем за 1,5 минуты.",
+        "quote_found": true,
+        "comment": "Дословное соответствие: 4 из 6 участников, в среднем за 1,5 минуты."
+      },
+      {
+        "id": "c010",
+        "text": "5 из 6 пользователей не знают номер договора",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/usability_notes.md",
+        "quote": "1. **Вход по номеру договора — главный барьер.** 5 из 6 не знали номер договора.",
+        "quote_found": true,
+        "comment": "Дословное соответствие утверждению."
+      },
+      {
+        "id": "c011",
+        "text": "4 из 6 пользователей интуитивно вводят номер телефона",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/usability_notes.md",
+        "quote": "4 из 6 сразу ввели номер мобильного в поле «Номер договора».",
+        "quote_found": true,
+        "comment": "Прямо указано в заметках юзабилити-тестирования."
+      },
+      {
+        "id": "c012",
+        "text": "Пользователи У3 и У4 бросили задачу",
+        "kind": "user",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/usability_notes.md",
+        "quote": "У3 и У4 бросили задачу на этом шаге.",
+        "quote_found": true,
+        "comment": "Прямо указано в пункте 1 заметок."
+      },
+      {
+        "id": "c013",
+        "text": "Пароль восстанавливается по e-mail, который есть только у 46% абонентов",
+        "kind": "product",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_facts.md",
+        "quote": "восстановление пароля — по e-mail, указанному в договоре (e-mail есть у ≈ 46% абонентов).",
+        "quote_found": true,
+        "comment": "Число 46% прямо приведено в описании функции входа."
+      },
+      {
+        "id": "c014",
+        "text": "Мобильный телефон есть у 93% абонентов",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_facts.md",
+        "quote": "Номер мобильного телефона указан в договоре у ≈ 93% абонентов.",
+        "quote_found": true,
+        "comment": "Число 93% прямо приведено в описании функции входа."
+      },
+      {
+        "id": "c015",
+        "text": "Конверсия «начали вход → успешно вошли» в тесте SMS-входа составляет ~75–80%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/onboarding_funnel.csv",
+        "quote": "| 2026-10-19 | Android — тест входа по SMS (10%) | 377 | 352 | 315 | 248 | 240 | 141 |",
+        "quote_found": true,
+        "comment": "Конверсия по неделям теста: 228/283=80,6%, 247/292=84,6%, 294/328=89,6%, 248/315=78,7%. Общая 1017/1218≈83,5%. Диапазон 75–80% выполняется только для одной недели (78,7%), остальные выше."
+      },
+      {
+        "id": "c016",
+        "text": "Конверсия «начали вход → успешно вошли» в контрольной группе составляет ~50%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/onboarding_funnel.csv",
+        "quote": "| 2026-10-12 | Android | 3433 | 3190 | 2852 | 1392 | 1354 | 826 |",
+        "quote_found": true,
+        "comment": "Конверсия контрольной группы (Android без теста) по неделям: 47,0%–56,0%, в среднем около 51%; для iOS — 49%–56%. Значение ~50% подтверждается расчётом."
+      },
+      {
+        "id": "c017",
+        "text": "На неделе 12.10 конверсия составила 294/328 = 90% в тесте против 1392/2852 = 49% в контроле",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/onboarding_funnel.csv",
+        "quote": "| 2026-10-12 | Android — тест входа по SMS (10%) | 403 | 361 | 328 | 294 | 289 | 206 |\n| 2026-10-12 | Android | 3433 | 3190 | 2852 | 1392 | 1354 | 826 |",
+        "quote_found": true,
+        "comment": "294/328 = 89,6% ≈ 90%; 1392/2852 = 48,8% ≈ 49%. Числа совпадают с округлением."
+      },
+      {
+        "id": "c018",
+        "text": "Выборка теста SMS-входа составляет 10% Android",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_facts.md",
+        "quote": "Тест: вход по SMS-коду на номер телефона из договора — с 28.09.2026 на 10% новых установок Android.",
+        "quote_found": true,
+        "comment": "Доля 10% прямо указана в описании теста."
+      },
+      {
+        "id": "c019",
+        "text": "Разрыв конверсии между тестом и контролем стабилен во всех четырёх неделях",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/onboarding_funnel.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Разрыв конверсии (тест минус контроль Android) по неделям: 28,3 п.п. (28.09), 34,6 п.п. (05.10), 40,8 п.п. (12.10), 29,2 п.п. (19.10) — варьируется, не стабилен."
+      },
+      {
+        "id": "c020",
+        "text": "Deck-of-cards туториалы не улучшают выполнение задач",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/nng_mobile_onboarding.md",
+        "quote": "our research on deck-of-cards tutorials, a method of instructional onboarding, showed that tutorials didn't improve task performance.",
+        "quote_found": false,
+        "comment": "Прямая цитата из исследования NN/g, приведённого в материалах."
+      },
+      {
+        "id": "c021",
+        "text": "Deck-of-cards туториалы нагружают память",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/nng_mobile_onboarding.md",
+        "quote": "Deck-of-cards tutorials usually are presented immediately when the app is launched and provide instructions for how to use its interface in a deck-of-card format (similar to a carousel). This type of onboarding, particularly in relatively simple mobile apps, tends to make the interface appear more complicated than it actually is, and strains user's memory.",
+        "quote_found": false,
+        "comment": "Прямая цитата из статьи NN/g подтверждает, что туториалы типа deck-of-cards нагружают память пользователя."
+      },
+      {
+        "id": "c022",
+        "text": "5 из 6 пользователей пропустили карусель",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/usability_notes.md",
+        "quote": "Карусель «Возможности приложения» (прототип из 5 экранов, показывали после входа) пропустили 5 из 6, не дочитав.",
+        "quote_found": true,
+        "comment": "В заметках юзабилити-тестирования прямо указано, что 5 из 6 участников пропустили карусель."
+      },
+      {
+        "id": "c023",
+        "text": "Никто из пользователей не вспомнил содержание карусели",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/usability_notes.md",
+        "quote": "Через 10 минут ни один участник не вспомнил, что было на экранах.",
+        "quote_found": true,
+        "comment": "Прямое указание в материалах: ни один из 6 участников не вспомнил содержание карусели через 10 минут."
+      },
+      {
+        "id": "c024",
+        "text": "Пятиэкранный туториал не решает барьер входа",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/usability_notes.md",
+        "quote": "Вход по номеру договора — главный барьер. 5 из 6 не знали номер договора. [...] Карусель «Возможности приложения» (прототип из 5 экранов, показывали после входа) пропустили 5 из 6, не дочитав.",
+        "quote_found": false,
+        "comment": "Барьер входа — это шаг входа по номеру договора, а пятиэкранный туториал (карусель) показывался уже после входа, следовательно, он не решает барьер входа."
+      },
+      {
+        "id": "c025",
+        "text": "Пуш «в одно касание» не решает барьер входа",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_facts.md",
+        "quote": "Сейчас: номер договора + пароль из договора; восстановление пароля — по e-mail, указанному в договоре [...] Запрос разрешения показывается при первом запуске, до входа.",
+        "quote_found": false,
+        "comment": "Барьер входа — это авторизация по номеру договора, а пуш-уведомления запрашиваются до входа и не влияют на возможность входа, следовательно, пуш «в одно касание» не решает барьер входа."
+      },
+      {
+        "id": "c026",
+        "text": "Текущая конверсия входа в приложение составляет ~50%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/onboarding_funnel.csv",
+        "quote": "| 2026-08-03 | Android | 3714 | 3433 | 3009 | 1684 | 1656 | 1072 |",
+        "quote_found": true,
+        "comment": "Конверсия входа (login_success / login_started) по всем неделям: сумма login_success ≈ 29045, сумма login_started ≈ 54902, отношение ≈ 52.9% (~50%)."
+      },
+      {
+        "id": "c027",
+        "text": "54% абонентов сталкиваются с тупиком с e-mail при восстановлении доступа",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_facts.md",
+        "quote": "восстановление пароля — по e-mail, указанному в договоре (e-mail есть у ≈ 46% абонентов).",
+        "quote_found": true,
+        "comment": "Если e-mail есть у ≈46% абонентов, то у 100% − 46% = 54% его нет, что означает тупик при восстановлении доступа по e-mail."
+      },
+      {
+        "id": "c028",
+        "text": "4 из 6 пользователей отклонили запрос пуш-разрешения до того, как поняли ценность продукта",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/usability_notes.md",
+        "quote": "Запрос уведомлений при первом запуске отклонили 4 из 6: «ещё не понял, зачем мне это приложение».",
+        "quote_found": true,
+        "comment": "Прямая цитата из заметок юзабилити-тестирования: 4 из 6 отклонили запрос пуш-разрешения, не поняв ценности продукта."
+      },
+      {
+        "id": "c029",
+        "text": "Количество обращений в КЦ по причине оплаты и баланса составляет ~40 тыс. в месяц",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/callcenter_reasons.csv",
+        "quote": "| 2026-06 | Оплата и баланс | 40211 |",
+        "quote_found": true,
+        "comment": "По всем месяцам (июнь–октябрь 2026) значения по причине «Оплата и баланс» составляют 39567–40489, то есть ~40 тыс. в месяц."
+      },
+      {
+        "id": "c030",
+        "text": "Количество обращений в КЦ по причине отсутствия интернета/диагностики составляет ~35 тыс. в месяц",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/callcenter_reasons.csv",
+        "quote": "| 2026-06 | Нет интернета / диагностика | 35443 |",
+        "quote_found": true,
+        "comment": "По всем месяцам значения по причине «Нет интернета / диагностика» составляют 34585–36241, то есть ~35 тыс. в месяц."
+      },
+      {
+        "id": "c031",
+        "text": "Количество обращений в КЦ по причине вызова мастера составляет ~12 тыс. в месяц",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/callcenter_reasons.csv",
+        "quote": "| 2026-06 | Вызов мастера | 11874 |",
+        "quote_found": true,
+        "comment": "Значения по месяцам: 11874, 12304, 12021, 11951, 12261 — в среднем около 12,1 тыс., что соответствует ~12 тыс."
+      },
+      {
+        "id": "c032",
+        "text": "Количество обращений в КЦ по причине смены пароля Wi-Fi составляет ~9 тыс. в месяц",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/callcenter_reasons.csv",
+        "quote": "| 2026-06 | Смена пароля Wi-Fi | 9259 |",
+        "quote_found": true,
+        "comment": "Значения по месяцам: 9259, 8342, 9363, 8960, 8885 — в среднем около 9,0 тыс., что соответствует ~9 тыс."
+      },
+      {
+        "id": "c033",
+        "text": "~42% абонентов имеют собственный роутер",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_facts.md",
+        "quote": "Только для роутеров, выданных «Восход Телеком» (≈ 58% абонентов)",
+        "quote_found": true,
+        "comment": "100% − 58% = 42% абонентов имеют собственный роутер"
+      },
+      {
+        "id": "c034",
+        "text": "Управление пакетами ТВ запланировано на 2027 год",
+        "kind": "product",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_facts.md",
+        "quote": "Управление пакетами ТВ | Нет; в планах на 2027 год",
+        "quote_found": true,
+        "comment": "Прямо указано в таблице функций"
+      },
+      {
+        "id": "c035",
+        "text": "Текущая доля установивших приложение, совершивших полезное действие за 7 дней, составляет ~25%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "до первого полезного действия доходит около четверти установивших",
+        "quote_found": true,
+        "comment": "Расчёт по materials/onboarding_funnel.csv: сумма first_action_7d = 17958, сумма installs = 68594, доля ≈ 26,2%, что соответствует «около четверти» (~25%)"
+      },
+      {
+        "id": "c036",
+        "text": "В приложении используется пятиэкранный туториал",
+        "kind": "product",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах пятиэкранный туториал упоминается как предложение («предлагает сделать») или прототип в юзабилити-тестах, а не как текущая используемая функция приложения"
+      },
+      {
+        "id": "c037",
+        "text": "Доля абонентов с роутером оператора составляет ~58%",
+        "kind": "user",
+        "chunk": 3,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_facts.md",
+        "quote": "Только для роутеров, выданных «Восход Телеком» (≈ 58% абонентов)",
+        "quote_found": true,
+        "comment": "Прямо указано ≈58%"
+      },
+      {
+        "id": "c038",
+        "text": "Доля абонентов со своим роутером составляет ~42%",
+        "kind": "user",
+        "chunk": 3,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_facts.md",
+        "quote": "Только для роутеров, выданных «Восход Телеком» (≈ 58% абонентов)",
+        "quote_found": true,
+        "comment": "100% − 58% = 42% абонентов со своим роутером"
+      },
+      {
+        "id": "c039",
+        "text": "Разрешение на пуш-уведомления отклоняют 4 из 6 пользователей",
+        "kind": "user",
+        "chunk": 3,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/usability_notes.md",
+        "quote": "Запрос уведомлений при первом запуске отклонили 4 из 6: «ещё не понял, зачем мне это приложение».",
+        "quote_found": true,
+        "comment": "Прямо указано в заметках юзабилити-тестирования"
+      },
+      {
+        "id": "c040",
+        "text": "Номер телефона из договора есть у 93% абонентов",
+        "kind": "user",
+        "chunk": 3,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_facts.md",
+        "quote": "Номер мобильного телефона указан в договоре у ≈ 93% абонентов.",
+        "quote_found": true,
+        "comment": "Прямо указано ≈93%"
+      },
+      {
+        "id": "c041",
+        "text": "Оценка приложения в магазинах приложений составляет 3,1/3,4",
+        "kind": "product",
+        "chunk": 3,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/product_facts.md",
+        "quote": "Средняя оценка в магазинах приложений: 3,1 (Google Play), 3,4 (App Store).",
+        "quote_found": true,
+        "comment": "Числа совпадают дословно с указанными в документе."
+      },
+      {
+        "id": "c042",
+        "text": "Помощь оператора в установке приложения во время звонка в контакт-центр переводит звонящих в приложение",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "3. Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о конверсии звонящих в приложение через помощь оператора во время звонка; есть лишь цель стратегии и упоминание звонка У1 без результата установки."
+      },
+      {
+        "id": "c043",
+        "text": "Данные не поддерживают гипотезу о пятиэкранном туториале и пуше «в одно касание»",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "4. План по этапам",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/usability_notes.md",
+        "quote": "Карусель «Возможности приложения» (прототип из 5 экранов, показывали после входа) пропустили 5 из 6, не дочитав. Через 10 минут ни один участник не вспомнил, что было на экранах. Запрос уведомлений при первом запуске отклонили 4 из 6: «ещё не понял, зачем мне это приложение».",
+        "quote_found": false,
+        "comment": "Юзабилити-тесты прямо показывают неэффективность 5-экранного туториала (пропущен 5/6, не запомнен) и низкую готовность к пушам (отклонены 4/6), что не поддерживает гипотезу."
+      }
+    ],
+    "all_extracted": [
+      {
+        "id": "c001",
+        "text": "Установка → первый запуск: ~92%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c002",
+        "text": "Первый запуск → начали вход: ~87%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c003",
+        "text": "Начали вход → успешно вошли: ~50%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c004",
+        "text": "Вошли → главный экран: ~97%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c005",
+        "text": "Главный экран → полезное действие за 7 дней: ~65%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c006",
+        "text": "Из 100 установок до полезного действия доходят ~25",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c007",
+        "text": "Основная потеря пользователей происходит на шаге входа, а не на главном экране",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c008",
+        "text": "Те, кто вошёл в приложение, дальше действуют быстро и успешно",
+        "kind": "user",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c009",
+        "text": "4 из 6 пользователей выполнили задачу за 1,5 минуты",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c010",
+        "text": "5 из 6 пользователей не знают номер договора",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c011",
+        "text": "4 из 6 пользователей интуитивно вводят номер телефона",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c012",
+        "text": "Пользователи У3 и У4 бросили задачу",
+        "kind": "user",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c013",
+        "text": "Пароль восстанавливается по e-mail, который есть только у 46% абонентов",
+        "kind": "product",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c014",
+        "text": "Мобильный телефон есть у 93% абонентов",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c015",
+        "text": "Конверсия «начали вход → успешно вошли» в тесте SMS-входа составляет ~75–80%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c016",
+        "text": "Конверсия «начали вход → успешно вошли» в контрольной группе составляет ~50%",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c017",
+        "text": "На неделе 12.10 конверсия составила 294/328 = 90% в тесте против 1392/2852 = 49% в контроле",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c018",
+        "text": "Выборка теста SMS-входа составляет 10% Android",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c019",
+        "text": "Разрыв конверсии между тестом и контролем стабилен во всех четырёх неделях",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c020",
+        "text": "Deck-of-cards туториалы не улучшают выполнение задач",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c021",
+        "text": "Deck-of-cards туториалы нагружают память",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c022",
+        "text": "5 из 6 пользователей пропустили карусель",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c023",
+        "text": "Никто из пользователей не вспомнил содержание карусели",
+        "kind": "number",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c024",
+        "text": "Пятиэкранный туториал не решает барьер входа",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c025",
+        "text": "Пуш «в одно касание» не решает барьер входа",
+        "kind": "causal",
+        "chunk": 1,
+        "section": "1. Главный вывод: проблема не в онбординге, а во входе"
+      },
+      {
+        "id": "c026",
+        "text": "Текущая конверсия входа в приложение составляет ~50%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c027",
+        "text": "54% абонентов сталкиваются с тупиком с e-mail при восстановлении доступа",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c028",
+        "text": "4 из 6 пользователей отклонили запрос пуш-разрешения до того, как поняли ценность продукта",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c029",
+        "text": "Количество обращений в КЦ по причине оплаты и баланса составляет ~40 тыс. в месяц",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c030",
+        "text": "Количество обращений в КЦ по причине отсутствия интернета/диагностики составляет ~35 тыс. в месяц",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c031",
+        "text": "Количество обращений в КЦ по причине вызова мастера составляет ~12 тыс. в месяц",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c032",
+        "text": "Количество обращений в КЦ по причине смены пароля Wi-Fi составляет ~9 тыс. в месяц",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c033",
+        "text": "~42% абонентов имеют собственный роутер",
+        "kind": "user",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c034",
+        "text": "Управление пакетами ТВ запланировано на 2027 год",
+        "kind": "product",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c035",
+        "text": "Текущая доля установивших приложение, совершивших полезное действие за 7 дней, составляет ~25%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c036",
+        "text": "В приложении используется пятиэкранный туториал",
+        "kind": "product",
+        "chunk": 2,
+        "section": "2. Продуктовая стратегия"
+      },
+      {
+        "id": "c037",
+        "text": "Доля абонентов с роутером оператора составляет ~58%",
+        "kind": "user",
+        "chunk": 3,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c038",
+        "text": "Доля абонентов со своим роутером составляет ~42%",
+        "kind": "user",
+        "chunk": 3,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c039",
+        "text": "Разрешение на пуш-уведомления отклоняют 4 из 6 пользователей",
+        "kind": "user",
+        "chunk": 3,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c040",
+        "text": "Номер телефона из договора есть у 93% абонентов",
+        "kind": "user",
+        "chunk": 3,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c041",
+        "text": "Оценка приложения в магазинах приложений составляет 3,1/3,4",
+        "kind": "product",
+        "chunk": 3,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c042",
+        "text": "Помощь оператора в установке приложения во время звонка в контакт-центр переводит звонящих в приложение",
+        "kind": "causal",
+        "chunk": 3,
+        "section": "3. Коммуникационная стратегия"
+      },
+      {
+        "id": "c043",
+        "text": "Данные не поддерживают гипотезу о пятиэкранном туториале и пуше «в одно касание»",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "4. План по этапам"
+      }
+    ]
+  },
+  "options": null,
+  "promises": {
+    "total": 0,
+    "unbacked": 0,
+    "unclear": 0,
+    "backed": 0,
+    "items": []
+  },
+  "validation_plan": null,
+  "expected_choice": null,
+  "injection": null,
+  "heuristics": {
+    "status_quo": 0,
+    "kill": 0,
+    "baseline": 0,
+    "guardrail": 0,
+    "kill_criterion": 0,
+    "date_or_term": 0,
+    "injection_flag": 0
+  },
+  "judge_usage": {
+    "calls": 9,
+    "prompt_tokens": 27035,
+    "output_tokens": 28196,
+    "duration_s": 424.55,
+    "cost_estimate": {
+      "usd": 0.078136,
+      "rub": 6.2509,
+      "estimated": false,
+      "basis": "config/prices.yaml (as_of 2026-11-04): $0.7/2.1 за 1 млн токенов вход/выход"
+    },
+    "log": [
+      {
+        "step": "extract_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 831,
+        "output_tokens": 2371,
+        "duration_s": 30.69,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1155,
+        "output_tokens": 2059,
+        "duration_s": 38.43,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1056,
+        "output_tokens": 2090,
+        "duration_s": 50.3,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 704,
+        "output_tokens": 1651,
+        "duration_s": 37.79,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4652,
+        "output_tokens": 4613,
+        "duration_s": 68.03,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4705,
+        "output_tokens": 4788,
+        "duration_s": 37.61,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4689,
+        "output_tokens": 4698,
+        "duration_s": 54.62,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4680,
+        "output_tokens": 4073,
+        "duration_s": 70.17,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4563,
+        "output_tokens": 1853,
+        "duration_s": 36.91,
+        "attempts": 1,
+        "errors": []
+      }
+    ]
+  },
+  "errors": []
+}

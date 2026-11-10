@@ -1,0 +1,57 @@
+[importlinter]
+root_package = strategist
+include_external_packages = True
+
+# Правило зависимостей чистой архитектуры: импорт разрешён только «вниз».
+# interfaces → bootstrap → infrastructure → application → domain
+[importlinter:contract:layers]
+name = Слои чистой архитектуры
+type = layers
+layers =
+    strategist.interfaces
+    strategist.bootstrap
+    strategist.infrastructure
+    strategist.application
+    strategist.domain
+
+# Интерфейсы (CLI, MCP, UI) работают только через use cases и composition root.
+[importlinter:contract:interfaces-no-infrastructure]
+name = Интерфейсы не импортируют инфраструктуру напрямую
+type = forbidden
+source_modules =
+    strategist.interfaces
+forbidden_modules =
+    strategist.infrastructure
+# Через composition root (bootstrap) — можно; прямой импорт — нет.
+allow_indirect_imports = True
+
+# Домен и сценарии не знают о фреймворках, моделях, хранилищах и сети.
+# Pydantic — оговорённое исключение (decision-1): валидация без IO.
+[importlinter:contract:core-no-frameworks]
+name = Домен и application не зависят от фреймворков и IO-библиотек
+type = forbidden
+source_modules =
+    strategist.domain
+    strategist.application
+forbidden_modules =
+    langgraph
+    ollama
+    httpx
+    pandas
+    duckdb
+    numpy
+    openpyxl
+    pypdf
+    docx
+    trafilatura
+    sqlite_vec
+    typer
+    rich
+    mcp
+    fastapi
+    starlette
+    sse_starlette
+    uvicorn
+    yaml
+    dotenv
+    markdown

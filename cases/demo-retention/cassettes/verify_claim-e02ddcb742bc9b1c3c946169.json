@@ -1,0 +1,26 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"properties\":{\"label\":\"entailment\",\"confidence\":1,\"rationale\":\"Цитата полностью подтверждает дату, расширение аудитории и изменение стоимости подключения.\"},\"required\":[\"label\",\"confidence\"],\"type\":\"object\"}",
+ "data": {
+  "properties": {
+   "label": "entailment",
+   "confidence": 1,
+   "rationale": "Цитата полностью подтверждает дату, расширение аудитории и изменение стоимости подключения."
+  },
+  "required": [
+   "label",
+   "confidence"
+  ],
+  "type": "object"
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 409,
+  "output_tokens": 45,
+  "estimated": false,
+  "latency_ms": 604,
+  "escalated": false
+ }
+}

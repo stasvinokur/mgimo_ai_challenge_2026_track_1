@@ -1,0 +1,1190 @@
+{
+  "per_config": {
+    "gpt-oss-120b@medium": {
+      "model": "gpt-oss:120b-cloud",
+      "think": "medium",
+      "stage": "base",
+      "n": 10,
+      "http_ok": 10,
+      "valid_strict": 1.0,
+      "valid_lenient": 1.0,
+      "parse_modes": {
+        "strict": 10
+      },
+      "latency_p50_s": 2.73,
+      "latency_max_s": 6.4,
+      "prompt_tokens_mean": 576.9,
+      "eval_tokens_mean": 1012.9,
+      "eval_tokens_max": 1638,
+      "judge_primary_mean": 3.4,
+      "judge_primary_hard_mean": 2.667,
+      "judge_second_hard_mean": 2.667,
+      "auto_mean": 0.871,
+      "cost_usd_total": 0.006943,
+      "cost_usd_per_call": 0.000694,
+      "logprobs_returned": false,
+      "errors": []
+    },
+    "gpt-oss-20b-cloud@low": {
+      "model": "gpt-oss:20b-cloud",
+      "think": "low",
+      "stage": "base",
+      "n": 10,
+      "http_ok": 10,
+      "valid_strict": 1.0,
+      "valid_lenient": 1.0,
+      "parse_modes": {
+        "strict": 10
+      },
+      "latency_p50_s": 4.11,
+      "latency_max_s": 7.17,
+      "prompt_tokens_mean": 576.9,
+      "eval_tokens_mean": 414.5,
+      "eval_tokens_max": 745,
+      "judge_primary_mean": 3.0,
+      "judge_primary_hard_mean": 3.0,
+      "judge_second_hard_mean": 2.667,
+      "auto_mean": 0.864,
+      "cost_usd_total": 0.001647,
+      "cost_usd_per_call": 0.000165,
+      "logprobs_returned": false,
+      "errors": []
+    },
+    "gemma4-31b@nothink": {
+      "model": "gemma4:31b-cloud",
+      "think": false,
+      "stage": "base",
+      "n": 10,
+      "http_ok": 10,
+      "valid_strict": 1.0,
+      "valid_lenient": 1.0,
+      "parse_modes": {
+        "strict": 10
+      },
+      "latency_p50_s": 1.59,
+      "latency_max_s": 3.31,
+      "prompt_tokens_mean": 535.9,
+      "eval_tokens_mean": 422.6,
+      "eval_tokens_max": 814,
+      "judge_primary_mean": 4.4,
+      "judge_primary_hard_mean": 4.667,
+      "judge_second_hard_mean": 4.667,
+      "auto_mean": 1.0,
+      "cost_usd_total": 0.002441,
+      "cost_usd_per_call": 0.000244,
+      "logprobs_returned": false,
+      "errors": []
+    },
+    "deepseek-v4.1-flash@nothink": {
+      "model": "deepseek-v4.1-flash:cloud",
+      "think": false,
+      "stage": "base",
+      "n": 10,
+      "http_ok": 10,
+      "valid_strict": 1.0,
+      "valid_lenient": 1.0,
+      "parse_modes": {
+        "strict": 10
+      },
+      "latency_p50_s": 2.01,
+      "latency_max_s": 7.54,
+      "prompt_tokens_mean": 550.2,
+      "eval_tokens_mean": 690.9,
+      "eval_tokens_max": 1608,
+      "judge_primary_mean": 4.8,
+      "judge_primary_hard_mean": 4.667,
+      "judge_second_hard_mean": 5.0,
+      "auto_mean": 1.0,
+      "cost_usd_total": 0.009941,
+      "cost_usd_per_call": 0.000994,
+      "logprobs_returned": false,
+      "errors": []
+    },
+    "glm-5.3-flash@nothink": {
+      "model": "glm-5.3-flash:cloud",
+      "think": false,
+      "stage": "base",
+      "n": 10,
+      "http_ok": 10,
+      "valid_strict": 0.0,
+      "valid_lenient": 1.0,
+      "parse_modes": {
+        "braces": 6,
+        "embedded": 4
+      },
+      "latency_p50_s": 16.2,
+      "latency_max_s": 60.35,
+      "prompt_tokens_mean": 521.3,
+      "eval_tokens_mean": 3103.5,
+      "eval_tokens_max": 7117,
+      "judge_primary_mean": 3.0,
+      "judge_primary_hard_mean": 1.0,
+      "judge_second_hard_mean": 1.667,
+      "auto_mean": 0.971,
+      "cost_usd_total": 0.016299,
+      "cost_usd_per_call": 0.00163,
+      "logprobs_returned": false,
+      "errors": []
+    },
+    "gpt-oss-20b-local@low": {
+      "model": "gpt-oss:20b",
+      "think": "low",
+      "stage": "base",
+      "n": 10,
+      "http_ok": 10,
+      "valid_strict": 1.0,
+      "valid_lenient": 1.0,
+      "parse_modes": {
+        "strict": 10
+      },
+      "latency_p50_s": 10.5,
+      "latency_max_s": 27.9,
+      "prompt_tokens_mean": 576.9,
+      "eval_tokens_mean": 399.1,
+      "eval_tokens_max": 828,
+      "judge_primary_mean": 3.0,
+      "judge_primary_hard_mean": 3.0,
+      "judge_second_hard_mean": 2.667,
+      "auto_mean": 0.855,
+      "cost_usd_total": 0.0,
+      "cost_usd_per_call": 0.0,
+      "logprobs_returned": true,
+      "errors": []
+    },
+    "gpt-oss-120b@low": {
+      "model": "gpt-oss:120b-cloud",
+      "think": "low",
+      "stage": "think",
+      "n": 3,
+      "http_ok": 3,
+      "valid_strict": 1.0,
+      "valid_lenient": 1.0,
+      "parse_modes": {
+        "strict": 3
+      },
+      "latency_p50_s": 3.61,
+      "latency_max_s": 4.54,
+      "prompt_tokens_mean": 633.667,
+      "eval_tokens_mean": 854.333,
+      "eval_tokens_max": 978,
+      "judge_primary_mean": 3.333,
+      "judge_primary_hard_mean": 3.333,
+      "judge_second_hard_mean": 3.333,
+      "auto_mean": 0.9,
+      "cost_usd_total": 0.001823,
+      "cost_usd_per_call": 0.000608,
+      "logprobs_returned": false,
+      "errors": []
+    },
+    "gpt-oss-120b@high": {
+      "model": "gpt-oss:120b-cloud",
+      "think": "high",
+      "stage": "think",
+      "n": 3,
+      "http_ok": 3,
+      "valid_strict": 1.0,
+      "valid_lenient": 1.0,
+      "parse_modes": {
+        "strict": 3
+      },
+      "latency_p50_s": 6.42,
+      "latency_max_s": 9.69,
+      "prompt_tokens_mean": 633.667,
+      "eval_tokens_mean": 2921.333,
+      "eval_tokens_max": 4132,
+      "judge_primary_mean": 2.667,
+      "judge_primary_hard_mean": 2.667,
+      "judge_second_hard_mean": 2.333,
+      "auto_mean": 0.8,
+      "cost_usd_total": 0.005544,
+      "cost_usd_per_call": 0.001848,
+      "logprobs_returned": false,
+      "errors": []
+    },
+    "gpt-oss-20b-cloud@medium": {
+      "model": "gpt-oss:20b-cloud",
+      "think": "medium",
+      "stage": "think",
+      "n": 3,
+      "http_ok": 3,
+      "valid_strict": 1.0,
+      "valid_lenient": 1.0,
+      "parse_modes": {
+        "strict": 3
+      },
+      "latency_p50_s": 11.34,
+      "latency_max_s": 12.2,
+      "prompt_tokens_mean": 633.667,
+      "eval_tokens_mean": 1198.0,
+      "eval_tokens_max": 1340,
+      "judge_primary_mean": 2.0,
+      "judge_primary_hard_mean": 2.0,
+      "judge_second_hard_mean": 1.667,
+      "auto_mean": 0.8,
+      "cost_usd_total": 0.001211,
+      "cost_usd_per_call": 0.000404,
+      "logprobs_returned": false,
+      "errors": []
+    },
+    "deepseek-v4.1-flash@think": {
+      "model": "deepseek-v4.1-flash:cloud",
+      "think": true,
+      "stage": "think",
+      "n": 3,
+      "http_ok": 3,
+      "valid_strict": 1.0,
+      "valid_lenient": 1.0,
+      "parse_modes": {
+        "strict": 3
+      },
+      "latency_p50_s": 11.18,
+      "latency_max_s": 21.68,
+      "prompt_tokens_mean": 639.0,
+      "eval_tokens_mean": 2304.333,
+      "eval_tokens_max": 3602,
+      "judge_primary_mean": 5.0,
+      "judge_primary_hard_mean": 5.0,
+      "judge_second_hard_mean": 5.0,
+      "auto_mean": 1.0,
+      "cost_usd_total": 0.008871,
+      "cost_usd_per_call": 0.002957,
+      "logprobs_returned": false,
+      "errors": []
+    }
+  },
+  "per_prompt": {
+    "frame": {
+      "gpt-oss-120b@medium": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 2.994,
+        "eval_count": 1073,
+        "auto": null,
+        "judge": 4,
+        "errors": []
+      },
+      "gpt-oss-20b-cloud@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 4.383,
+        "eval_count": 400,
+        "auto": null,
+        "judge": 3,
+        "errors": []
+      },
+      "gemma4-31b@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 1.802,
+        "eval_count": 399,
+        "auto": null,
+        "judge": 4,
+        "errors": []
+      },
+      "deepseek-v4.1-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 4.52,
+        "eval_count": 985,
+        "auto": null,
+        "judge": 5,
+        "errors": []
+      },
+      "glm-5.3-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": false,
+        "latency_s": 23.126,
+        "eval_count": 3729,
+        "auto": null,
+        "judge": 1,
+        "errors": []
+      },
+      "gpt-oss-20b-local@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 11.211,
+        "eval_count": 370,
+        "auto": null,
+        "judge": 3,
+        "errors": []
+      }
+    },
+    "extract_claims": {
+      "gpt-oss-120b@medium": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 1.55,
+        "eval_count": 678,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      },
+      "gpt-oss-20b-cloud@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 3.946,
+        "eval_count": 394,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      },
+      "gemma4-31b@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 1.216,
+        "eval_count": 361,
+        "auto": 1.0,
+        "judge": 4,
+        "errors": []
+      },
+      "deepseek-v4.1-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 1.89,
+        "eval_count": 600,
+        "auto": 1.0,
+        "judge": 4,
+        "errors": []
+      },
+      "glm-5.3-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": false,
+        "latency_s": 11.725,
+        "eval_count": 2076,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "gpt-oss-20b-local@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 7.741,
+        "eval_count": 367,
+        "auto": 0.9333333333333332,
+        "judge": 3,
+        "errors": []
+      }
+    },
+    "classify_claims": {
+      "gpt-oss-120b@medium": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 1.569,
+        "eval_count": 566,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "gpt-oss-20b-cloud@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 4.277,
+        "eval_count": 407,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "gemma4-31b@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 0.981,
+        "eval_count": 217,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "deepseek-v4.1-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 1.061,
+        "eval_count": 224,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "glm-5.3-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": false,
+        "latency_s": 3.877,
+        "eval_count": 649,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "gpt-oss-20b-local@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 4.756,
+        "eval_count": 198,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      }
+    },
+    "options": {
+      "gpt-oss-120b@medium": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 4.851,
+        "eval_count": 1379,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      },
+      "gpt-oss-20b-cloud@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 7.174,
+        "eval_count": 745,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      },
+      "gemma4-31b@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 3.312,
+        "eval_count": 814,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "deepseek-v4.1-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 7.541,
+        "eval_count": 1608,
+        "auto": 1.0,
+        "judge": 4,
+        "errors": []
+      },
+      "glm-5.3-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": false,
+        "latency_s": 60.351,
+        "eval_count": 7117,
+        "auto": 1.0,
+        "judge": 1,
+        "errors": []
+      },
+      "gpt-oss-20b-local@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 13.149,
+        "eval_count": 642,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      },
+      "gpt-oss-120b@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 4.541,
+        "eval_count": 978,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      },
+      "gpt-oss-120b@high": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 9.69,
+        "eval_count": 4132,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      },
+      "gpt-oss-20b-cloud@medium": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 11.338,
+        "eval_count": 1340,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      },
+      "deepseek-v4.1-flash@think": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 21.683,
+        "eval_count": 3602,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      }
+    },
+    "premortem": {
+      "gpt-oss-120b@medium": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 6.401,
+        "eval_count": 1638,
+        "auto": null,
+        "judge": 4,
+        "errors": []
+      },
+      "gpt-oss-20b-cloud@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 5.677,
+        "eval_count": 614,
+        "auto": null,
+        "judge": 3,
+        "errors": []
+      },
+      "gemma4-31b@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 3.048,
+        "eval_count": 704,
+        "auto": null,
+        "judge": 4,
+        "errors": []
+      },
+      "deepseek-v4.1-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 5.456,
+        "eval_count": 1236,
+        "auto": null,
+        "judge": 5,
+        "errors": []
+      },
+      "glm-5.3-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": false,
+        "latency_s": 33.471,
+        "eval_count": 4843,
+        "auto": null,
+        "judge": 1,
+        "errors": []
+      },
+      "gpt-oss-20b-local@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 27.902,
+        "eval_count": 828,
+        "auto": null,
+        "judge": 3,
+        "errors": []
+      },
+      "gpt-oss-120b@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 3.611,
+        "eval_count": 917,
+        "auto": null,
+        "judge": 4,
+        "errors": []
+      },
+      "gpt-oss-120b@high": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 6.42,
+        "eval_count": 2445,
+        "auto": null,
+        "judge": 4,
+        "errors": []
+      },
+      "gpt-oss-20b-cloud@medium": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 9.434,
+        "eval_count": 1004,
+        "auto": null,
+        "judge": 2,
+        "errors": []
+      },
+      "deepseek-v4.1-flash@think": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 11.178,
+        "eval_count": 2443,
+        "auto": null,
+        "judge": 5,
+        "errors": []
+      }
+    },
+    "promise_check": {
+      "gpt-oss-120b@medium": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 2.7,
+        "eval_count": 1110,
+        "auto": 0.6,
+        "judge": 1,
+        "errors": []
+      },
+      "gpt-oss-20b-cloud@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 3.237,
+        "eval_count": 332,
+        "auto": 0.8,
+        "judge": 3,
+        "errors": []
+      },
+      "gemma4-31b@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 1.247,
+        "eval_count": 373,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "deepseek-v4.1-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 1.37,
+        "eval_count": 368,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "glm-5.3-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": false,
+        "latency_s": 16.131,
+        "eval_count": 2389,
+        "auto": 0.8,
+        "judge": 1,
+        "errors": []
+      },
+      "gpt-oss-20b-local@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 15.33,
+        "eval_count": 332,
+        "auto": 0.8,
+        "judge": 3,
+        "errors": []
+      },
+      "gpt-oss-120b@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 2.261,
+        "eval_count": 668,
+        "auto": 0.8,
+        "judge": 3,
+        "errors": []
+      },
+      "gpt-oss-120b@high": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 4.155,
+        "eval_count": 2187,
+        "auto": 0.6,
+        "judge": 1,
+        "errors": []
+      },
+      "gpt-oss-20b-cloud@medium": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 12.204,
+        "eval_count": 1250,
+        "auto": 0.6,
+        "judge": 1,
+        "errors": []
+      },
+      "deepseek-v4.1-flash@think": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 2.779,
+        "eval_count": 868,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      }
+    },
+    "derived_metric": {
+      "gpt-oss-120b@medium": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 2.764,
+        "eval_count": 1146,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "gpt-oss-20b-cloud@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 5.636,
+        "eval_count": 448,
+        "auto": 0.25,
+        "judge": 3,
+        "errors": []
+      },
+      "gemma4-31b@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 2.464,
+        "eval_count": 439,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "deepseek-v4.1-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 1.56,
+        "eval_count": 361,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "glm-5.3-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": false,
+        "latency_s": 16.263,
+        "eval_count": 3149,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "gpt-oss-20b-local@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 17.907,
+        "eval_count": 414,
+        "auto": 0.25,
+        "judge": 3,
+        "errors": []
+      }
+    },
+    "comms": {
+      "gpt-oss-120b@medium": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 2.528,
+        "eval_count": 913,
+        "auto": null,
+        "judge": 5,
+        "errors": []
+      },
+      "gpt-oss-20b-cloud@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 3.733,
+        "eval_count": 396,
+        "auto": null,
+        "judge": 1,
+        "errors": []
+      },
+      "gemma4-31b@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 2.059,
+        "eval_count": 527,
+        "auto": null,
+        "judge": 4,
+        "errors": []
+      },
+      "deepseek-v4.1-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 4.088,
+        "eval_count": 880,
+        "auto": null,
+        "judge": 5,
+        "errors": []
+      },
+      "glm-5.3-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": false,
+        "latency_s": 24.419,
+        "eval_count": 4098,
+        "auto": null,
+        "judge": 1,
+        "errors": []
+      },
+      "gpt-oss-20b-local@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 9.781,
+        "eval_count": 469,
+        "auto": null,
+        "judge": 1,
+        "errors": []
+      }
+    },
+    "experiment": {
+      "gpt-oss-120b@medium": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 4.706,
+        "eval_count": 1122,
+        "auto": 0.5,
+        "judge": 1,
+        "errors": []
+      },
+      "gpt-oss-20b-cloud@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 1.996,
+        "eval_count": 186,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      },
+      "gemma4-31b@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 1.374,
+        "eval_count": 231,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      },
+      "deepseek-v4.1-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 2.123,
+        "eval_count": 381,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "glm-5.3-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": false,
+        "latency_s": 15.68,
+        "eval_count": 2112,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "gpt-oss-20b-local@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 3.962,
+        "eval_count": 177,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      }
+    },
+    "injection_screen": {
+      "gpt-oss-120b@medium": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 1.619,
+        "eval_count": 504,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      },
+      "gpt-oss-20b-cloud@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 2.355,
+        "eval_count": 223,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      },
+      "gemma4-31b@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 0.817,
+        "eval_count": 161,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "deepseek-v4.1-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 1.404,
+        "eval_count": 266,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "glm-5.3-flash@nothink": {
+        "valid_lenient": true,
+        "valid_strict": false,
+        "latency_s": 7.208,
+        "eval_count": 873,
+        "auto": 1.0,
+        "judge": 5,
+        "errors": []
+      },
+      "gpt-oss-20b-local@low": {
+        "valid_lenient": true,
+        "valid_strict": true,
+        "latency_s": 4.324,
+        "eval_count": 194,
+        "auto": 1.0,
+        "judge": 3,
+        "errors": []
+      }
+    }
+  },
+  "judge_agreement": {
+    "pairs": 30,
+    "exact": 0.733,
+    "within_1": 0.967,
+    "pearson": 0.907
+  },
+  "judge_cost_usd": 0.29618,
+  "probes": {
+    "gpt-oss:120b-cloud": {
+      "status": 200,
+      "format_enforced": false,
+      "logprobs_returned": false,
+      "error": null,
+      "latency_s": 1.504,
+      "limit_headers": {}
+    },
+    "gpt-oss:20b-cloud": {
+      "status": 200,
+      "format_enforced": false,
+      "logprobs_returned": false,
+      "error": null,
+      "latency_s": 4.563,
+      "limit_headers": {}
+    },
+    "gemma4:31b-cloud": {
+      "status": 200,
+      "format_enforced": false,
+      "logprobs_returned": false,
+      "error": null,
+      "latency_s": 0.558,
+      "limit_headers": {}
+    },
+    "deepseek-v4.1-flash:cloud": {
+      "status": 200,
+      "format_enforced": false,
+      "logprobs_returned": false,
+      "error": null,
+      "latency_s": 0.801,
+      "limit_headers": {}
+    },
+    "glm-5.3-flash:cloud": {
+      "status": 200,
+      "format_enforced": false,
+      "logprobs_returned": false,
+      "error": null,
+      "latency_s": 4.733,
+      "limit_headers": {}
+    },
+    "gpt-oss:20b": {
+      "status": 200,
+      "format_enforced": true,
+      "logprobs_returned": true,
+      "error": null,
+      "latency_s": 11.977,
+      "limit_headers": {}
+    },
+    "mistral-large-4:cloud": {
+      "status": 200,
+      "format_enforced": false,
+      "logprobs_returned": false,
+      "error": null,
+      "latency_s": 6.692,
+      "limit_headers": {}
+    },
+    "kimi-k2.6:cloud": {
+      "status": 200,
+      "format_enforced": false,
+      "logprobs_returned": false,
+      "error": null,
+      "latency_s": 4.933,
+      "limit_headers": {}
+    },
+    "deepseek-v3.1:671b-cloud": {
+      "status": 410,
+      "format_enforced": false,
+      "logprobs_returned": false,
+      "error": "deepseek-v3.1:671b was retired on July 15, 2026. Try glm-5.3-flash:cloud. (ref: 21f83a92-d60b-4874-8039-de14367c1a57)",
+      "latency_s": 0.202,
+      "limit_headers": {}
+    },
+    "qwen3-coder:480b-cloud": {
+      "status": 410,
+      "format_enforced": false,
+      "logprobs_returned": false,
+      "error": "qwen3-coder:480b was retired on July 15, 2026. Try glm-5.3-flash:cloud. (ref: 942e8272-6dec-4dc7-aaeb-e86ea223dff8)",
+      "latency_s": 0.197,
+      "limit_headers": {}
+    },
+    "qwen3-vl:235b-cloud": {
+      "status": 410,
+      "format_enforced": false,
+      "logprobs_returned": false,
+      "error": "qwen3-vl:235b was retired on June 16, 2026. Try glm-5.3-flash:cloud. (ref: 58cf5f1c-1f36-4061-86d0-bb0312919324)",
+      "latency_s": 0.2,
+      "limit_headers": {}
+    }
+  },
+  "vision": [
+    {
+      "model": "gemma4:31b-cloud",
+      "status": 200,
+      "valid_lenient": true,
+      "parse_mode": "fenced",
+      "expected_found": [
+        "Антиспам+",
+        "100%",
+        "14 дней",
+        "Белый список"
+      ],
+      "expected_total": 5,
+      "latency_s": 1.136,
+      "prompt_eval_count": 472,
+      "eval_count": 260,
+      "error": null
+    },
+    {
+      "model": "glm-5.3-flash:cloud",
+      "status": 200,
+      "valid_lenient": true,
+      "parse_mode": "fenced",
+      "expected_found": [
+        "Антиспам+",
+        "100%",
+        "14 дней",
+        "Белый список"
+      ],
+      "expected_total": 5,
+      "latency_s": 5.27,
+      "prompt_eval_count": 1143,
+      "eval_count": 799,
+      "error": null
+    }
+  ],
+  "limit_headers_seen": [],
+  "status_counts": {
+    "200": 99,
+    "410": 3,
+    "None": 2
+  },
+  "calls_in_cache": 104,
+  "embeddings": {
+    "n_queries": 20,
+    "n_corpus": 40,
+    "qwen3_raw": {
+      "recall@1": 0.8,
+      "recall@3": 0.9,
+      "mrr": 0.861
+    },
+    "qwen3_instruct": {
+      "recall@1": 0.85,
+      "recall@3": 0.95,
+      "mrr": 0.912
+    },
+    "bm25": {
+      "recall@1": 0.35,
+      "recall@3": 0.55,
+      "mrr": 0.472
+    },
+    "hybrid_rrf": {
+      "recall@1": 0.55,
+      "recall@3": 0.6,
+      "mrr": 0.625
+    },
+    "qwen3_instruct_misses": [
+      {
+        "query": "Почему клиенты перестают платить за фильтр звонков?",
+        "top1": "Kill-критерии: если через 8 недель отток не опустится ниже 3,8% или жалобы на пропущенный спам вырастут вдвое, вариант с",
+        "gold_rank": 4
+      },
+      {
+        "query": "Нужен ли мобильный интернет для работы защиты",
+        "top1": "Для работы приложения-определителя номера требуется постоянное подключение к интернету.",
+        "gold_rank": 2
+      },
+      {
+        "query": "Какие альтернативы есть у пользователя бесплатно",
+        "top1": "Услуга стоит 99 рублей в месяц; первые 14 дней для впервые подключающих — без оплаты.",
+        "gold_rank": 2
+      }
+    ],
+    "dim": 4096,
+    "latency_s": {
+      "corpus_batch": 9.551,
+      "qwen3_raw": 25.069,
+      "qwen3_instruct": 16.653
+    }
+  },
+  "option_diversity": {
+    "deepseek-v4.1-flash@nothink": {
+      "max_cos": 0.709,
+      "mean_cos": 0.612
+    },
+    "deepseek-v4.1-flash@think": {
+      "max_cos": 0.744,
+      "mean_cos": 0.684
+    },
+    "gemma4-31b@nothink": {
+      "max_cos": 0.531,
+      "mean_cos": 0.494
+    },
+    "glm-5.3-flash@nothink": {
+      "max_cos": 0.774,
+      "mean_cos": 0.643
+    },
+    "gpt-oss-120b@high": {
+      "max_cos": 0.708,
+      "mean_cos": 0.634
+    },
+    "gpt-oss-120b@low": {
+      "max_cos": 0.77,
+      "mean_cos": 0.621
+    },
+    "gpt-oss-120b@medium": {
+      "max_cos": 0.688,
+      "mean_cos": 0.6
+    },
+    "gpt-oss-20b-cloud@low": {
+      "max_cos": 0.656,
+      "mean_cos": 0.54
+    },
+    "gpt-oss-20b-cloud@medium": {
+      "max_cos": 0.652,
+      "mean_cos": 0.599
+    },
+    "gpt-oss-20b-local@low": {
+      "max_cos": 0.651,
+      "mean_cos": 0.601
+    }
+  },
+  "prices_usd_per_1m": {
+    "gpt-oss:120b": {
+      "input": 0.15,
+      "output": 0.6
+    },
+    "gpt-oss:20b": {
+      "input": 0.07,
+      "output": 0.3
+    },
+    "gemma4": {
+      "input": 0.14,
+      "output": 0.4
+    },
+    "deepseek-v4.1-flash": {
+      "input": 0.3,
+      "output": 1.2
+    },
+    "glm-5.3-flash": {
+      "input": 0.15,
+      "output": 0.5
+    },
+    "mistral-large-4": {
+      "input": 0.7,
+      "output": 2.1
+    },
+    "kimi-k2.6": {
+      "input": 0.95,
+      "output": 4.0
+    },
+    "clef": {
+      "input": 0.24,
+      "output": 0.0
+    }
+  },
+  "prices_source": "https://ollama.com/pricing (2026-11-04, Pay as you go)",
+  "live_calls_this_run": {}
+}

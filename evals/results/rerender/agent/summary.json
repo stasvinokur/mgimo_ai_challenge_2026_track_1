@@ -1,0 +1,86 @@
+{
+  "label": "agent",
+  "flags": [
+    "numbers_v2",
+    "model_labels"
+  ],
+  "rows": [
+    {
+      "brief": "app-onboarding",
+      "off": {
+        "number_flags": 1,
+        "numbers_checked": null
+      },
+      "on": {
+        "number_flags": 1,
+        "numbers_checked": 53
+      }
+    },
+    {
+      "brief": "b2b-field-service",
+      "off": {
+        "number_flags": 5,
+        "numbers_checked": null
+      },
+      "on": {
+        "number_flags": 3,
+        "numbers_checked": 95
+      }
+    },
+    {
+      "brief": "family-pack",
+      "off": {
+        "number_flags": 1,
+        "numbers_checked": null
+      },
+      "on": {
+        "number_flags": 1,
+        "numbers_checked": 87
+      }
+    },
+    {
+      "brief": "feature-sunset",
+      "off": {
+        "number_flags": 29,
+        "numbers_checked": null
+      },
+      "on": {
+        "number_flags": 1,
+        "numbers_checked": 64
+      }
+    },
+    {
+      "brief": "price-increase-a",
+      "off": {
+        "number_flags": 7,
+        "numbers_checked": null
+      },
+      "on": {
+        "number_flags": 2,
+        "numbers_checked": 158
+      }
+    },
+    {
+      "brief": "price-increase-b",
+      "off": {
+        "number_flags": 8,
+        "numbers_checked": null
+      },
+      "on": {
+        "number_flags": 4,
+        "numbers_checked": 105
+      }
+    },
+    {
+      "brief": "subscription-retention",
+      "off": {
+        "number_flags": 0,
+        "numbers_checked": null
+      },
+      "on": {
+        "number_flags": 10,
+        "numbers_checked": 111
+      }
+    }
+  ]
+}

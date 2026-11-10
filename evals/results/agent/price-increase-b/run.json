@@ -1,0 +1,37 @@
+{
+  "brief_id": "price-increase-b",
+  "approach": "agent",
+  "status": "ok",
+  "started_at": "2026-11-05T07:34:42+00:00",
+  "finished_at": "2026-11-05T07:38:34+00:00",
+  "duration_s": 231.8,
+  "materials": [
+    "finance_note.md",
+    "market_digital_books.md",
+    "market_inflation.md",
+    "market_subscription_prices.md",
+    "price_test_m1.csv",
+    "price_test_m2_renewals.csv"
+  ],
+  "costs": {
+    "calls": 164,
+    "input_tokens": 302565,
+    "output_tokens": 45832,
+    "usd_list_price": 0.122518,
+    "model_latency_s": 342.1,
+    "by_model": {
+      "deepseek-v4.1-flash:cloud": {
+        "calls": 51,
+        "tokens": 222546
+      },
+      "gemma4:31b-cloud": {
+        "calls": 43,
+        "tokens": 100434
+      },
+      "clef:cloud": {
+        "calls": 70,
+        "tokens": 25417
+      }
+    }
+  }
+}

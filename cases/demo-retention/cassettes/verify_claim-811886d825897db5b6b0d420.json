@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "StrongVerifyDTO",
+ "text": "{\"label\":\"partial\",\"confidence\":0.7,\"note\":\"EV-004 связывает отказ с автоподключением и списанием без предупреждения, но не уточняет тариф «Семейный», а EV-017 лишь описывает механику автоподключения тарифа без указания на отток.\"}",
+ "data": {
+  "label": "partial",
+  "confidence": 0.7,
+  "note": "EV-004 связывает отказ с автоподключением и списанием без предупреждения, но не уточняет тариф «Семейный», а EV-017 лишь описывает механику автоподключения тарифа без указания на отток."
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 764,
+  "output_tokens": 77,
+  "estimated": false,
+  "latency_ms": 724,
+  "escalated": true
+ }
+}

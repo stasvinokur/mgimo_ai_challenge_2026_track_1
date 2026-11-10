@@ -1,0 +1,50 @@
+{
+ "note": "Три независимых прогона evals/runners/reversal_check.py на одном коде (05.11.2026, после исправления подачи сигналов пересмотра, TASK-38). Каждый прогон заново ведёт бриф A: варианты и формулировки у модели разные.",
+ "summary": {
+  "reopened": 3,
+  "moved_away_from_unacceptable": 3,
+  "matched_expert": 1,
+  "runs": 3
+ },
+ "runs": [
+  {
+   "run": 1,
+   "checked_at": "2026-11-05T13:29:36+00:00",
+   "start_choice": "Подтвердить повышение до 479 ₽ для всех с 1 декабря и масштабировать",
+   "before_vs_expected_b": "no",
+   "after_vs_expected_b": "partial",
+   "recommendation_after": "Повысить цену до 479 ₽ не для всех сразу, а сначала для сегментов с подтверждённой низкой чувствительностью (вовлечённых и длительно платящих); для новых и пассивных сохранить 399 ₽ или предложить упаковку.",
+   "decision_status": "reopened",
+   "untouched": 64,
+   "tokens_used": 94558,
+   "tokens_full_regeneration": 257023,
+   "success": false
+  },
+  {
+   "run": 2,
+   "checked_at": "2026-11-05T13:35:37+00:00",
+   "start_choice": "Повысить до 479 ₽ для всех с 1 декабря и компенсировать отток коммуникацией",
+   "before_vs_expected_b": "no",
+   "after_vs_expected_b": "partial",
+   "recommendation_after": "С 1 декабря цену для всех не поднимаем. Оставляем 399 ₽ и доизмеряем переносимость теста — продления на когортах 60–90 дней, контрастные регионы и порог допустимого оттока при роялти 46%; цену пересматриваем после этого.",
+   "decision_status": "reopened",
+   "untouched": 66,
+   "tokens_used": 70390,
+   "tokens_full_regeneration": 254114,
+   "success": false
+  },
+  {
+   "run": 3,
+   "checked_at": "2026-11-05T13:41:32+00:00",
+   "start_choice": "Повысить до 479 ₽, но с инвестицией в коммуникацию и удержание",
+   "before_vs_expected_b": "no",
+   "after_vs_expected_b": "yes",
+   "recommendation_after": "Сохраняем 399 ₽ для текущих подписчиков и вводим 479 ₽ только для новых — при условии, что отток у текущих не выйдет за порог окупаемости 21,7%.",
+   "decision_status": "reopened",
+   "untouched": 67,
+   "tokens_used": 86269,
+   "tokens_full_regeneration": 231590,
+   "success": true
+  }
+ ]
+}

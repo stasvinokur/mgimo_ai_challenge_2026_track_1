@@ -1,0 +1,20 @@
+{
+ "question_id": "demo-retention-run:CL-029:type",
+ "kind": "choice",
+ "choice": "fact",
+ "probability": null,
+ "score": null,
+ "probs": {
+  "fact": 0.7481,
+  "hypothesis": 0.1422,
+  "forecast": 0.0162,
+  "assumption": 0.0785,
+  "unknown": 0.015
+ },
+ "confidence": 0.7481,
+ "backend": "systemone",
+ "model": "clef:cloud",
+ "escalated": false,
+ "input_tokens": 293,
+ "latency_ms": 913
+}

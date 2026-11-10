@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "StrongVerifyDTO",
+ "text": "{\"label\":\"supported\",\"confidence\":0.9,\"note\":\"Цитата прямо подтверждает, что в отзывах родителей о сервисе упоминается отсутствие необходимости звонить ребёнку каждые полчаса.\"}",
+ "data": {
+  "label": "supported",
+  "confidence": 0.9,
+  "note": "Цитата прямо подтверждает, что в отзывах родителей о сервисе упоминается отсутствие необходимости звонить ребёнку каждые полчаса."
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 369,
+  "output_tokens": 51,
+  "estimated": false,
+  "latency_ms": 586,
+  "escalated": true
+ }
+}

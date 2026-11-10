@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":0.9,\"rationale\":\"Цитата упоминает конфликт с подростком, но не говорит о расширении аудитории или ценности продукта для возрастной группы 11–15 лет.\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 0.9,
+  "rationale": "Цитата упоминает конфликт с подростком, но не говорит о расширении аудитории или ценности продукта для возрастной группы 11–15 лет."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 294,
+  "output_tokens": 52,
+  "estimated": false,
+  "latency_ms": 531,
+  "escalated": false
+ }
+}

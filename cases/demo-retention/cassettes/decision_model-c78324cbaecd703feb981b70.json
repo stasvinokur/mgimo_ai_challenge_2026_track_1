@@ -1,0 +1,150 @@
+{
+ "task": "decision_model",
+ "schema": "DecisionModelDTO",
+ "text": "{\"utilities\":[{\"option_key\":\"OPT-001\",\"base_utility\":62,\"effects\":{\"U-001\":{\"low\":18,\"base\":0,\"high\":-22},\"U-002\":{\"low\":8,\"base\":0,\"high\":-10},\"U-003\":{\"low\":6,\"base\":0,\"high\":-8},\"U-006\":{\"low\":-10,\"base\":0,\"high\":8}}},{\"option_key\":\"OPT-002\",\"base_utility\":66,\"effects\":{\"U-001\":{\"low\":-12,\"base\":0,\"high\":10},\"U-003\":{\"low\":-18,\"base\":0,\"high\":20},\"U-006\":{\"low\":-14,\"base\":0,\"high\":10},\"U-005\":{\"low\":4,\"base\":0,\"high\":-6}}},{\"option_key\":\"OPT-003\",\"base_utility\":58,\"effects\":{\"U-002\":{\"low\":-8,\"base\":0,\"high\":14},\"U-003\":{\"low\":4,\"base\":0,\"high\":-6},\"U-004\":{\"low\":6,\"base\":0,\"high\":-8},\"U-006\":{\"low\":-8,\"base\":0,\"high\":6}}},{\"option_key\":\"OPT-004\",\"base_utility\":60,\"effects\":{\"U-004\":{\"low\":-10,\"base\":0,\"high\":16},\"U-001\":{\"low\":-6,\"base\":0,\"high\":6},\"U-006\":{\"low\":-10,\"base\":0,\"high\":8},\"U-005\":{\"low\":4,\"base\":0,\"high\":-4}}},{\"option_key\":\"OPT-005\",\"base_utility\":34,\"effects\":{\"U-001\":{\"low\":-16,\"base\":0,\"high\":14},\"U-003\":{\"low\":-10,\"base\":0,\"high\":10},\"U-006\":{\"low\":-8,\"base\":0,\"high\":6},\"U-005\":{\"low\":-4,\"base\":0,\"high\":8}}}],\"note\":\"Ключевая развилка — реальность падения удержания (U-001) и наличие быстрого фикса онбординга (U-003): если пересчёт подтвердит падение внутри стабильных сегментов и найдётся точечный фикс iOS, выигрывает OPT-002; если падение окажется артефактом измерения — OPT-001.\",\"level_updates\":[]}",
+ "data": {
+  "utilities": [
+   {
+    "option_key": "OPT-001",
+    "base_utility": 62,
+    "effects": {
+     "U-001": {
+      "low": 18,
+      "base": 0,
+      "high": -22
+     },
+     "U-002": {
+      "low": 8,
+      "base": 0,
+      "high": -10
+     },
+     "U-003": {
+      "low": 6,
+      "base": 0,
+      "high": -8
+     },
+     "U-006": {
+      "low": -10,
+      "base": 0,
+      "high": 8
+     }
+    }
+   },
+   {
+    "option_key": "OPT-002",
+    "base_utility": 66,
+    "effects": {
+     "U-001": {
+      "low": -12,
+      "base": 0,
+      "high": 10
+     },
+     "U-003": {
+      "low": -18,
+      "base": 0,
+      "high": 20
+     },
+     "U-006": {
+      "low": -14,
+      "base": 0,
+      "high": 10
+     },
+     "U-005": {
+      "low": 4,
+      "base": 0,
+      "high": -6
+     }
+    }
+   },
+   {
+    "option_key": "OPT-003",
+    "base_utility": 58,
+    "effects": {
+     "U-002": {
+      "low": -8,
+      "base": 0,
+      "high": 14
+     },
+     "U-003": {
+      "low": 4,
+      "base": 0,
+      "high": -6
+     },
+     "U-004": {
+      "low": 6,
+      "base": 0,
+      "high": -8
+     },
+     "U-006": {
+      "low": -8,
+      "base": 0,
+      "high": 6
+     }
+    }
+   },
+   {
+    "option_key": "OPT-004",
+    "base_utility": 60,
+    "effects": {
+     "U-004": {
+      "low": -10,
+      "base": 0,
+      "high": 16
+     },
+     "U-001": {
+      "low": -6,
+      "base": 0,
+      "high": 6
+     },
+     "U-006": {
+      "low": -10,
+      "base": 0,
+      "high": 8
+     },
+     "U-005": {
+      "low": 4,
+      "base": 0,
+      "high": -4
+     }
+    }
+   },
+   {
+    "option_key": "OPT-005",
+    "base_utility": 34,
+    "effects": {
+     "U-001": {
+      "low": -16,
+      "base": 0,
+      "high": 14
+     },
+     "U-003": {
+      "low": -10,
+      "base": 0,
+      "high": 10
+     },
+     "U-006": {
+      "low": -8,
+      "base": 0,
+      "high": 6
+     },
+     "U-005": {
+      "low": -4,
+      "base": 0,
+      "high": 8
+     }
+    }
+   }
+  ],
+  "note": "Ключевая развилка — реальность падения удержания (U-001) и наличие быстрого фикса онбординга (U-003): если пересчёт подтвердит падение внутри стабильных сегментов и найдётся точечный фикс iOS, выигрывает OPT-002; если падение окажется артефактом измерения — OPT-001.",
+  "level_updates": []
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 7847,
+  "output_tokens": 538,
+  "estimated": false,
+  "latency_ms": 2753,
+  "escalated": false
+ }
+}

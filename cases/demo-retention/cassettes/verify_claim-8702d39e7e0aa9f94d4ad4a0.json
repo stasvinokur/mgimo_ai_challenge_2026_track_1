@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "StrongVerifyDTO",
+ "text": "{\"label\":\"partial\",\"confidence\":0.7,\"note\":\"Цитаты подтверждают расширение аудитории на 11–15 лет, более низкий NPS у этой группы и риск конфликтов, но прямо не связывают падение удержания с этим расширением.\"}",
+ "data": {
+  "label": "partial",
+  "confidence": 0.7,
+  "note": "Цитаты подтверждают расширение аудитории на 11–15 лет, более низкий NPS у этой группы и риск конфликтов, но прямо не связывают падение удержания с этим расширением."
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 816,
+  "output_tokens": 65,
+  "estimated": false,
+  "latency_ms": 1826,
+  "escalated": true
+ }
+}

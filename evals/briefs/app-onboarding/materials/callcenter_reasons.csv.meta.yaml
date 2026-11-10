@@ -1,0 +1,14 @@
+title: "Причины звонков в контакт-центр абонентов домашнего интернета, июнь–октябрь 2026"
+kind: table
+synthetic: true
+source_url: null
+publisher: "«Восход Телеком» (вымышленный оператор), контакт-центр"
+published: 2026-11-01
+retrieved: 2026-11-04
+note: "Синтетические данные. Классификация оператора контакт-центра по завершении звонка."
+generator: "uv run python evals/briefs/generate_synthetic.py"
+seed: 3861337355
+columns:
+  month: "Месяц"
+  reason: "Причина звонка"
+  calls: "Число звонков"

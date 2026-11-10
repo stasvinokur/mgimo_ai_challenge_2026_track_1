@@ -1,0 +1,990 @@
+{
+ "split": "holdout",
+ "items": [
+  {
+   "id": "app-onboarding-calc_row_share-01",
+   "brief": "app-onboarding",
+   "table": "callcenter_reasons.csv",
+   "kind": "calc_row_share",
+   "expect": "row_share_aggregated",
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "month",
+    "description": "Доля по «month»"
+   },
+   "values": [
+    1.0,
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2
+   ],
+   "facts": {
+    "columns": [
+     "month",
+     "reason",
+     "calls"
+    ],
+    "dtypes": {
+     "month": "str",
+     "reason": "str",
+     "calls": "int64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "app-onboarding-calc_row_share-02",
+   "brief": "app-onboarding",
+   "table": "callcenter_reasons.csv",
+   "kind": "calc_row_share",
+   "expect": "row_share_aggregated",
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "reason",
+    "description": "Доля по «reason»"
+   },
+   "values": [
+    1.0,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666,
+    0.16666666666666666
+   ],
+   "facts": {
+    "columns": [
+     "month",
+     "reason",
+     "calls"
+    ],
+    "dtypes": {
+     "month": "str",
+     "reason": "str",
+     "calls": "int64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "app-onboarding-calc_row_share-03",
+   "brief": "app-onboarding",
+   "table": "onboarding_funnel.csv",
+   "kind": "calc_row_share",
+   "expect": "row_share_aggregated",
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "week_start",
+    "description": "Доля по «week_start»"
+   },
+   "values": [
+    1.0,
+    0.07142857142857142,
+    0.07142857142857142,
+    0.07142857142857142,
+    0.07142857142857142,
+    0.07142857142857142,
+    0.07142857142857142,
+    0.07142857142857142,
+    0.07142857142857142,
+    0.10714285714285714,
+    0.10714285714285714,
+    0.10714285714285714,
+    0.10714285714285714
+   ],
+   "facts": {
+    "columns": [
+     "week_start",
+     "platform",
+     "installs",
+     "first_open",
+     "login_started",
+     "login_success",
+     "home_screen",
+     "first_action_7d"
+    ],
+    "dtypes": {
+     "week_start": "str",
+     "platform": "str",
+     "installs": "int64",
+     "first_open": "int64",
+     "login_started": "int64",
+     "login_success": "int64",
+     "home_screen": "int64",
+     "first_action_7d": "int64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "app-onboarding-calc_row_share-04",
+   "brief": "app-onboarding",
+   "table": "onboarding_funnel.csv",
+   "kind": "calc_row_share",
+   "expect": "row_share_aggregated",
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "platform",
+    "description": "Доля по «platform»"
+   },
+   "values": [
+    1.0,
+    0.42857142857142855,
+    0.14285714285714285,
+    0.42857142857142855
+   ],
+   "facts": {
+    "columns": [
+     "week_start",
+     "platform",
+     "installs",
+     "first_open",
+     "login_started",
+     "login_success",
+     "home_screen",
+     "first_action_7d"
+    ],
+    "dtypes": {
+     "week_start": "str",
+     "platform": "str",
+     "installs": "int64",
+     "first_open": "int64",
+     "login_started": "int64",
+     "login_success": "int64",
+     "home_screen": "int64",
+     "first_action_7d": "int64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "b2b-field-service-calc_row_share-01",
+   "brief": "b2b-field-service",
+   "table": "sales_funnel.csv",
+   "kind": "calc_row_share",
+   "expect": "row_share_aggregated",
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "channel",
+    "description": "Доля по «channel»"
+   },
+   "values": [
+    1.0,
+    0.25,
+    0.25,
+    0.25,
+    0.25
+   ],
+   "facts": {
+    "columns": [
+     "channel",
+     "quarter",
+     "leads",
+     "meetings",
+     "pilots_started",
+     "spend_rub"
+    ],
+    "dtypes": {
+     "channel": "str",
+     "quarter": "str",
+     "leads": "int64",
+     "meetings": "int64",
+     "pilots_started": "int64",
+     "spend_rub": "int64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "b2b-field-service-calc_row_share-02",
+   "brief": "b2b-field-service",
+   "table": "sales_funnel.csv",
+   "kind": "calc_row_share",
+   "expect": "row_share_aggregated",
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "quarter",
+    "description": "Доля по «quarter»"
+   },
+   "values": [
+    1.0,
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+   ],
+   "facts": {
+    "columns": [
+     "channel",
+     "quarter",
+     "leads",
+     "meetings",
+     "pilots_started",
+     "spend_rub"
+    ],
+    "dtypes": {
+     "channel": "str",
+     "quarter": "str",
+     "leads": "int64",
+     "meetings": "int64",
+     "pilots_started": "int64",
+     "spend_rub": "int64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_row_share-01",
+   "brief": "price-increase-b",
+   "table": "price_test_m1.csv",
+   "kind": "calc_row_share",
+   "expect": "row_share_aggregated",
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "group",
+    "description": "Доля по «group»"
+   },
+   "values": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "users",
+     "paid_after_trial",
+     "cancelled_autorenew_30d",
+     "renewals_at_new_price",
+     "revenue_30d_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "users": "int64",
+     "paid_after_trial": "float64",
+     "cancelled_autorenew_30d": "float64",
+     "renewals_at_new_price": "float64",
+     "revenue_30d_rub": "float64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_row_share-02",
+   "brief": "price-increase-b",
+   "table": "price_test_m1.csv",
+   "kind": "calc_row_share",
+   "expect": "row_share_aggregated",
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "segment",
+    "description": "Доля по «segment»"
+   },
+   "values": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "users",
+     "paid_after_trial",
+     "cancelled_autorenew_30d",
+     "renewals_at_new_price",
+     "revenue_30d_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "users": "int64",
+     "paid_after_trial": "float64",
+     "cancelled_autorenew_30d": "float64",
+     "renewals_at_new_price": "float64",
+     "revenue_30d_rub": "float64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_churn_label-01",
+   "brief": "price-increase-b",
+   "table": "price_test_m1.csv",
+   "kind": "calc_churn_label",
+   "expect": "churn_label",
+   "spec": {
+    "name": "calc_churn_label",
+    "agg": "ratio",
+    "column": "paid_after_trial",
+    "denominator_column": "users",
+    "description": "Доля оттока"
+   },
+   "values": [
+    0.42002412545235224
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "users",
+     "paid_after_trial",
+     "cancelled_autorenew_30d",
+     "renewals_at_new_price",
+     "revenue_30d_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "users": "int64",
+     "paid_after_trial": "float64",
+     "cancelled_autorenew_30d": "float64",
+     "renewals_at_new_price": "float64",
+     "revenue_30d_rub": "float64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_retention_ok-01",
+   "brief": "price-increase-b",
+   "table": "price_test_m1.csv",
+   "kind": "calc_retention_ok",
+   "expect": null,
+   "spec": {
+    "name": "calc_retention_ok",
+    "agg": "ratio",
+    "column": "paid_after_trial",
+    "denominator_column": "users",
+    "description": "Удержание"
+   },
+   "values": [
+    0.42002412545235224
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "users",
+     "paid_after_trial",
+     "cancelled_autorenew_30d",
+     "renewals_at_new_price",
+     "revenue_30d_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "users": "int64",
+     "paid_after_trial": "float64",
+     "cancelled_autorenew_30d": "float64",
+     "renewals_at_new_price": "float64",
+     "revenue_30d_rub": "float64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_share_percent-01",
+   "brief": "price-increase-b",
+   "table": "price_test_m1.csv",
+   "kind": "calc_share_percent",
+   "expect": "share_vs_percent",
+   "spec": {
+    "name": "calc_share_percent",
+    "agg": "ratio",
+    "column": "paid_after_trial",
+    "denominator_column": "users",
+    "unit": "%"
+   },
+   "values": [
+    0.42002412545235224
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "users",
+     "paid_after_trial",
+     "cancelled_autorenew_30d",
+     "renewals_at_new_price",
+     "revenue_30d_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "users": "int64",
+     "paid_after_trial": "float64",
+     "cancelled_autorenew_30d": "float64",
+     "renewals_at_new_price": "float64",
+     "revenue_30d_rub": "float64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_share_ok-01",
+   "brief": "price-increase-b",
+   "table": "price_test_m1.csv",
+   "kind": "calc_share_ok",
+   "expect": null,
+   "spec": {
+    "name": "calc_share_ok",
+    "agg": "ratio",
+    "column": "paid_after_trial",
+    "denominator_column": "users",
+    "unit": "доля"
+   },
+   "values": [
+    0.42002412545235224
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "users",
+     "paid_after_trial",
+     "cancelled_autorenew_30d",
+     "renewals_at_new_price",
+     "revenue_30d_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "users": "int64",
+     "paid_after_trial": "float64",
+     "cancelled_autorenew_30d": "float64",
+     "renewals_at_new_price": "float64",
+     "revenue_30d_rub": "float64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_churn_label-02",
+   "brief": "price-increase-b",
+   "table": "price_test_m1.csv",
+   "kind": "calc_churn_label",
+   "expect": "churn_label",
+   "spec": {
+    "name": "calc_churn_label",
+    "agg": "ratio",
+    "column": "renewals_at_new_price",
+    "denominator_column": "users",
+    "description": "Доля оттока"
+   },
+   "values": [
+    0.0
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "users",
+     "paid_after_trial",
+     "cancelled_autorenew_30d",
+     "renewals_at_new_price",
+     "revenue_30d_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "users": "int64",
+     "paid_after_trial": "float64",
+     "cancelled_autorenew_30d": "float64",
+     "renewals_at_new_price": "float64",
+     "revenue_30d_rub": "float64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_retention_ok-02",
+   "brief": "price-increase-b",
+   "table": "price_test_m1.csv",
+   "kind": "calc_retention_ok",
+   "expect": null,
+   "spec": {
+    "name": "calc_retention_ok",
+    "agg": "ratio",
+    "column": "renewals_at_new_price",
+    "denominator_column": "users",
+    "description": "Удержание"
+   },
+   "values": [
+    0.0
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "users",
+     "paid_after_trial",
+     "cancelled_autorenew_30d",
+     "renewals_at_new_price",
+     "revenue_30d_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "users": "int64",
+     "paid_after_trial": "float64",
+     "cancelled_autorenew_30d": "float64",
+     "renewals_at_new_price": "float64",
+     "revenue_30d_rub": "float64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_share_percent-02",
+   "brief": "price-increase-b",
+   "table": "price_test_m1.csv",
+   "kind": "calc_share_percent",
+   "expect": "share_vs_percent",
+   "spec": {
+    "name": "calc_share_percent",
+    "agg": "ratio",
+    "column": "renewals_at_new_price",
+    "denominator_column": "users",
+    "unit": "%"
+   },
+   "values": [
+    0.0
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "users",
+     "paid_after_trial",
+     "cancelled_autorenew_30d",
+     "renewals_at_new_price",
+     "revenue_30d_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "users": "int64",
+     "paid_after_trial": "float64",
+     "cancelled_autorenew_30d": "float64",
+     "renewals_at_new_price": "float64",
+     "revenue_30d_rub": "float64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_share_ok-02",
+   "brief": "price-increase-b",
+   "table": "price_test_m1.csv",
+   "kind": "calc_share_ok",
+   "expect": null,
+   "spec": {
+    "name": "calc_share_ok",
+    "agg": "ratio",
+    "column": "renewals_at_new_price",
+    "denominator_column": "users",
+    "unit": "доля"
+   },
+   "values": [
+    0.0
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "users",
+     "paid_after_trial",
+     "cancelled_autorenew_30d",
+     "renewals_at_new_price",
+     "revenue_30d_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "users": "int64",
+     "paid_after_trial": "float64",
+     "cancelled_autorenew_30d": "float64",
+     "renewals_at_new_price": "float64",
+     "revenue_30d_rub": "float64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_churn_ok-01",
+   "brief": "price-increase-b",
+   "table": "price_test_m1.csv",
+   "kind": "calc_churn_ok",
+   "expect": null,
+   "spec": {
+    "name": "calc_churn_ok",
+    "agg": "ratio",
+    "column": "cancelled_autorenew_30d",
+    "denominator_column": "users",
+    "description": "Доля оттока"
+   },
+   "values": [
+    0.01897605284888522
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "users",
+     "paid_after_trial",
+     "cancelled_autorenew_30d",
+     "renewals_at_new_price",
+     "revenue_30d_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "users": "int64",
+     "paid_after_trial": "float64",
+     "cancelled_autorenew_30d": "float64",
+     "renewals_at_new_price": "float64",
+     "revenue_30d_rub": "float64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_row_share-03",
+   "brief": "price-increase-b",
+   "table": "price_test_m2_renewals.csv",
+   "kind": "calc_row_share",
+   "expect": "row_share_aggregated",
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "group",
+    "description": "Доля по «group»"
+   },
+   "values": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "renewals_due",
+     "renewed",
+     "churn_at_renewal_pct",
+     "revenue_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "renewals_due": "int64",
+     "renewed": "int64",
+     "churn_at_renewal_pct": "float64",
+     "revenue_rub": "int64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_row_share-04",
+   "brief": "price-increase-b",
+   "table": "price_test_m2_renewals.csv",
+   "kind": "calc_row_share",
+   "expect": "row_share_aggregated",
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "segment",
+    "description": "Доля по «segment»"
+   },
+   "values": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "renewals_due",
+     "renewed",
+     "churn_at_renewal_pct",
+     "revenue_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "renewals_due": "int64",
+     "renewed": "int64",
+     "churn_at_renewal_pct": "float64",
+     "revenue_rub": "int64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_churn_label-03",
+   "brief": "price-increase-b",
+   "table": "price_test_m2_renewals.csv",
+   "kind": "calc_churn_label",
+   "expect": "churn_label",
+   "spec": {
+    "name": "calc_churn_label",
+    "agg": "ratio",
+    "column": "renewed",
+    "denominator_column": "renewals_due",
+    "description": "Доля оттока"
+   },
+   "values": [
+    0.850986472758381
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "renewals_due",
+     "renewed",
+     "churn_at_renewal_pct",
+     "revenue_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "renewals_due": "int64",
+     "renewed": "int64",
+     "churn_at_renewal_pct": "float64",
+     "revenue_rub": "int64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_retention_ok-03",
+   "brief": "price-increase-b",
+   "table": "price_test_m2_renewals.csv",
+   "kind": "calc_retention_ok",
+   "expect": null,
+   "spec": {
+    "name": "calc_retention_ok",
+    "agg": "ratio",
+    "column": "renewed",
+    "denominator_column": "renewals_due",
+    "description": "Удержание"
+   },
+   "values": [
+    0.850986472758381
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "renewals_due",
+     "renewed",
+     "churn_at_renewal_pct",
+     "revenue_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "renewals_due": "int64",
+     "renewed": "int64",
+     "churn_at_renewal_pct": "float64",
+     "revenue_rub": "int64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_share_percent-03",
+   "brief": "price-increase-b",
+   "table": "price_test_m2_renewals.csv",
+   "kind": "calc_share_percent",
+   "expect": "share_vs_percent",
+   "spec": {
+    "name": "calc_share_percent",
+    "agg": "ratio",
+    "column": "renewed",
+    "denominator_column": "renewals_due",
+    "unit": "%"
+   },
+   "values": [
+    0.850986472758381
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "renewals_due",
+     "renewed",
+     "churn_at_renewal_pct",
+     "revenue_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "renewals_due": "int64",
+     "renewed": "int64",
+     "churn_at_renewal_pct": "float64",
+     "revenue_rub": "int64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_share_ok-03",
+   "brief": "price-increase-b",
+   "table": "price_test_m2_renewals.csv",
+   "kind": "calc_share_ok",
+   "expect": null,
+   "spec": {
+    "name": "calc_share_ok",
+    "agg": "ratio",
+    "column": "renewed",
+    "denominator_column": "renewals_due",
+    "unit": "доля"
+   },
+   "values": [
+    0.850986472758381
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "renewals_due",
+     "renewed",
+     "churn_at_renewal_pct",
+     "revenue_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "renewals_due": "int64",
+     "renewed": "int64",
+     "churn_at_renewal_pct": "float64",
+     "revenue_rub": "int64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_share_percent-04",
+   "brief": "price-increase-b",
+   "table": "price_test_m2_renewals.csv",
+   "kind": "calc_share_percent",
+   "expect": "share_vs_percent",
+   "spec": {
+    "name": "calc_share_percent",
+    "agg": "mean",
+    "column": "churn_at_renewal_pct",
+    "unit": "доля"
+   },
+   "values": [
+    11.274999999999999
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "renewals_due",
+     "renewed",
+     "churn_at_renewal_pct",
+     "revenue_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "renewals_due": "int64",
+     "renewed": "int64",
+     "churn_at_renewal_pct": "float64",
+     "revenue_rub": "int64"
+    },
+    "unique_text": {}
+   }
+  },
+  {
+   "id": "price-increase-b-calc_share_ok-04",
+   "brief": "price-increase-b",
+   "table": "price_test_m2_renewals.csv",
+   "kind": "calc_share_ok",
+   "expect": null,
+   "spec": {
+    "name": "calc_share_ok",
+    "agg": "mean",
+    "column": "churn_at_renewal_pct",
+    "unit": "%"
+   },
+   "values": [
+    11.274999999999999
+   ],
+   "facts": {
+    "columns": [
+     "group",
+     "segment",
+     "price_rub",
+     "renewals_due",
+     "renewed",
+     "churn_at_renewal_pct",
+     "revenue_rub"
+    ],
+    "dtypes": {
+     "group": "str",
+     "segment": "str",
+     "price_rub": "int64",
+     "renewals_due": "int64",
+     "renewed": "int64",
+     "churn_at_renewal_pct": "float64",
+     "revenue_rub": "int64"
+    },
+    "unique_text": {}
+   }
+  }
+ ]
+}

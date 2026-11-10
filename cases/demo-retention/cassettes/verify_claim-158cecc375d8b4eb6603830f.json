@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "StrongVerifyDTO",
+ "text": "{\"label\":\"supported\",\"confidence\":0.9,\"note\":\"Цитаты прямо указывают на отказ пользователей от «Скворечника» в пользу бесплатного встроенного «Локатора» на iOS.\"}",
+ "data": {
+  "label": "supported",
+  "confidence": 0.9,
+  "note": "Цитаты прямо указывают на отказ пользователей от «Скворечника» в пользу бесплатного встроенного «Локатора» на iOS."
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 528,
+  "output_tokens": 50,
+  "estimated": false,
+  "latency_ms": 591,
+  "escalated": true
+ }
+}

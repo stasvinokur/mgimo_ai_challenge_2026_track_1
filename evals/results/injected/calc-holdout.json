@@ -1,0 +1,130 @@
+{
+ "rows": {
+  "calc_row_share": {
+   "n": 10,
+   "contract": 2,
+   "v011": 0,
+   "expect": "row_share_aggregated"
+  },
+  "calc_churn_label": {
+   "n": 3,
+   "contract": 3,
+   "v011": 3,
+   "expect": "churn_label"
+  },
+  "calc_retention_ok": {
+   "n": 3,
+   "contract": 3,
+   "v011": 3,
+   "expect": "—"
+  },
+  "calc_share_percent": {
+   "n": 4,
+   "contract": 4,
+   "v011": 0,
+   "expect": "share_vs_percent"
+  },
+  "calc_share_ok": {
+   "n": 4,
+   "contract": 4,
+   "v011": 4,
+   "expect": "—"
+  },
+  "calc_churn_ok": {
+   "n": 1,
+   "contract": 1,
+   "v011": 1,
+   "expect": "—"
+  }
+ },
+ "misses": [
+  {
+   "id": "app-onboarding-calc_row_share-01",
+   "expect": "row_share_aggregated",
+   "fired": [],
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "month",
+    "description": "Доля по «month»"
+   }
+  },
+  {
+   "id": "app-onboarding-calc_row_share-02",
+   "expect": "row_share_aggregated",
+   "fired": [],
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "reason",
+    "description": "Доля по «reason»"
+   }
+  },
+  {
+   "id": "app-onboarding-calc_row_share-03",
+   "expect": "row_share_aggregated",
+   "fired": [],
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "week_start",
+    "description": "Доля по «week_start»"
+   }
+  },
+  {
+   "id": "app-onboarding-calc_row_share-04",
+   "expect": "row_share_aggregated",
+   "fired": [],
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "platform",
+    "description": "Доля по «platform»"
+   }
+  },
+  {
+   "id": "b2b-field-service-calc_row_share-01",
+   "expect": "row_share_aggregated",
+   "fired": [],
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "channel",
+    "description": "Доля по «channel»"
+   }
+  },
+  {
+   "id": "b2b-field-service-calc_row_share-02",
+   "expect": "row_share_aggregated",
+   "fired": [],
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "quarter",
+    "description": "Доля по «quarter»"
+   }
+  },
+  {
+   "id": "price-increase-b-calc_row_share-03",
+   "expect": "row_share_aggregated",
+   "fired": [],
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "group",
+    "description": "Доля по «group»"
+   }
+  },
+  {
+   "id": "price-increase-b-calc_row_share-04",
+   "expect": "row_share_aggregated",
+   "fired": [],
+   "spec": {
+    "name": "calc_row_share",
+    "agg": "share",
+    "group_by": "segment",
+    "description": "Доля по «segment»"
+   }
+  }
+ ]
+}

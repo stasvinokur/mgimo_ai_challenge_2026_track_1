@@ -1,0 +1,4046 @@
+{
+  "metrics_version": "1.2",
+  "brief_id": "b2b-field-service",
+  "label": "agent-v2-off-r2",
+  "output_path": "evals/results/agent-v2-off-r2/b2b-field-service/output.md",
+  "output_sha256": "a0afd9fcdc497e9c255d2ca4bb6163faf24d8ee6b440bcdfff758519fcb61691",
+  "output_chars": 72500,
+  "judge_model": "mistral-large-4:cloud",
+  "judge_candidates": [
+    "mistral-large-4:cloud",
+    "kimi-k2.6:cloud"
+  ],
+  "judge_notes": [],
+  "judge_params": {
+    "think": false,
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 65536
+  },
+  "agent_model": "deepseek-v4.1-flash:cloud",
+  "seed": 42,
+  "census": true,
+  "claims_only": true,
+  "started_at": "2026-11-09T17:50:27+00:00",
+  "finished_at": "2026-11-09T18:08:55+00:00",
+  "claims": {
+    "extracted": 181,
+    "sample_size": 181,
+    "verified": 181,
+    "supported": 117,
+    "partial": 10,
+    "unsupported": 54,
+    "contradicted": 2,
+    "unsupported_share": 0.298,
+    "unsupported_ci95": [
+      0.2364,
+      0.3686
+    ],
+    "partial_share": 0.055,
+    "supported_share": 0.646,
+    "by_section": {
+      "Решение на одной странице": {
+        "verified": 6,
+        "unsupported": 0,
+        "partial": 2
+      },
+      "Картина ситуации": {
+        "verified": 18,
+        "unsupported": 0,
+        "partial": 1
+      },
+      "Варианты": {
+        "verified": 69,
+        "unsupported": 13,
+        "partial": 3
+      },
+      "Стресс-тест решения": {
+        "verified": 8,
+        "unsupported": 8,
+        "partial": 0
+      },
+      "Продуктовая стратегия": {
+        "verified": 18,
+        "unsupported": 5,
+        "partial": 0
+      },
+      "Коммуникационная стратегия": {
+        "verified": 19,
+        "unsupported": 1,
+        "partial": 3
+      },
+      "План проверки": {
+        "verified": 28,
+        "unsupported": 25,
+        "partial": 1
+      },
+      "Журнал решения": {
+        "verified": 9,
+        "unsupported": 2,
+        "partial": 0
+      },
+      "Источники": {
+        "verified": 6,
+        "unsupported": 0,
+        "partial": 0
+      }
+    },
+    "quotes_not_found": 1,
+    "sample": [
+      {
+        "id": "c001",
+        "text": "Средняя заявленная готовность платить составляет 425 ₽, что ниже цены 590 ₽",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Планируемая цена коммерческой версии — 590 ₽ за сотрудника в месяц.",
+        "quote_found": true,
+        "comment": "Сумма готовности платить: 600+650+200+200+600+500+250+600+150+200+700+200+700+400=5950 ₽; 5950/14=425 ₽, что ниже 590 ₽."
+      },
+      {
+        "id": "c002",
+        "text": "Данные о готовности платить получены «со слов», без договоров и оплат",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Вопрос о цене задавался в конце пилота, ответы — «со слов», договоров и оплат не было.",
+        "quote_found": true,
+        "comment": "Прямо подтверждено в общих наблюдениях менеджера пилота; в pilot_results.xlsx также указано, что оплат не было."
+      },
+      {
+        "id": "c003",
+        "text": "Продлить пилот на платной основе готовы лишь 50% компаний",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Намерение продлить на платной основе",
+        "quote_found": true,
+        "comment": "«да»: П-02, П-05, П-08, П-11 = 4; «скорее да»: П-01, П-06, П-13 = 3; итого 7 из 14 = 50%."
+      },
+      {
+        "id": "c004",
+        "text": "Оценка готовности компаний продлить пилот имеет низкую надёжность",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Вопрос о цене задавался в конце пилота, ответы — «со слов», договоров и оплат не было.",
+        "quote_found": true,
+        "comment": "Подтверждено, что намерения получены «со слов» без договоров и оплат, но количественная оценка «низкая надёжность» в материалах прямо не измерена."
+      },
+      {
+        "id": "c005",
+        "text": "Все пилотные клиенты пришли через знакомых и партнёров",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Все клиенты пришли через знакомых менеджеров или партнёров; холодных клиентов в пилоте не было.",
+        "quote_found": true,
+        "comment": "Прямая цитата из общих наблюдений менеджера пилота."
+      },
+      {
+        "id": "c006",
+        "text": "Холодные каналы привлечения клиентов не проверены",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Решение на одной странице",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Все клиенты пришли через знакомых менеджеров или партнёров; холодных клиентов в пилоте не было.",
+        "quote_found": true,
+        "comment": "Для пилотных клиентов подтверждено отсутствие холодных клиентов, однако materials/sales_funnel.csv показывает лиды, встречи и 2 запущенных пилота по контекстной рекламе, поэтому «холодные каналы не проверены» верно не полностью."
+      },
+      {
+        "id": "c007",
+        "text": "Доля компаний, намерение которых продлить пилот на платной основе равно 'да' или 'скорее да', составляет 50.0%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Намерение продлить на платной основе",
+        "quote_found": true,
+        "comment": "«да» + «скорее да» = 4 + 3 = 7 компаний; 7/14 = 50.0%."
+      },
+      {
+        "id": "c008",
+        "text": "Средняя готовность платить за сотрудника в месяц составляет 425 ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Готовность платить, ₽ за сотрудника в месяц (со слов)",
+        "quote_found": true,
+        "comment": "Среднее по колонке: 5950/14 = 425 ₽ за сотрудника в месяц."
+      },
+      {
+        "id": "c009",
+        "text": "Средняя доля активных пользователей в неделю составляет 56.71%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Доля активных в неделю, %",
+        "quote_found": true,
+        "comment": "Сумма долей: 86+87+23+29+79+61+31+94+17+43+78+29+82+55=794; 794/14=56.714...% ≈ 56.71%."
+      },
+      {
+        "id": "c010",
+        "text": "Среднее количество заявок на одного активного сотрудника в неделю составляет 9.75 заявки",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Заявок на активного сотрудника в неделю",
+        "quote_found": true,
+        "comment": "Сумма значений: 10.3+19.8+5.8+8.1+14.6+6.1+5.8+16.6+2.5+7.3+12.1+5.3+13.5+8.7=136.5; 136.5/14=9.75 заявки."
+      },
+      {
+        "id": "c011",
+        "text": "Доля компаний, имеющих штрафы по SLA у заказчика, составляет 42.9%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "| Штрафы по SLA у заказчика |",
+        "quote_found": true,
+        "comment": "Значение «да» у 6 из 14 клиентов: 6/14 = 42.857% ≈ 42.9%."
+      },
+      {
+        "id": "c012",
+        "text": "Распределение компаний по сегментам: Выездные медицинские услуги 14.3%, Доставка питьевой воды 14.3%, Клининг 21.4%, Охрана (группы быстрого реагирования) 7.1%, Подключение интернета и ТВ (подрядчик провайдера) 21.4%, Ремонт и монтаж бытовой техники 21.4%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "| Клиент | Сегмент |",
+        "quote_found": true,
+        "comment": "Подсчёт по сегментам из 14 строк: Ремонт и монтаж бытовой техники 3/14=21.4%; Подключение интернета и ТВ 3/14=21.4%; Клининг 3/14=21.4%; Доставка питьевой воды 2/14=14.3%; Выездные медицинские услуги 2/14=14.3%; Охрана 1/14=7.1%."
+      },
+      {
+        "id": "c013",
+        "text": "В Едином реестре ФНС на 10 июля 2026 года содержится информация о 6,6 млн субъектов малого и среднего предпринимательства",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_smb_registry.md",
+        "quote": "В обновленном реестре содержатся данные о 6,6 млн субъектах малого и среднего предпринимательства.",
+        "quote_found": true,
+        "comment": "Число прямо указано для 10 июля 2026 года."
+      },
+      {
+        "id": "c014",
+        "text": "Количество субъектов МСП на 10 июля 2026 года увеличилось на 222,5 тыс. (3,5%) по сравнению с 10 июля 2025 года",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_smb_registry.md",
+        "quote": "Это на 222,5 тыс. субъектов МСП (или на 3,5%) больше, чем было на 10 июля 2025 года.",
+        "quote_found": true,
+        "comment": "Прирост и процент прямо указаны в материале."
+      },
+      {
+        "id": "c015",
+        "text": "Доля субъектов МСП от общего числа действующих юрлиц и ИП составляет 81,8%",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_smb_registry.md",
+        "quote": "Доля субъектов МСП от общего количества действующих юридических лиц и индивидуальных предпринимателей составляет 81,8%.",
+        "quote_found": true,
+        "comment": "Доля прямо указана для 10 июля 2026 года."
+      },
+      {
+        "id": "c016",
+        "text": "Две трети малых предприятий используют цифровые платформы, а каждое пятое — облачные сервисы",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_smb_digital.md",
+        "quote": "Две трети из них используют цифровые платформы, каждое пятое предприятие — облачные сервисы.",
+        "quote_found": true,
+        "comment": "Утверждение дословно совпадает с источником."
+      },
+      {
+        "id": "c017",
+        "text": "В пилоте «Бригады Онлайн» не было холодных клиентов; все пришли через знакомых менеджеров или партнёров",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Все клиенты пришли через знакомых менеджеров или партнёров; холодных клиентов в пилоте не было.",
+        "quote_found": true,
+        "comment": "Прямо подтверждено в общих наблюдениях менеджера пилота."
+      },
+      {
+        "id": "c018",
+        "text": "В ходе пилота «Бригады Онлайн» не заключались договоры и не производились оплаты; ответы о готовности платить были даны «со слов»",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Вопрос о цене задавался в конце пилота, ответы — «со слов», договоров и оплат не было.",
+        "quote_found": true,
+        "comment": "Прямо подтверждено; также в pilot_results.xlsx указано, что пилот был бесплатным и оплат не было."
+      },
+      {
+        "id": "c019",
+        "text": "Один из респондентов пилота считает цену 590 ₽ за монтажника приемлемой при условии наличия выгрузки в систему заявок провайдера",
+        "kind": "user",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "«590 за монтажника — нормально, если будет выгрузка в систему заявок провайдера».",
+        "quote_found": true,
+        "comment": "Прямая цитата респондента П-02, подрядчика провайдера."
+      },
+      {
+        "id": "c020",
+        "text": "Один из респондентов пилота считает цену 590 ₽ за уборщицу неприемлемой из-за низкой маржинальности бизнеса",
+        "kind": "user",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "«Пока бесплатно — пусть будет. Платить 590 за уборщицу — нет, у нас маржа другая».",
+        "quote_found": true,
+        "comment": "Прямая цитата респондента П-07, клининг: цена 590 ₽ неприемлема из-за маржинальности."
+      },
+      {
+        "id": "c021",
+        "text": "Респонденты пилота выразили готовность платить при условии предоставления годового договора со скидкой",
+        "kind": "user",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Платить готовы, но хотят годовой договор со скидкой.",
+        "quote_found": true,
+        "comment": "Только один респондент (П-05) прямо упомянул условие годового договора со скидкой; утверждение о «респондентах» во множественном числе сильнее, чем позволяют данные."
+      },
+      {
+        "id": "c022",
+        "text": "Для работы с медицинским сегментом сервису требуется защищенный контур и сертификация для обработки медицинских данных",
+        "kind": "product",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "нельзя вносить данные пациентов: нужен защищённый контур и соответствие требованиям к медицинским данным",
+        "quote_found": true,
+        "comment": "Прямо указано в интервью П-14; также подтверждено в pilot_results.xlsx (П-06, П-14)."
+      },
+      {
+        "id": "c023",
+        "text": "Сервис «ПолеВизор» предлагает тариф «Старт» за 450 ₽ за сотрудника в месяц с функционалом заявок, фотоотчётов и маршрутов",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "| Старт | 450 ₽ за сотрудника в месяц | Заявки, фотоотчёты, маршруты |",
+        "quote_found": true,
+        "comment": "Строка таблицы тарифов дословно совпадает с утверждением."
+      },
+      {
+        "id": "c024",
+        "text": "Сервис «ПолеВизор» предлагает тариф «Бизнес» за 690 ₽ за сотрудника в месяц, включающий интеграцию с 1С, API и отчёты по SLA",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "| Бизнес | 690 ₽ за сотрудника в месяц | Всё из «Старт» + интеграция с 1С, API, отчёты по SLA |",
+        "quote_found": true,
+        "comment": "Строка таблицы тарифов дословно совпадает с утверждением."
+      },
+      {
+        "id": "c025",
+        "text": "Пилот был бесплатным",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Пилот был бесплатным для всех 14 клиентов.",
+        "quote_found": true,
+        "comment": "Также подтверждено в brief.md («Полгода бесплатно пилотировали») и в примечании к pilot_interviews.md."
+      },
+      {
+        "id": "c026",
+        "text": "По пилоту договоры и оплаты не заключались",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "ответы — «со слов», договоров и оплат не было.",
+        "quote_found": true,
+        "comment": "Также подтверждено в листе «Описание» pilot_results.xlsx: «оплат не было»."
+      },
+      {
+        "id": "c027",
+        "text": "Ответы о готовности платить в пилоте даны «со слов»",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Готовность платить, ₽ за сотрудника в месяц (со слов)",
+        "quote_found": true,
+        "comment": "Заголовок столбца и общие наблюдения менеджера в pilot_interviews.md прямо указывают на «со слов»."
+      },
+      {
+        "id": "c028",
+        "text": "Средняя готовность платить по пилоту составляет 425 ₽",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Готовность платить, ₽ за сотрудника в месяц (со слов)",
+        "quote_found": true,
+        "comment": "Расчёт по 14 строкам листа «Пилоты»: 600+650+200+200+600+500+250+600+150+200+700+200+700+400=5950; 5950/14=425 ₽."
+      },
+      {
+        "id": "c029",
+        "text": "Заявленная цена составляет 590 ₽",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "В январе коммерческий запуск по 590 ₽ за сотрудника в месяц.",
+        "quote_found": true,
+        "comment": "Также указано в листе «Описание» pilot_results.xlsx: «Планируемая цена коммерческой версии — 590 ₽ за сотрудника в месяц»."
+      },
+      {
+        "id": "c030",
+        "text": "Средняя готовность платить 425 ₽ ниже заявленной цены 590 ₽",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Планируемая цена коммерческой версии — 590 ₽ за сотрудника в месяц.",
+        "quote_found": true,
+        "comment": "Средняя готовность платить 425 ₽ (расчёт по данным pilot_results.xlsx) действительно ниже заявленной цены 590 ₽."
+      },
+      {
+        "id": "c031",
+        "text": "Доля намеренных продлить пилот на платной основе составляет 50%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "| Намерение продлить — ответ руководителя клиента: да / скорее да / не знаю / нет. |",
+        "quote_found": true,
+        "comment": "7 из 14 клиентов (П-01, П-02, П-05, П-06, П-08, П-11, П-13) ответили «да» или «скорее да»: 7/14 = 50%."
+      },
+      {
+        "id": "c032",
+        "text": "Надёжность данных о намерении продлить пилот низкая",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Вопрос о цене задавался в конце пилота, ответы — «со слов», договоров и оплат не было.",
+        "quote_found": true,
+        "comment": "Данные о намерении получены устно в конце бесплатного пилота без договоров и оплат, что прямо указывает на низкую надёжность."
+      },
+      {
+        "id": "c033",
+        "text": "Пилотные клиенты приходили только через знакомых менеджеров и партнёров",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Все клиенты пришли через знакомых менеджеров или партнёров; холодных клиентов в пилоте не было.",
+        "quote_found": true,
+        "comment": "Прямое утверждение в общих наблюдениях менеджера пилота."
+      },
+      {
+        "id": "c034",
+        "text": "Каналы холодных продаж не проверены",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "materials/sales_funnel.csv",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В воронке продаж приведены данные по холодным каналам (контекстная реклама, заявки с сайта) с лидами, встречами и расходами, что противоречит утверждению об их непроверенности."
+      },
+      {
+        "id": "c035",
+        "text": "Панель ролей для варианта OPT-001 составляет 7.0±1.3",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах брифа нет упоминаний варианта OPT-001 и панели ролей."
+      },
+      {
+        "id": "c036",
+        "text": "Панель ролей для варианта OPT-002 составляет 6.0±0.8",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах брифа нет упоминаний варианта OPT-002 и панели ролей."
+      },
+      {
+        "id": "c037",
+        "text": "Панель ролей для варианта OPT-003 составляет 8.2±0.4",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах брифа нет упоминаний варианта OPT-003 и панели ролей."
+      },
+      {
+        "id": "c038",
+        "text": "Панель ролей для варианта OPT-004 составляет 4.3±0.9",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах брифа нет упоминаний варианта OPT-004 и панели ролей."
+      },
+      {
+        "id": "c039",
+        "text": "Панель ролей для варианта OPT-005 составляет 3.0±0.8",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах брифа нет упоминаний варианта OPT-005 и панели ролей."
+      },
+      {
+        "id": "c040",
+        "text": "Панель ролей для варианта OPT-006 составляет 4.0±1.7",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах брифа нет упоминаний варианта OPT-006 и панели ролей."
+      },
+      {
+        "id": "c041",
+        "text": "Конкурирующий продукт «ПолеВизор» предлагает тариф 450 ₽",
+        "kind": "market",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "| Старт | 450 ₽ за сотрудника в месяц | Заявки, фотоотчёты, маршруты |",
+        "quote_found": true,
+        "comment": "Тариф «Старт» с ценой 450 ₽ прямо указан в таблице тарифов конкурента."
+      },
+      {
+        "id": "c042",
+        "text": "Конкурирующий продукт «ПолеВизор» предлагает тариф 690 ₽ с интеграциями",
+        "kind": "market",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "| Бизнес | 690 ₽ за сотрудника в месяц | Всё из «Старт» + интеграция с 1С, API, отчёты по SLA |",
+        "quote_found": true,
+        "comment": "Тариф «Бизнес» с ценой 690 ₽ и интеграциями (1С, API) прямо указаны в таблице тарифов."
+      },
+      {
+        "id": "c043",
+        "text": "Для медицинских услуг требуется защищённый контур и сертификация",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "нужен защищённый контур и соответствие требованиям к медицинским данным",
+        "quote_found": true,
+        "comment": "В интервью П-14 прямо указано требование защищённого контура; в том же интервью упоминается необходимость «сертифицированного решения»."
+      },
+      {
+        "id": "c044",
+        "text": "Ранжирование вариантов устойчиво к перестановке порядка",
+        "kind": "other",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний о ранжировании вариантов, его устойчивости или перестановке порядка."
+      },
+      {
+        "id": "c045",
+        "text": "Ключевая неопределённость — готовность платить, а не сегментация",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Материалы содержат данные о готовности платить, но не утверждают, что это ключевая неопределённость в отличие от сегментации."
+      },
+      {
+        "id": "c046",
+        "text": "В пилоте представлены сегменты клининга, подключения интернета/ТВ, доставки воды, медицинских услуг и охраны",
+        "kind": "company_data",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Клининг; Подключение интернета и ТВ (подрядчик провайдера); Доставка питьевой воды; Выездные медицинские услуги; Охрана (группы быстрого реагирования)",
+        "quote_found": false,
+        "comment": "В листе «Пилоты» присутствуют все перечисленные сегменты (П-03/П-07/П-12, П-02/П-08/П-13, П-04/П-10, П-06/П-14, П-09 соответственно)."
+      },
+      {
+        "id": "c047",
+        "text": "Для монтажника цена 590 ₽ признана приемлемой при наличии выгрузки в систему заявок провайдера",
+        "kind": "user",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "«590 за монтажника — нормально, если будет выгрузка в систему заявок провайдера».",
+        "quote_found": true,
+        "comment": "Прямая цитата из интервью П-02 (подключение интернета/ТВ) подтверждает приемлемость цены 590 ₽ при условии выгрузки в систему провайдера."
+      },
+      {
+        "id": "c048",
+        "text": "Для уборщицы цена 590 ₽ признана неприемлемой из-за низкой маржинальности",
+        "kind": "user",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "«Пока бесплатно — пусть будет. Платить 590 за уборщицу — нет, у нас маржа другая».",
+        "quote_found": true,
+        "comment": "Прямая цитата из интервью П-07 (клининг) подтверждает неприемлемость цены 590 ₽ из-за низкой маржинальности."
+      },
+      {
+        "id": "c049",
+        "text": "Медицинский сегмент требует защищённого контура и сертификации",
+        "kind": "market",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "нужен защищённый контур и соответствие требованиям к медицинским данным",
+        "quote_found": true,
+        "comment": "Требование защищённого контура прямо указано для медицинского сегмента (П-14); сертификация упоминается как «сертифицированное решение»."
+      },
+      {
+        "id": "c050",
+        "text": "Требования защищённого контура и сертификации удорожают вход в медицинский сегмент",
+        "kind": "causal",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Материалы фиксируют наличие требований защищённого контура и сертификации, но не содержат утверждения о том, что они удорожают вход в сегмент."
+      },
+      {
+        "id": "c051",
+        "text": "Готовность платить существует при условии годового договора со скидкой",
+        "kind": "user",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Платить готовы, но хотят годовой договор со скидкой.",
+        "quote_found": true,
+        "comment": "Прямая цитата из интервью П-05 подтверждает наличие готовности платить при условии годового договора со скидкой."
+      },
+      {
+        "id": "c052",
+        "text": "Разная ценовая чувствительность существует по сегментам",
+        "kind": "causal",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "| П-09 | Охрана (группы быстрого реагирования) | 26 | 19 | 17 | 2.5 | нет | 150 | нет |\n| П-11 | Ремонт и монтаж бытовой техники | 12 | 21 | 78 | 12.1 | да | 700 | да |",
+        "quote_found": true,
+        "comment": "В таблице готовность платить варьируется от 150 ₽ (охрана) до 700 ₽ (ремонт техники), что демонстрирует разную ценовую чувствительность по сегментам."
+      },
+      {
+        "id": "c053",
+        "text": "50% компаний заявили о намерении продлить пилот на платной основе",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Намерение продлить — ответ руководителя клиента: да / скорее да / не знаю / нет.",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу «Намерение продлить на платной основе»: да (П-02, П-05, П-08, П-11) + скорее да (П-01, П-06, П-13) = 7 из 14; 7/14 = 50%."
+      },
+      {
+        "id": "c054",
+        "text": "Средняя заявленная готовность платить составляет 425 ₽",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Готовность платить, ₽ за сотрудника в месяц (со слов)",
+        "quote_found": true,
+        "comment": "Сумма значений: 600+650+200+200+600+500+250+600+150+200+700+200+700+400 = 5950 ₽; 5950 / 14 = 425 ₽."
+      },
+      {
+        "id": "c055",
+        "text": "Один из респондентов назвал 590 ₽ за монтажника приемлемой ценой",
+        "kind": "user",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "«590 за монтажника — нормально, если будет выгрузка в систему заявок провайдера».",
+        "quote_found": true,
+        "comment": "Респондент П-02 прямо назвал 590 ₽ за монтажника приемлемой ценой при условии интеграции."
+      },
+      {
+        "id": "c056",
+        "text": "В сегментах клининга и доставки воды цену сочли неприемлемой",
+        "kind": "user",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "«Пока бесплатно — пусть будет. Платить 590 за уборщицу — нет, у нас маржа другая».",
+        "quote_found": true,
+        "comment": "Для клининга (П-07) прямо заявлено, что 590 ₽ неприемлемо. Для доставки воды (П-10) в интервью цена прямо не обсуждается, в таблице указана готовность 200 ₽, что подразумевает неприемлемость 590 ₽, но явного утверждения нет."
+      },
+      {
+        "id": "c057",
+        "text": "Прямые продажи по тёплым контактам воспроизводят единственную доказанно работающую модель привлечения пилота",
+        "kind": "company_data",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Все клиенты пришли через знакомых менеджеров или партнёров; холодных клиентов в пилоте не было.",
+        "quote_found": true,
+        "comment": "Тёплые контакты — доминирующая модель (менеджеры 9 пилотов + партнёры 3 = 12 из 14), однако в sales_funnel.csv контекстная реклама дала 2 пилота, поэтому модель не единственная."
+      },
+      {
+        "id": "c058",
+        "text": "Конкурент «ПолеВизор» предлагает тариф «Старт» по цене 450 ₽",
+        "kind": "market",
+        "chunk": 5,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "| Старт | 450 ₽ за сотрудника в месяц | Заявки, фотоотчёты, маршруты |",
+        "quote_found": true,
+        "comment": "В таблице тарифов конкурента «ПолеВизор» указан тариф «Старт» по цене 450 ₽ за сотрудника в месяц."
+      },
+      {
+        "id": "c059",
+        "text": "В пилоте не было договоров и оплат.",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Вопрос о цене задавался в конце пилота, ответы — «со слов», договоров и оплат не было.",
+        "quote_found": true,
+        "comment": "Также в pilot_results.xlsx указано: «Пилот был бесплатным для всех 14 клиентов» и «оплат не было»."
+      },
+      {
+        "id": "c060",
+        "text": "Средняя заявленная готовность платить составляет 425 ₽.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Готовность платить, ₽ за сотрудника в месяц (со слов)",
+        "quote_found": true,
+        "comment": "Сумма значений: 600+650+200+200+600+500+250+600+150+200+700+200+700+400 = 5950 ₽; 5950 / 14 = 425 ₽."
+      },
+      {
+        "id": "c061",
+        "text": "Намерение продлить на платной основе есть лишь у половины респондентов.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "| Клиент | Сегмент | Сотрудников в поле | Недель в пилоте | Доля активных в неделю, % | Заявок на активного сотрудника в неделю | Штрафы по SLA у заказчика | Готовность платить, ₽ за сотрудника в месяц (со слов) | Намерение продлить на платной основе | Комментарий менеджера пилота |",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу «Намерение продлить на платной основе»: «да» — 4 (П-02, П-05, П-08, П-11), «скорее да» — 3 (П-01, П-06, П-13), итого 7 из 14 респондентов (ровно 50%)."
+      },
+      {
+        "id": "c062",
+        "text": "Тарифы «ПолеВизор» составляют 450 ₽ и 690 ₽.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "| Старт | 450 ₽ за сотрудника в месяц | Заявки, фотоотчёты, маршруты |\n| Бизнес | 690 ₽ за сотрудника в месяц | Всё из «Старт» + интеграция с 1С, API, отчёты по SLA |",
+        "quote_found": true,
+        "comment": "В таблице тарифов указаны цены 450 ₽ и 690 ₽ (третий тариф — «по запросу»)."
+      },
+      {
+        "id": "c063",
+        "text": "«ПолеВизор» предлагает входной тариф за 450 ₽.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "| Старт | 450 ₽ за сотрудника в месяц | Заявки, фотоотчёты, маршруты |",
+        "quote_found": true,
+        "comment": "Тариф «Старт» является входным (первым в списке) и стоит 450 ₽."
+      },
+      {
+        "id": "c064",
+        "text": "«ПолеВизор» предлагает тариф с интеграцией и SLA за 690 ₽.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "| Бизнес | 690 ₽ за сотрудника в месяц | Всё из «Старт» + интеграция с 1С, API, отчёты по SLA |",
+        "quote_found": true,
+        "comment": "Тариф «Бизнес» за 690 ₽ включает интеграцию с 1С, API и отчёты по SLA."
+      },
+      {
+        "id": "c065",
+        "text": "Тариф «Бизнес» «ПолеВизора» за 690 ₽ включает интеграцию с 1С, API и отчёты по SLA.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "| Бизнес | 690 ₽ за сотрудника в месяц | Всё из «Старт» + интеграция с 1С, API, отчёты по SLA |",
+        "quote_found": true,
+        "comment": "Дословное соответствие описанию тарифа «Бизнес»."
+      },
+      {
+        "id": "c066",
+        "text": "Сервис не закрывает обязательные требования сегментов.",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "нужен защищённый контур и соответствие требованиям к медицинским данным",
+        "quote_found": true,
+        "comment": "Для медицинских услуг (П-14) требуется защищённый контур; для подрядчиков провайдера (П-08) — интеграция с 1С и API; для охраны (П-09) — тревожная кнопка и интеграция с пультом, чего у сервиса нет."
+      },
+      {
+        "id": "c067",
+        "text": "Для медицинских выездных услуг требуется защищённый контур и сертификация обработки медицинских данных.",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "нужен защищённый контур и соответствие требованиям к медицинским данным. Пока вносили только адрес. ... Готовы вернуться к разговору, «когда будет сертифицированное решение».",
+        "quote_found": true,
+        "comment": "Прямое указание на необходимость защищённого контура и сертификации для медицинских данных."
+      },
+      {
+        "id": "c068",
+        "text": "Для масштабирования требуется интеграция с 1С и открытый API.",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Без интеграции с 1С и открытого API масштабировать не будут: «двойной ввод мы не потянем».",
+        "quote_found": true,
+        "comment": "Прямая цитата из интервью П-08 о требовании интеграции для масштабирования."
+      },
+      {
+        "id": "c069",
+        "text": "Пилотные компании приходили только через знакомых менеджеров и партнёров.",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Все клиенты пришли через знакомых менеджеров или партнёров; холодных клиентов в пилоте не было.",
+        "quote_found": true,
+        "comment": "Общее наблюдение менеджера пилота прямо подтверждает утверждение."
+      },
+      {
+        "id": "c070",
+        "text": "Закупка связи и выбор ПО у МСП с автопарком происходят в разных центрах принятия решений.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах брифа нет данных о том, что закупка связи и выбор ПО у МСП с автопарком происходят в разных центрах принятия решений."
+      },
+      {
+        "id": "c071",
+        "text": "Количество субъектов МСП составляет 6,6 млн.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_smb_registry.md",
+        "quote": "В обновленном реестре содержатся данные о 6,6 млн субъектах малого и среднего предпринимательства.",
+        "quote_found": true,
+        "comment": "Число прямо указано в материалах."
+      },
+      {
+        "id": "c072",
+        "text": "Рост числа субъектов МСП за год составляет 3,5%.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_smb_registry.md",
+        "quote": "Это на 222,5 тыс. субъектов МСП (или на 3,5%) больше, чем было на 10 июля 2025 года.",
+        "quote_found": true,
+        "comment": "Рост 3,5% прямо указан."
+      },
+      {
+        "id": "c073",
+        "text": "Доля субъектов МСП от действующих юрлиц и ИП составляет 81,8%.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_smb_registry.md",
+        "quote": "Доля субъектов МСП от общего количества действующих юридических лиц и индивидуальных предпринимателей составляет 81,8%.",
+        "quote_found": true,
+        "comment": "Доля 81,8% прямо указана."
+      },
+      {
+        "id": "c074",
+        "text": "Две трети малых предприятий используют цифровые платформы.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_smb_digital.md",
+        "quote": "Две трети из них используют цифровые платформы, каждое пятое предприятие — облачные сервисы.",
+        "quote_found": true,
+        "comment": "Утверждение дословно процитировано."
+      },
+      {
+        "id": "c075",
+        "text": "Часть респондентов считает цену неприемлемой для низкомаржинальных сегментов.",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "«Пока бесплатно — пусть будет. Платить 590 за уборщицу — нет, у нас маржа другая».",
+        "quote_found": true,
+        "comment": "Респондент П-07 (клининг) прямо связывает отказ платить с низкой маржой сегмента."
+      },
+      {
+        "id": "c076",
+        "text": "Клиентам необходима выгрузка данных в систему заявок провайдера.",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "«590 за монтажника — нормально, если будет выгрузка в систему заявок провайдера».",
+        "quote_found": true,
+        "comment": "Респондент П-02 прямо указывает на необходимость выгрузки в систему заявок провайдера."
+      },
+      {
+        "id": "c077",
+        "text": "Сегмент сервисных выездных бригад включает компании с 5–30 сотрудниками.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет определения сегмента «сервисные выездные бригады» через диапазон 5–30 сотрудников; в пилоте участвовали компании от 9 до 48 сотрудников."
+      },
+      {
+        "id": "c078",
+        "text": "Сегмент медицины требует защищённого контура.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Маршруты и SMS пациенту полезны, но нельзя вносить данные пациентов: нужен защищённый контур и соответствие требованиям к медицинским данным.",
+        "quote_found": true,
+        "comment": "Респондент П-14 (медицина) прямо указывает на необходимость защищённого контура; в таблице также отмечено: «нужен защищённый контур для медданных»."
+      },
+      {
+        "id": "c079",
+        "text": "Сегменты клининга и доставки воды характеризуются низкой маржинальностью.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "«Пока бесплатно — пусть будет. Платить 590 за уборщицу — нет, у нас маржа другая».",
+        "quote_found": true,
+        "comment": "Для клининга низкая маржинальность прямо подтверждена (П-07). Для доставки воды в материалах прямо не указана низкая маржинальность, есть лишь низкая готовность платить (200 ₽ в таблице)."
+      },
+      {
+        "id": "c080",
+        "text": "Цена оффера составляет 590 ₽.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "В январе коммерческий запуск по 590 ₽ за сотрудника в месяц.",
+        "quote_found": true,
+        "comment": "Цена 590 ₽ прямо указана в брифе и в описании таблицы пилота."
+      },
+      {
+        "id": "c081",
+        "text": "База корпоративных SIM «Восход Телеком» является единственным названным в запросе потенциальным каналом с готовой аудиторией МСП с автопарком.",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "Продажи хотят идти сразу во все МСП с автопарком — у «Восход Телеком» большая база корпоративных SIM.",
+        "quote_found": true,
+        "comment": "В запросе руководителя назван только этот канал как потенциальный с готовой аудиторией МСП с автопарком."
+      },
+      {
+        "id": "c082",
+        "text": "Все клиенты в пилоте приходили только через знакомых менеджеров или партнёров, холодных продаж не было",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Все клиенты пришли через знакомых менеджеров или партнёров; холодных клиентов в пилоте не было.",
+        "quote_found": true,
+        "comment": "Прямое утверждение в общих наблюдениях менеджера пилота."
+      },
+      {
+        "id": "c083",
+        "text": "Доля намерения продлить пилот на платной основе составляет 50%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "| Клиент | Сегмент | Сотрудников в поле | Недель в пилоте | Доля активных в неделю, % | Заявок на активного сотрудника в неделю | Штрафы по SLA у заказчика | Готовность платить, ₽ за сотрудника в месяц (со слов) | Намерение продлить на платной основе | Комментарий менеджера пилота |",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу «Намерение продлить»: 4 «да» (П-02, П-05, П-08, П-11) + 3 «скорее да» (П-01, П-06, П-13) = 7 из 14; 7/14 = 50%."
+      },
+      {
+        "id": "c084",
+        "text": "В пилоте не было фактических оплат",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Готовность платить — ответ на вопрос менеджера пилота в конце пилота; оплат не было.",
+        "quote_found": true,
+        "comment": "Также указано: «Пилот был бесплатным для всех 14 клиентов»."
+      },
+      {
+        "id": "c085",
+        "text": "Один из респондентов назвал цену 590 ₽ за услугу уборщицы неприемлемой",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "«Пока бесплатно — пусть будет. Платить 590 за уборщицу — нет, у нас маржа другая».",
+        "quote_found": true,
+        "comment": "Респондент П-07 (клининг) прямо назвал цену 590 ₽ неприемлемой."
+      },
+      {
+        "id": "c086",
+        "text": "Конкурент «ПолеВизор» предлагает тариф «Старт» за 450 ₽, включающий заявки, фотоотчёты и маршруты",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "| Старт | 450 ₽ за сотрудника в месяц | Заявки, фотоотчёты, маршруты |",
+        "quote_found": true,
+        "comment": "Тариф «Старт» с указанной ценой и составом совпадает с утверждением."
+      },
+      {
+        "id": "c087",
+        "text": "Конкурент «ПолеВизор» предлагает тариф «Бизнес» за 690 ₽ с интеграцией с 1С и API",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "| Бизнес | 690 ₽ за сотрудника в месяц | Всё из «Старт» + интеграция с 1С, API, отчёты по SLA |",
+        "quote_found": true,
+        "comment": "Тариф «Бизнес» с ценой 690 ₽ и наличием интеграции с 1С и API подтверждён."
+      },
+      {
+        "id": "c088",
+        "text": "В пилоте участвовали компании из сегментов: клининг 21,4%, подключение интернета и ТВ 21,4%, выездные медицинские услуги 14,3%, доставка воды 14,3%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "| Клиент | Сегмент | Сотрудников в поле | Недель в пилоте | Доля активных в неделю, % | Заявок на активного сотрудника в неделю | Штрафы по SLA у заказчика | Готовность платить, ₽ за сотрудника в месяц (со слов) | Намерение продлить на платной основе | Комментарий менеджера пилота |",
+        "quote_found": true,
+        "comment": "Подсчёт по столбцу «Сегмент»: клининг 3/14=21,4%, подключение интернета и ТВ 3/14=21,4%, выездные медицинские услуги 2/14=14,3%, доставка воды 2/14=14,3%."
+      },
+      {
+        "id": "c089",
+        "text": "Для медицинского сегмента требуется защищённый контур и сертификация",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "нужен защищённый контур и соответствие требованиям к медицинским данным",
+        "quote_found": true,
+        "comment": "Респондент П-14 (выездные медицинские услуги) указал на необходимость защищённого контура и сертифицированного решения."
+      },
+      {
+        "id": "c090",
+        "text": "Рынок МСП насчитывает 6,6 млн субъектов с приростом 3,5% за год",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_smb_registry.md",
+        "quote": "В обновленном реестре содержатся данные о 6,6 млн субъектах малого и среднего предпринимательства. Это на 222,5 тыс. субъектов МСП (или на 3,5%) больше, чем было на 10 июля 2025 года.",
+        "quote_found": true,
+        "comment": "Числа 6,6 млн и прирост 3,5% за год прямо указаны в материале ФНС."
+      },
+      {
+        "id": "c091",
+        "text": "Две трети малых предприятий используют цифровые платформы",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_smb_digital.md",
+        "quote": "Две трети из них используют цифровые платформы, каждое пятое предприятие — облачные сервисы.",
+        "quote_found": true,
+        "comment": "Прямое указание в материалах: две трети малых предприятий используют цифровые платформы."
+      },
+      {
+        "id": "c092",
+        "text": "Продукт «Бригада Онлайн» не имеет интеграции с 1С и открытого API",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Без интеграции с 1С и открытого API масштабировать не будут: «двойной ввод мы не потянем».",
+        "quote_found": true,
+        "comment": "Клиент П-08 указывает на отсутствие интеграции с 1С и API как на блокер; в описании продукта в brief.md эти функции также не заявлены."
+      },
+      {
+        "id": "c093",
+        "text": "Закупка ПО и выбор оператора связи у МСП с автопарком осуществляются разными центрами принятия решений",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о центрах принятия решений по закупке ПО и выбору оператора связи."
+      },
+      {
+        "id": "c094",
+        "text": "OPT-001 выигрывает в базовом сценарии",
+        "kind": "product",
+        "chunk": 8,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах отсутствуют упоминания OPT-001, базового сценария или сравнительных оценок вариантов."
+      },
+      {
+        "id": "c095",
+        "text": "OPT-001 остаётся лучшим в 34 из 81 сценариев",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о 81 сценарии и результатах OPT-001."
+      },
+      {
+        "id": "c096",
+        "text": "Вероятность сохранения лидерства OPT-001 составляет примерно 47%",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет расчёта вероятности сохранения лидерства OPT-001."
+      },
+      {
+        "id": "c097",
+        "text": "При уровне «high» ёмкости и доступности сегмента сервисных выездных бригад выигрывает OPT-002",
+        "kind": "causal",
+        "chunk": 8,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет сценарного анализа с уровнями «high» и вариантами OPT-002."
+      },
+      {
+        "id": "c098",
+        "text": "При уровне «high» значимости функции SMS-уведомления клиенту о приезде мастера выигрывает OPT-002",
+        "kind": "causal",
+        "chunk": 8,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о влиянии значимости SMS-уведомлений на выбор OPT-002."
+      },
+      {
+        "id": "c099",
+        "text": "При уровне «low» готовности платить 590 ₽ за сотрудника выигрывает OPT-003",
+        "kind": "causal",
+        "chunk": 8,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет сценариев с уровнем «low» готовности платить и сравнением OPT-003."
+      },
+      {
+        "id": "c100",
+        "text": "При уровне «high» стоимости привлечения и цикла сделки по каналам выигрывает OPT-003",
+        "kind": "causal",
+        "chunk": 8,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет анализа стоимости привлечения по каналам в разрезе вариантов OPT-003."
+      },
+      {
+        "id": "c101",
+        "text": "При уровне «high» реального проникновения конкурента «ПолеВизор» выигрывает OPT-003",
+        "kind": "causal",
+        "chunk": 8,
+        "section": "Стресс-тест решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний OPT-003 или уровней реального проникновения конкурента «ПолеВизор»."
+      },
+      {
+        "id": "c102",
+        "text": "Штрафы по SLA есть у 42,9% компаний пилота",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "| Штрафы по SLA у заказчика |",
+        "quote_found": true,
+        "comment": "6 из 14 компаний имеют значение «да» (П-01, П-02, П-05, П-08, П-11, П-13): 6/14 = 42,857% ≈ 42,9%."
+      },
+      {
+        "id": "c103",
+        "text": "Тариф «Старт» продукта «ПолеВизор» стоит 450 ₽ за сотрудника в месяц",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "| Старт | 450 ₽ за сотрудника в месяц | Заявки, фотоотчёты, маршруты |",
+        "quote_found": true,
+        "comment": "Цена тарифа «Старт» указана прямо в таблице тарифов конкурента."
+      },
+      {
+        "id": "c104",
+        "text": "Тариф «Бизнес» продукта «ПолеВизор» стоит 690 ₽ за сотрудника в месяц",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "| Бизнес | 690 ₽ за сотрудника в месяц | Всё из «Старт» + интеграция с 1С, API, отчёты по SLA |",
+        "quote_found": true,
+        "comment": "Цена тарифа «Бизнес» указана прямо в таблице тарифов конкурента."
+      },
+      {
+        "id": "c105",
+        "text": "Средняя готовность платить составляет 425 ₽",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "| Готовность платить, ₽ за сотрудника в месяц (со слов) |",
+        "quote_found": true,
+        "comment": "Среднее арифметическое значений колонки: (600+650+200+200+600+500+250+600+150+200+700+200+700+400)/14 = 5950/14 = 425 ₽."
+      },
+      {
+        "id": "c106",
+        "text": "Цена продукта составляет 590 ₽ за сотрудника в месяц",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "В январе коммерческий запуск по 590 ₽ за сотрудника в месяц.",
+        "quote_found": true,
+        "comment": "Цена коммерческой версии указана в брифе; также подтверждена в листе «Описание» pilot_results.xlsx."
+      },
+      {
+        "id": "c107",
+        "text": "Доля компаний, намеренных продлить пилот на платной основе, составляет 50%",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "| Намерение продлить на платной основе |",
+        "quote_found": true,
+        "comment": "7 из 14 компаний ответили «да» или «скорее да» (П-01, П-02, П-05, П-06, П-08, П-11, П-13): 7/14 = 50%."
+      },
+      {
+        "id": "c108",
+        "text": "По результатам пилота договоров и оплат не было",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Вопрос о цене задавался в конце пилота, ответы — «со слов», договоров и оплат не было.",
+        "quote_found": true,
+        "comment": "Прямое указание в общих наблюдениях менеджера пилота; также подтверждено в листе «Описание» pilot_results.xlsx."
+      },
+      {
+        "id": "c109",
+        "text": "Средняя доля активных пользователей в неделю в пилоте составляла 56,71%",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "| Доля активных в неделю, % |",
+        "quote_found": true,
+        "comment": "Среднее арифметическое значений колонки: (86+87+23+29+79+61+31+94+17+43+78+29+82+55)/14 = 794/14 = 56,714...% ≈ 56,71%."
+      },
+      {
+        "id": "c110",
+        "text": "Функция приёма и распределения заявок на выезд реализована в продукте",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "сервис для компаний с выездными сотрудниками: заявки, маршруты, фотоотчёты, SMS клиенту о приезде мастера.",
+        "quote_found": true,
+        "comment": "Функция работы с заявками («заявки») прямо указана в описании сервиса в брифе."
+      },
+      {
+        "id": "c111",
+        "text": "Функция построения маршрутов выездных сотрудников реализована в продукте",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "заявки, маршруты, фотоотчёты, SMS клиенту о приезде мастера",
+        "quote_found": true,
+        "comment": "В брифе прямо перечислены маршруты как реализованная функция сервиса."
+      },
+      {
+        "id": "c112",
+        "text": "Функция фотоотчёта с места выезда реализована в продукте",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "заявки, маршруты, фотоотчёты, SMS клиенту о приезде мастера",
+        "quote_found": true,
+        "comment": "Фотоотчёты указаны в перечне функций продукта в брифе."
+      },
+      {
+        "id": "c113",
+        "text": "Функция SMS-уведомления клиента о приезде мастера реализована в продукте",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "SMS клиенту о приезде мастера",
+        "quote_found": true,
+        "comment": "SMS-уведомление о приезде мастера прямо указано как функция продукта."
+      },
+      {
+        "id": "c114",
+        "text": "Функция отчётности по SLA для заказчика запланирована",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминания о запланированной функции отчётности по SLA для продукта «Бригада Онлайн»; упоминание SLA есть только у конкурента и как пожелание клиента П-13."
+      },
+      {
+        "id": "c115",
+        "text": "Функция интеграции с 1С и открытого API запланирована",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Интеграция с 1С и API упоминается только как требование клиентов (П-08) и как функция конкурента, но не как запланированная функция продукта."
+      },
+      {
+        "id": "c116",
+        "text": "Сегмент SEG-001 включает пилотные компании (тёплые контакты)",
+        "kind": "other",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Код сегмента SEG-001 отсутствует в материалах; сегменты в таблице пилотов обозначены названиями, а не кодами."
+      },
+      {
+        "id": "c117",
+        "text": "Сегмент SEG-002 включает выездные медицинские услуги",
+        "kind": "other",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Код сегмента SEG-002 отсутствует в материалах."
+      },
+      {
+        "id": "c118",
+        "text": "Сегмент SEG-003 включает клининг и доставку питьевой воды",
+        "kind": "other",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Код сегмента SEG-003 отсутствует в материалах."
+      },
+      {
+        "id": "c119",
+        "text": "Связь «польза → выручка» пока не подтверждена",
+        "kind": "causal",
+        "chunk": 9,
+        "section": "Продуктовая стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Вопрос о цене задавался в конце пилота, ответы — «со слов», договоров и оплат не было.",
+        "quote_found": true,
+        "comment": "Пилот был бесплатным, оплаты отсутствовали, готовность платить выражена устно — связь пользы с реальной выручкой не подтверждена."
+      },
+      {
+        "id": "c120",
+        "text": "Коммерческий запуск «Бригады Онлайн» запланирован на январь по цене 590 ₽ за сотрудника в месяц.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "В январе коммерческий запуск по 590 ₽ за сотрудника в месяц.",
+        "quote_found": true,
+        "comment": "Дата (январь) и цена (590 ₽/сотрудник/мес) прямо указаны в брифе и подтверждены в описании таблицы пилотов."
+      },
+      {
+        "id": "c121",
+        "text": "Бесплатный пилот длился полгода.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "Полгода бесплатно пилотировали «Бригаду Онлайн»",
+        "quote_found": true,
+        "comment": "Прямо указано в брифе; в pilot_results.xlsx также указан период «март–сентябрь 2026» (6 месяцев)."
+      },
+      {
+        "id": "c122",
+        "text": "В пилоте не было холодных клиентов.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Все клиенты пришли через знакомых менеджеров или партнёров; холодных клиентов в пилоте не было.",
+        "quote_found": true,
+        "comment": "Прямое утверждение в общих наблюдениях менеджера пилота."
+      },
+      {
+        "id": "c123",
+        "text": "Все компании пилота пришли через знакомых менеджеров или партнёров.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Все клиенты пришли через знакомых менеджеров или партнёров",
+        "quote_found": true,
+        "comment": "Прямое утверждение в материалах интервью."
+      },
+      {
+        "id": "c124",
+        "text": "В пилоте договоры и оплаты не заключались.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "договоров и оплат не было",
+        "quote_found": true,
+        "comment": "Подтверждено также в pilot_results.xlsx: «Пилот был бесплатным для всех 14 клиентов» и «оплат не было»."
+      },
+      {
+        "id": "c125",
+        "text": "Готовность платить в пилоте замерена только «со слов».",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Готовность платить, ₽ за сотрудника в месяц (со слов)",
+        "quote_found": true,
+        "comment": "В заголовке столбца и описании листа указано «со слов»; в интервью — «ответы — „со слов“»."
+      },
+      {
+        "id": "c126",
+        "text": "Средняя готовность платить составляет 425 ₽ при цене 590 ₽.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Готовность платить, ₽ за сотрудника в месяц (со слов)",
+        "quote_found": true,
+        "comment": "Расчёт: 600+650+200+200+600+500+250+600+150+200+700+200+700+400 = 5950 ₽; 5950 / 14 = 425 ₽. Цена 590 ₽ указана в brief.md и листе «Описание»."
+      },
+      {
+        "id": "c127",
+        "text": "Намерение продлить на платной основе составляет 50% при низкой надёжности.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Намерение продлить на платной основе",
+        "quote_found": true,
+        "comment": "Подсчёт: «да» и «скорее да» у 7 из 14 клиентов (П-01, П-02, П-05, П-06, П-08, П-11, П-13) = 50%. Надёжность низкая, поскольку ответы даны «со слов» и договоров/оплат не было."
+      },
+      {
+        "id": "c128",
+        "text": "До планёрки осталось две недели.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "Стратегия нужна к планёрке через две недели.",
+        "quote_found": true,
+        "comment": "Прямое указание в запросе руководителя."
+      },
+      {
+        "id": "c129",
+        "text": "За полгода пилота не было ни одного платного договора.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "договоров и оплат не было",
+        "quote_found": true,
+        "comment": "За весь период пилота (полгода) не было договоров и оплат; пилот был бесплатным для всех 14 клиентов."
+      },
+      {
+        "id": "c130",
+        "text": "Заявленная готовность платить в 425 ₽ в среднем ниже цены 590 ₽.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Планируемая цена коммерческой версии — 590 ₽ за сотрудника в месяц.",
+        "quote_found": true,
+        "comment": "Средняя готовность платить 425 ₽ (см. расчёт в c126) ниже заявленной цены 590 ₽."
+      },
+      {
+        "id": "c131",
+        "text": "Пилотные компании не доверяют цене без годового договора со скидкой.",
+        "kind": "user",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Платить готовы, но хотят годовой договор со скидкой.",
+        "quote_found": true,
+        "comment": "Только один клиент (П-05) явно запросил годовой договор со скидкой; обобщение на все пилотные компании не подтверждено."
+      },
+      {
+        "id": "c132",
+        "text": "«Бригада Онлайн» закрывает полный цикл выезда — заявки, маршруты, фотоотчёты и SMS клиенту о приезде мастера — в одном месте, без двойного ввода данных.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "заявки, маршруты, фотоотчёты, SMS клиенту о приезде мастера",
+        "quote_found": true,
+        "comment": "Перечисленные функции подтверждены, однако часть «без двойного ввода данных» противоречит интервью П-08 («двойной ввод мы не потянем»)."
+      },
+      {
+        "id": "c133",
+        "text": "Для работы с медицинскими данными сервису требуется защищённый контур и сертификация.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "нельзя вносить данные пациентов: нужен защищённый контур и соответствие требованиям к медицинским данным",
+        "quote_found": true,
+        "comment": "Прямое указание в интервью П-14 и в таблице результатов пилота (П-14: «нужен защищённый контур для медданных»)."
+      },
+      {
+        "id": "c134",
+        "text": "В пилоте цена 590 ₽ за сотрудника в месяц оказалась неприемлемой для клининга и доставки питьевой воды из-за низкой маржинальности.",
+        "kind": "market",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Платить 590 за уборщицу — нет, у нас маржа другая",
+        "quote_found": true,
+        "comment": "Для клининга (П-07) подтверждено с указанием низкой маржинальности; для доставки воды (П-10) причина отказа — неудобство использования, а не маржинальность."
+      },
+      {
+        "id": "c135",
+        "text": "42,9% компаний пилота сталкивались со штрафами по SLA у заказчика.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "| Клиент | Сегмент | Сотрудников в поле | Недель в пилоте | Доля активных в неделю, % | Заявок на активного сотрудника в неделю | Штрафы по SLA у заказчика | Готовность платить, ₽ за сотрудника в месяц (со слов) | Намерение продлить на платной основе | Комментарий менеджера пилота |",
+        "quote_found": true,
+        "comment": "В колонке «Штрафы по SLA у заказчика» значение «да» у 6 из 14 компаний: 6/14 = 42,857% ≈ 42,9%."
+      },
+      {
+        "id": "c136",
+        "text": "Сервис снижает риск штрафов по SLA у заказчика за счёт фиксации заявки, маршрута и подтверждённого фотоотчёта в одной системе.",
+        "kind": "causal",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Фотоотчёт с геометкой закрывает споры: «по двум спорным заявкам в августе отбились фотографиями»",
+        "quote_found": true,
+        "comment": "П-02 указывает на снижение числа спорных заявок и штрафов провайдера благодаря фотоотчёту; в таблице также отмечено, что спорных заявок стало меньше."
+      },
+      {
+        "id": "c137",
+        "text": "Цена 590 ₽ за сотрудника в месяц обсуждается с каждой пилотной компанией индивидуально.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах цена указана как фиксированная 590 ₽ за сотрудника в месяц; индивидуальное обсуждение цены с каждой компанией не упоминается."
+      },
+      {
+        "id": "c138",
+        "text": "Часть пилотных компаний запросила годовой договор со скидкой.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Платить готовы, но хотят годовой договор со скидкой.",
+        "quote_found": true,
+        "comment": "Клиент П-05 явно запросил годовой договор со скидкой, что подтверждает наличие таких запросов среди части пилотных компаний."
+      },
+      {
+        "id": "c139",
+        "text": "Тариф составляет 590 ₽ за сотрудника в месяц",
+        "kind": "product",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "В январе коммерческий запуск по 590 ₽ за сотрудника в месяц.",
+        "quote_found": true,
+        "comment": "Также подтверждено в листе «Описание» файла pilot_results.xlsx: «Планируемая цена коммерческой версии — 590 ₽ за сотрудника в месяц»."
+      },
+      {
+        "id": "c140",
+        "text": "На старте эксперимента EXP-001 количество оплативших пилотных компаний равно 0",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "Эксперимент EXP-001 в материалах не упоминается; известно лишь, что пилот был бесплатным для всех 14 клиентов и оплат не было."
+      },
+      {
+        "id": "c141",
+        "text": "Минимальный обнаружимый эффект для EXP-001 составляет 10 процентных пунктов конверсии в оплату при количестве пилотных компаний не менее 30",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-001, минимального обнаружимого эффекта или 30 пилотных компаний."
+      },
+      {
+        "id": "c142",
+        "text": "Для различимости эффекта в EXP-001 необходимо не менее 3 оплативших на каждые 30 пилотных компаний",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-001 и соотношения 3 оплативших на 30 компаний."
+      },
+      {
+        "id": "c143",
+        "text": "Срок проведения эксперимента EXP-001 составляет 45 дней",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-001 и срока 45 дней."
+      },
+      {
+        "id": "c144",
+        "text": "Доля пилотных компаний, отказавшихся от платного договора и ушедших к конкуренту, не более 50% от всех выставленных счетов",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о выставленных счетах, отказах и переходах к конкуренту; пилот был бесплатным."
+      },
+      {
+        "id": "c145",
+        "text": "Заявленный уровень [CL-002]: средняя фактическая цена за сотрудника в месяц составляет 425 ₽",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет кода CL-002 и цены 425 ₽; заявленная цена 590 ₽."
+      },
+      {
+        "id": "c146",
+        "text": "Уровень пилота [CL-003]: средняя доля активных пользователей в неделю в платных компаниях составляет 56,71%",
+        "kind": "user",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет кода CL-003 и упоминания платных компаний; пилот был бесплатным для всех 14 клиентов."
+      },
+      {
+        "id": "c147",
+        "text": "Kill-критерий для EXP-001 наступает до 2026-12-24",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-001 и kill-критерия."
+      },
+      {
+        "id": "c148",
+        "text": "Порог перехода к коммерческому запуску в EXP-001: доля оплативших не менее 20%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-001 и порога 20% оплативших."
+      },
+      {
+        "id": "c149",
+        "text": "Порог корректировки цены в EXP-001: доля оплативших от 10% до 20%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-001 и порога 10–20% оплативших."
+      },
+      {
+        "id": "c150",
+        "text": "Порог остановки коммерческого запуска в EXP-001: доля оплативших менее 10%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-001 и порога менее 10% оплативших."
+      },
+      {
+        "id": "c151",
+        "text": "Минимальный обнаружимый эффект для EXP-002 составляет 15 процентных пунктов расхождения между заявленной и фактической оплатой при N не менее 30",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-002, минимального обнаружимого эффекта, расхождения оплаты или параметра N≥30"
+      },
+      {
+        "id": "c152",
+        "text": "Срок проведения эксперимента EXP-002 составляет 45 дней",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-002 или срока проведения 45 дней"
+      },
+      {
+        "id": "c153",
+        "text": "Доля компаний, давших согласие на интервью и последующее выставление счёта, не менее 60% пилотных компаний",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": true,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах указано, что интервью проведены с 6 из 14 клиентов (≈42,9%), что меньше 60%; данные о согласии на выставление счёта отсутствуют"
+      },
+      {
+        "id": "c154",
+        "text": "Количество записей с персональными данными респондентов в отчётах равно 0",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "partial",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Имена не сохраняются, клиенты обозначены кодами как в pilot_results.xlsx.",
+        "quote_found": true,
+        "comment": "Подтверждена анонимизация (имена не сохраняются, используются коды), однако явного указания, что количество записей с персональными данными равно 0, нет"
+      },
+      {
+        "id": "c155",
+        "text": "Kill-критерий для EXP-002 наступает до 2026-12-24",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-002, kill-критериев или даты 2026-12-24"
+      },
+      {
+        "id": "c156",
+        "text": "Порог использования заявленной готовности как валидного индикатора: расхождение не более 20 процентных пунктов",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о пороге в 20 процентных пунктов для валидности заявленной готовности как индикатора"
+      },
+      {
+        "id": "c157",
+        "text": "Порог исключения самоотчёта из критериев: расхождение более 20 процентных пунктов",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о пороге исключения самоотчёта из критериев (более 20 п.п.)"
+      },
+      {
+        "id": "c158",
+        "text": "Для EXP-003 отбирается выборка не менее 100 компаний из базы корпоративных SIM с признаками выездных сотрудников и автопарка",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-003, выборки из 100 компаний или отбора по базе корпоративных SIM с признаками выездных сотрудников и автопарка"
+      },
+      {
+        "id": "c159",
+        "text": "Минимальный обнаружимый эффект для EXP-003 составляет 5 процентных пунктов конверсии при выборке не менее 100 компаний",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-003, минимального обнаружимого эффекта 5 п.п. или выборки 100 компаний"
+      },
+      {
+        "id": "c160",
+        "text": "Срок проведения эксперимента EXP-003 составляет 60 дней",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-003 или срока проведения 60 дней"
+      },
+      {
+        "id": "c161",
+        "text": "Доля жалоб на спам или нежелательные звонки не более 5% от обзвоненных компаний",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о жалобах на спам/нежелательные звонки или их доле от обзвоненных компаний."
+      },
+      {
+        "id": "c162",
+        "text": "Стоимость привлечения клиента через канал SIM не выше 30% от годовой выручки, рассчитанной как 590 ₽ умножить на число сотрудников и умножить на 12",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет данных о канале SIM, стоимости привлечения или расчёте выручки по формуле 590 ₽ × сотрудники × 12."
+      },
+      {
+        "id": "c163",
+        "text": "Kill-критерий для EXP-003 наступает до 2027-01-15",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминаний EXP-003 или kill-критериев."
+      },
+      {
+        "id": "c164",
+        "text": "Порог приоритизации канала SIM: совпадение центров принятия решений не менее 50% и конверсия не менее 5%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет порогов приоритизации канала SIM (50% совпадения ЦПР, 5% конверсии)."
+      },
+      {
+        "id": "c165",
+        "text": "Порог отказа от канала SIM как основного: совпадение менее 30% или конверсия менее 2%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет порогов отказа от канала SIM (30% совпадения, 2% конверсии)."
+      },
+      {
+        "id": "c166",
+        "text": "Компания «Восход Телеком» располагает базой корпоративных SIM-карт",
+        "kind": "company_data",
+        "chunk": 11,
+        "section": "План проверки",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "у «Восход Телеком» большая база корпоративных SIM",
+        "quote_found": true,
+        "comment": "Прямое упоминание в брифе."
+      },
+      {
+        "id": "c167",
+        "text": "В ходе пилота не заключались договоры",
+        "kind": "company_data",
+        "chunk": 13,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "договоров и оплат не было",
+        "quote_found": true,
+        "comment": "Менеджер пилота прямо указал, что договоров не было."
+      },
+      {
+        "id": "c168",
+        "text": "В ходе пилота не производились оплаты",
+        "kind": "company_data",
+        "chunk": 13,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "договоров и оплат не было",
+        "quote_found": true,
+        "comment": "Менеджер пилота прямо указал, что оплат не было; также в pilot_results.xlsx: «оплат не было»."
+      },
+      {
+        "id": "c169",
+        "text": "Ответы о готовности платить в ходе пилота были даны «со слов»",
+        "kind": "company_data",
+        "chunk": 13,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "ответы — «со слов»",
+        "quote_found": true,
+        "comment": "В конспектах интервью указано, что ответы о цене даны «со слов»; в pilot_results.xlsx колонка также помечена «(со слов)»."
+      },
+      {
+        "id": "c170",
+        "text": "Средняя заявленная готовность платить за сотрудника в месяц составляет 425 ₽",
+        "kind": "number",
+        "chunk": 13,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Готовность платить, ₽ за сотрудника в месяц (со слов)",
+        "quote_found": true,
+        "comment": "Расчёт по 14 значениям колонки: (600+650+200+200+600+500+250+600+150+200+700+200+700+400)/14 = 5950/14 = 425 ₽."
+      },
+      {
+        "id": "c171",
+        "text": "Цена составляет 590 ₽",
+        "kind": "number",
+        "chunk": 13,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "brief.md",
+        "quote": "В январе коммерческий запуск по 590 ₽ за сотрудника в месяц.",
+        "quote_found": true,
+        "comment": "Цена 590 ₽ прямо указана в brief.md и подтверждена в описании pilot_results.xlsx."
+      },
+      {
+        "id": "c172",
+        "text": "Все пилотные клиенты пришли через знакомых менеджеров и партнёров",
+        "kind": "company_data",
+        "chunk": 13,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Все клиенты пришли через знакомых менеджеров или партнёров; холодных клиентов в пилоте не было.",
+        "quote_found": true,
+        "comment": "Прямое утверждение менеджера пилота в общих наблюдениях."
+      },
+      {
+        "id": "c173",
+        "text": "В пилоте «Бригады Онлайн» не было холодных клиентов",
+        "kind": "company_data",
+        "chunk": 13,
+        "section": "Журнал решения",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "холодных клиентов в пилоте не было",
+        "quote_found": true,
+        "comment": "Явно зафиксировано в общих наблюдениях менеджера пилота."
+      },
+      {
+        "id": "c174",
+        "text": "Срок kill-критерия установлен на 2027-01-31",
+        "kind": "number",
+        "chunk": 13,
+        "section": "Журнал решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет упоминания kill-критерия или даты 2027-01-31."
+      },
+      {
+        "id": "c175",
+        "text": "Дата планового пересмотра решения установлена на 2026-12-24",
+        "kind": "number",
+        "chunk": 13,
+        "section": "Журнал решения",
+        "verdict": "unsupported",
+        "contradicted": false,
+        "source_file": "",
+        "quote": "",
+        "quote_found": false,
+        "comment": "В материалах нет даты 2026-12-24 или упоминания планового пересмотра решения."
+      },
+      {
+        "id": "c176",
+        "text": "«ПолеВизор» является конкурентом.",
+        "kind": "market",
+        "chunk": 14,
+        "section": "Источники",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/competitor_page.md",
+        "quote": "Сохранённая страница конкурента «ПолеВизор»",
+        "quote_found": true,
+        "comment": "В заголовке файла прямо указано, что это страница конкурента; brief.md также называет его конкурентом."
+      },
+      {
+        "id": "c177",
+        "text": "Число субъектов МСП в Едином реестре ФНС зафиксировано на 10 июля 2026 года.",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Источники",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/market_smb_registry.md",
+        "quote": "Число субъектов МСП в Едином реестре ФНС на 10 июля 2026 года",
+        "quote_found": true,
+        "comment": "Дата 10 июля 2026 года указана в заголовке и в тексте материала ФНС."
+      },
+      {
+        "id": "c178",
+        "text": "Существуют конспекты интервью с участниками пилота «Бригады Онлайн».",
+        "kind": "company_data",
+        "chunk": 14,
+        "section": "Источники",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_interviews.md",
+        "quote": "Конспекты интервью с участниками пилота «Бригады Онлайн»",
+        "quote_found": true,
+        "comment": "Файл с таким названием и содержанием присутствует в материалах."
+      },
+      {
+        "id": "c179",
+        "text": "Пилот «Бригады Онлайн» был бесплатным.",
+        "kind": "product",
+        "chunk": 14,
+        "section": "Источники",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Пилот был бесплатным для всех 14 клиентов.",
+        "quote_found": true,
+        "comment": "Указано в листе «Описание» файла pilot_results.xlsx; также подтверждено в brief.md и pilot_interviews.md."
+      },
+      {
+        "id": "c180",
+        "text": "В пилоте «Бригады Онлайн» участвовало 14 компаний.",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Источники",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/pilot_results.xlsx",
+        "quote": "Итоги бесплатного пилота «Бригады Онлайн» у 14 компаний",
+        "quote_found": true,
+        "comment": "В meta-файле и в листе «Описание» указано 14 клиентов; в таблице 14 строк (П-01…П-14)."
+      },
+      {
+        "id": "c181",
+        "text": "Существует воронка продаж пилотов «Бригады Онлайн» по каналам за 2026 год.",
+        "kind": "company_data",
+        "chunk": 14,
+        "section": "Источники",
+        "verdict": "supported",
+        "contradicted": false,
+        "source_file": "materials/sales_funnel.csv",
+        "quote": "title: \"Воронка продаж пилотов «Бригады Онлайн» по каналам, 2026\"",
+        "quote_found": true,
+        "comment": "В материалах присутствует файл sales_funnel.csv, озаглавленный как воронка продаж пилотов по каналам за 2026 год, с данными по кварталам 2026-Q1–Q3."
+      }
+    ],
+    "all_extracted": [
+      {
+        "id": "c001",
+        "text": "Средняя заявленная готовность платить составляет 425 ₽, что ниже цены 590 ₽",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c002",
+        "text": "Данные о готовности платить получены «со слов», без договоров и оплат",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c003",
+        "text": "Продлить пилот на платной основе готовы лишь 50% компаний",
+        "kind": "number",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c004",
+        "text": "Оценка готовности компаний продлить пилот имеет низкую надёжность",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c005",
+        "text": "Все пилотные клиенты пришли через знакомых и партнёров",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c006",
+        "text": "Холодные каналы привлечения клиентов не проверены",
+        "kind": "company_data",
+        "chunk": 1,
+        "section": "Решение на одной странице"
+      },
+      {
+        "id": "c007",
+        "text": "Доля компаний, намерение которых продлить пилот на платной основе равно 'да' или 'скорее да', составляет 50.0%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c008",
+        "text": "Средняя готовность платить за сотрудника в месяц составляет 425 ₽",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c009",
+        "text": "Средняя доля активных пользователей в неделю составляет 56.71%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c010",
+        "text": "Среднее количество заявок на одного активного сотрудника в неделю составляет 9.75 заявки",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c011",
+        "text": "Доля компаний, имеющих штрафы по SLA у заказчика, составляет 42.9%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c012",
+        "text": "Распределение компаний по сегментам: Выездные медицинские услуги 14.3%, Доставка питьевой воды 14.3%, Клининг 21.4%, Охрана (группы быстрого реагирования) 7.1%, Подключение интернета и ТВ (подрядчик провайдера) 21.4%, Ремонт и монтаж бытовой техники 21.4%",
+        "kind": "number",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c013",
+        "text": "В Едином реестре ФНС на 10 июля 2026 года содержится информация о 6,6 млн субъектов малого и среднего предпринимательства",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c014",
+        "text": "Количество субъектов МСП на 10 июля 2026 года увеличилось на 222,5 тыс. (3,5%) по сравнению с 10 июля 2025 года",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c015",
+        "text": "Доля субъектов МСП от общего числа действующих юрлиц и ИП составляет 81,8%",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c016",
+        "text": "Две трети малых предприятий используют цифровые платформы, а каждое пятое — облачные сервисы",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c017",
+        "text": "В пилоте «Бригады Онлайн» не было холодных клиентов; все пришли через знакомых менеджеров или партнёров",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c018",
+        "text": "В ходе пилота «Бригады Онлайн» не заключались договоры и не производились оплаты; ответы о готовности платить были даны «со слов»",
+        "kind": "company_data",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c019",
+        "text": "Один из респондентов пилота считает цену 590 ₽ за монтажника приемлемой при условии наличия выгрузки в систему заявок провайдера",
+        "kind": "user",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c020",
+        "text": "Один из респондентов пилота считает цену 590 ₽ за уборщицу неприемлемой из-за низкой маржинальности бизнеса",
+        "kind": "user",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c021",
+        "text": "Респонденты пилота выразили готовность платить при условии предоставления годового договора со скидкой",
+        "kind": "user",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c022",
+        "text": "Для работы с медицинским сегментом сервису требуется защищенный контур и сертификация для обработки медицинских данных",
+        "kind": "product",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c023",
+        "text": "Сервис «ПолеВизор» предлагает тариф «Старт» за 450 ₽ за сотрудника в месяц с функционалом заявок, фотоотчётов и маршрутов",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c024",
+        "text": "Сервис «ПолеВизор» предлагает тариф «Бизнес» за 690 ₽ за сотрудника в месяц, включающий интеграцию с 1С, API и отчёты по SLA",
+        "kind": "market",
+        "chunk": 2,
+        "section": "Картина ситуации"
+      },
+      {
+        "id": "c025",
+        "text": "Пилот был бесплатным",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c026",
+        "text": "По пилоту договоры и оплаты не заключались",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c027",
+        "text": "Ответы о готовности платить в пилоте даны «со слов»",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c028",
+        "text": "Средняя готовность платить по пилоту составляет 425 ₽",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c029",
+        "text": "Заявленная цена составляет 590 ₽",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c030",
+        "text": "Средняя готовность платить 425 ₽ ниже заявленной цены 590 ₽",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c031",
+        "text": "Доля намеренных продлить пилот на платной основе составляет 50%",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c032",
+        "text": "Надёжность данных о намерении продлить пилот низкая",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c033",
+        "text": "Пилотные клиенты приходили только через знакомых менеджеров и партнёров",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c034",
+        "text": "Каналы холодных продаж не проверены",
+        "kind": "company_data",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c035",
+        "text": "Панель ролей для варианта OPT-001 составляет 7.0±1.3",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c036",
+        "text": "Панель ролей для варианта OPT-002 составляет 6.0±0.8",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c037",
+        "text": "Панель ролей для варианта OPT-003 составляет 8.2±0.4",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c038",
+        "text": "Панель ролей для варианта OPT-004 составляет 4.3±0.9",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c039",
+        "text": "Панель ролей для варианта OPT-005 составляет 3.0±0.8",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c040",
+        "text": "Панель ролей для варианта OPT-006 составляет 4.0±1.7",
+        "kind": "number",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c041",
+        "text": "Конкурирующий продукт «ПолеВизор» предлагает тариф 450 ₽",
+        "kind": "market",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c042",
+        "text": "Конкурирующий продукт «ПолеВизор» предлагает тариф 690 ₽ с интеграциями",
+        "kind": "market",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c043",
+        "text": "Для медицинских услуг требуется защищённый контур и сертификация",
+        "kind": "product",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c044",
+        "text": "Ранжирование вариантов устойчиво к перестановке порядка",
+        "kind": "other",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c045",
+        "text": "Ключевая неопределённость — готовность платить, а не сегментация",
+        "kind": "causal",
+        "chunk": 4,
+        "section": "Варианты"
+      },
+      {
+        "id": "c046",
+        "text": "В пилоте представлены сегменты клининга, подключения интернета/ТВ, доставки воды, медицинских услуг и охраны",
+        "kind": "company_data",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c047",
+        "text": "Для монтажника цена 590 ₽ признана приемлемой при наличии выгрузки в систему заявок провайдера",
+        "kind": "user",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c048",
+        "text": "Для уборщицы цена 590 ₽ признана неприемлемой из-за низкой маржинальности",
+        "kind": "user",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c049",
+        "text": "Медицинский сегмент требует защищённого контура и сертификации",
+        "kind": "market",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c050",
+        "text": "Требования защищённого контура и сертификации удорожают вход в медицинский сегмент",
+        "kind": "causal",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c051",
+        "text": "Готовность платить существует при условии годового договора со скидкой",
+        "kind": "user",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c052",
+        "text": "Разная ценовая чувствительность существует по сегментам",
+        "kind": "causal",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c053",
+        "text": "50% компаний заявили о намерении продлить пилот на платной основе",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c054",
+        "text": "Средняя заявленная готовность платить составляет 425 ₽",
+        "kind": "number",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c055",
+        "text": "Один из респондентов назвал 590 ₽ за монтажника приемлемой ценой",
+        "kind": "user",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c056",
+        "text": "В сегментах клининга и доставки воды цену сочли неприемлемой",
+        "kind": "user",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c057",
+        "text": "Прямые продажи по тёплым контактам воспроизводят единственную доказанно работающую модель привлечения пилота",
+        "kind": "company_data",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c058",
+        "text": "Конкурент «ПолеВизор» предлагает тариф «Старт» по цене 450 ₽",
+        "kind": "market",
+        "chunk": 5,
+        "section": "Варианты"
+      },
+      {
+        "id": "c059",
+        "text": "В пилоте не было договоров и оплат.",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c060",
+        "text": "Средняя заявленная готовность платить составляет 425 ₽.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c061",
+        "text": "Намерение продлить на платной основе есть лишь у половины респондентов.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c062",
+        "text": "Тарифы «ПолеВизор» составляют 450 ₽ и 690 ₽.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c063",
+        "text": "«ПолеВизор» предлагает входной тариф за 450 ₽.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c064",
+        "text": "«ПолеВизор» предлагает тариф с интеграцией и SLA за 690 ₽.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c065",
+        "text": "Тариф «Бизнес» «ПолеВизора» за 690 ₽ включает интеграцию с 1С, API и отчёты по SLA.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c066",
+        "text": "Сервис не закрывает обязательные требования сегментов.",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c067",
+        "text": "Для медицинских выездных услуг требуется защищённый контур и сертификация обработки медицинских данных.",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c068",
+        "text": "Для масштабирования требуется интеграция с 1С и открытый API.",
+        "kind": "product",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c069",
+        "text": "Пилотные компании приходили только через знакомых менеджеров и партнёров.",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c070",
+        "text": "Закупка связи и выбор ПО у МСП с автопарком происходят в разных центрах принятия решений.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c071",
+        "text": "Количество субъектов МСП составляет 6,6 млн.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c072",
+        "text": "Рост числа субъектов МСП за год составляет 3,5%.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c073",
+        "text": "Доля субъектов МСП от действующих юрлиц и ИП составляет 81,8%.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c074",
+        "text": "Две трети малых предприятий используют цифровые платформы.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c075",
+        "text": "Часть респондентов считает цену неприемлемой для низкомаржинальных сегментов.",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c076",
+        "text": "Клиентам необходима выгрузка данных в систему заявок провайдера.",
+        "kind": "user",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c077",
+        "text": "Сегмент сервисных выездных бригад включает компании с 5–30 сотрудниками.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c078",
+        "text": "Сегмент медицины требует защищённого контура.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c079",
+        "text": "Сегменты клининга и доставки воды характеризуются низкой маржинальностью.",
+        "kind": "market",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c080",
+        "text": "Цена оффера составляет 590 ₽.",
+        "kind": "number",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c081",
+        "text": "База корпоративных SIM «Восход Телеком» является единственным названным в запросе потенциальным каналом с готовой аудиторией МСП с автопарком.",
+        "kind": "company_data",
+        "chunk": 6,
+        "section": "Варианты"
+      },
+      {
+        "id": "c082",
+        "text": "Все клиенты в пилоте приходили только через знакомых менеджеров или партнёров, холодных продаж не было",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c083",
+        "text": "Доля намерения продлить пилот на платной основе составляет 50%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c084",
+        "text": "В пилоте не было фактических оплат",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c085",
+        "text": "Один из респондентов назвал цену 590 ₽ за услугу уборщицы неприемлемой",
+        "kind": "user",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c086",
+        "text": "Конкурент «ПолеВизор» предлагает тариф «Старт» за 450 ₽, включающий заявки, фотоотчёты и маршруты",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c087",
+        "text": "Конкурент «ПолеВизор» предлагает тариф «Бизнес» за 690 ₽ с интеграцией с 1С и API",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c088",
+        "text": "В пилоте участвовали компании из сегментов: клининг 21,4%, подключение интернета и ТВ 21,4%, выездные медицинские услуги 14,3%, доставка воды 14,3%",
+        "kind": "number",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c089",
+        "text": "Для медицинского сегмента требуется защищённый контур и сертификация",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c090",
+        "text": "Рынок МСП насчитывает 6,6 млн субъектов с приростом 3,5% за год",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c091",
+        "text": "Две трети малых предприятий используют цифровые платформы",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c092",
+        "text": "Продукт «Бригада Онлайн» не имеет интеграции с 1С и открытого API",
+        "kind": "product",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c093",
+        "text": "Закупка ПО и выбор оператора связи у МСП с автопарком осуществляются разными центрами принятия решений",
+        "kind": "market",
+        "chunk": 7,
+        "section": "Варианты"
+      },
+      {
+        "id": "c094",
+        "text": "OPT-001 выигрывает в базовом сценарии",
+        "kind": "product",
+        "chunk": 8,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c095",
+        "text": "OPT-001 остаётся лучшим в 34 из 81 сценариев",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c096",
+        "text": "Вероятность сохранения лидерства OPT-001 составляет примерно 47%",
+        "kind": "number",
+        "chunk": 8,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c097",
+        "text": "При уровне «high» ёмкости и доступности сегмента сервисных выездных бригад выигрывает OPT-002",
+        "kind": "causal",
+        "chunk": 8,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c098",
+        "text": "При уровне «high» значимости функции SMS-уведомления клиенту о приезде мастера выигрывает OPT-002",
+        "kind": "causal",
+        "chunk": 8,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c099",
+        "text": "При уровне «low» готовности платить 590 ₽ за сотрудника выигрывает OPT-003",
+        "kind": "causal",
+        "chunk": 8,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c100",
+        "text": "При уровне «high» стоимости привлечения и цикла сделки по каналам выигрывает OPT-003",
+        "kind": "causal",
+        "chunk": 8,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c101",
+        "text": "При уровне «high» реального проникновения конкурента «ПолеВизор» выигрывает OPT-003",
+        "kind": "causal",
+        "chunk": 8,
+        "section": "Стресс-тест решения"
+      },
+      {
+        "id": "c102",
+        "text": "Штрафы по SLA есть у 42,9% компаний пилота",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c103",
+        "text": "Тариф «Старт» продукта «ПолеВизор» стоит 450 ₽ за сотрудника в месяц",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c104",
+        "text": "Тариф «Бизнес» продукта «ПолеВизор» стоит 690 ₽ за сотрудника в месяц",
+        "kind": "market",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c105",
+        "text": "Средняя готовность платить составляет 425 ₽",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c106",
+        "text": "Цена продукта составляет 590 ₽ за сотрудника в месяц",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c107",
+        "text": "Доля компаний, намеренных продлить пилот на платной основе, составляет 50%",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c108",
+        "text": "По результатам пилота договоров и оплат не было",
+        "kind": "company_data",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c109",
+        "text": "Средняя доля активных пользователей в неделю в пилоте составляла 56,71%",
+        "kind": "number",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c110",
+        "text": "Функция приёма и распределения заявок на выезд реализована в продукте",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c111",
+        "text": "Функция построения маршрутов выездных сотрудников реализована в продукте",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c112",
+        "text": "Функция фотоотчёта с места выезда реализована в продукте",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c113",
+        "text": "Функция SMS-уведомления клиента о приезде мастера реализована в продукте",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c114",
+        "text": "Функция отчётности по SLA для заказчика запланирована",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c115",
+        "text": "Функция интеграции с 1С и открытого API запланирована",
+        "kind": "product",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c116",
+        "text": "Сегмент SEG-001 включает пилотные компании (тёплые контакты)",
+        "kind": "other",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c117",
+        "text": "Сегмент SEG-002 включает выездные медицинские услуги",
+        "kind": "other",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c118",
+        "text": "Сегмент SEG-003 включает клининг и доставку питьевой воды",
+        "kind": "other",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c119",
+        "text": "Связь «польза → выручка» пока не подтверждена",
+        "kind": "causal",
+        "chunk": 9,
+        "section": "Продуктовая стратегия"
+      },
+      {
+        "id": "c120",
+        "text": "Коммерческий запуск «Бригады Онлайн» запланирован на январь по цене 590 ₽ за сотрудника в месяц.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c121",
+        "text": "Бесплатный пилот длился полгода.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c122",
+        "text": "В пилоте не было холодных клиентов.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c123",
+        "text": "Все компании пилота пришли через знакомых менеджеров или партнёров.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c124",
+        "text": "В пилоте договоры и оплаты не заключались.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c125",
+        "text": "Готовность платить в пилоте замерена только «со слов».",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c126",
+        "text": "Средняя готовность платить составляет 425 ₽ при цене 590 ₽.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c127",
+        "text": "Намерение продлить на платной основе составляет 50% при низкой надёжности.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c128",
+        "text": "До планёрки осталось две недели.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c129",
+        "text": "За полгода пилота не было ни одного платного договора.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c130",
+        "text": "Заявленная готовность платить в 425 ₽ в среднем ниже цены 590 ₽.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c131",
+        "text": "Пилотные компании не доверяют цене без годового договора со скидкой.",
+        "kind": "user",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c132",
+        "text": "«Бригада Онлайн» закрывает полный цикл выезда — заявки, маршруты, фотоотчёты и SMS клиенту о приезде мастера — в одном месте, без двойного ввода данных.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c133",
+        "text": "Для работы с медицинскими данными сервису требуется защищённый контур и сертификация.",
+        "kind": "product",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c134",
+        "text": "В пилоте цена 590 ₽ за сотрудника в месяц оказалась неприемлемой для клининга и доставки питьевой воды из-за низкой маржинальности.",
+        "kind": "market",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c135",
+        "text": "42,9% компаний пилота сталкивались со штрафами по SLA у заказчика.",
+        "kind": "number",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c136",
+        "text": "Сервис снижает риск штрафов по SLA у заказчика за счёт фиксации заявки, маршрута и подтверждённого фотоотчёта в одной системе.",
+        "kind": "causal",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c137",
+        "text": "Цена 590 ₽ за сотрудника в месяц обсуждается с каждой пилотной компанией индивидуально.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c138",
+        "text": "Часть пилотных компаний запросила годовой договор со скидкой.",
+        "kind": "company_data",
+        "chunk": 10,
+        "section": "Коммуникационная стратегия"
+      },
+      {
+        "id": "c139",
+        "text": "Тариф составляет 590 ₽ за сотрудника в месяц",
+        "kind": "product",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c140",
+        "text": "На старте эксперимента EXP-001 количество оплативших пилотных компаний равно 0",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c141",
+        "text": "Минимальный обнаружимый эффект для EXP-001 составляет 10 процентных пунктов конверсии в оплату при количестве пилотных компаний не менее 30",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c142",
+        "text": "Для различимости эффекта в EXP-001 необходимо не менее 3 оплативших на каждые 30 пилотных компаний",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c143",
+        "text": "Срок проведения эксперимента EXP-001 составляет 45 дней",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c144",
+        "text": "Доля пилотных компаний, отказавшихся от платного договора и ушедших к конкуренту, не более 50% от всех выставленных счетов",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c145",
+        "text": "Заявленный уровень [CL-002]: средняя фактическая цена за сотрудника в месяц составляет 425 ₽",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c146",
+        "text": "Уровень пилота [CL-003]: средняя доля активных пользователей в неделю в платных компаниях составляет 56,71%",
+        "kind": "user",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c147",
+        "text": "Kill-критерий для EXP-001 наступает до 2026-12-24",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c148",
+        "text": "Порог перехода к коммерческому запуску в EXP-001: доля оплативших не менее 20%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c149",
+        "text": "Порог корректировки цены в EXP-001: доля оплативших от 10% до 20%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c150",
+        "text": "Порог остановки коммерческого запуска в EXP-001: доля оплативших менее 10%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c151",
+        "text": "Минимальный обнаружимый эффект для EXP-002 составляет 15 процентных пунктов расхождения между заявленной и фактической оплатой при N не менее 30",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c152",
+        "text": "Срок проведения эксперимента EXP-002 составляет 45 дней",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c153",
+        "text": "Доля компаний, давших согласие на интервью и последующее выставление счёта, не менее 60% пилотных компаний",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c154",
+        "text": "Количество записей с персональными данными респондентов в отчётах равно 0",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c155",
+        "text": "Kill-критерий для EXP-002 наступает до 2026-12-24",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c156",
+        "text": "Порог использования заявленной готовности как валидного индикатора: расхождение не более 20 процентных пунктов",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c157",
+        "text": "Порог исключения самоотчёта из критериев: расхождение более 20 процентных пунктов",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c158",
+        "text": "Для EXP-003 отбирается выборка не менее 100 компаний из базы корпоративных SIM с признаками выездных сотрудников и автопарка",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c159",
+        "text": "Минимальный обнаружимый эффект для EXP-003 составляет 5 процентных пунктов конверсии при выборке не менее 100 компаний",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c160",
+        "text": "Срок проведения эксперимента EXP-003 составляет 60 дней",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c161",
+        "text": "Доля жалоб на спам или нежелательные звонки не более 5% от обзвоненных компаний",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c162",
+        "text": "Стоимость привлечения клиента через канал SIM не выше 30% от годовой выручки, рассчитанной как 590 ₽ умножить на число сотрудников и умножить на 12",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c163",
+        "text": "Kill-критерий для EXP-003 наступает до 2027-01-15",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c164",
+        "text": "Порог приоритизации канала SIM: совпадение центров принятия решений не менее 50% и конверсия не менее 5%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c165",
+        "text": "Порог отказа от канала SIM как основного: совпадение менее 30% или конверсия менее 2%",
+        "kind": "number",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c166",
+        "text": "Компания «Восход Телеком» располагает базой корпоративных SIM-карт",
+        "kind": "company_data",
+        "chunk": 11,
+        "section": "План проверки"
+      },
+      {
+        "id": "c167",
+        "text": "В ходе пилота не заключались договоры",
+        "kind": "company_data",
+        "chunk": 13,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c168",
+        "text": "В ходе пилота не производились оплаты",
+        "kind": "company_data",
+        "chunk": 13,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c169",
+        "text": "Ответы о готовности платить в ходе пилота были даны «со слов»",
+        "kind": "company_data",
+        "chunk": 13,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c170",
+        "text": "Средняя заявленная готовность платить за сотрудника в месяц составляет 425 ₽",
+        "kind": "number",
+        "chunk": 13,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c171",
+        "text": "Цена составляет 590 ₽",
+        "kind": "number",
+        "chunk": 13,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c172",
+        "text": "Все пилотные клиенты пришли через знакомых менеджеров и партнёров",
+        "kind": "company_data",
+        "chunk": 13,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c173",
+        "text": "В пилоте «Бригады Онлайн» не было холодных клиентов",
+        "kind": "company_data",
+        "chunk": 13,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c174",
+        "text": "Срок kill-критерия установлен на 2027-01-31",
+        "kind": "number",
+        "chunk": 13,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c175",
+        "text": "Дата планового пересмотра решения установлена на 2026-12-24",
+        "kind": "number",
+        "chunk": 13,
+        "section": "Журнал решения"
+      },
+      {
+        "id": "c176",
+        "text": "«ПолеВизор» является конкурентом.",
+        "kind": "market",
+        "chunk": 14,
+        "section": "Источники"
+      },
+      {
+        "id": "c177",
+        "text": "Число субъектов МСП в Едином реестре ФНС зафиксировано на 10 июля 2026 года.",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Источники"
+      },
+      {
+        "id": "c178",
+        "text": "Существуют конспекты интервью с участниками пилота «Бригады Онлайн».",
+        "kind": "company_data",
+        "chunk": 14,
+        "section": "Источники"
+      },
+      {
+        "id": "c179",
+        "text": "Пилот «Бригады Онлайн» был бесплатным.",
+        "kind": "product",
+        "chunk": 14,
+        "section": "Источники"
+      },
+      {
+        "id": "c180",
+        "text": "В пилоте «Бригады Онлайн» участвовало 14 компаний.",
+        "kind": "number",
+        "chunk": 14,
+        "section": "Источники"
+      },
+      {
+        "id": "c181",
+        "text": "Существует воронка продаж пилотов «Бригады Онлайн» по каналам за 2026 год.",
+        "kind": "company_data",
+        "chunk": 14,
+        "section": "Источники"
+      }
+    ]
+  },
+  "options": null,
+  "promises": {
+    "total": 0,
+    "unbacked": 0,
+    "unclear": 0,
+    "backed": 0,
+    "items": []
+  },
+  "validation_plan": null,
+  "expected_choice": null,
+  "injection": null,
+  "heuristics": {
+    "status_quo": 7,
+    "kill": 3,
+    "baseline": 6,
+    "guardrail": 1,
+    "kill_criterion": 4,
+    "date_or_term": 66,
+    "injection_flag": 0
+  },
+  "judge_usage": {
+    "calls": 33,
+    "prompt_tokens": 114853,
+    "output_tokens": 101484,
+    "duration_s": 1107.53,
+    "cost_estimate": {
+      "usd": 0.293513,
+      "rub": 23.4811,
+      "estimated": false,
+      "basis": "config/prices.yaml (as_of 2026-11-04): $0.7/2.1 за 1 млн токенов вход/выход"
+    },
+    "log": [
+      {
+        "step": "extract_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1097,
+        "output_tokens": 1629,
+        "duration_s": 15.84,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3030,
+        "output_tokens": 1908,
+        "duration_s": 11.75,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 2007,
+        "output_tokens": 896,
+        "duration_s": 76.89,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1977,
+        "output_tokens": 4163,
+        "duration_s": 29.59,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 2050,
+        "output_tokens": 4095,
+        "duration_s": 27.41,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[6]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 2914,
+        "output_tokens": 4256,
+        "duration_s": 35.93,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[7]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 3182,
+        "output_tokens": 2475,
+        "duration_s": 125.71,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[8]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 685,
+        "output_tokens": 1690,
+        "duration_s": 11.47,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[9]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 2216,
+        "output_tokens": 3351,
+        "duration_s": 23.14,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[10]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 2995,
+        "output_tokens": 4355,
+        "duration_s": 29.26,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[11]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 1500,
+        "output_tokens": 6696,
+        "duration_s": 65.1,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[12]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 974,
+        "output_tokens": 285,
+        "duration_s": 4.58,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[13]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 2166,
+        "output_tokens": 2225,
+        "duration_s": 16.26,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "extract_claims[14]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 703,
+        "output_tokens": 2272,
+        "duration_s": 14.42,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[1]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4585,
+        "output_tokens": 2706,
+        "duration_s": 24.66,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[2]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4761,
+        "output_tokens": 1846,
+        "duration_s": 38.85,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[3]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4599,
+        "output_tokens": 3050,
+        "duration_s": 24.2,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[4]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4582,
+        "output_tokens": 3528,
+        "duration_s": 33.42,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[5]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4593,
+        "output_tokens": 5494,
+        "duration_s": 71.34,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[6]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4572,
+        "output_tokens": 5508,
+        "duration_s": 40.6,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[7]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4592,
+        "output_tokens": 3927,
+        "duration_s": 37.04,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[8]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4557,
+        "output_tokens": 2805,
+        "duration_s": 22.92,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[9]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4666,
+        "output_tokens": 5290,
+        "duration_s": 46.28,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[10]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4609,
+        "output_tokens": 1540,
+        "duration_s": 15.48,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[11]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4582,
+        "output_tokens": 3914,
+        "duration_s": 32.08,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[12]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4582,
+        "output_tokens": 2266,
+        "duration_s": 40.63,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[13]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4546,
+        "output_tokens": 3442,
+        "duration_s": 26.3,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[14]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4647,
+        "output_tokens": 5316,
+        "duration_s": 50.55,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[15]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4660,
+        "output_tokens": 1666,
+        "duration_s": 37.95,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[16]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4647,
+        "output_tokens": 3150,
+        "duration_s": 24.08,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[17]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4618,
+        "output_tokens": 2268,
+        "duration_s": 16.77,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[18]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4559,
+        "output_tokens": 2669,
+        "duration_s": 28.15,
+        "attempts": 1,
+        "errors": []
+      },
+      {
+        "step": "verify_claims[19]",
+        "model": "mistral-large-4:cloud",
+        "prompt_tokens": 4400,
+        "output_tokens": 803,
+        "duration_s": 8.88,
+        "attempts": 1,
+        "errors": []
+      }
+    ]
+  },
+  "errors": []
+}

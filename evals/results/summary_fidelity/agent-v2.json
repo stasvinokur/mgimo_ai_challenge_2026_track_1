@@ -1,0 +1,259 @@
+{
+  "summary": {
+    "label": "agent-v2",
+    "n": 7,
+    "order_sensitive": 0,
+    "ours_matches_full": 7,
+    "one_pass_matches_full": 7,
+    "full_matches_selected": 7,
+    "ours_matches_selected": 7,
+    "one_pass_matches_selected": 7
+  },
+  "rows": [
+    {
+      "brief": "app-onboarding",
+      "selected": "OPT-001",
+      "full": {
+        "choice": "OPT-001",
+        "confidence": 0.979,
+        "path": "clef",
+        "chars": 76128
+      },
+      "full_reversed": {
+        "choice": "OPT-001",
+        "confidence": 0.978,
+        "path": "clef",
+        "chars": 76128
+      },
+      "full_rotated": {
+        "choice": "OPT-001",
+        "confidence": 0.978,
+        "path": "clef",
+        "chars": 76128
+      },
+      "ours": {
+        "choice": "OPT-001",
+        "confidence": 0.921,
+        "path": "clef",
+        "chars": 3041
+      },
+      "one_pass": {
+        "choice": "OPT-001",
+        "confidence": 0.803,
+        "path": "clef",
+        "chars": 1582
+      },
+      "order_sensitive": false
+    },
+    {
+      "brief": "b2b-field-service",
+      "selected": "OPT-002",
+      "full": {
+        "choice": "OPT-002",
+        "confidence": 0.98,
+        "path": "clef",
+        "chars": 82798
+      },
+      "full_reversed": {
+        "choice": "OPT-002",
+        "confidence": 0.98,
+        "path": "clef",
+        "chars": 82798
+      },
+      "full_rotated": {
+        "choice": "OPT-002",
+        "confidence": 0.98,
+        "path": "clef",
+        "chars": 82798
+      },
+      "ours": {
+        "choice": "OPT-002",
+        "confidence": 0.949,
+        "path": "clef",
+        "chars": 3266
+      },
+      "one_pass": {
+        "choice": "OPT-002",
+        "confidence": 0.94,
+        "path": "clef",
+        "chars": 1749
+      },
+      "order_sensitive": false
+    },
+    {
+      "brief": "family-pack",
+      "selected": "OPT-003",
+      "full": {
+        "choice": "OPT-003",
+        "confidence": 0.974,
+        "path": "clef",
+        "chars": 79761
+      },
+      "full_reversed": {
+        "choice": "OPT-003",
+        "confidence": 0.973,
+        "path": "clef",
+        "chars": 79761
+      },
+      "full_rotated": {
+        "choice": "OPT-003",
+        "confidence": 0.974,
+        "path": "clef",
+        "chars": 79761
+      },
+      "ours": {
+        "choice": "OPT-003",
+        "confidence": 0.956,
+        "path": "clef",
+        "chars": 3290
+      },
+      "one_pass": {
+        "choice": "OPT-003",
+        "confidence": 0.948,
+        "path": "clef",
+        "chars": 1933
+      },
+      "order_sensitive": false
+    },
+    {
+      "brief": "feature-sunset",
+      "selected": "OPT-003",
+      "full": {
+        "choice": "OPT-003",
+        "confidence": 0.985,
+        "path": "clef",
+        "chars": 72561
+      },
+      "full_reversed": {
+        "choice": "OPT-003",
+        "confidence": 0.985,
+        "path": "clef",
+        "chars": 72561
+      },
+      "full_rotated": {
+        "choice": "OPT-003",
+        "confidence": 0.985,
+        "path": "clef",
+        "chars": 72561
+      },
+      "ours": {
+        "choice": "OPT-003",
+        "confidence": 0.97,
+        "path": "clef",
+        "chars": 2919
+      },
+      "one_pass": {
+        "choice": "OPT-003",
+        "confidence": 0.972,
+        "path": "clef",
+        "chars": 1781
+      },
+      "order_sensitive": false
+    },
+    {
+      "brief": "price-increase-a",
+      "selected": "OPT-002",
+      "full": {
+        "choice": "OPT-002",
+        "confidence": 0.982,
+        "path": "clef",
+        "chars": 66442
+      },
+      "full_reversed": {
+        "choice": "OPT-002",
+        "confidence": 0.982,
+        "path": "clef",
+        "chars": 66442
+      },
+      "full_rotated": {
+        "choice": "OPT-002",
+        "confidence": 0.982,
+        "path": "clef",
+        "chars": 66442
+      },
+      "ours": {
+        "choice": "OPT-002",
+        "confidence": 0.959,
+        "path": "clef",
+        "chars": 3037
+      },
+      "one_pass": {
+        "choice": "OPT-002",
+        "confidence": 0.95,
+        "path": "clef",
+        "chars": 1695
+      },
+      "order_sensitive": false
+    },
+    {
+      "brief": "price-increase-b",
+      "selected": "OPT-003",
+      "full": {
+        "choice": "OPT-003",
+        "confidence": 0.978,
+        "path": "clef",
+        "chars": 65979
+      },
+      "full_reversed": {
+        "choice": "OPT-003",
+        "confidence": 0.978,
+        "path": "clef",
+        "chars": 65979
+      },
+      "full_rotated": {
+        "choice": "OPT-003",
+        "confidence": 0.978,
+        "path": "clef",
+        "chars": 65979
+      },
+      "ours": {
+        "choice": "OPT-003",
+        "confidence": 0.948,
+        "path": "clef",
+        "chars": 2840
+      },
+      "one_pass": {
+        "choice": "OPT-003",
+        "confidence": 0.946,
+        "path": "clef",
+        "chars": 1660
+      },
+      "order_sensitive": false
+    },
+    {
+      "brief": "subscription-retention",
+      "selected": "OPT-005",
+      "full": {
+        "choice": "OPT-005",
+        "confidence": 0.98,
+        "path": "clef",
+        "chars": 79073
+      },
+      "full_reversed": {
+        "choice": "OPT-005",
+        "confidence": 0.98,
+        "path": "clef",
+        "chars": 79073
+      },
+      "full_rotated": {
+        "choice": "OPT-005",
+        "confidence": 0.98,
+        "path": "clef",
+        "chars": 79073
+      },
+      "ours": {
+        "choice": "OPT-005",
+        "confidence": 0.889,
+        "path": "clef",
+        "chars": 3388
+      },
+      "one_pass": {
+        "choice": "OPT-005",
+        "confidence": 0.813,
+        "path": "clef",
+        "chars": 1598
+      },
+      "order_sensitive": false
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"entailment\",\"confidence\":1,\"rationale\":\"Цитата прямо подтверждает, что план по выходу на безубыточность в IV квартале 2026 года не выполняется при текущей динамике.\"}",
+ "data": {
+  "label": "entailment",
+  "confidence": 1,
+  "rationale": "Цитата прямо подтверждает, что план по выходу на безубыточность в IV квартале 2026 года не выполняется при текущей динамике."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 294,
+  "output_tokens": 51,
+  "estimated": false,
+  "latency_ms": 504,
+  "escalated": false
+ }
+}

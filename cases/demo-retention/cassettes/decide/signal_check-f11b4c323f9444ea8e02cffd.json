@@ -1,0 +1,17 @@
+{
+ "question_id": "demo-retention-run:DEC-0001:signal:3",
+ "kind": "choice",
+ "choice": "not_fired",
+ "probability": null,
+ "score": null,
+ "probs": {
+  "not_fired": 0.8434,
+  "fired": 0.1566
+ },
+ "confidence": 0.8434,
+ "backend": "systemone",
+ "model": "clef:cloud",
+ "escalated": false,
+ "input_tokens": 1944,
+ "latency_ms": 1117
+}

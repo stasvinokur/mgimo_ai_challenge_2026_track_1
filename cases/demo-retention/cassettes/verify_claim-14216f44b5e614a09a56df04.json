@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "StrongVerifyDTO",
+ "text": "{\"label\":\"supported\",\"confidence\":0.9,\"note\":\"Цитата прямо подтверждает бесплатные первые 14 дней и наличие приложений для iPhone и Android.\"}",
+ "data": {
+  "label": "supported",
+  "confidence": 0.9,
+  "note": "Цитата прямо подтверждает бесплатные первые 14 дней и наличие приложений для iPhone и Android."
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 363,
+  "output_tokens": 39,
+  "estimated": false,
+  "latency_ms": 544,
+  "escalated": true
+ }
+}

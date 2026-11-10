@@ -1,0 +1,180 @@
+{
+  "model": "jev-1.13.0",
+  "n": 38,
+  "accuracy_claim_type": 0.929,
+  "accuracy_objection": 0.667,
+  "accuracy_promise": 1.0,
+  "accuracy_all": 0.868,
+  "robustness": {
+    "choice": {
+      "n": 24,
+      "changed_vs_base": 0.083,
+      "accuracy": 0.917,
+      "mean_abs_dp": 0.077
+    },
+    "negated": {
+      "n": 24,
+      "changed_vs_base": 0.042,
+      "accuracy": 0.875,
+      "mean_abs_dp": 0.033
+    },
+    "perm": {
+      "n": 38,
+      "changed_vs_base": 0.026,
+      "accuracy": 0.895,
+      "mean_abs_dp": 0.052
+    },
+    "renamed": {
+      "n": 38,
+      "changed_vs_base": 0.053,
+      "accuracy": 0.921,
+      "mean_abs_dp": 0.055
+    }
+  },
+  "variant_agreement": {
+    "n": 38,
+    "all_agree_share": 0.947,
+    "accuracy_when_agree": 0.917,
+    "accuracy_when_disagree": 0.0,
+    "base_errors": 5,
+    "base_errors_flagged_by_disagreement": 2
+  },
+  "calibration_maxprob": {
+    "n": 38,
+    "by_threshold": [
+      {
+        "threshold": 0.5,
+        "coverage": 1.0,
+        "accuracy_kept": 0.868,
+        "escalated": 0,
+        "errors_caught": 0,
+        "errors_total": 5
+      },
+      {
+        "threshold": 0.6,
+        "coverage": 0.895,
+        "accuracy_kept": 0.941,
+        "escalated": 4,
+        "errors_caught": 3,
+        "errors_total": 5
+      },
+      {
+        "threshold": 0.7,
+        "coverage": 0.789,
+        "accuracy_kept": 0.967,
+        "escalated": 8,
+        "errors_caught": 4,
+        "errors_total": 5
+      },
+      {
+        "threshold": 0.8,
+        "coverage": 0.711,
+        "accuracy_kept": 1.0,
+        "escalated": 11,
+        "errors_caught": 5,
+        "errors_total": 5
+      },
+      {
+        "threshold": 0.9,
+        "coverage": 0.605,
+        "accuracy_kept": 1.0,
+        "escalated": 15,
+        "errors_caught": 5,
+        "errors_total": 5
+      }
+    ],
+    "ece_5bins": 0.075,
+    "mean_conf": 0.854,
+    "accuracy": 0.868
+  },
+  "calibration_confidence_field": {
+    "n": 14,
+    "by_threshold": [
+      {
+        "threshold": 0.5,
+        "coverage": 1.0,
+        "accuracy_kept": 0.929,
+        "escalated": 0,
+        "errors_caught": 0,
+        "errors_total": 1
+      },
+      {
+        "threshold": 0.6,
+        "coverage": 1.0,
+        "accuracy_kept": 0.929,
+        "escalated": 0,
+        "errors_caught": 0,
+        "errors_total": 1
+      },
+      {
+        "threshold": 0.7,
+        "coverage": 0.857,
+        "accuracy_kept": 1.0,
+        "escalated": 2,
+        "errors_caught": 1,
+        "errors_total": 1
+      },
+      {
+        "threshold": 0.8,
+        "coverage": 0.786,
+        "accuracy_kept": 1.0,
+        "escalated": 3,
+        "errors_caught": 1,
+        "errors_total": 1
+      },
+      {
+        "threshold": 0.9,
+        "coverage": 0.786,
+        "accuracy_kept": 1.0,
+        "escalated": 3,
+        "errors_caught": 1,
+        "errors_total": 1
+      }
+    ],
+    "ece_5bins": 0.016,
+    "mean_conf": 0.926,
+    "accuracy": 0.929
+  },
+  "latency_p50_s": 0.398,
+  "latency_max_s": 0.612,
+  "input_tokens_mean_per_request": 1439.4,
+  "questions_per_request_mean": 4.26,
+  "errors": [
+    {
+      "id": "ct14",
+      "gold": "synthetic",
+      "got": "derived_metric",
+      "p": 0.73,
+      "note": "трудный: выглядит как количественные данные опроса, но респонденты синтетические"
+    },
+    {
+      "id": "ob04",
+      "gold": "нет",
+      "got": "да",
+      "p": 0.53,
+      "note": "трудный: возражение есть, но это мнение без данных"
+    },
+    {
+      "id": "ob10",
+      "gold": "нет",
+      "got": "да",
+      "p": 0.57,
+      "note": "данные поддерживают дешёвый вариант"
+    },
+    {
+      "id": "ob11",
+      "gold": "нет",
+      "got": "да",
+      "p": 0.65,
+      "note": "трудный: единичный отзыв — данные, но не сильное возражение"
+    },
+    {
+      "id": "ob12",
+      "gold": "нет",
+      "got": "да",
+      "p": 0.5,
+      "note": "данные подтверждают выполнимость"
+    }
+  ],
+  "independence_check": []
+}

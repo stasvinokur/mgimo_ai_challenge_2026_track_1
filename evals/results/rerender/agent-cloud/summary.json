@@ -1,0 +1,42 @@
+{
+  "label": "agent-cloud",
+  "flags": [
+    "numbers_v2",
+    "model_labels"
+  ],
+  "rows": [
+    {
+      "brief": "family-pack",
+      "off": {
+        "number_flags": 0,
+        "numbers_checked": null
+      },
+      "on": {
+        "number_flags": 4,
+        "numbers_checked": 72
+      }
+    },
+    {
+      "brief": "price-increase-a",
+      "off": {
+        "number_flags": 17,
+        "numbers_checked": null
+      },
+      "on": {
+        "number_flags": 0,
+        "numbers_checked": 157
+      }
+    },
+    {
+      "brief": "subscription-retention",
+      "off": {
+        "number_flags": 2,
+        "numbers_checked": null
+      },
+      "on": {
+        "number_flags": 12,
+        "numbers_checked": 113
+      }
+    }
+  ]
+}

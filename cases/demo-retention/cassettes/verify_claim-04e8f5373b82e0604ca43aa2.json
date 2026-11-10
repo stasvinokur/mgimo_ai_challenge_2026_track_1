@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"entailment\",\"confidence\":1,\"rationale\":\"Цитата прямо подтверждает причины отказа и тот факт, что до онбординга дело не дошло.\"}",
+ "data": {
+  "label": "entailment",
+  "confidence": 1,
+  "rationale": "Цитата прямо подтверждает причины отказа и тот факт, что до онбординга дело не дошло."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 310,
+  "output_tokens": 39,
+  "estimated": false,
+  "latency_ms": 561,
+  "escalated": false
+ }
+}

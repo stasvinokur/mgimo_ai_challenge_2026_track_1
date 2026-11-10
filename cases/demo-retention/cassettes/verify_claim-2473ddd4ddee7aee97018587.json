@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"Цитата подтверждает причину (автоподключение и списания), но в ней не упоминается тариф «Семейный».\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "Цитата подтверждает причину (автоподключение и списания), но в ней не упоминается тариф «Семейный»."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 294,
+  "output_tokens": 43,
+  "estimated": false,
+  "latency_ms": 478,
+  "escalated": false
+ }
+}

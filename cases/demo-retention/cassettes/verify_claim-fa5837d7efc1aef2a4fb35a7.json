@@ -1,0 +1,19 @@
+{
+ "task": "verify_claim",
+ "schema": "_NLIAnswer",
+ "text": "{\"label\":\"neutral\",\"confidence\":1,\"rationale\":\"Цитата говорит о жалобах клиентов на цену, но не утверждает, что это основная причина оттока.\"}",
+ "data": {
+  "label": "neutral",
+  "confidence": 1,
+  "rationale": "Цитата говорит о жалобах клиентов на цену, но не утверждает, что это основная причина оттока."
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 284,
+  "output_tokens": 40,
+  "estimated": false,
+  "latency_ms": 473,
+  "escalated": false
+ }
+}

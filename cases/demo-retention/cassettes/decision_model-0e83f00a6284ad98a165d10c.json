@@ -1,0 +1,157 @@
+{
+ "task": "decision_model",
+ "schema": "DecisionModelDTO",
+ "text": "{\"utilities\":[{\"option_key\":\"OPT-001\",\"base_utility\":52,\"effects\":{\"U-001\":{\"low\":-12,\"base\":8,\"high\":22},\"U-002\":{\"low\":4,\"base\":0,\"high\":-8},\"U-003\":{\"low\":6,\"base\":0,\"high\":-10},\"U-006\":{\"low\":-8,\"base\":0,\"high\":6}}},{\"option_key\":\"OPT-002\",\"base_utility\":68,\"effects\":{\"U-001\":{\"low\":-6,\"base\":4,\"high\":10},\"U-003\":{\"low\":-14,\"base\":6,\"high\":20},\"U-006\":{\"low\":-10,\"base\":2,\"high\":8},\"U-005\":{\"low\":2,\"base\":0,\"high\":-4}}},{\"option_key\":\"OPT-003\",\"base_utility\":55,\"effects\":{\"U-002\":{\"low\":-6,\"base\":4,\"high\":14},\"U-004\":{\"low\":4,\"base\":0,\"high\":-6},\"U-005\":{\"low\":2,\"base\":0,\"high\":-4},\"U-006\":{\"low\":-4,\"base\":0,\"high\":4}}},{\"option_key\":\"OPT-004\",\"base_utility\":60,\"effects\":{\"U-004\":{\"low\":-8,\"base\":6,\"high\":16},\"U-001\":{\"low\":-4,\"base\":2,\"high\":6},\"U-006\":{\"low\":-6,\"base\":0,\"high\":6}}},{\"option_key\":\"OPT-005\",\"base_utility\":30,\"effects\":{\"U-001\":{\"low\":-14,\"base\":-4,\"high\":14},\"U-003\":{\"low\":-6,\"base\":-2,\"high\":10},\"U-006\":{\"low\":-4,\"base\":0,\"high\":6},\"U-005\":{\"low\":2,\"base\":0,\"high\":-6}}}],\"note\":\"Новые данные A/B показывают, что новый онбординг (QR, инструкции для iPhone, напоминания) улучшает ранние шаги воронки и снижает обращения о подключении, но не меняет цену и автоподключение — поэтому OPT-002 (измерение + точечный фикс онбординга) выглядит наиболее обоснованным при условии подтверждения эффекта на удержание; OPT-004 остаётся страховкой от ценовой/списательной боли.\",\"level_updates\":[{\"uncertainty_id\":\"U-003\",\"observed_level\":\"high\",\"evidence\":[\"CL-067\",\"CL-068\",\"CL-069\",\"CL-073\",\"CL-076\"]}]}",
+ "data": {
+  "utilities": [
+   {
+    "option_key": "OPT-001",
+    "base_utility": 52,
+    "effects": {
+     "U-001": {
+      "low": -12,
+      "base": 8,
+      "high": 22
+     },
+     "U-002": {
+      "low": 4,
+      "base": 0,
+      "high": -8
+     },
+     "U-003": {
+      "low": 6,
+      "base": 0,
+      "high": -10
+     },
+     "U-006": {
+      "low": -8,
+      "base": 0,
+      "high": 6
+     }
+    }
+   },
+   {
+    "option_key": "OPT-002",
+    "base_utility": 68,
+    "effects": {
+     "U-001": {
+      "low": -6,
+      "base": 4,
+      "high": 10
+     },
+     "U-003": {
+      "low": -14,
+      "base": 6,
+      "high": 20
+     },
+     "U-006": {
+      "low": -10,
+      "base": 2,
+      "high": 8
+     },
+     "U-005": {
+      "low": 2,
+      "base": 0,
+      "high": -4
+     }
+    }
+   },
+   {
+    "option_key": "OPT-003",
+    "base_utility": 55,
+    "effects": {
+     "U-002": {
+      "low": -6,
+      "base": 4,
+      "high": 14
+     },
+     "U-004": {
+      "low": 4,
+      "base": 0,
+      "high": -6
+     },
+     "U-005": {
+      "low": 2,
+      "base": 0,
+      "high": -4
+     },
+     "U-006": {
+      "low": -4,
+      "base": 0,
+      "high": 4
+     }
+    }
+   },
+   {
+    "option_key": "OPT-004",
+    "base_utility": 60,
+    "effects": {
+     "U-004": {
+      "low": -8,
+      "base": 6,
+      "high": 16
+     },
+     "U-001": {
+      "low": -4,
+      "base": 2,
+      "high": 6
+     },
+     "U-006": {
+      "low": -6,
+      "base": 0,
+      "high": 6
+     }
+    }
+   },
+   {
+    "option_key": "OPT-005",
+    "base_utility": 30,
+    "effects": {
+     "U-001": {
+      "low": -14,
+      "base": -4,
+      "high": 14
+     },
+     "U-003": {
+      "low": -6,
+      "base": -2,
+      "high": 10
+     },
+     "U-006": {
+      "low": -4,
+      "base": 0,
+      "high": 6
+     },
+     "U-005": {
+      "low": 2,
+      "base": 0,
+      "high": -6
+     }
+    }
+   }
+  ],
+  "note": "Новые данные A/B показывают, что новый онбординг (QR, инструкции для iPhone, напоминания) улучшает ранние шаги воронки и снижает обращения о подключении, но не меняет цену и автоподключение — поэтому OPT-002 (измерение + точечный фикс онбординга) выглядит наиболее обоснованным при условии подтверждения эффекта на удержание; OPT-004 остаётся страховкой от ценовой/списательной боли.",
+  "level_updates": [
+   {
+    "uncertainty_id": "U-003",
+    "observed_level": "high",
+    "evidence": [
+     "CL-067",
+     "CL-068",
+     "CL-069",
+     "CL-073",
+     "CL-076"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "model": "deepseek-v4.1-flash:cloud",
+  "role": "reasoning",
+  "input_tokens": 11068,
+  "output_tokens": 587,
+  "estimated": false,
+  "latency_ms": 7535,
+  "escalated": false
+ }
+}

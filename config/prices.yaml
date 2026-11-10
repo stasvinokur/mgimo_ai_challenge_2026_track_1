@@ -1,0 +1,39 @@
+# Справочные цены для чека стоимости.
+# Источник ставок облачных моделей: https://ollama.com/pricing (снято 2026-11-04, TASK-2).
+# Ollama Cloud тарифицирует облачные модели за токены (Pay as you go); подписки Pro $20 / Max $100
+# в месяц включают кредиты $60 / $300, которые списываются по этим же ставкам. Поэтому ставки ниже —
+# прайс-лист провайдера (estimated: false), а не допущение. Чек показывает: (1) точные токены;
+# (2) стоимость по прайс-листу — оценка сверху (кэшированный вход и ночные ставки DeepSeek не учитываем);
+# (3) фактические деньги на подписке = прайс × usd_per_month / included_credits_usd, пока кредиты
+# не исчерпаны; (4) Jev по тарифу вендора; (5) минуты человека.
+# Методика: evals/spikes/models/REPORT.md, раздел «Справочная цена». Обновлять перед сдачей (TASK-23).
+as_of: "2026-11-04"
+currency_rate_rub_per_usd: 80.0        # допущение; сверить с курсом ЦБ на дату прогона
+human_rate_rub_per_hour: 1220.0        # аналитик: 200 тыс. ₽/мес — между медианами Москвы (220) и Петербурга (180), Хабр Карьера, I п/г 2026 / 164 ч
+
+subscription:
+  name: Ollama Pro
+  usd_per_month: 20.0
+  included_credits_usd: 60.0           # кредиты в месяц, списываются по ставкам ниже (ollama.com/pricing)
+  expected_runs_per_month: 60          # для расчёта доли подписки на прогон
+
+# USD за 1 млн токенов: input / output. estimated: true — справочная, не фактическая цена.
+# Имена — как их вызывает локальный демон (облачные — с суффиксом -cloud или :cloud).
+models:
+  gpt-oss:120b-cloud: {input: 0.15, output: 0.60, estimated: false}
+  gpt-oss:20b-cloud: {input: 0.07, output: 0.30, estimated: false}
+  gemma4:31b-cloud: {input: 0.14, output: 0.40, estimated: false}          # строка «gemma4» прайса
+  deepseek-v4.1-flash:cloud: {input: 0.30, output: 1.20, estimated: false} # вне пика 0.15 / 0.60
+  glm-5.3-flash:cloud: {input: 0.15, output: 0.50, estimated: false}
+  mistral-large-4:cloud: {input: 0.70, output: 2.10, estimated: false}     # судья
+  kimi-k2.6:cloud: {input: 0.95, output: 4.00, estimated: false}           # судья
+  # Clef (модель решений, System One API): за вход; выход в прайсе не указан и в usage = 0.
+  clef:cloud: {input: 0.24, output: 0.0, estimated: false}
+  # Локальные модели: деньги ≈ 0, учитывается только время.
+  gpt-oss:20b: {input: 0.0, output: 0.0, estimated: false}
+  qwen3-embedding:8b: {input: 0.0, output: 0.0, estimated: false}
+  # Jev: $0.042 за 1 млн входных токенов, выход бесплатно (заявление вендора; вживую не проверено).
+  jev-1.13.0: {input: 0.042, output: 0.0, estimated: false}
+  replay: {input: 0.0, output: 0.0, estimated: false}
+# Для модели вне списка — ставка уровня deepseek-v4.1-flash (дороже большинства кандидатов): оценка сверху.
+default: {input: 0.30, output: 1.20, estimated: true}

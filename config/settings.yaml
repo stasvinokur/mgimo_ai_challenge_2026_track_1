@@ -1,0 +1,32 @@
+# Параметры рабочего процесса. Значения — осознанные пределы, а не магия.
+cases_dir: cases
+max_clarifying_questions: 3          # «Clarify When Necessary»: не больше трёх уточнений
+min_options: 4                       # обязательно status_quo и kill + ≥2 содержательных
+max_uncertainties: 6                 # таблица «варианты × 3–6 неопределённостей × уровни»
+research:
+  max_steps: 12                      # лимит шагов исследовательского цикла
+  token_budget: 400000               # смета на исследование; шлюз показывает её человеку
+  allow_web: false                   # загрузка сайтов из allowlist в цикле исследования (`--web` включает)
+claims:
+  verify_escalation_band: [0.35, 0.75]   # пограничная уверенность проверяющего → reasoning-модель
+  numeric_tolerance: 0.000001            # расхождение pandas/DuckDB больше этого блокирует вывод
+options:
+  distinctness_threshold: 0.92       # косинус обоснований выше — подозрение на клон
+stress:
+  max_scenario_factors: 4            # 3^4 = 81 сценарий максимум
+revision:
+  suspect_depth: 6                   # глубина обхода графа зависимостей
+gates:
+  - research_plan                    # план исследования + смета
+  - option_choice                    # выбор варианта
+  - decision_commit                  # фиксация решения
+security:
+  mask_pii: true
+  block_on_injection: false          # инъекция не останавливает работу, но журналируется и не исполняется
+quality:                             # улучшения v0.2.0; выключенный флаг — поведение v0.1.1 (абляция)
+  metric_contract: true              # единица времени, «отток» на удержании, доля строк, период и n расчёта
+  numbers_v2: true                   # сверка чисел с единицами и выведенными числами
+  model_labels: true                 # расчёты и оценки модели агента подписаны как таковые
+  summary_repair: true               # повтор выжимки по замечаниям, замена довода, статусы и оговорки
+  ru_labels: true                    # статусы, виды и вердикты в отчёте — по-русски (v0.3.0)
+# Выключить для прогона: STRATEGIST_QUALITY_OFF=all или список через запятую (agent_run.py --quality-off)

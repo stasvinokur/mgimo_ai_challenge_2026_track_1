@@ -1,0 +1,38 @@
+{
+  "brief_id": "b2b-field-service",
+  "approach": "agent",
+  "status": "ok",
+  "started_at": "2026-11-09T12:22:16+00:00",
+  "finished_at": "2026-11-09T12:26:11+00:00",
+  "duration_s": 235.4,
+  "materials": [
+    "competitor_page.md",
+    "market_smb_digital.md",
+    "market_smb_registry.md",
+    "pilot_interviews.md",
+    "pilot_results.xlsx",
+    "sales_funnel.csv"
+  ],
+  "quality_off": "all",
+  "costs": {
+    "calls": 178,
+    "input_tokens": 289026,
+    "output_tokens": 47808,
+    "usd_list_price": 0.126603,
+    "model_latency_s": 312.3,
+    "by_model": {
+      "deepseek-v4.1-flash:cloud": {
+        "calls": 64,
+        "tokens": 233912
+      },
+      "gemma4:31b-cloud": {
+        "calls": 33,
+        "tokens": 64178
+      },
+      "clef:cloud": {
+        "calls": 81,
+        "tokens": 38744
+      }
+    }
+  }
+}

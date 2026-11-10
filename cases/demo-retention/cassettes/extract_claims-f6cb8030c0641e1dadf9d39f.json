@@ -1,0 +1,78 @@
+{
+ "task": "extract_claims",
+ "schema": "MetricPlanDTO",
+ "text": "{\"metrics\":[{\"name\":\"conv_invite\",\"description\":\"Конверсия в отправку инвайта\",\"agg\":\"ratio\",\"column\":\"invite_sent\",\"denominator_column\":\"connected\",\"group_by\":\"arm\",\"segment_column\":\"channel\",\"unit\":\"доля\"},{\"name\":\"conv_child_install\",\"description\":\"Конверсия в установку приложения ребенком\",\"agg\":\"ratio\",\"column\":\"child_app_installed\",\"denominator_column\":\"invite_sent\",\"group_by\":\"arm\",\"segment_column\":\"channel\",\"unit\":\"доля\"},{\"name\":\"conv_pairing\",\"description\":\"Конверсия в сопряжение (pairing)\",\"agg\":\"ratio\",\"column\":\"paired_3d\",\"denominator_column\":\"child_app_installed\",\"group_by\":\"arm\",\"segment_column\":\"channel\",\"unit\":\"доля\"},{\"name\":\"conv_first_alert\",\"description\":\"Конверсия в первый алерт\",\"agg\":\"ratio\",\"column\":\"first_alert_7d\",\"denominator_column\":\"paired_3d\",\"group_by\":\"arm\",\"segment_column\":\"channel\",\"unit\":\"доля\"},{\"name\":\"ios_share_invite\",\"description\":\"Доля iOS в отправке инвайтов\",\"agg\":\"ratio\",\"column\":\"invite_sent_ios\",\"denominator_column\":\"invite_sent\",\"group_by\":\"arm\",\"segment_column\":\"channel\",\"unit\":\"доля\"},{\"name\":\"ios_share_pairing\",\"description\":\"Доля iOS в сопряжении\",\"agg\":\"ratio\",\"column\":\"paired_3d_ios\",\"denominator_column\":\"paired_3d\",\"group_by\":\"arm\",\"segment_column\":\"channel\",\"unit\":\"доля\"}]}",
+ "data": {
+  "metrics": [
+   {
+    "name": "conv_invite",
+    "description": "Конверсия в отправку инвайта",
+    "agg": "ratio",
+    "column": "invite_sent",
+    "denominator_column": "connected",
+    "group_by": "arm",
+    "segment_column": "channel",
+    "unit": "доля"
+   },
+   {
+    "name": "conv_child_install",
+    "description": "Конверсия в установку приложения ребенком",
+    "agg": "ratio",
+    "column": "child_app_installed",
+    "denominator_column": "invite_sent",
+    "group_by": "arm",
+    "segment_column": "channel",
+    "unit": "доля"
+   },
+   {
+    "name": "conv_pairing",
+    "description": "Конверсия в сопряжение (pairing)",
+    "agg": "ratio",
+    "column": "paired_3d",
+    "denominator_column": "child_app_installed",
+    "group_by": "arm",
+    "segment_column": "channel",
+    "unit": "доля"
+   },
+   {
+    "name": "conv_first_alert",
+    "description": "Конверсия в первый алерт",
+    "agg": "ratio",
+    "column": "first_alert_7d",
+    "denominator_column": "paired_3d",
+    "group_by": "arm",
+    "segment_column": "channel",
+    "unit": "доля"
+   },
+   {
+    "name": "ios_share_invite",
+    "description": "Доля iOS в отправке инвайтов",
+    "agg": "ratio",
+    "column": "invite_sent_ios",
+    "denominator_column": "invite_sent",
+    "group_by": "arm",
+    "segment_column": "channel",
+    "unit": "доля"
+   },
+   {
+    "name": "ios_share_pairing",
+    "description": "Доля iOS в сопряжении",
+    "agg": "ratio",
+    "column": "paired_3d_ios",
+    "denominator_column": "paired_3d",
+    "group_by": "arm",
+    "segment_column": "channel",
+    "unit": "доля"
+   }
+  ]
+ },
+ "usage": {
+  "model": "gemma4:31b-cloud",
+  "role": "workhorse",
+  "input_tokens": 1625,
+  "output_tokens": 341,
+  "estimated": false,
+  "latency_ms": 2547,
+  "escalated": false
+ }
+}
